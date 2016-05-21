@@ -1,0 +1,97 @@
+<?php
+
+namespace backend\controllers;
+use Yii;
+use backend\models\User;
+use backend\models\Room;
+use yii\data\Pagination;
+class MainController extends \yii\web\Controller{
+    public function actionIndex(){
+        //调用模型层
+        $query = User::find();
+        //调用分页类
+        $pages = new Pagination([
+            'totalCount' => $query->count(),
+            'pageSize'=>2,
+        ]);
+        $models = $query->offset($pages->offset)
+            ->limit($pages->limit)
+            ->asArray()
+            ->all();
+
+       return $this->renderPartial('tables', [
+            'user' => $models,
+            'pages' => $pages,
+        ]);
+        //return $this->renderPartial('tables',['user'=>$posts]);
+    }
+    /**
+     * 房源列表信息
+     */
+    public function actionTables(){
+        //调用模型层
+        $query = Room::find();
+        //调用分页类
+        $pages = new Pagination([
+            'totalCount' => $query->count(),
+            'pageSize'=>3,
+        ]);
+        $models = $query->offset($pages->offset)
+            ->limit($pages->limit)
+            ->asArray()
+            ->all();
+        //向视图层传参
+        return $this->renderPartial('room', [
+            'room' => $models,
+            'pages' => $pages,
+        ]);
+    }
+
+    /**
+     * 房源审核
+     */
+    public function actionUpdate(){
+        //echo 555;die;
+        $state=$_GET['state'];
+        $u_id=$_GET['u_id'];
+        $connection = \Yii::$app->db;
+        $connection->createCommand()->update('room', ['state' => $state], 'u_id='.$u_id)->execute();
+        return $this->redirect(array('main/tables'));
+        //echo "<script>alert('已审核');location.href='index.php?r=main/tables'</script>";
+    }
+    /**
+     * 房源批量删除
+     */
+    public function actionBatch(){
+        $u_id=$_GET['u_id'];
+        $connection = \Yii::$app->db;
+        $connection->createCommand("delete FROM room where u_id in($u_id)")->execute();
+        return $this-redirect(array('main/tables'));
+    }
+    /**
+     * 相册
+     */
+    public function actionGallery(){
+        $connection = \Yii::$app->db;
+        $command = $connection->createCommand('SELECT * FROM users');
+        $posts = $command->queryAll();
+        foreach($posts as $key => $val){
+            $img = explode(',',$val['image']);
+            $val['image'] = $img;
+            $photos[] = $val;
+        }
+        return $this->renderPartial('gallery.html',['users'=>$photos]);
+    }
+    /**
+     * 相册删除
+     */
+    public function actionDelete(){
+        echo 4554;
+    }
+    /**
+     * 日历
+     */
+    public function actionCalendar(){
+        return $this->renderPartial('calendar.html');
+    }
+}
