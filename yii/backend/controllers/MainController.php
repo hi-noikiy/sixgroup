@@ -25,6 +25,17 @@ class MainController extends \yii\web\Controller{
         ]);
         //return $this->renderPartial('tables',['user'=>$posts]);
     }
+	/**
+     * 锁定用户
+     */
+    public function actionBlock(){
+        $request = Yii::$app->request;
+        $u_id=$request->get('u_id');
+        $status=$request->get('status');
+        $connection = \Yii::$app->db;
+        $connection->createCommand()->update('user', ['status' => $status], 'u_id='.$u_id)->execute();
+        return $this->redirect(array('main/index'));
+    }
     /**
      * 房源列表信息
      */
@@ -34,7 +45,7 @@ class MainController extends \yii\web\Controller{
         //调用分页类
         $pages = new Pagination([
             'totalCount' => $query->count(),
-            'pageSize'=>3,
+            'pageSize'=>10,
         ]);
         $models = $query->offset($pages->offset)
             ->limit($pages->limit)
@@ -63,9 +74,10 @@ class MainController extends \yii\web\Controller{
      * 房源批量删除
      */
     public function actionBatch(){
-        $u_id=$_GET['u_id'];
+        $request = Yii::$app->request;
+        $r_id=$request->get('r_id');
         $connection = \Yii::$app->db;
-        $connection->createCommand("delete FROM room where u_id in($u_id)")->execute();
+        $connection->createCommand("delete FROM room where r_id in($r_id)")->execute();
         return $this-redirect(array('main/tables'));
     }
     /**
