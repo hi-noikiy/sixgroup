@@ -42,16 +42,16 @@ Route::any('jing','ThemeController@jing');
 
 
 /*登录*/
-Route::get('login','LoginController@index');
+//Route::get('login','LoginController@index');
 
 //普通登陆
-Route::any('login/register','LoginController@register');
+//Route::any('login/register','LoginController@register');
 //手机登陆发送短信
-Route::any('login/phone','LoginController@phone');
+//Route::any('login/phone','LoginController@phone');
 //手机登陆接收表单
-Route::any('login/cellphone','LoginController@cellphone');
+//Route::any('login/cellphone','LoginController@cellphone');
 //退出登录
-Route::any('login/del','LoginController@del');
+//Route::any('login/del','LoginController@del');
 
 
 /*列表*/
@@ -77,7 +77,36 @@ Route::any('register/phone','RegisterController@phoneVerification');
 
 
 /*房源*/
-Route::any('room','RoomController@index');
+//Route::any('room','RoomController@index');
 
 //房源信息接收表单
-Route::any('room/store','RoomController@Store');
+//Route::any('room/store','RoomController@Store');
+
+//登陆展示页面
+Route::get('login','LoginController@index');
+//普通登陆
+Route::any('login/register','LoginController@register');
+//手机登陆发送短信
+Route::any('login/phone','LoginController@phone');
+//手机登陆接收表单
+Route::any('login/cellphone','LoginController@cellphone');
+//房源展示页面
+Route::any('room','RoomController@index');
+//房源信息接收表单
+Route::post('room/message','RoomController@room_message');
+//房源照片
+Route::any('room/photo','RoomController@room_photo');
+//房源照片接收
+Route::any('room/photos','RoomController@room_photos');
+//房源价格页面
+Route::any('room/price','RoomController@room_price');
+//房源价格接收
+Route::any('room/prices','RoomController@room_prices');
+//房源个人信息页面
+Route::any('room/personage','RoomController@room_personage');
+//房源个人信息接收
+Route::any('room/personages','RoomController@room_personages');
+//房源发布成功页面
+Route::any('room/success','RoomController@room_success');
+//支付页面
+Route::any('payment','PaymentController@index');

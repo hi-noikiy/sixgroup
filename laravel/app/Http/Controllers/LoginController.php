@@ -1,12 +1,20 @@
 <?php
-
 namespace App\Http\Controllers;
 use App\Http\Requests;
 use Session;
 use Cookie;
 use DB,Input,Redirect,url,Validator,Request;
 
-
+/**
+ * 登录功能
+ * ============================================================================
+ * *http://localhost/snail/laravel/public/login
+ * ----------------------------------------------------------------------------
+ * @controller     LoginController
+ * ============================================================================
+ * $Author: 耿文龙
+ * 2016/5/17   2016/5/18 
+*/
 class LoginController extends Controller
 {
     //展示登陆页面
@@ -16,7 +24,7 @@ class LoginController extends Controller
 	}
 	//普通会员登陆
 	public function register(){
-		//接收表单值
+		//判断是否有表单值提交
 		if(Input::has('_token')){
 			$u_name=Input::get('username');
 			$u_pwd=Input::get('pwd');
@@ -188,8 +196,6 @@ class LoginController extends Controller
 											 return redirect("login");
 											 
 										 }
-
-								
 							 }
 						
 					}
@@ -214,13 +220,6 @@ class LoginController extends Controller
 			echo "错误";
 		}
 				
-	}
-
-	//退出登录
-	public function del(){
-		Session::forget('u_name');
-		return redirect("index");
-
 	}
     
 }

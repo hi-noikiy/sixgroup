@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta http-equiv="Cache-Control" content="no-transform" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>
     用户登录- 蜗牛短租网
@@ -179,8 +179,8 @@
                     <span class="text-watermark" style="width:125px">动态密码</span>
                 </label>
                 <input type="button" id="btnGetVerifyCode" value="获取动态密码" class="verify-btn" onclick="pwd()" />
-                <input type="button" id="huoqu" style="display:none" value="发送成功" class="verify-btn"  />
-                
+				<input type="button" id="huoqu" style="display:none" value="发送成功" class="verify-btn"  />
+				
 
             </div>
         </div>
@@ -225,27 +225,27 @@
 <script type="text/javascript">
 function  pwd(){
       var phone=document.getElementById('Mobile').value;
-     
-          $.ajax({
+	 
+		  $.ajax({
             type:'get',
             url:"{{URL('login/phone')}}",
            data:'phone='+phone,
            success:function(msg){
                 if(msg==1){
-                    $("#btnGetVerifyCode").val("动态密码已发送");
-                    //$("#btnGetVerifyCode").hide();
-                    //$("#btnGetVerifyCode").css('display','none'); 
-                    // $('#huoqu').css("display","block");
+					$("#btnGetVerifyCode").val("动态密码已发送");
+					//$("#btnGetVerifyCode").hide();
+					//$("#btnGetVerifyCode").css('display','none'); 
+					// $('#huoqu').css("display","block");
 
-                }else{
-                    $('#btnGetVerifyCode').val("动态密码失败");
-                }
+				}else{
+					$('#btnGetVerifyCode').val("动态密码失败");
+				}
             }
         })  
-      // var date={'phone':phone}
-       //   $.get("{{URL('login/phone')}}",date,function(msg){
-       //     alert(msg);
-       //  });
+	  // var date={'phone':phone}
+	   //   $.get("{{URL('login/phone')}}",date,function(msg){
+	   //     alert(msg);
+	   //  });
 
              
 }
