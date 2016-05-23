@@ -1,5 +1,11 @@
 <?php
 use yii\widgets\LinkPager;
+/**
+ *  @Modular    房源页面
+ *  @Class      Register
+ *  @Author     田渊博
+ *  @Time       2016/05/20
+**/
 $session = Yii::$app->session;
 $session->open();
 ?>
@@ -276,8 +282,8 @@ $session->open();
 									</a>
 								</li>
 							</ul>
-						</li>
- -->
+						</li> -->
+
 						<li class="light-blue">
 							<a data-toggle="dropdown" href="#" class="dropdown-toggle">
 								<img class="nav-user-photo" src="" alt="<?php $session['u_name']?> Photo" />
@@ -365,7 +371,7 @@ $session->open();
 					</div><!-- #sidebar-shortcuts -->
 <ul class="nav nav-list">
 						<li class="active">
-							<a href="index.html">
+							<a href="#">
 								<i class="icon-dashboard"></i>
 								<span class="menu-text"> 控制台 </span>
 							</a>
@@ -551,8 +557,8 @@ $session->open();
 							</a>
 						</li>
 
-    					<li>
-        					<a href="index.php?r=main/gallery">
+    						<li>
+        						<a href="index.php?r=main/gallery">
 								<i class="icon-picture"></i>
 								<span class="menu-text"> 相册 </span>
 							</a>
@@ -739,7 +745,7 @@ $session->open();
 													<tr>
 														<td class="center">
 															<label>
-																<input type="checkbox" name="ids[]" class="ace" value="<?php echo $v['u_id']?>"/>
+																<input type="checkbox" name="ids" class="ace" value="<?php echo $v['r_id']?>"/>
 																<span class="lbl"></span>
 															</label>
 														</td>
@@ -752,11 +758,11 @@ $session->open();
 <!--															<span class="label label-sm label-warning">Expiring</span>-->
 <!--														</td>-->
 														<td><?php echo $v['r_introduce']?></td>
-														<input type="hidden" id="<?php echo $v['u_id']?>" value="<?php echo $v['state']?>">
-														<td id='tr_<?php echo $v['u_id']?>'><?php if($v['state']==0){?>
-														<a href="javascript:void(0)" onclick="fun(<?php echo $v['u_id']?>)">审核
+														<input type="hidden" id="<?php echo $v['r_id']?>" value="<?php echo $v['state']?>">
+														<td id='tr_<?php echo $v['r_id']?>'><?php if($v['state']==0){?>
+														<a href="javascript:void(0)" onclick="audite(<?php echo $v['r_id']?>)">待审核
 															<?php }elseif($v['state']==1){?>
-															<span style="color:blue">已通过</span>
+															<span style="color:red">已通过</span>
 															<?php }else{?>
 															<span style="color:blue">-</span>
 															<?php }?>
@@ -1115,7 +1121,7 @@ $session->open();
 												</tbody>
 											</table>
 								<div style="margin-left: 420px">
-									<button class="btn btn-xs btn-success">
+									<button class="btn btn-xs btn-success" id='checkall'>
 										<i class="icon-ok bigger-120">全选</i>
 									</button>
 									<button class="btn btn-xs btn-danger" onclick="batch()">
@@ -1123,7 +1129,7 @@ $session->open();
 									</button>
 								</div>
 							   <div style="margin-left: 420px">
-							<?php 
+							<?php
 							echo LinkPager::widget([
                                 'pagination' => $pages,
                             ]);
@@ -3044,8 +3050,8 @@ $session->open();
 </body>
 </html>
 <script>
-	function fun(u_id){
-		state=document.getElementById(u_id).value;
+	function audite(r_id){
+		state=document.getElementById(r_id).value;
 		if(state==1){
 			state=0
 		}else{
@@ -3053,7 +3059,7 @@ $session->open();
 		}
 		if(confirm('你确定要通过审核吗？')==true){
 			//alert(state);
-			document.getElementById('tr_'+u_id).innerHTML='--';
+			//document.getElementById('tr_'+r_id).innerHTML='已审核';
 			//创建ajax对象
 			var ajax=new XMLHttpRequest();
             //ajax事件
@@ -3062,7 +3068,7 @@ $session->open();
                     document.getElementById('count').innerHTML=ajax.responseText;
                 }
             }
-            ajax.open('get','index.php?r=main/update&state='+state+'&&u_id='+u_id);
+            ajax.open('get','index.php?r=main/update&state='+state+'&&r_id='+r_id);
             ajax.send(null);
 		}
 	}
@@ -3071,31 +3077,37 @@ $session->open();
 	 * 批量删除
 	 */
 	function batch() {
-        if (confirm('你确定要删除吗？？') == true) {
-            var obj = document.getElementsByName('ids');
-            alert(obj.length);
-            var id = Array();
-            var j = 0;
-            for (i in obj) {
-                if (obj[i].checked == true) {
-                    id[j] = obj[i].value;
-                    j++;
+        if(window.confirm('你确定要删除吗？')){
+            var ids=document.getElementsByName('ids');
+            var str='';
+            for(var i=0;i<ids.length;i++) {
+                if (ids[i].checked == true) {
+                    str += ',' + ids[i].value;
                 }
             }
-            u_id = id.join(',');
-            if (u_id == 0) {
-                alert('请选择一个');
-            } else {
-                var ajax = new XMLHttpRequest();
-                ajax.onreadystatechange = function () {
-                    if (ajax.readyState == 4) {
-                        //alert(ajax.responseText);die;
-                        document.getElementById('count').innerHTML = ajax.responseText;
-                    }
-                }
-                ajax.open('get', 'index.php?r=main/batch&u_id=' + u_id);
-                ajax.send(null);
+        ids=str.substr(1);
+            alert(ids);
+        var ajax=new XMLHttpRequest();
+        ajax.onreadystatechange=function(){
+            if(ajax.readyState==4&&ajax.status==200){
+				if(ajax.responseText==-1){
+					alert('删除失败');
+				}else{
+					document.getElementById('count').innerHTML=ajax.responseText;
+				}
             }
+        }
+        ajax.open('get','index.php?r=main/batch&r_id='+ids);
+        ajax.send(null);     
+        } 
+    }
+        //全选
+    	var qx=document.getElementById('checkall');
+    	qx.onclick=function(){
+        var qx=document.getElementById('checkall');
+        var obj=document.getElementsByName('ids');
+        for(i in obj){
+            obj[i].checked=true;
         }
     }
 </script>
