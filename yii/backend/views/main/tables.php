@@ -51,7 +51,7 @@ $session->open();
 		<script src="../views/assets/js/respond.min.js"></script>
 		<![endif]-->
 	</head>
-
+<div id='count'>
 	<body>
 		<div class="navbar navbar-default" id="navbar">
 			<script type="text/javascript">
@@ -281,7 +281,7 @@ $session->open();
 
 						<li class="light-blue">
 							<a data-toggle="dropdown" href="#" class="dropdown-toggle">
-								<img class="nav-user-photo" src="" alt="<?php $session['u_name']?> Photo" />
+								<img class="nav-user-photo" src="./uploads/<?php $session['u_img']?>" alt="<?php $session['u_name']?> Photo" />
 								<span class="user-info">
 									<small>欢迎,</small>
 									<span style="color: blue"><?php echo $session['u_name']?></span>
@@ -366,7 +366,7 @@ $session->open();
 					</div><!-- #sidebar-shortcuts -->
 <ul class="nav nav-list">
 						<li class="active">
-							<a href="index.html">
+							<a href="#">
 								<i class="icon-dashboard"></i>
 								<span class="menu-text"> 控制台 </span>
 							</a>
@@ -507,7 +507,7 @@ $session->open();
 														<th>
 															邮箱
 														</th>
-<!--														<th class="hidden-480">用户头像</th>-->
+														<th class="hidden-480">是否锁定</th>
 														
 													</tr>
 												</thead>
@@ -524,8 +524,18 @@ $session->open();
 															<?php echo $v['u_name']?>
 														</td>
 <!--														<td><img src="./uploads/--><?php //echo $v['u_img']?><!--" width="50px" height="35px"/></td>-->
-														<td class="hidden-480"><?php echo $v['u_phone']?></td>
+														<td class="hidden-480"><?php echo str_replace(substr($v['u_phone'],3,5),'***', $v['u_phone'])?></td>
 														<td><?php echo $v['u_email']?></td>
+														<input type="hidden" id="<?php echo $v['u_id']?>" value="<?php echo $v['status']?>">
+														<td id='tr_<?php echo $v['u_id']?>'><?php if($v['status']==0){?>
+														<a href="javascript:void(0)" onclick="blocks(<?php echo $v['u_id']?>)">锁定
+															<?php }elseif($v['status']==1){?>
+															<span style="color:red">已锁定</span>
+															<?php }else{?>
+															<span style="color:blue">-</span>
+															<?php }?>
+															</a>
+														</td>
 													</tr>
                                                 <?php }?>
 															<div class="visible-xs visible-sm hidden-md hidden-lg">
@@ -862,5 +872,30 @@ $session->open();
 			})
 		</script>
 	<div style="display:none"><script src='http://v7.cnzz.com/stat.php?id=155540&web_id=155540' language='JavaScript' charset='gb2312'></script></div>
+</div>
 </body>
 </html>
+<script>
+	function blocks(u_id){
+		status=document.getElementById(u_id).value;
+		if(status==1){
+			status=0
+		}else{
+			status=1
+		}
+		if(confirm('你确定要锁定吗？')==true){
+			//alert(state);
+			//document.getElementById('tr_'+u_id).innerHTML='已锁定';
+			//创建ajax对象
+			var ajax=new XMLHttpRequest();
+            //ajax事件
+            ajax.onreadystatechange=function(){
+                if(ajax.readyState==4){
+                    document.getElementById('count').innerHTML=ajax.responseText;
+                }
+            }
+            ajax.open('get','index.php?r=main/block&status='+status+'&&u_id='+u_id);
+            ajax.send(null);
+		}
+	}
+</script>
