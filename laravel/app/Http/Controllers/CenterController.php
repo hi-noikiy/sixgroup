@@ -53,7 +53,7 @@ class CenterController extends Controller
     public function person()
     {
         //取出session
-        Session::get('u_name');
+        $u_name=Session::get('u_name');
         $u_id=Session::get('u_id');
         //查询个人信息
         $data = DB::table('user')->where('u_id', '=', [$u_id])->get();
