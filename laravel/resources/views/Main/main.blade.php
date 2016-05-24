@@ -187,11 +187,11 @@
             <div class="m-search-box form-horizontal">
                 <div class="tab-content">
 
-<form id="mainSearchForm" action="" class="mainSearchForm mainSearchForm_unitlist" method="post">
+<form id="mainSearchForm" action="search" class="mainSearchForm mainSearchForm_unitlist" method="post">
     <div class="control-group  city-group">
         <span class="controls-span">目的地</span>
         <div class="controls">
-            <label for="destInput">
+            <label for="">
                 <input type="text" id="destInput" class="ipt-text" data-destid="48" data-destpinyin="beijing" value="北京" />
                 <i class="icon-city"></i>
             </label>
@@ -372,7 +372,7 @@
                 <li>
                     <a type="kw" data-type="s" data-val="182" data-identityid="0"
                        title=""
-                       href="/beijing_gongyu/chaoyangqu_s182/" class=" ">朝阳区</a>
+                       href="//chaoyangqu_s182/" class=" ">朝阳区</a>
                 </li>
                 <li>
                     <a type="kw" data-type="s" data-val="204" data-identityid="0"
@@ -4040,7 +4040,7 @@
 
 
 
-    <div class="searchresult-list t-searchresult-list  clearfix" data-unitid="3581">
+ <!--    <div class="searchresult-list t-searchresult-list  clearfix" data-unitid="3581">
         <div class="house-img">
             <a href="/beijing_gongyu/chaoyangqu_3581.htm#index=1" target="_blank" rel="nofollow" class="link-btn-pic" onclick="_gaq.push(['_trackEvent', 'pcList', '房屋点击']);">
                 <img data-origin="http://pic.tujia.com/upload/unit/day_160125/thumb/201601251714465094_370_232.jpg" alt="北京 北京途家长安驿精品大床房" />
@@ -4164,8 +4164,8 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="searchresult-list t-searchresult-list  clearfix" data-unitid="22719">
+    </div> -->
+    <!-- <div class="searchresult-list t-searchresult-list  clearfix" data-unitid="22719">
         <div class="house-img">
             <a href="/beijing_gongyu/dongchengqu_22719.htm#index=2" target="_blank" rel="nofollow" class="link-btn-pic" onclick="_gaq.push(['_trackEvent', 'pcList', '房屋点击']);">
                 <img data-origin="http://pic.tujia.com/upload/unit/day_160510/thumb/201605101834292930_370_232.jpg" alt="北京 北京途家雍和宫红云阁温馨大床房" />
@@ -4352,8 +4352,8 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="searchresult-list t-searchresult-list  clearfix" data-unitid="4255">
+    </div> -->
+   <!--  <div class="searchresult-list t-searchresult-list  clearfix" data-unitid="4255">
         <div class="house-img">
             <a href="/beijing_gongyu/fengtaiqu_4255.htm#index=3" target="_blank" rel="nofollow" class="link-btn-pic" onclick="_gaq.push(['_trackEvent', 'pcList', '房屋点击']);">
                 <img data-origin="http://pic.tujia.com/upload/landlordunit/day_150421/thumb/201504211206142919_370_232.jpg" alt="北京 北京东管丽泽公寓精装二居标准套房" />
@@ -4553,8 +4553,8 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="searchresult-list searchresult-info  clearfix" data-unitid="76920">
+    </div> -->
+    <!-- <div class="searchresult-list searchresult-info  clearfix" data-unitid="76920">
         <div class="house-img">
             <a href="/beijing_gongyu/fengtaiqu_76920.htm#index=4" target="_blank" rel="nofollow" class="link-btn-pic" onclick="_gaq.push(['_trackEvent', 'pcList', '房屋点击']);">
                 <img data-origin="http://pic.tujia.com/upload/landlordunit/day_160410/thumb/201604101622208888_370_232.jpg" alt="北京 北京蒲黄榆地铁站爱家公寓家庭房" />
@@ -4657,8 +4657,8 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="searchresult-list t-searchresult-list  clearfix" data-unitid="86363">
+    </div> -->
+    <!-- <div class="searchresult-list t-searchresult-list  clearfix" data-unitid="86363">
         <div class="house-img">
             <a href="/beijing_gongyu/dongchengqu_86363.htm#index=5" target="_blank" rel="nofollow" class="link-btn-pic" onclick="_gaq.push(['_trackEvent', 'pcList', '房屋点击']);">
                 <img data-origin="http://pic.tujia.com/upload/landlordunit/day_160327/thumb/201603271608535086_370_232.jpg" alt="北京 市中心崇文门磁器口南北通透大三居" />
@@ -4856,8 +4856,8 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="searchresult-list t-searchresult-list  clearfix" data-unitid="51578">
+    </div> -->
+    <!-- <div class="searchresult-list t-searchresult-list  clearfix" data-unitid="51578">
         <div class="house-img">
             <a href="/beijing_gongyu/chaoyangqu_51578.htm#index=6" target="_blank" rel="nofollow" class="link-btn-pic" onclick="_gaq.push(['_trackEvent', 'pcList', '房屋点击']);">
                 <img data-origin="http://pic.tujia.com/upload/landlordunit/day_160405/thumb/201604051610025335_370_232.jpg" alt="北京 故宫，国贸，天安门豪华四居室" />
@@ -4999,8 +4999,8 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="searchresult-list searchresult-info  clearfix" data-unitid="96971">
+    </div> -->
+    <!-- <div class="searchresult-list searchresult-info  clearfix" data-unitid="96971">
         <div class="house-img">
             <a href="/beijing_gongyu/dongchengqu_96971.htm#index=7" target="_blank" rel="nofollow" class="link-btn-pic" onclick="_gaq.push(['_trackEvent', 'pcList', '房屋点击']);">
                 <img data-origin="http://pic.tujia.com/upload/landlordunit/day_160408/thumb/201604081152521548_370_232.jpg" alt="北京 e家酒店式公寓-前门店-复式两居" />
@@ -5203,8 +5203,8 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="searchresult-list t-searchresult-list  clearfix" data-unitid="51540">
+    </div> -->
+<!--     <div class="searchresult-list t-searchresult-list  clearfix" data-unitid="51540">
         <div class="house-img">
             <a href="/beijing_gongyu/chaoyangqu_51540.htm#index=9" target="_blank" rel="nofollow" class="link-btn-pic" onclick="_gaq.push(['_trackEvent', 'pcList', '房屋点击']);">
                 <img data-origin="http://pic.tujia.com/upload/landlordunit/day_150806/thumb/201508060748498209_370_232.jpg" alt="北京 前卫高层落地窗三居室，市中心" />
@@ -5346,8 +5346,8 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="searchresult-list searchresult-info  clearfix" data-unitid="96120">
+    </div> -->
+  <!--   <div class="searchresult-list searchresult-info  clearfix" data-unitid="96120">
         <div class="house-img">
             <a href="/beijing_gongyu/dongchengqu_96120.htm#index=10" target="_blank" rel="nofollow" class="link-btn-pic" onclick="_gaq.push(['_trackEvent', 'pcList', '房屋点击']);">
                 <img data-origin="http://pic.tujia.com/upload/landlordunit/day_160408/thumb/201604081135128565_370_232.jpg" alt="北京 e家酒店式公寓-前门店复式两居" />
@@ -5446,8 +5446,8 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="searchresult-list t-searchresult-list  clearfix" data-unitid="98815">
+    </div> -->
+    <!-- <div class="searchresult-list t-searchresult-list  clearfix" data-unitid="98815">
         <div class="house-img">
             <a href="/beijing_gongyu/chaoyangqu_98815.htm#index=11" target="_blank" rel="nofollow" class="link-btn-pic" onclick="_gaq.push(['_trackEvent', 'pcList', '房屋点击']);">
                 <img data-origin="http://pic.tujia.com/upload/landlordunit/day_160512/thumb/201605121615004728_370_232.jpg" alt="北京 国贸百子湾观景温馨时尚Loft" />
@@ -5588,8 +5588,8 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="searchresult-list searchresult-info  clearfix" data-unitid="98496">
+    </div> -->
+  <!--   <div class="searchresult-list searchresult-info  clearfix" data-unitid="98496">
         <div class="house-img">
             <a href="/beijing_gongyu/fengtaiqu_98496.htm#index=12" target="_blank" rel="nofollow" class="link-btn-pic" onclick="_gaq.push(['_trackEvent', 'pcList', '房屋点击']);">
                 <img data-origin="http://pic.tujia.com/upload/landlordunit/day_160415/thumb/201604152110414807_370_232.jpg" alt="北京 地铁七里庄站307医院" />
@@ -5788,8 +5788,8 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="searchresult-list t-searchresult-list  clearfix" data-unitid="98013">
+    </div> -->
+<!--     <div class="searchresult-list t-searchresult-list  clearfix" data-unitid="98013">
         <div class="house-img">
             <a href="/beijing_gongyu/fengtaiqu_98013.htm#index=14" target="_blank" rel="nofollow" class="link-btn-pic" onclick="_gaq.push(['_trackEvent', 'pcList', '房屋点击']);">
                 <img data-origin="http://pic.tujia.com/upload/landlordunit/day_160503/thumb/201605030945566284_370_232.jpg" alt="北京 西客站丽泽商务六里桥附近小区" />
@@ -5904,8 +5904,8 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="searchresult-list t-searchresult-list  clearfix" data-unitid="98746">
+    </div> -->
+ <!--    <div class="searchresult-list t-searchresult-list  clearfix" data-unitid="98746">
         <div class="house-img">
             <a href="/beijing_gongyu/haidian_98746.htm#index=15" target="_blank" rel="nofollow" class="link-btn-pic" onclick="_gaq.push(['_trackEvent', 'pcList', '房屋点击']);">
                 <img data-origin="http://pic.tujia.com/upload/landlordunit/day_160418/thumb/201604180931162607_370_232.jpg" alt="北京 鸟巢水立方国际会议中心清新大两居" />
@@ -6027,8 +6027,8 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="searchresult-list t-searchresult-list  clearfix" data-unitid="33198">
+    </div> -->
+<!--     <div class="searchresult-list t-searchresult-list  clearfix" data-unitid="33198">
         <div class="house-img">
             <a href="/beijing_gongyu/chaoyangqu_33198.htm#index=16" target="_blank" rel="nofollow" class="link-btn-pic" onclick="_gaq.push(['_trackEvent', 'pcList', '房屋点击']);">
                 <img data-origin="http://pic.tujia.com/upload/landlordunit/day_160215/thumb/201602151111532719_370_232.jpg" alt="北京 北京泛亚悦居服务公寓豪华大套房" />
@@ -6190,8 +6190,8 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="searchresult-list t-searchresult-list  clearfix" data-unitid="22718">
+    </div> -->
+  <!--   <div class="searchresult-list t-searchresult-list  clearfix" data-unitid="22718">
         <div class="house-img">
             <a href="/beijing_gongyu/dongchengqu_22718.htm#index=17" target="_blank" rel="nofollow" class="link-btn-pic" onclick="_gaq.push(['_trackEvent', 'pcList', '房屋点击']);">
                 <img data-origin="http://pic.tujia.com/upload/unit/day_160510/thumb/201605101835171665_370_232.jpg" alt="北京 北京途家雍和宫红云阁精品标间" />
@@ -6378,8 +6378,8 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="searchresult-list searchresult-info  clearfix" data-unitid="63215">
+    </div> -->
+   <!--  <div class="searchresult-list searchresult-info  clearfix" data-unitid="63215">
         <div class="house-img">
             <a href="/beijing_gongyu/chaoyangqu_63215.htm#index=18" target="_blank" rel="nofollow" class="link-btn-pic" onclick="_gaq.push(['_trackEvent', 'pcList', '房屋点击']);">
                 <img data-origin="http://pic.tujia.com/upload/landlordunit/day_160125/thumb/201601251211278857_370_232.jpg" alt="北京 北京鹏远公寓两室三床房" />
@@ -6789,8 +6789,8 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="searchresult-list t-searchresult-list  clearfix" data-unitid="22717">
+    </div> -->
+<!--     <div class="searchresult-list t-searchresult-list  clearfix" data-unitid="22717">
         <div class="house-img">
             <a href="/beijing_gongyu/dongchengqu_22717.htm#index=22" target="_blank" rel="nofollow" class="link-btn-pic" onclick="_gaq.push(['_trackEvent', 'pcList', '房屋点击']);">
                 <img data-origin="http://pic.tujia.com/upload/unit/day_160510/thumb/201605101835506033_370_232.jpg" alt="北京 北京途家雍和宫红云阁家庭房" />
@@ -6978,8 +6978,8 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="searchresult-list t-searchresult-list  clearfix" data-unitid="68554">
+    </div> -->
+<!--     <div class="searchresult-list t-searchresult-list  clearfix" data-unitid="68554">
         <div class="house-img">
             <a href="/beijing_gongyu/chaoyangqu_68554.htm#index=23" target="_blank" rel="nofollow" class="link-btn-pic" onclick="_gaq.push(['_trackEvent', 'pcList', '房屋点击']);">
                 <img data-origin="http://pic.tujia.com/upload/landlordunit/day_151106/thumb/201511060521351614_370_232.jpg" alt="北京 北京百住公寓凤凰城店复式两室套房" />
@@ -7180,8 +7180,8 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="searchresult-list t-searchresult-list  clearfix" data-unitid="63756">
+    </div> -->
+<!--     <div class="searchresult-list t-searchresult-list  clearfix" data-unitid="63756">
         <div class="house-img">
             <a href="/beijing_gongyu/chaoyangqu_63756.htm#index=24" target="_blank" rel="nofollow" class="link-btn-pic" onclick="_gaq.push(['_trackEvent', 'pcList', '房屋点击']);">
                 <img data-origin="http://pic.tujia.com/upload/landlordunit/day_151013/thumb/201510131111209571_370_232.jpg" alt="北京 市中心~故宫~天安门豪华大房" />
@@ -7323,8 +7323,8 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="searchresult-list searchresult-info  clearfix" data-unitid="98739">
+    </div> -->
+<!--     <div class="searchresult-list searchresult-info  clearfix" data-unitid="98739">
         <div class="house-img">
             <a href="/beijing_gongyu/daxing_98739.htm#index=25" target="_blank" rel="nofollow" class="link-btn-pic" onclick="_gaq.push(['_trackEvent', 'pcList', '房屋点击']);">
                 <img data-origin="http://pic.tujia.com/upload/landlordunit/day_160418/thumb/201604181343362990_370_232.jpg" alt="北京 悦酒店公寓" />
@@ -7631,8 +7631,8 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="searchresult-list t-searchresult-list  clearfix" data-unitid="98921">
+    </div> -->
+<!--     <div class="searchresult-list t-searchresult-list  clearfix" data-unitid="98921">
         <div class="house-img">
             <a href="/beijing_gongyu/daxing_98921.htm#index=28" target="_blank" rel="nofollow" class="link-btn-pic" onclick="_gaq.push(['_trackEvent', 'pcList', '房屋点击']);">
                 <img data-origin="http://pic.tujia.com/upload/landlordunit/day_160419/thumb/201604191056052535_370_232.png" alt="北京 天宫院动画主题VS宜家风现代小屋" />
@@ -7753,8 +7753,8 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="searchresult-list t-searchresult-list  clearfix" data-unitid="59130">
+    </div> -->
+<!--     <div class="searchresult-list t-searchresult-list  clearfix" data-unitid="59130">
         <div class="house-img">
             <a href="/beijing_gongyu/huairou_59130.htm#index=29" target="_blank" rel="nofollow" class="link-btn-pic" onclick="_gaq.push(['_trackEvent', 'pcList', '房屋点击']);">
                 <img data-origin="http://pic.tujia.com/upload/unit/day_160303/thumb/201603031649167179_370_232.jpg" alt="北京 怀柔途家长城小院山景精品双床房" />
@@ -7893,11 +7893,12 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
+    @foreach($room as $v)
     <div class="searchresult-list t-searchresult-list  clearfix" data-unitid="13460">
         <div class="house-img">
             <a href="/beijing_gongyu/chaoyangqu_13460.htm#index=30" target="_blank" rel="nofollow" class="link-btn-pic" onclick="_gaq.push(['_trackEvent', 'pcList', '房屋点击']);">
-                <img data-origin="http://pic.tujia.com/upload/landlordunit/day_160125/thumb/201601251619594763_370_232.jpg" alt="北京 北京光耀公寓豪华行政二居室" />
+                <img src="http://www.snail.com/laravel/public/uploads/{{$v->r_img}}" alt="北京 北京光耀公寓豪华行政二居室" />
             </a>
             <div class="functions-menu">
                 <a href="javascript:;" class="view-pic">更多图片</a>
@@ -7910,14 +7911,14 @@
                 <div class="house-content">
                     <div id="divcvinfo_13460" class="house-name">
                         <h2>
-                            <a href="/beijing_gongyu/chaoyangqu_13460.htm#index=30" target="_blank" onclick="_gaq.push(['_trackEvent', 'pcList', '房屋点击']);" title="北京光耀公寓豪华行政二居室">北京光耀公寓豪华行政二居室</a>
+                            <a href="/beijing_gongyu/chaoyangqu_13460.htm#index=30" target="_blank" onclick="_gaq.push(['_trackEvent', 'pcList', '房屋点击']);" title="北京光耀公寓豪华行政二居室">{{$v->r_title}}</a>
 
                         </h2>
                     </div>
 
                     <div class="house-htladdress">
-                            <a href="/beijing_gongyu/chaoyangqu_s182/" title="点击此处查看位于朝阳区的所有公寓" target="_self" style="margin-left:0">朝阳区</a>
-                        <span class="business-area-name">朝外大街17号</span>
+                            <a href="/beijing_gongyu/chaoyangqu_s182/" title="点击此处查看位于朝阳区的所有公寓" target="_self" style="margin-left:0">{{$v->r_address}}</a>
+                        <span class="business-area-name">{{$v->r_alias}}</span>
                             <span class="span-text">
                                 近<a href="/beijing_gongyu/d-chaoyangmen/"
                                     style="margin:0" title="距离朝阳门500米，点击此处查看附近的所有公寓">朝阳门地铁站</a>
@@ -7927,18 +7928,18 @@
 
                     <div class="house-datelist">
 
-                        <span title="酒店式公寓">酒店式公寓</span>|
+                        <span title="酒店式公寓">{{$v->ty_name}}</span>|
 
-                            <span title="2室1厅2卫1厨房">二居</span>|
+                            <span title="2室1厅2卫1厨房">{{$v->r_pattem}}</span>|
 
-                            <span title="建筑面积128平米">128平米</span>|
+                            <span title="建筑面积128平米">{{$v->r_area}}平米</span>|
 
-                            <span title="推荐入住4人">宜住4人</span>
+                            <span title="推荐入住4人">宜住{{$v->r_people}}人</span>
                     </div>
                 </div>
 
                 <div class="house-highlight">
-                            <div class="house-judgement"><a href="/beijing_gongyu/chaoyangqu_13460.htm#tabto=usercomments&amp;index=30" target="_blank" rel="nofollow" onclick="_gaq.push(['_trackEvent', 'pcList', '房屋点评']);"><span class="hotel-value">4.9</span>/<span class="number-box">5</span>分<span class="comments-count">118</span>条点评</a></div>
+                            <div class="house-judgement"><a href="/beijing_gongyu/chaoyangqu_13460.htm#tabto=usercomments&amp;index=30" target="_blank" rel="nofollow" onclick="_gaq.push(['_trackEvent', 'pcList', '房屋点评']);"><span class="hotel-value">{{$v->r_collect}}</span>/<span class="number-box">5</span>分<span class="comments-count">118</span>条点评</a></div>
 
 
 
@@ -7949,7 +7950,7 @@
                                     <p>
                                         <a href="/beijing_gongyu/chaoyangqu_13460.htm#index=30" target="_blank" rel="nofollow" class="h-price" onclick="_gaq.push(['_trackEvent', 'pcList', '房屋点击']);">
                                             <dfn class=" f-vt">¥</dfn><span class="price-value">
-                                                1080
+                                                {{$v->r_price}}
                                             </span>
                                         </a>
                                     </p>
@@ -7980,7 +7981,7 @@
                                     </td>
 
                                     <td class="item-04">
-                                        <span class="price-cont" pdid="15903" tdprice="1080"><dfn>¥</dfn><b>1080</b></span>
+                                        <span class="price-cont" pdid="15903" tdprice="1080"><dfn>¥</dfn><b>{{$v->r_price}}</b></span>
                                     </td>
 
                                     <td class="item-last">
@@ -7999,7 +8000,7 @@
                                     </td>
 
                                     <td class="item-04">
-                                        <span class="price-cont" pdid="31533" tdprice="880"><dfn>¥</dfn><b>880</b></span>
+                                        <span class="price-cont" pdid="31533" tdprice="880"><dfn>¥</dfn><b>{{$v->r_price}}</b></span>
                                     </td>
 
                                     <td class="item-last">
@@ -8048,6 +8049,7 @@
 
                     </tbody>
                 </table>
+ <!--表-->
                 <div class="searchresult-toggle">
                             <span>54</span>分钟前有人预订
                                                 <a class="btn-box" href="javascript:;" onclick="_gaq.push(['_trackEvent', 'pcList', '查看全部房价']);">展开全部产品（4）<i class="icon-caret-bottom"></i></a>
@@ -8056,7 +8058,7 @@
             </div>
         </div>
     </div>
-
+@endforeach
     <div id="PrepaidCardTooltip" class="m-tips-wrap" style="display: none">
         <div class="tips-content" style="width:220px">
             <div class="tips-info">所有产品均可直接全额预付房费，支持使用“途游卡、礼品卡、惠住卡、积分和账户余额”</div>
