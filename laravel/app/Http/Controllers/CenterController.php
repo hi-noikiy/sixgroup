@@ -186,7 +186,7 @@ class CenterController extends Controller
         //执行sql语句
         DB::update('update user set u_name="'.$u_name.'",u_phone="'.$u_phone.'",u_email="'.$u_email.'" where u_id = ?', [$u_id]);
         DB::table('orde')->insert(['u_id'=>$u_id,'r_id'=>$r_id,'o_price' =>$r_price, 'o_people' =>$o_people]);
-            return Redirect::action('CenterController@payment');
+        return Redirect::action('CenterController@order');
     }
     /*
      * @payorder    支付
