@@ -72,7 +72,7 @@
 
         <div class="sub-link" >
     @if($name=Session::get('u_name'))
-    欢迎<font style="color: red">{{$name}}</font>来到蜗牛家!
+    <a href="{{URL('center')}}">欢迎<font style="color: red">{{$name}}</font>来到蜗牛家!</a>
     <a href="{{URL('login/del')}}" rel="nofollow">退出</a>
     @else
     <a href="{{URL('register')}}" rel="nofollow" class="link-btn">注册</a>
