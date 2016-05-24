@@ -167,8 +167,6 @@ class CenterController extends Controller
     public function orderadd()
     {
         $r_id=Input::get('r_id');
-        Session::put('r_id');
-        $r_id=Session::get('r_id');
         $data = DB::table('room')->where('r_id', '=', [$r_id])->get();
         return view('Center/orderadd',['data'=>$data]);
     }
@@ -178,7 +176,7 @@ class CenterController extends Controller
     public function orderad()
     {
         $u_id=Session::get('u_id');
-        $r_id=Session::get('r_id');
+        $r_id=Input::get('r_id');
         //接收数据
         $r_price=Input::get('r_price');
         $o_people=Input::get('o_people');
