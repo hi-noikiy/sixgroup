@@ -53,7 +53,7 @@ class CenterController extends Controller
     public function person()
     {
         //取出session
-        Session::get('u_name');
+        $u_name=Session::get('u_name');
         $u_id=Session::get('u_id');
         //查询个人信息
         $data = DB::table('user')->where('u_id', '=', [$u_id])->get();
@@ -162,21 +162,11 @@ class CenterController extends Controller
         return view('Center/pwdupdate');
     }
     /*
-     * @room    显示房间信息
-     */
-    public function room()
-    {
-        return view('Center/room');
-    }
-    /*
      * @orderadd    订单添加订单添加页面
      */
-    //
     public function orderadd()
     {
         $r_id=Input::get('r_id');
-        Session::put('r_id');
-        $r_id=Session::get('r_id');
         $data = DB::table('room')->where('r_id', '=', [$r_id])->get();
         return view('Center/orderadd',['data'=>$data]);
     }
@@ -185,9 +175,8 @@ class CenterController extends Controller
      */
     public function orderad()
     {
-        Session::get('u_id');
         $u_id=Session::get('u_id');
-        $r_id=Session::get('r_id');
+        $r_id=Input::get('r_id');
         //接收数据
         $r_price=Input::get('r_price');
         $o_people=Input::get('o_people');
@@ -285,6 +274,9 @@ class CenterController extends Controller
         $u_id=Session::get('u_id');
         return view('Center/headp');
     }
+    /*
+     * @headsuccess   上传头像成功
+     */
     public function headsuccess()
     {
         $result = array();

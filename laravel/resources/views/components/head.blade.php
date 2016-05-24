@@ -1,7 +1,7 @@
 <div class="hd-wrap-fluid ">
     <div class="m-hd">
         <div class="site-logo-cont">
-            <img style="margin-top: 10px;margin-left: 17px" height="40px" width="100px" src="images/logo.jpg" alt="蜗牛logo">
+            <img src="images/logo1.png" width="150px" height="50px"/>
             <span class="logo-text">旅途中的家</span>
         </div>
         <div class="nav-list">

@@ -136,9 +136,6 @@ Route::post('updateperson','CenterController@updateperson');
 //添加个人资料成功
 Route::any('personal','CenterController@personal');
 
-//房间信息
-Route::any('room','CenterController@room');
-
 //订单管理
 Route::any('order','CenterController@order');
 
