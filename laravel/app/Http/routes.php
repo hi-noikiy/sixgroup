@@ -21,7 +21,7 @@
 Route::any('index','MessageController@index');
 
 /*搜索界面*/
-Route::any('sreach','MessageController@sreach');
+Route::any('sreach','MainController@index');
 
 /*主题->情侣*/
 Route::any('love','ThemeController@love');
