@@ -101,6 +101,7 @@
                         <div class="controls">
                             @foreach($data as $v)
                             <span class="total-picer" id="spnBookingInfoUnitAmount" rel="rateDetailLayer" ><dfn>¥</dfn><b class="picer-value" ><input type="hidden" name='r_price' value="{{$v->r_price}}"/>{{$v->r_price}}</b></span>
+                          <input type="hidden" name="r_id" value="{{$v->r_id}}"/>
                             @endforeach
                             <!--房费明细-->
                             <div class="m-tips-wrap" id="rateDetailLayer" style="display: none">
