@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests;
 use Session;
 use Cookie;
-
+use DB;
 class MainController extends Controller{
 	public function index(){
 		//列表信息
