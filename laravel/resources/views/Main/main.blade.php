@@ -4051,7 +4051,7 @@
                 <div class="house-content">
                     <div id="divcvinfo_13460" class="house-name">
                         <h2>
-                            <a href="/beijing_gongyu/chaoyangqu_13460.htm#index=30" target="_blank" onclick="_gaq.push(['_trackEvent', 'pcList', '房屋点击']);" title="北京光耀公寓豪华行政二居室">{{$v->r_title}}</a>
+                            <a href="URL{{index?r_id}}={{$v->r_id}}" target="_blank" onclick="_gaq.push(['_trackEvent', 'pcList', '房屋点击']);" title="{{$v->r_title}}">{{$v->r_title}}</a>
 
                         </h2>
                     </div>
