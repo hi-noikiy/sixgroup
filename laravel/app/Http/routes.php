@@ -56,7 +56,8 @@ Route::any('jing','ThemeController@jing');
 
 /*列表*/
 Route::get('main','MainController@index');
-
+/*跳转至商品详情页*/
+Route::any('index','GoodController@index');
 /*商品详情页*/
 Route::any('good','GoodController@index');
 
