@@ -4051,7 +4051,7 @@
                 <div class="house-content">
                     <div id="divcvinfo_13460" class="house-name">
                         <h2>
-                            <a href="URL{{index?r_id}}={{$v->r_id}}" target="_blank" onclick="_gaq.push(['_trackEvent', 'pcList', '房屋点击']);" title="{{$v->r_title}}">{{$v->r_title}}</a>
+                            <a href="{{URL('good?r_id')}}={{$v->r_id}}" onclick="_gaq.push(['_trackEvent', 'pcList', '房屋点击']);" title="{{$v->r_title}}">{{$v->r_title}}</a>
 
                         </h2>
                     </div>

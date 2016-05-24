@@ -449,7 +449,7 @@
         <div class="hotel-cont">
             <div class="room-info">
                     <h1>
-                        {{$room[0]->r_title}}<span class="personal-tag sweetome-tag" title="蜗牛自营门店，高品质的体验">蜗牛自营</span>
+                        {{$room->r_title}}<span class="personal-tag sweetome-tag" title="蜗牛自营门店，高品质的体验">蜗牛自营</span>
                         
 
                     </h1>
@@ -470,7 +470,7 @@
                 <div class="hotel-advan-tag">
                     <ul>
                         <li class="icon-type" title="酒店式公寓">酒店式公寓</li>
-                        <li class="icon-square" title="建筑面积45平米">{{$room[0]->r_pattem}}</li>
+                        <li class="icon-square" title="建筑面积45平米">{{$room->r_pattem}}</li>
                             <li class="icon-cooking" title="可做饭">可做饭</li>
                         <li class="icon-bed" title="1张床"><span class="lab-text"><u rel="bedCountDetail">1张床</u></span></li>
                         <li class="icon-guests" title="推荐入住2人">宜住2人</li>
@@ -525,7 +525,7 @@
                                 <span class="controls-span">入住</span>
                                 <div class="controls">
                                     <input type="hidden" id="UnitId" value="3581" />
-                                    <input type="hidden" id="r_id" value="{{$room[0]->r_id}}" />
+                                    <input type="hidden" id="r_id" value="{{$room->r_id}}" />
                                     <input type="hidden" id="ProductId" value="0" />
                                     <input type="hidden" id="UnitDetailSubType" value="0" />
                                     <label for="unitDetailStartDate">
@@ -543,7 +543,7 @@
                                 </div>
                             </div>
                             <div>
-                                <span class="staring-price">¥{{$room[0]->r_price}}</span>
+                                <span class="staring-price">¥{{$room->r_price}}</span>
                             </div>
                             <div class="change-control-group btn-group">
                                 <div class="controls"><a href="javascript:void(0);" id="changeBtn" class="change-btn" onclick="lick()">确定</a></div>
@@ -570,7 +570,8 @@
             url:'{{URL("good/add")}}',
             data:'r_id='+r_id+'&startDate='+startDate+'&endDate='+endDate,
             success:function(msg){
-                alert(msg);
+                //alert(msg);
+                location.href="{{URL('orderadd?r_id')}}="+r_id;
             }
         })
         //alert(r_id);
@@ -684,7 +685,7 @@
         </div>
         <div id="unitintrocontentcontainer" class="content-box">
             <div class="desc-info " style="">
-                {{$room[0]->r_introduce}}
+                {{$room->r_introduce}}
             </div>
 
 
@@ -912,7 +913,7 @@
         <div class="cont-info">
         <img style="display: none" height="400px" width="400px" src="uploads/2.jpg" >
         <ul>
-        @foreach($room as $v)
+        @foreach($com as $v)
             <li><em>{{$v->c_content}}</em><em>{{$v->c_time}}</em><br><img onmouseover="out({{$v->c_id}})"  height="45px" width="130px" src="images/logo1.png" alt="蜗牛logo"></li>
         @endforeach
         </ul>
