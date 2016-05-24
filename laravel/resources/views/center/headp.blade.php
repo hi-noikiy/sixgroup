@@ -30,8 +30,8 @@
     <script src="http://staticfile.tujia.com/Common/Scripts/jquery.unobtrusive-ajax.js" type="text/javascript"></script>
     <script src="http://staticfile.tujia.com/Common/Scripts/swfobject.js" type="text/javascript"></script>
     <script type="text/javascript" src="http://staticfile.tujia.com/Common/Scripts/fullAvatarEditor.js"></script>
-    <script type="text/javascript" src="http://localhost/web/snail/laravel/public/scripts/fullAvatarEditor.js"></script>
-    <script type="text/javascript" src="http://localhost/web/snail/laravel/public/scripts/swfobject.js"></script>
+    <script type="text/javascript" src="http://localhost/sixgroup/laravel/public/scripts/fullAvatarEditor.js"></script>
+    <script type="text/javascript" src="http://localhost/sixgroup/laravel/public/scripts/swfobject.js"></script>
     <script type="text/javascript">
         //window["WEB_XHR_POLLING"] = true;
         var MESSAGE_RADIO = "http://staticfile.tujia.com/PortalSite2/radio/message.wav", ORDERNOTICE_RADIO = "http://staticfile.tujia.com/PortalSite2/radio/ordernotice.wav";
