@@ -7897,8 +7897,8 @@
     @foreach($room as $v)
     <div class="searchresult-list t-searchresult-list  clearfix" data-unitid="13460">
         <div class="house-img">
-            <a href="/beijing_gongyu/chaoyangqu_13460.htm#index=30" target="_blank" rel="nofollow" class="link-btn-pic" onclick="_gaq.push(['_trackEvent', 'pcList', '房屋点击']);">
-                <img src="http://www.snail.com/laravel/public/uploads/{{$v->r_img}}" alt="北京 北京光耀公寓豪华行政二居室" />
+            <a href="http://www.snails.com/laravel/public/uploads/{{$v->r_img}}" target="_blank" rel="nofollow" class="link-btn-pic" onclick="_gaq.push(['_trackEvent', 'pcList', '房屋点击']);">
+                <img src="http://www.snails.com/laravel/public/uploads/{{$v->r_img}}" alt="北京 北京光耀公寓豪华行政二居室" />
             </a>
             <div class="functions-menu">
                 <a href="javascript:;" class="view-pic">更多图片</a>
