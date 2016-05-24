@@ -162,16 +162,8 @@ class CenterController extends Controller
         return view('Center/pwdupdate');
     }
     /*
-     * @room    显示房间信息
-     */
-    public function room()
-    {
-        return view('Center/room');
-    }
-    /*
      * @orderadd    订单添加订单添加页面
      */
-    //
     public function orderadd()
     {
         $r_id=Input::get('r_id');
@@ -185,7 +177,6 @@ class CenterController extends Controller
      */
     public function orderad()
     {
-        Session::get('u_id');
         $u_id=Session::get('u_id');
         $r_id=Session::get('r_id');
         //接收数据
@@ -285,6 +276,9 @@ class CenterController extends Controller
         $u_id=Session::get('u_id');
         return view('Center/headp');
     }
+    /*
+     * @headsuccess   上传头像成功
+     */
     public function headsuccess()
     {
         $result = array();
