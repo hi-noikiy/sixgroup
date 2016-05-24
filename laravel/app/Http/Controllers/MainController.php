@@ -5,10 +5,12 @@ use App\Http\Requests;
 use Session;
 use Cookie;
 
-class MainController extends Controller
-{
+class MainController extends Controller{
 	public function index(){
-		 return view('Main/main');
+		//列表信息
+		$sql="select * from room join type on room.r_type=type.ty_id";
+		$arr=DB::select($sql);
+		return view('Main/main',['room'=>$arr]);
 	}
 
 
