@@ -449,7 +449,7 @@
         <div class="hotel-cont">
             <div class="room-info">
                     <h1>
-                        {{$room->r_title}}<span class="personal-tag sweetome-tag" title="蜗牛自营门店，高品质的体验">蜗牛自营</span>
+                        {{$room[0]->r_title}}<span class="personal-tag sweetome-tag" title="蜗牛自营门店，高品质的体验">蜗牛自营</span>
                         
 
                     </h1>
@@ -470,7 +470,7 @@
                 <div class="hotel-advan-tag">
                     <ul>
                         <li class="icon-type" title="酒店式公寓">酒店式公寓</li>
-                        <li class="icon-square" title="建筑面积45平米">{{$room->r_pattem}}</li>
+                        <li class="icon-square" title="建筑面积45平米">{{$room[0]->r_pattem}}</li>
                             <li class="icon-cooking" title="可做饭">可做饭</li>
                         <li class="icon-bed" title="1张床"><span class="lab-text"><u rel="bedCountDetail">1张床</u></span></li>
                         <li class="icon-guests" title="推荐入住2人">宜住2人</li>
@@ -525,7 +525,7 @@
                                 <span class="controls-span">入住</span>
                                 <div class="controls">
                                     <input type="hidden" id="UnitId" value="3581" />
-                                    <input type="hidden" id="r_id" value="{{$room->r_id}}" />
+                                    <input type="hidden" id="r_id" value="{{$room[0]->r_id}}" />
                                     <input type="hidden" id="ProductId" value="0" />
                                     <input type="hidden" id="UnitDetailSubType" value="0" />
                                     <label for="unitDetailStartDate">
@@ -543,7 +543,7 @@
                                 </div>
                             </div>
                             <div>
-                                <span class="staring-price">¥{{$room->r_price}}</span>
+                                <span class="staring-price">¥{{$room[0]->r_price}}</span>
                             </div>
                             <div class="change-control-group btn-group">
                                 <div class="controls"><a href="javascript:void(0);" id="changeBtn" class="change-btn" onclick="lick()">确定</a></div>
@@ -567,8 +567,8 @@
         var endDate=$('#unitDetailEndDate').val();
         $.ajax({
             type:'get',
-            url:'{{URL('')}}',
-            data:'',
+            url:'{{URL("good/add")}}',
+            data:'r_id='+r_id+'&startDate='+startDate+'&endDate='+endDate,
             success:function(msg){
                 alert(msg);
             }
@@ -684,17 +684,12 @@
         </div>
         <div id="unitintrocontentcontainer" class="content-box">
             <div class="desc-info " style="">
-                {{$room->r_introduce}}
+                {{$room[0]->r_introduce}}
             </div>
 
 
-            
-                <div class="desc-info j-autohide" style="display:none">
-                    <br />公寓距离天安门广场3公里，乘车约15分钟；<br />公寓距离北京首都国际机场30公里，乘车约45分钟；<br />公寓距离北京火车站1公里，乘车约10分钟；<br />公寓距离永安里（地铁1号线）503米，向西步行大约6分钟；<br />公寓距离建国门（地铁1、2号线）&nbsp;794米，向东步行大约10分钟；<br />公寓途经公交车有：1路、9路、37路、43路、120路、126路、205路、666路、668路、673路、728路、729路、802路、810路。<br />商场：秀水街、赛特商场、贵友大厦、新世界百货、沃尔玛。<br />医院：朝阳区中医医院、新景安太妇产医院、朝阳区第二医院。<br />餐饮：凯莱大酒店西餐厅‎、麦当劳建国门餐厅、成远饭店‎、荷花泰菜双子座店、丰收日宁波海鲜大酒店等。<br />银行：中国农业银行建国门支行、中国民生银行建外支行、友利银行北京分行、中国光大银行东长安街支行等。
-                </div>
     
-                <div id="unitintromore" class="toggle-btn"><a href="javascript:;" class="">查看更多<i class="i-acor"></i></a></div>
-                <div id="unitintroless" class="toggle-btn" style="display:none"><a href="javascript:;" class="active">收起<i class="i-acor"></i></a></div>
+                
         </div>
     </div>
     <script type="text/javascript">
@@ -915,15 +910,23 @@
             </div>
         </div>
         <div class="cont-info">
+        <img style="display: none" height="400px" width="400px" src="uploads/2.jpg" >
         <ul>
-            <li><em>不错</em><br><img  height="45px" width="130px" src="images/logo1.png" alt="蜗牛logo"></li>
-            <li>213234</li>
-            <li>234234</li>
-            <li>234234324</li>
-            <li>32423</li>
+        @foreach($room as $v)
+            <li><em>{{$v->c_content}}</em><em>{{$v->c_time}}</em><br><img onmouseover="out({{$v->c_id}})"  height="45px" width="130px" src="images/logo1.png" alt="蜗牛logo"></li>
+        @endforeach
         </ul>
+
         </div>
     </div>
+
+<script>
+    function out(id){
+        alert(id);
+
+    }
+</script>
+
 
 <div class="m-tips-wrap" id="j-experience-info" style="display: none;">
     <div class="tips-content experience-voucher">
@@ -970,7 +973,7 @@
 
         <div class="shop-rate">
             
-                <p class="link-btn-cont"><a href="javascript:;" onclick="_gaq.push(['_trackEvent', 'pcDetail', '在线客服']); qimoChatClick(); return false;" class="chat-btn  custom-service">在线客服</a></p>
+                <p class="link-btn-cont"><a href="javascript:;"  class="chat-btn  custom-service">在线客服</a></p>
                             <p class="contact-info">蜗牛客服：<span class="tel-box">400-188-1234</span><span class="gray-text">(7x24小时)</span> </p>
         </div>
     </div>

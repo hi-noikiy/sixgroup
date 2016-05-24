@@ -90,6 +90,9 @@ Route::any('login/register','LoginController@register');
 Route::any('login/phone','LoginController@phone');
 //手机登陆接收表单
 Route::any('login/cellphone','LoginController@cellphone');
+//推出登陆
+Route::any('login/del','LoginController@del');
+
 //房源展示页面
 Route::any('room','RoomController@index');
 //房源信息接收表单

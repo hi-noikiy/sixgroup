@@ -19,13 +19,14 @@ class GoodController extends Controller
 
 	/*商品详情*/
 	public function index(){
-		$r_id='7';
+		//$r_id=isset($_GET['r_id'])?$_GET['r_id']:'';
+		$r_id=1;
 		$room=DB::table('room')
             ->join('comment', 'room.r_id', '=', 'comment.r_id')
             ->where('room.r_id', '=',$r_id)
             ->get();
-        var_dump($room);exit;
-		return view('Good/good',['room'=>$room[0]]);
+        //var_dump($room);exit;
+		return view('Good/good',['room'=>$room]);
 
 	}
 
