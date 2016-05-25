@@ -83,7 +83,7 @@
     </div>
 </div>
 
-<form action="{{URL('orderad')}}" autocomplete="off" id="orderForm" method="post">
+<form action="{{URL('orderad')}}" autocomplete="off" id="orderForm" method="post" onsubmit="return func()">
     <div class="m-wrap clearfix">
         <div class="m-cont">
             <!--预订信息-->
@@ -165,14 +165,14 @@
                 <div class="control-group">
                     <label for="" class="control-lab"><b>*</b>姓名： </label>
                     <div class="controls">
-                        <input class="ipt-lg" data-val="true" data-val-required="请填写真实的入住联系人姓名" id="Name" maxlength="20" name="u_name" placeholder="" type="text" value="" />
+                        <input class="ipt-lg" data-val="true" data-val-required="请填写真实的入住联系人姓名" id="u_name" maxlength="20" name="u_name" placeholder="" type="text" value="" onblur="check_name()"/><span id="sname" style="color:red;font-size:15px"></span>
                         <div data-valmsg-for="OrderLinkmanList[0].Name" data-valmsg-replace="true"></div>
                     </div>
                 </div>
                 <div class="control-group">
                     <label for="" class="control-lab"><b>*</b>手机：</label>
                     <div class="controls">
-                        <input class="ipt-lg" data-val="true" data-val-regex="请填写有效手机号码,我们将通过此号码与您取得联系" data-val-regex-pattern="^[1-9]\d{10}$" data-val-required="请填写有效手机号码,我们将通过此号码与您取得联系" id="Mobile" maxlength="11" name="u_phone" type="text" value="" />
+                        <input class="ipt-lg" data-val="true" data-val-regex="请填写有效手机号码,我们将通过此号码与您取得联系" data-val-regex-pattern="^[1-9]\d{10}$" data-val-required="请填写有效手机号码,我们将通过此号码与您取得联系" id="u_phone" maxlength="11" name="u_phone" type="text" value="" onblur="check_phone()"/><span id="sphone" style="color:red;font-size:15px"></span>
                         <div data-valmsg-for="OrderLinkmanList[0].Mobile" data-valmsg-replace="true"></div>
                     </div>
                 </div>
@@ -180,7 +180,7 @@
                 <div class="control-group">
                     <label for="" class="control-lab">邮箱：</label>
                     <div class="controls">
-                        <input class="ipt-lg" data-val="true" data-val-regex="E-mail 格式错误" data-val-regex-pattern="[A-Za-z0-9._%+-]+@([a-zA-Z0-9_-])+(\.[a-zA-Z0-9_-]+)+" id="Email" maxlength="50" name="u_email" type="text" value="" />
+                        <input class="ipt-lg" data-val="true" data-val-regex="E-mail 格式错误" data-val-regex-pattern="[A-Za-z0-9._%+-]+@([a-zA-Z0-9_-])+(\.[a-zA-Z0-9_-]+)+" id="u_email" maxlength="50" name="u_email" type="text" value="" onblur="check_email()"/><span id="semail" style="color:red;font-size:15px"></span>
 
                         <div data-valmsg-for="OrderLinkmanList[0].Email" data-valmsg-replace="true"></div>
                     </div>
@@ -896,7 +896,7 @@
                 </div>
                 <div class="btn-cont">
                     <input name="_token" value="{{csrf_token()}}" type="hidden"/>
-                    <input type="submit" value="提交订单" id="ordersubmit1" class="submit-btn" onclick="_gaq.push(['_trackEvent', 'pcOrderInfo', '提交订单']);" />
+                    <input type="submit" value="提交订单" id="sub" class="submit-btn" onclick="_gaq.push(['_trackEvent', 'pcOrderInfo', '提交订单']);" />
                     <input type="button" value="正在提交中..." id="submitting" class="submit-btn dn" style="cursor: default; display: none;" />
                 </div>
             </div>
@@ -1473,3 +1473,93 @@
 
 </body>
 </html>
+<script>
+    //验证用户名
+    function check_name()
+    {
+        var u_name=document.getElementById('u_name').value;
+        var sub=document.getElementById('sub').value;
+        var u_name1=/^[\x4e00-\x9fa5]+$/;
+        if(u_name=='')
+        {
+            document.getElementById('sname').innerHTML='姓名不能为空';
+            document.getElementById('sub').disabled=true;
+            return false;
+        }
+        else if(u_name1.test(u_name))
+        {
+            document.getElementById('sname').innerHTML='姓名必须为汉字';
+            document.getElementById('sub').disabled=true;
+            return false;
+        }
+        else
+        {
+            document.getElementById('sname').innerHTML='';
+            document.getElementById('sub').disabled=false;
+            return true;
+        }
+    }
+    //验证手机号
+    function check_phone()
+    {
+        var u_phone=document.getElementById('u_phone').value;
+        var sub=document.getElementById('sub').value;
+        var u_phone1=/^\d{11}$/;
+        if(u_phone=='')
+        {
+            document.getElementById('sphone').innerHTML='手机号不能为空';
+            document.getElementById('sub').disabled=true;
+            return false;
+        }
+        else if(u_phone1.test(u_phone))
+        {
+            document.getElementById('sphone').innerHTML='';
+            document.getElementById('sub').disabled=false;
+            return true;
+        }
+        else
+        {
+            document.getElementById('sphone').innerHTML='手机号必须为11位';
+            document.getElementById('sub').disabled=true;
+            return false;
+        }
+
+    }
+    //验证邮箱
+    function check_email()
+    {
+        var u_email=document.getElementById('u_email').value;
+        var sub=document.getElementById('sub').value;
+        var u_email1=/^\w+@\w+(\.)com|net|cn|edu$/;
+        if(u_email=='')
+        {
+            document.getElementById('semail').innerHTML='邮箱不能为空';
+            document.getElementById('sub').disabled=true;
+            return false;
+        }
+        else if(u_email1.test(u_email))
+        {
+            document.getElementById('semail').innerHTML='';
+            document.getElementById('sub').disabled=false;
+            return true;
+        }
+        else
+        {
+            document.getElementById('semail').innerHTML='邮箱格式不正确';
+            document.getElementById('sub').disabled=true;
+            return false;
+        }
+    }
+    function func()
+    {
+        if(check_name()&&check_phone()&&check_email())
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+</script>
+
