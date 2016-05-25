@@ -4,6 +4,7 @@ namespace backend\controllers;
 use Yii;
 use backend\models\Users;
 use yii\web\Session;
+use  yii\web\Request;
 class LoginController extends \yii\web\Controller{
     public function actionIndex(){
         return $this->renderPartial('index');
@@ -12,8 +13,9 @@ class LoginController extends \yii\web\Controller{
      * 用户登录
      */
     public function actionInsert(){
-        $u_name=$_POST['u_name'];
-        $u_pwd=$_POST['u_pwd'];
+        $request = Yii::$app->request;
+        $u_name=$request->post('u_name');
+        $u_pwd=$request->post('u_pwd');
         $connection = \Yii::$app->db;
         $sql= $connection->createCommand("SELECT state,time FROM users WHERE u_name='$u_name'");
         $rem = $sql->queryOne();

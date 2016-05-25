@@ -5,6 +5,7 @@ use Yii;
 use backend\models\User;
 use backend\models\Room;
 use yii\data\Pagination;
+use  yii\web\Request;
 class MainController extends \yii\web\Controller{
     public function actionIndex(){
         //调用模型层
