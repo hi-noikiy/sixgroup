@@ -62,10 +62,11 @@ class MainController extends \yii\web\Controller{
      * 房源审核
      */
     public function actionUpdate(){
-        //echo 555;die;
-        $state=$_GET['state'];
-        $u_id=$_GET['u_id'];
-        $connection = \Yii::$app->db;
+        //调用传值方式
+        $request = Yii::$app->request;
+        $r_id=$request->get('r_id');
+        $state=$request->get('state');
+		$connection = \Yii::$app->db;
         $connection->createCommand()->update('room', ['state' => $state], 'u_id='.$u_id)->execute();
         return $this->redirect(array('main/tables'));
         //echo "<script>alert('已审核');location.href='index.php?r=main/tables'</script>";
