@@ -28,8 +28,11 @@ class GoodController extends Controller
         	->join('room', 'room.r_id', '=', 'comment.r_id')
         	->where('room.r_id', '=',$r_id)
         	->get();
-        //var_dump($com);exit;
-		return view('Good/good',['room'=>$room[0],'com'=>$com]);
+        $sum=count($com);	//评论条数
+        $img=$room[0]->r_img;	//获取图片字符串
+        $imgs=explode('|',$img);	//转换数组
+        //var_dump($img);die;
+		return view('Good/good',['room'=>$room[0],'com'=>$com,'img'=>$imgs,'sum'=>$sum]);
 
 	}
 

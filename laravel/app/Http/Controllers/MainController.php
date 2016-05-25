@@ -21,9 +21,10 @@ class MainController extends Controller{
 	public function index()
 	{
 		//列表信息
-		$sql="select * from room join type on room.r_type=type.ty_id";
-		$arr=DB::select($sql);
-		return view('Main/main',['room'=>$arr]);
+		$data = DB::table('room')
+			->join('type', 'room.r_type', '=', 'type.ty_id')
+			->paginate(3);
+		return view('Main/main',['room'=>$data]);
 	}
 
 

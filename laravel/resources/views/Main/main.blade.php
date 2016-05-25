@@ -114,8 +114,8 @@
 
 <div class="hd-wrap-fluid ">
     <div class="m-hd">
-        <div class="site-logo-cont">
-            <a href="http://www.tujia.com/" target="_blank" title="途家网首页" class="site-logo">途家网</a>
+                <div class="site-logo-cont">
+            <img src="images/logo1.png" width="150px" height="50px"/>
             <span class="logo-text">旅途中的家</span>
         </div>
         <div class="nav-list">
@@ -169,22 +169,7 @@
     <div class="wrap-large">
         
 
-<div class="m-ad-text" id="merit">
-    <span class="lab-text"><i class="icon-1"></i><a href="http://www.tujia.com/Promotion/ConsumerTrainning.htm" target="_blank" class="link-btn" onclick="_gaq.push(['_trackEvent', 'pcList', '了解途家']);">了解途家</a>（做饭洗衣聚会方便，<a href="http://content.tujia.com/Clause/PassengerCasualty.htm" class="link-btn" style="font-size:12px; color:#666">预付就赠11万人身险</a> ）</span>
 
-    <span class="lab-text">
-            
-                <i class="icon-2"></i><a href="http://vip.tujia.com/Memberhome/ReturnCash" target="_blank" class="link-btn" onclick="_gaq.push(['_trackEvent', 'pcList', '额外优惠']);">高级会员额外返现/立减总价的3-10%</a>
-            
-    </span>
-
-    <span class="lab-text">
-        <i class="icon-3"></i>
-            <a target="_blank" class="link-btn" href="http://vip.tujia.com/Memberhome/Integral">积分可抵订金</a>
-    </span>
-
-    <span class="lab-text"><i class="icon-4"></i><a href="http://www.tujia.com/Promotion/tujiabaozhangjihua.htm" target="_blank" rel="nofollow" class="link-btn" onclick="_gaq.push(['_trackEvent', 'pcList', '安心租']);">1000万安心租保障</a></span>
-</div>
     </div>
     
 
@@ -3942,7 +3927,7 @@
                        name="distancesort" title="按距离从近到远排序" class="">距离</a>
                 </div>
             </div>
-            <div class="total-house-amount"><span>15000+</span>套房屋符合条件</div>
+            <div class="total-house-amount">套房屋符合条件</div>
 
             <div class="f-clear"></div>
         </div>
@@ -4045,9 +4030,10 @@
 
     @foreach($room as $v)
     <div class="searchresult-list t-searchresult-list  clearfix" data-unitid="13460">
+    <?php $img=explode('|',$v->r_img) ?>
         <div class="house-img">
-            <a href="http://www.snails.com/laravel/public/uploads/{{$v->r_img}}" target="_blank" rel="nofollow" class="link-btn-pic" onclick="_gaq.push(['_trackEvent', 'pcList', '房屋点击']);">
-                <img src="http://www.snails.com/laravel/public/uploads/{{$v->r_img}}" alt="北京 北京光耀公寓豪华行政二居室" />
+            <a href="../public/images/{{$img[0]}}" target="_blank" rel="nofollow" class="link-btn-pic" onclick="_gaq.push(['_trackEvent', 'pcList', '房屋点击']);">
+                <img src="../public/images/{{$img[0]}}" alt="北京 北京光耀公寓豪华行政二居室" />
             </a>
             <div class="functions-menu">
                 <a href="javascript:;" class="view-pic">更多图片</a>
@@ -4208,6 +4194,7 @@
         </div>
     </div>
 @endforeach
+{!! $room->render() !!}
     <div id="PrepaidCardTooltip" class="m-tips-wrap" style="display: none">
         <div class="tips-content" style="width:220px">
             <div class="tips-info">所有产品均可直接全额预付房费，支持使用“途游卡、礼品卡、惠住卡、积分和账户余额”</div>
@@ -4282,7 +4269,7 @@
 
                 
 <!--MvcPager 1.5 for ASP.NET MVC 3.0 © 2009-2011 Webdiyer (http://www.webdiyer.com)-->
-<div class="pages"><span class='selected'>1</span><a href='/beijing_gongyu/se0/2/'>2</a><a href='/beijing_gongyu/se0/3/'>3</a><a href='/beijing_gongyu/se0/4/'>4</a><a href='/beijing_gongyu/se0/5/'>5</a><a href='/beijing_gongyu/se0/6/'>...</a><a href='/beijing_gongyu/se0/2/'>下一页</a><a href='/beijing_gongyu/se0/109/'>尾页</a></div>
+<div class="pages"></div>
 <!--MvcPager 1.5 for ASP.NET MVC 3.0 © 2009-2011 Webdiyer (http://www.webdiyer.com)-->
 
             </div>

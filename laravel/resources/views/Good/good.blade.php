@@ -325,54 +325,12 @@
     <div class="thumb-cont">
         <div class="shadow-box"></div>
         <div class="owl-carousel" style="width: 9999px">
+                @foreach($img as $v)
                     <div class="item">
-                        <img onload="javascript:imgLoadSuccess();" onerror="javascript:imgLoadFail(this);" src="http://pic.tujia.com/upload/unit/day_160125/thumb/201601251714465094_390_390.jpg" />
+                        <img onload="javascript:imgLoadSuccess();" onerror="javascript:imgLoadFail(this);" src="../public/images/{{$v}}" />
                     </div>
-                    <div class="item">
-                        <img onload="javascript:imgLoadSuccess();" onerror="javascript:imgLoadFail(this);" src="http://pic.tujia.com/upload/unit/day_160125/thumb/201601251714564014_390_390.jpg" />
-                    </div>
-                    <div class="item">
-                        <img onload="javascript:imgLoadSuccess();" onerror="javascript:imgLoadFail(this);" src="http://pic.tujia.com/upload/unit/day_160125/thumb/201601251715064189_390_390.jpg" />
-                    </div>
-                    <div class="item">
-                        <img onload="javascript:imgLoadSuccess();" onerror="javascript:imgLoadFail(this);" src="http://pic.tujia.com/upload/unit/day_160125/thumb/201601251715251681_390_390.jpg" />
-                    </div>
-                    <div class="item">
-                        <img onload="javascript:imgLoadSuccess();" onerror="javascript:imgLoadFail(this);" src="http://pic.tujia.com/upload/unit/day_160125/thumb/201601251715155061_390_390.jpg" />
-                    </div>
-                    <div class="item">
-                        <img onload="javascript:imgLoadSuccess();" onerror="javascript:imgLoadFail(this);" src="http://pic.tujia.com/upload/unit/day_160125/thumb/201601251717512270_390_390.jpg" />
-                    </div>
-                    <div class="item">
-                        <img onload="javascript:imgLoadSuccess();" onerror="javascript:imgLoadFail(this);" src="http://pic.tujia.com/upload/unit/day_160125/thumb/201601251718028765_390_390.jpg" />
-                    </div>
-                    <div class="item">
-                        <img onload="javascript:imgLoadSuccess();" onerror="javascript:imgLoadFail(this);" src="http://pic.tujia.com/upload/unit/day_160125/thumb/201601251718127985_390_390.jpg" />
-                    </div>
-                    <div class="item">
-                        <img onload="javascript:imgLoadSuccess();" onerror="javascript:imgLoadFail(this);" src="http://pic.tujia.com/upload/unit/day_160125/thumb/201601251719043350_390_390.jpg" />
-                    </div>
-                    <div class="item">
-                        <img onload="javascript:imgLoadSuccess();" onerror="javascript:imgLoadFail(this);" src="http://pic.tujia.com/upload/unit/day_160125/thumb/201601251719158890_390_390.jpg" />
-                    </div>
-                    <div class="item">
-                        <img onload="javascript:imgLoadSuccess();" onerror="javascript:imgLoadFail(this);" src="http://pic.tujia.com/upload/unit/day_160125/thumb/201601251719391955_390_390.jpg" />
-                    </div>
-                    <div class="item">
-                        <img onload="javascript:imgLoadSuccess();" onerror="javascript:imgLoadFail(this);" src="http://pic.tujia.com/upload/unit/day_160125/thumb/201601251720164081_390_390.jpg" />
-                    </div>
-                    <div class="item">
-                        <img onload="javascript:imgLoadSuccess();" onerror="javascript:imgLoadFail(this);" src="http://pic.tujia.com/upload/unit/day_160125/thumb/201601251719527669_390_390.jpg" />
-                    </div>
-                    <div class="item">
-                        <img onload="javascript:imgLoadSuccess();" onerror="javascript:imgLoadFail(this);" src="http://pic.tujia.com/upload/unit/day_160125/thumb/201601251720048574_390_390.jpg" />
-                    </div>
-                    <div class="item">
-                        <img onload="javascript:imgLoadSuccess();" onerror="javascript:imgLoadFail(this);" src="http://pic.tujia.com/upload/unit/day_160125/thumb/201601251720288923_390_390.jpg" />
-                    </div>
-                    <div class="item">
-                        <img onload="javascript:imgLoadSuccess();" onerror="javascript:imgLoadFail(this);" src="http://pic.tujia.com/upload/unit/day_160125/thumb/20160125172042178_390_390.jpg" />
-                    </div>
+                @endforeach
+
         </div>
         <div id="imgControl" class="thumb-btn" style="display:none">
             <a href="javascript:;" class="btn-prev" id="hd-prev">上一张</a>
@@ -596,7 +554,7 @@
                     </li>
                         <li id="commentsareatab" class="j-tabs">
                             <a href="#commentsArea" id="usercomments" onclick="_gaq.push(['_trackEvent', 'pcDetail', '点评导航']);">
-                                入住点评<span id="usercomments-value" class="total-box">405</span>条
+                                入住点评<span id="usercomments-value" class="total-box">{{$sum}}</span>条
                             </a>
                         </li>
                     <li id="unitgoodexperiencetabcontainer" style="display:none" >
@@ -905,7 +863,7 @@
     <div id="commentsArea" class="m-column-box">
         <a name="comment" id="comment" href="#comment"></a>
         <div class="m-column-tit t-column-tit clearfix" id="commentsArea">
-            <h2 id="commentsTitle">本房屋点评（<b>405</b>条）</h2>
+            <h2 id="commentsTitle">本房屋点评（<b>{{$sum}}</b>条）</h2>
             <div class="point-info" rel="j-experience-info">
                 发点评赢体验券，乐享体验房<i class="icon-desc-text"></i>
             </div>
