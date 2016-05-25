@@ -751,13 +751,13 @@ $session->open();
 														</td>
 														<!-- <td><?php echo $v['u_id']?></td> -->
 														<td><?php echo $v['r_title']?></td>
-														<td class="hidden-480"><?php echo $v['r_comment']?></td>
+                                                        <td class="hidden-480"><?php echo str_replace(substr($v['r_comment'],21),'...',$v['r_comment'])?></td>
 														<td><?php echo $v['r_info']?></td>
 
 <!--														<td class="hidden-480">-->
 <!--															<span class="label label-sm label-warning">Expiring</span>-->
 <!--														</td>-->
-														<td><?php echo $v['r_introduce']?></td>
+                                                        <td><a href="index.php?r=main/look&r_id=<?php echo $v['r_id']?>"><?php echo str_replace(substr($v['r_introduce'],21),'....',$v['r_introduce'])?></a></td>
 														<input type="hidden" id="<?php echo $v['r_id']?>" value="<?php echo $v['state']?>">
 														<td id='tr_<?php echo $v['r_id']?>'><?php if($v['state']==0){?>
 														<a href="javascript:void(0)" onclick="audite(<?php echo $v['r_id']?>)">待审核
@@ -766,7 +766,9 @@ $session->open();
 															<?php }else{?>
 															<span style="color:blue">-</span>
 															<?php }?>
-															</a>
+															</a>||
+                                                            <a href="index.php?r=main/check&r_id=<?php echo $v['r_id']?>">查看</a>
+
 														</td>
 													<!-- 	<td>
 															<div class="visible-md visible-lg hidden-sm hidden-xs btn-group">
