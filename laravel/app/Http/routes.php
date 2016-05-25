@@ -39,6 +39,8 @@ Route::any('carhome','ThemeController@carhome');
 Route::any('jing','ThemeController@jing');
 
 
+Route::any('demo','RegisterController@demo');
+Route::any('demo1','RegisterController@demo1');
 
 
 /*登录*/

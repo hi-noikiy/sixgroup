@@ -119,7 +119,7 @@
                     <div class="control-group">
                         <label class="controls-label"><b>*</b>手机验证码：</label>
                         <div class="controls">
-                            <input class="ipt-text-verify verification"  onblur="key()" data-message="请输入验证码" data-val="true" data-val-required="验证码不能为空" id="verifycode" maxlength="4" name="verifycode" type="text" value="" />
+                            <input class="ipt-text-verify verification"  onblur="key()" data-message="请输入验证码" data-val="true" data-val-required="验证码不能为空" id="verifycode" maxlength="4" name="verifycode" type="text"  />
                             <span id="errorMsgCode">
                                 
                             </span>

@@ -24,7 +24,7 @@ class RegisterController extends Controller
 	{
 		 return view('Register/register');
 	}
-
+	
 
 	/*邮件发送*/
 	public function emailSend()
@@ -77,6 +77,21 @@ class RegisterController extends Controller
 	public function emailActivation()
 	{
 		$u_id= Request::get('u_id');
+		
+	}
+
+
+	/*XSS测试-表单*/
+	public function demo()
+	{
+		return view('Register/demo');
+		
+	}
+	/*XSS测试*/
+	public function demo1()
+	{
+		$user= Request::get('user');
+		echo $user;
 		
 	}
 }

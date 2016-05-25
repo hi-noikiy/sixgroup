@@ -132,7 +132,16 @@
             </ul>
         </div>
 
-        <div class="sub-link" lazyloadurl="http://vip.tujia.com/WebParts/Portal/UserInfo?isShowCreateNewStore=False"></div>
+                 <div class="sub-link" >
+    @if($name=Session::get('u_name'))
+    欢迎<font style="color: red">{{$name}}</font>来到蜗牛家!
+    <a href="{{URL('login/del')}}" rel="nofollow">退出</a>
+    @else
+    <a href="{{URL('register')}}" rel="nofollow" class="link-btn">注册</a>
+    <a href="{{URL('login')}}" rel="nofollow">登录</a>
+    @endif
+    <a href="{{URL('room')}}"  rel="nofollow" class="t-link-btn">免费发布房屋</a>
+        </div>
     </div>
 </div>
 
