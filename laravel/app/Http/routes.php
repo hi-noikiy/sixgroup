@@ -73,7 +73,7 @@ Route::any('register/reg','RegisterController@register');
 //邮件发送
 Route::any('register/send','RegisterController@emailSend');
 //邮件激活
-Route::any('register/act?uid=1','RegisterController@emailActivation');
+Route::any('register/act','RegisterController@emailActivation');
 //手机验证
 Route::any('register/phone','RegisterController@phoneVerification');
 

@@ -6,6 +6,7 @@ $config = [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
             'cookieValidationKey' => 'CFcptTfEm9kW1020WdSOtmXz8Ce8d9RI',
         ],
+      
     ],
 ];
 

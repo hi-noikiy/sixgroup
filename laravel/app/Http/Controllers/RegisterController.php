@@ -31,7 +31,7 @@ class RegisterController extends Controller
 	{
 		//接收邮箱地址
 		$email= Request::get('email');
-		$url='http://www.snail.com/laravel/public/register/act?u_id=1';
+		$url='http://www.snail.com/register/act?email='.$email;
 		$data = ['email'=>$email, 'name'=>'蜗牛', 'uid'=>'1', 'activationcode'=>'1','url'=>$url];
 		Mail::send('Register/activation', $data, function($message) use($data)
 		{
@@ -51,7 +51,7 @@ class RegisterController extends Controller
 		$Password=Request::get('Password');
 		$FromId=Request::get('FromId');
 		$Email=Request::get('Email');
-		$operation=DB::insert("insert into user (u_phone,u_pwd,u_email) value('$Mobile','$Password','$Email')");
+		$operation=DB::insert("insert into user (u_phone,u_pwd,u_email,u_evaluate) value('$Mobile','$Password','$Email',200)");
 		if ($operation) {
 			return view('Message/welcome');
 		}else{
@@ -76,8 +76,12 @@ class RegisterController extends Controller
 	/*邮箱激活*/
 	public function emailActivation()
 	{
-		$u_id= Request::get('u_id');
-		
+		$email= Request::get('email');
+		//echo $email;
+		$bool=DB::update("update user set u_evaluate=u_evaluate+'800' where u_email = '$email'");
+		if ($bool) {
+			echo "<script>alert('激活成功,留在本页')</script>";
+		}
 	}
 
 

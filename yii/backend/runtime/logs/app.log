@@ -9758,3 +9758,214 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1463730319.411
     'REQUEST_TIME' => 1463730319
 ]
+2016-05-26 01:23:59 [127.0.0.1][-][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)' in E:\wamp--\www\six\yii\vendor\yiisoft\yii2\db\Connection.php:579
+Stack trace:
+#0 E:\wamp--\www\six\yii\vendor\yiisoft\yii2\db\Connection.php(579): PDO->__construct('mysql:host=127....', 'root', 'root', NULL)
+#1 E:\wamp--\www\six\yii\vendor\yiisoft\yii2\db\Connection.php(529): yii\db\Connection->createPdoInstance()
+#2 E:\wamp--\www\six\yii\vendor\yiisoft\yii2\db\Connection.php(836): yii\db\Connection->open()
+#3 E:\wamp--\www\six\yii\vendor\yiisoft\yii2\db\Connection.php(823): yii\db\Connection->getMasterPdo()
+#4 E:\wamp--\www\six\yii\vendor\yiisoft\yii2\db\Command.php(216): yii\db\Connection->getSlavePdo()
+#5 E:\wamp--\www\six\yii\vendor\yiisoft\yii2\db\Command.php(831): yii\db\Command->prepare('<span class="ke...')
+#6 E:\wamp--\www\six\yii\vendor\yiisoft\yii2\db\Command.php(373): yii\db\Command->queryInternal('<span class="st...', '<span class="ke...')
+#7 E:\wamp--\www\six\yii\backend\controllers\LoginController.php(21): yii\db\Command->queryOne()
+#8 [internal function]: backend\controllers\LoginController->actionInsert()
+#9 E:\wamp--\www\six\yii\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array('[<span class="t...', '[]')
+#10 E:\wamp--\www\six\yii\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams('[<span class="s...')
+#11 E:\wamp--\www\six\yii\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('<span class="st...', '[<span class="s...')
+#12 E:\wamp--\www\six\yii\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('<span class="st...', '[<span class="s...')
+#13 E:\wamp--\www\six\yii\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#14 E:\wamp--\www\six\yii\backend\web\index.php(18): yii\base\Application->run()
+#15 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)' in E:\wamp--\www\six\yii\vendor\yiisoft\yii2\db\Connection.php:534
+Stack trace:
+#0 E:\wamp--\www\six\yii\vendor\yiisoft\yii2\db\Connection.php(836): yii\db\Connection->open()
+#1 E:\wamp--\www\six\yii\vendor\yiisoft\yii2\db\Connection.php(823): yii\db\Connection->getMasterPdo()
+#2 E:\wamp--\www\six\yii\vendor\yiisoft\yii2\db\Command.php(216): yii\db\Connection->getSlavePdo()
+#3 E:\wamp--\www\six\yii\vendor\yiisoft\yii2\db\Command.php(831): yii\db\Command->prepare('<span class="ke...')
+#4 E:\wamp--\www\six\yii\vendor\yiisoft\yii2\db\Command.php(373): yii\db\Command->queryInternal('<span class="st...', '<span class="ke...')
+#5 E:\wamp--\www\six\yii\backend\controllers\LoginController.php(21): yii\db\Command->queryOne()
+#6 [internal function]: backend\controllers\LoginController->actionInsert()
+#7 E:\wamp--\www\six\yii\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array('[<span class="t...', '[]')
+#8 E:\wamp--\www\six\yii\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams('[<span class="s...')
+#9 E:\wamp--\www\six\yii\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('<span class="st...', '[<span class="s...')
+#10 E:\wamp--\www\six\yii\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('<span class="st...', '[<span class="s...')
+#11 E:\wamp--\www\six\yii\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 E:\wamp--\www\six\yii\backend\web\index.php(18): yii\base\Application->run()
+#13 {main}
+Additional Information:
+
+2016-05-26 01:23:59 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'login/insert'
+]
+
+$_POST = [
+    '_csrf' => 'cXdYbERLQi43AR07HBEUfTYEGT0.ZnBYIQ5uHwEpBkojRRxfdxwJfw=='
+    'u_name' => '张三'
+    'u_pwd' => '123'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '6vt3f1t2djg98ivjnsicgs4ec4'
+    '_csrf' => '22e38c071263380e0ea452d5bf5d3ca59183d70fe797f7cdb68b0521252d2d79a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"FvEWXZVSGsAQz-2vPy6sEbDdR2D33WKQ\";}'
+    '__qc_wId' => '466'
+    'pgv_pvid' => '4877583248'
+    'CNZZDATA155540' => 'cnzz_eid=1739619714-1464215960-&ntime=1464215960'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.snailadmin.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:46.0) Gecko/20100101 Firefox/46.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://www.snailadmin.com/index.php?r=login/index'
+    'HTTP_COOKIE' => 'PHPSESSID=6vt3f1t2djg98ivjnsicgs4ec4; _csrf=22e38c071263380e0ea452d5bf5d3ca59183d70fe797f7cdb68b0521252d2d79a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22FvEWXZVSGsAQz-2vPy6sEbDdR2D33WKQ%22%3B%7D; __qc_wId=466; pgv_pvid=4877583248; CNZZDATA155540=cnzz_eid%3D1739619714-1464215960-%26ntime%3D1464215960'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'CONTENT_LENGTH' => '102'
+    'PATH' => 'C:\\Program Files\\Broadcom\\Broadcom 802.11 Network Adapter;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Acer\\abFiles\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\WIDCOMM\\Bluetooth Software\\;C:\\Program Files\\WIDCOMM\\Bluetooth Software\\syswow64;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;E:\\server\\mysql\\bin;E:\\CentOSA\\svn\\To\\bin;E:\\wamp--\\bin\\php\\php5.5.12;C:\\ProgramData\\ComposerSetup\\bin;E:\\Git\\bin;'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.9 (Win64) PHP/5.5.12 Server at www.snailadmin.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.9 (Win64) PHP/5.5.12'
+    'SERVER_NAME' => 'www.snailadmin.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'E:/wamp--/www/six/yii/backend/web/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/wamp--/www/six/yii/backend/web/'
+    'SERVER_ADMIN' => 'webmaster@dummy-host2.example.com'
+    'SCRIPT_FILENAME' => 'E:/wamp--/www/six/yii/backend/web/index.php'
+    'REMOTE_PORT' => '65060'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=login/insert'
+    'REQUEST_URI' => '/index.php?r=login/insert'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1464218639.398
+    'REQUEST_TIME' => 1464218639
+]
+2016-05-26 01:29:06 [::1][-][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)' in E:\wamp--\www\six\yii\vendor\yiisoft\yii2\db\Connection.php:579
+Stack trace:
+#0 E:\wamp--\www\six\yii\vendor\yiisoft\yii2\db\Connection.php(579): PDO->__construct('mysql:host=127....', 'root', 'root', NULL)
+#1 E:\wamp--\www\six\yii\vendor\yiisoft\yii2\db\Connection.php(529): yii\db\Connection->createPdoInstance()
+#2 E:\wamp--\www\six\yii\vendor\yiisoft\yii2\db\Connection.php(836): yii\db\Connection->open()
+#3 E:\wamp--\www\six\yii\vendor\yiisoft\yii2\db\Connection.php(823): yii\db\Connection->getMasterPdo()
+#4 E:\wamp--\www\six\yii\vendor\yiisoft\yii2\db\Command.php(216): yii\db\Connection->getSlavePdo()
+#5 E:\wamp--\www\six\yii\vendor\yiisoft\yii2\db\Command.php(831): yii\db\Command->prepare('<span class="ke...')
+#6 E:\wamp--\www\six\yii\vendor\yiisoft\yii2\db\Command.php(373): yii\db\Command->queryInternal('<span class="st...', '<span class="ke...')
+#7 E:\wamp--\www\six\yii\backend\controllers\LoginController.php(21): yii\db\Command->queryOne()
+#8 [internal function]: backend\controllers\LoginController->actionInsert()
+#9 E:\wamp--\www\six\yii\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array('[<span class="t...', '[]')
+#10 E:\wamp--\www\six\yii\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams('[<span class="s...')
+#11 E:\wamp--\www\six\yii\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('<span class="st...', '[<span class="s...')
+#12 E:\wamp--\www\six\yii\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('<span class="st...', '[<span class="s...')
+#13 E:\wamp--\www\six\yii\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#14 E:\wamp--\www\six\yii\backend\web\index.php(18): yii\base\Application->run()
+#15 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)' in E:\wamp--\www\six\yii\vendor\yiisoft\yii2\db\Connection.php:534
+Stack trace:
+#0 E:\wamp--\www\six\yii\vendor\yiisoft\yii2\db\Connection.php(836): yii\db\Connection->open()
+#1 E:\wamp--\www\six\yii\vendor\yiisoft\yii2\db\Connection.php(823): yii\db\Connection->getMasterPdo()
+#2 E:\wamp--\www\six\yii\vendor\yiisoft\yii2\db\Command.php(216): yii\db\Connection->getSlavePdo()
+#3 E:\wamp--\www\six\yii\vendor\yiisoft\yii2\db\Command.php(831): yii\db\Command->prepare('<span class="ke...')
+#4 E:\wamp--\www\six\yii\vendor\yiisoft\yii2\db\Command.php(373): yii\db\Command->queryInternal('<span class="st...', '<span class="ke...')
+#5 E:\wamp--\www\six\yii\backend\controllers\LoginController.php(21): yii\db\Command->queryOne()
+#6 [internal function]: backend\controllers\LoginController->actionInsert()
+#7 E:\wamp--\www\six\yii\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array('[<span class="t...', '[]')
+#8 E:\wamp--\www\six\yii\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams('[<span class="s...')
+#9 E:\wamp--\www\six\yii\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('<span class="st...', '[<span class="s...')
+#10 E:\wamp--\www\six\yii\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('<span class="st...', '[<span class="s...')
+#11 E:\wamp--\www\six\yii\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 E:\wamp--\www\six\yii\backend\web\index.php(18): yii\base\Application->run()
+#13 {main}
+Additional Information:
+
+2016-05-26 01:29:06 [::1][-][-][info][application] $_GET = [
+    'r' => 'login/insert'
+]
+
+$_POST = [
+    '_csrf' => 'QXpJNTZyMzEpHSxvZSB5STcDe0xeHwABFzF/ZGwjdmYAHABAdANecg=='
+    'u_name' => '张三'
+    'u_pwd' => '123'
+    'remember' => '1'
+]
+
+$_COOKIE = [
+    '_jzqco' => '|||||1.1414377251.1464163521181.1464217395742.1464217400247.1464217395742.1464217400247.0.0.0.129.124'
+    'Hm_lvt_405c96e7f6bed44fb846abfe1f65c6f5' => '1464085798,1464135313,1464159781,1464216779'
+    '_ceg_s' => 'o7r9dk'
+    '_ceg_u' => 'o7r9dk'
+    'accessId' => '797098a0-b29d-11e5-b3b1-49764155fe50'
+    '_jzqa' => '1.1749954432183686000.1464171388.1464178783.1464181366.3'
+    '_jzqx' => '1.1464171388.1464181366.2.jzqsr=localhost|jzqct=/six/laravel/public/good.jzqsr=localhost|jzqct=/six/laravel/public/orderadd'
+    '_jzqckmp' => '1'
+    'lzstat_uv' => '29382978962251823197|'
+    'pgv_pvi' => '6985494528'
+    '__xsptplus184' => '184.2.1464178783.1464178783.1#3|localhost||||##PPnRMoIwIhRHFGULA7Zf0a6SU2Tlnpc2#'
+    'Hm_lvt_02fc96fc6232fcb90748551f45e3bfa1' => '1464009656,1464053090,1464171765'
+    'mayi_uuid' => '5677570240471230690071'
+    'sgsa_id' => 'localhost|1464171765899656'
+    'Hm_lvt_0294bbb72b1c6a6b342da076397c9af2' => '1464009657,1464053090,1464171766'
+    '_ga' => 'GA1.1.451501838.1464171768'
+    'pgv_pvid' => '8374168492'
+    'CNZZDATA155540' => 'cnzz_eid=1344943304-1464167351-&ntime=1464215960'
+    'XSRF-TOKEN' => 'eyJpdiI6ImdHYnUrRnc1TzFEVGpKUENmK0M5Y3c9PSIsInZhbHVlIjoibU03UkcxbUNramV1XC8ycXlBOWdYXC9ydnhJazFUQVdWb0RiM2hcL3pabk9JZHhPRU12dElTa0ZOQWpVcmhPS2RKc0NxcUhQNzJJOWNocDhCNGF5ajJVVEE9PSIsIm1hYyI6Ijg5MzRmZDVmY2QwZDBlODQwNDZlMDk4M2NjZmU2YWZkM2MxMjEzNzFjN2U3MjNjMTM0ZTdlZWVhNjNlNDU3NzMifQ=='
+    'laravel_session' => 'eyJpdiI6Inl5VkwzMzRjSG43UndGZjRyaldjdXc9PSIsInZhbHVlIjoiVFZXMUR3dDBmWGhjMG04VUJiVXpKR0hRMlwvSW1tek4yWk9QaDFQRFJ1Y1NlNUlhcWxiT2I4MG5oVlNnR3RMTFBDOW05TVZCWXRBQ2ljbzJzczF1VGpBPT0iLCJtYWMiOiJmYzgyMGJhODliYTA2NTYwN2Q0MjY4NDg2MmRmNDBiZjY5NmIxZmY4MzQ1YTllM2MxMGZmOWRlY2EyMmU2MDZmIn0='
+    'Hm_lpvt_405c96e7f6bed44fb846abfe1f65c6f5' => '1464217401'
+    'tuJiaAnalyticsSessionId' => '1ac5c1a0-9289-7b11-1839-7cf1bac25ede'
+    'PHPSESSID' => 'c7tvvn2lfaebiv9v05itr3pf94'
+    '_csrf' => '9a98d57bf48451a264bb56cfb348556c85345eaca32f9916f49b33be6b961b44a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"hgeZSRJxvy2yhm30VK6QZQEWAfIuBqmC\";}'
+    '__qc_wId' => '885'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:46.0) Gecko/20100101 Firefox/46.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/six/yii/backend/web/index.php?r=login'
+    'HTTP_COOKIE' => '_jzqco=%7C%7C%7C%7C%7C1.1414377251.1464163521181.1464217395742.1464217400247.1464217395742.1464217400247.0.0.0.129.124; Hm_lvt_405c96e7f6bed44fb846abfe1f65c6f5=1464085798,1464135313,1464159781,1464216779; _ceg.s=o7r9dk; _ceg.u=o7r9dk; accessId=797098a0-b29d-11e5-b3b1-49764155fe50; _jzqa=1.1749954432183686000.1464171388.1464178783.1464181366.3; _jzqx=1.1464171388.1464181366.2.jzqsr=localhost|jzqct=/six/laravel/public/good.jzqsr=localhost|jzqct=/six/laravel/public/orderadd; _jzqckmp=1; lzstat_uv=29382978962251823197|; pgv_pvi=6985494528; __xsptplus184=184.2.1464178783.1464178783.1%233%7Clocalhost%7C%7C%7C%7C%23%23PPnRMoIwIhRHFGULA7Zf0a6SU2Tlnpc2%23; Hm_lvt_02fc96fc6232fcb90748551f45e3bfa1=1464009656,1464053090,1464171765; mayi_uuid=5677570240471230690071; sgsa_id=localhost|1464171765899656; Hm_lvt_0294bbb72b1c6a6b342da076397c9af2=1464009657,1464053090,1464171766; _ga=GA1.1.451501838.1464171768; pgv_pvid=8374168492; CNZZDATA155540=cnzz_eid%3D1344943304-1464167351-%26ntime%3D1464215960; XSRF-TOKEN=eyJpdiI6ImdHYnUrRnc1TzFEVGpKUENmK0M5Y3c9PSIsInZhbHVlIjoibU03UkcxbUNramV1XC8ycXlBOWdYXC9ydnhJazFUQVdWb0RiM2hcL3pabk9JZHhPRU12dElTa0ZOQWpVcmhPS2RKc0NxcUhQNzJJOWNocDhCNGF5ajJVVEE9PSIsIm1hYyI6Ijg5MzRmZDVmY2QwZDBlODQwNDZlMDk4M2NjZmU2YWZkM2MxMjEzNzFjN2U3MjNjMTM0ZTdlZWVhNjNlNDU3NzMifQ%3D%3D; laravel_session=eyJpdiI6Inl5VkwzMzRjSG43UndGZjRyaldjdXc9PSIsInZhbHVlIjoiVFZXMUR3dDBmWGhjMG04VUJiVXpKR0hRMlwvSW1tek4yWk9QaDFQRFJ1Y1NlNUlhcWxiT2I4MG5oVlNnR3RMTFBDOW05TVZCWXRBQ2ljbzJzczF1VGpBPT0iLCJtYWMiOiJmYzgyMGJhODliYTA2NTYwN2Q0MjY4NDg2MmRmNDBiZjY5NmIxZmY4MzQ1YTllM2MxMGZmOWRlY2EyMmU2MDZmIn0%3D; Hm_lpvt_405c96e7f6bed44fb846abfe1f65c6f5=1464217401; tuJiaAnalyticsSessionId=1ac5c1a0-9289-7b11-1839-7cf1bac25ede; PHPSESSID=c7tvvn2lfaebiv9v05itr3pf94; _csrf=9a98d57bf48451a264bb56cfb348556c85345eaca32f9916f49b33be6b961b44a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22hgeZSRJxvy2yhm30VK6QZQEWAfIuBqmC%22%3B%7D; __qc_wId=885'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'CONTENT_LENGTH' => '115'
+    'PATH' => 'C:\\Program Files\\Broadcom\\Broadcom 802.11 Network Adapter;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Acer\\abFiles\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\WIDCOMM\\Bluetooth Software\\;C:\\Program Files\\WIDCOMM\\Bluetooth Software\\syswow64;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;E:\\server\\mysql\\bin;E:\\CentOSA\\svn\\To\\bin;E:\\wamp--\\bin\\php\\php5.5.12;C:\\ProgramData\\ComposerSetup\\bin;E:\\Git\\bin;'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.9 (Win64) PHP/5.5.12 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.9 (Win64) PHP/5.5.12'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'E:/wamp--/www/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/wamp--/www/'
+    'SERVER_ADMIN' => 'webmaster@dummy-host2.example.com'
+    'SCRIPT_FILENAME' => 'E:/wamp--/www/six/yii/backend/web/index.php'
+    'REMOTE_PORT' => '65350'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=login/insert'
+    'REQUEST_URI' => '/six/yii/backend/web/index.php?r=login/insert'
+    'SCRIPT_NAME' => '/six/yii/backend/web/index.php'
+    'PHP_SELF' => '/six/yii/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1464218946.474
+    'REQUEST_TIME' => 1464218946
+]

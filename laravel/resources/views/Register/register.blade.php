@@ -241,12 +241,12 @@
     {
         var Mobile=$('#Mobile').val();
         var yz=Math.floor(Math.random()*10000);
-        code==yz;
+        code=yz;
         //alert(yz);
         $.ajax({
             type:'get',
             url:"{{URL('/register/phone')}}",
-            data:'phone='+Mobile+'&yz='+yz,
+            data:'phone='+Mobile+'&yz='+code,
             success:function(msg){
                 if (msg==1) {
                     alert('短信已发送');
