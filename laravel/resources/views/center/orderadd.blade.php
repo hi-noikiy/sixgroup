@@ -1523,7 +1523,6 @@
             document.getElementById('sub').disabled=true;
             return false;
         }
-
     }
     //验证邮箱
     function check_email()
