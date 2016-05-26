@@ -133,7 +133,14 @@
                             <p class="p-item">退房：<span class="date-box">{{$v->o_end_time}}</span></p>
                         </td>
                         <td>
-                            <p class="p-item">房费：<span class="price-box"><dfn class="">¥</dfn>{{$v->o_price}}</span><span class="divItem"><a href="payment">付款</a></span></p>
+                            <p class="p-item">房费：<span class="price-box"><dfn class="">¥</dfn>{{$v->o_price}}</span><span class="divItem">
+                                    @if($v->o_state==0)
+                                        <a href="payment">付款</a>
+                                    @else
+                                        付款成功
+                                    @endif
+                                </span>
+                            </p>
                             <span>
                                 <input name="_token" value="{{csrf_token()}}" type="hidden"/>
                                 <a href="javascript:void(0)" onclick="orderdelete({{$v->o_id}})">删除订单</a></span>
