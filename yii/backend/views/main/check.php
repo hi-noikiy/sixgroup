@@ -430,6 +430,19 @@ $session->open();
 															</div>
 														</td>
 													</tr>
+													<table id="sample-table-1" class="table table-striped table-bordered table-hover">
+												<thead>
+													<tr>
+														<th>房源基本信息</th>
+													</tr>
+													
+												</thead>
+												<tbody>
+													<tr>
+														<td><h4><?php echo $room['r_introduce']?></h4></td>
+													</tr>
+												</tbody>
+											</table>
 												</tbody>
 											</table>
 								<!-- <div style="margin-left: 420px">
