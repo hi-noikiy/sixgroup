@@ -327,7 +327,7 @@
         <div class="owl-carousel" style="width: 9999px">
                 @foreach($img as $v)
                     <div class="item">
-                        <img onload="javascript:imgLoadSuccess();" onerror="javascript:imgLoadFail(this);" src="../public/images/{{$v}}" />
+                        <img onload="javascript:imgLoadSuccess();" onerror="javascript:imgLoadFail(this);" src="images/{{$v}}" />
                     </div>
                 @endforeach
 
