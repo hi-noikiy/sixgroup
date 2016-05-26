@@ -1,4 +1,4 @@
-<!DOCTYPE HTML>
+f<!DOCTYPE HTML>
 <html>
 <head>
     <meta http-equiv="Cache-Control" content="no-transform" />
@@ -203,7 +203,8 @@
             <div class="coagent-cont">
                 <div class="coagent-tit"><span>合作网站账号登录</span></div>
                 <div class="link-btn-cont">
-                     <a href="javascript:;" id="qqLogin" title="QQ账户登录" onclick="qqLogin();return false;"  class="qq-login-btn">QQ</a>
+				<a href="{{URL('login/thirdparty')}}"  title="QQ账户登录"   class="qq-login-btn">QQ</a>
+                    <!-- <a href="javascript:;" id="qqLogin" title="QQ账户登录" onclick="qqLogin();return false;"  class="qq-login-btn">QQ</a>-->
                      <a href="javascript:;" id="sinaLogin" title="新浪微博账户登录" onclick="sinaLogin();return false;" class="sian-login-btn">新浪微博</a>
                      <a href="javascript:;" id="" title="微信账户登录" onclick="wechatLogin();return false;" class="weixin-login-btn">微信</a>
                 </div>

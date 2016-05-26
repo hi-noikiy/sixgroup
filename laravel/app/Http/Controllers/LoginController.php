@@ -231,5 +231,9 @@ class LoginController extends Controller
 		return view('Login/login');
 
 	}
+	//第三方登陆
+	public function thirdparty(){
+         return view('Login/test');
+	}
     
 }

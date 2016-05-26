@@ -89,6 +89,8 @@ Route::any('register/phone','RegisterController@phoneVerification');
 Route::get('login','LoginController@index');
 //普通登陆
 Route::any('login/register','LoginController@register');
+//第三方登陆
+Route::get('login/thirdparty','LoginController@thirdparty');
 //手机登陆发送短信
 Route::any('login/phone','LoginController@phone');
 //手机登陆接收表单
