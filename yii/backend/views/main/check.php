@@ -181,7 +181,7 @@ $session->open();
 						<li class="active open">
 							<a href="#" class="dropdown-toggle">
                                 <i class="icon-user"></i>
-								<span class="menu-text"> 房东管理 </span>
+								<span class="menu-text"> 房源管理 </span>
 
 								<b class="arrow icon-angle-down"></b>
 							</a>
