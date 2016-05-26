@@ -82,6 +82,37 @@ class MainController extends \yii\web\Controller{
         $connection->createCommand("delete FROM room where r_id in($r_id)")->execute();
         return $this-redirect(array('main/tables'));
     }
+
+	/**
+     * 查看房源介绍
+     */
+    public function actionLook(){
+        $request = Yii::$app->request;
+        $r_id=$request->get('r_id');
+        $connection = \Yii::$app->db;
+        $command = $connection->createCommand("SELECT * FROM room where r_id='$r_id'");
+        $post = $command->queryOne();
+        return $this->renderPartial('look',['room'=>$post]);
+    }
+    /**
+     * 查看详情
+     */
+    public function actionCheck(){
+        $request = Yii::$app->request;
+        $r_id=$request->get('r_id');
+        //echo $r_id;die;
+        $connection = \Yii::$app->db;
+        $command = $connection->createCommand("SELECT * FROM room join type on room.r_type=type.ty_id where r_id='$r_id'");
+        $post = $command->queryOne();
+        $img = explode('|',$post['r_img']);
+        foreach($img as $key => $val){
+            if($key==0){
+             $photos = $val;
+            }
+        }
+        //print_r($photos);die;
+        return $this->renderPartial('check',['room'=>$post,'image'=>$photos]);
+    }
     /**
      * 相册
      */
