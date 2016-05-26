@@ -380,7 +380,7 @@ $session->open();
 <!--						</li>-->
 
 						<li>
-							<a href="#" class="dropdown-toggle">
+							<a href="index.php?r=main/index" class="dropdown-toggle">
                                 <i class="icon-user"></i>
 								<span class="menu-text"> 用户管理 </span>
 
@@ -399,7 +399,7 @@ $session->open();
 						</li>
 
 						<li class="active open">
-							<a href="#" class="dropdown-toggle">
+							<a href="index.php?r=main/tables" class="dropdown-toggle">
                                 <i class="icon-user"></i>
 								<span class="menu-text"> 房源管理 </span>
 
@@ -454,7 +454,7 @@ $session->open();
 						<ul class="breadcrumb">
 							<li>
 								<i class="icon-home home-icon"></i>
-								<a href="#">首页</a>
+								<a href="index.php?r=main/index">首页</a>
 							</li>
 
 							<li>

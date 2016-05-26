@@ -313,7 +313,7 @@ $session->open();
 								<li class="divider"></li>
 
 								<li>
-									<a href="#">
+									<a href="index.php?r=main/back">
 										<i class="icon-off"></i>
 										退出
 									</a>
@@ -385,7 +385,7 @@ $session->open();
 <!--						</li>-->
 
 						<li>
-							<a href="#" class="dropdown-toggle">
+							<a href="index.php?r=main/index" class="dropdown-toggle">
                                 <i class="icon-user"></i>
 								<span class="menu-text"> 用户管理 </span>
 
@@ -474,9 +474,9 @@ $session->open();
 						</li>
 
 						<li class="active open">
-							<a href="#" class="dropdown-toggle">
+							<a href="index.php?r=main/tables" class="dropdown-toggle">
                                 <i class="icon-user"></i>
-								<span class="menu-text"> 房东管理 </span>
+								<span class="menu-text"> 房源管理 </span>
 
 								<b class="arrow icon-angle-down"></b>
 							</a>
