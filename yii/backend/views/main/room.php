@@ -313,7 +313,7 @@ $session->open();
 								<li class="divider"></li>
 
 								<li>
-									<a href="#">
+									<a href="index.php?r=main/back">
 										<i class="icon-off"></i>
 										退出
 									</a>
