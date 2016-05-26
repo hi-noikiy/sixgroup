@@ -757,7 +757,7 @@ $session->open();
 <!--														<td class="hidden-480">-->
 <!--															<span class="label label-sm label-warning">Expiring</span>-->
 <!--														</td>-->
-                                                        <td><a href="index.php?r=main/look&r_id=<?php echo $v['r_id']?>"><?php echo str_replace(substr($v['r_introduce'],21),'....',$v['r_introduce'])?></a></td>
+                                                        <td><a href="index.php?r=main/check&r_id=<?php echo $v['r_id']?>"><?php echo str_replace(substr($v['r_introduce'],21),'....',$v['r_introduce'])?></a></td>
 														<input type="hidden" id="<?php echo $v['r_id']?>" value="<?php echo $v['state']?>">
 														<td id='tr_<?php echo $v['r_id']?>'><?php if($v['state']==0){?>
 														<a href="javascript:void(0)" onclick="audite(<?php echo $v['r_id']?>)">待审核
