@@ -120,7 +120,7 @@
         </div>
         <div class="nav-list">
             <ul>
-                <li class="first"><a href="http://www.tujia.com/se0/" class="home-link " target="_blank">首页</a></li>
+                <li class="first"><a href="{{URL('index')}}" class="home-link ">首页</a></li>
                 <li><a href="http://international.tujia.com/"  target="_blank">海外·港台</a></li>
                 <li><a href="http://www.tujia.com/changzu/se0/"  target="_blank">周租月租</a></li>
                 <li><a href="http://www.tujia.com/Experience/"  target="_blank">体验房</a></li>
