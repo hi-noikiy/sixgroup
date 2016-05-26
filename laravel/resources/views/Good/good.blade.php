@@ -935,6 +935,7 @@
                 <p class="link-btn-cont"><a href="javascript:;"  class="chat-btn  custom-service">在线客服</a></p>
                             <p class="contact-info">蜗牛客服：<span class="tel-box">400-188-1234</span><span class="gray-text">(7x24小时)</span> </p>
         </div>
+        
     </div>
 
 
@@ -1249,7 +1250,7 @@
         });
     });
 
-    $('#account').focus(function () {
+    $('#account,#password,#verifycode').focus(function () {
         $(this).next().hide();
 
         $('#loginerrormsg').hide();
@@ -1258,22 +1259,6 @@
         if ($.trim($(this).val()) == "") {
             $(this).next().show();
         }
-    });
-
-    $('#password').focus(function () {
-        $(this).next().hide();
-
-        $('#loginerrormsg').hide();
-        $('#verifycodeErorr').hide();
-    }).blur(function () {
-        if ($.trim($(this).val()) == "") {
-            $(this).next().show();
-        }
-    });
-
-    $('#verifycode').focus(function () {
-        $('#loginerrormsg').hide();
-        $('#verifycodeErorr').hide();
     });
 
     $("#saveUserLongTime").click(function () {
@@ -1291,15 +1276,15 @@
     });
 
     function qqLogin() {
-        window.location = "https://passport.tujia.com/PortalSite/QQLogin?srcUrl=http%3a%2f%2fwww.tujia.com%2fbeijing_gongyu%2fchaoyangqu_3581.htm";
+        window.location = "https://passport.tujia.com/PortalSite/QQLogin?srcUrl=http%3a%2f%2fwww.tujia.com%2fsanya_gongyu%2fyalongwan_2800.htm";
     }
 
     function sinaLogin() {
-        window.location = "https://passport.tujia.com/PortalSite/SinaLogin?srcUrl=http%3a%2f%2fwww.tujia.com%2fbeijing_gongyu%2fchaoyangqu_3581.htm";
+        window.location = "https://passport.tujia.com/PortalSite/SinaLogin?srcUrl=http%3a%2f%2fwww.tujia.com%2fsanya_gongyu%2fyalongwan_2800.htm";
     }
 
     function wechatLogin() {
-        window.location = "https://passport.tujia.com/PortalSite/WeChatLogin?srcUrl=http%3a%2f%2fwww.tujia.com%2fbeijing_gongyu%2fchaoyangqu_3581.htm";
+        window.location = "https://passport.tujia.com/PortalSite/WeChatLogin?srcUrl=http%3a%2f%2fwww.tujia.com%2fsanya_gongyu%2fyalongwan_2800.htm";
     }
 </script>
 
