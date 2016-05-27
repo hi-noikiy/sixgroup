@@ -1,8 +1,3 @@
-
-
-
-
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -79,6 +74,31 @@
 <script type="text/javascript">
     var $jq = jQuery.noConflict(true);
 </script>
+</script>
+    <style type="text/css">
+        body,div,ul,li,a,img{margin: 0;padding: 0;}
+        ul,li{list-style: none;}
+        a{text-decoration: none;}
+
+        #wrapper{position: relative;margin: 30px auto;width: 100%;height:650px;}
+        #banner{position:relative;width: 100%;height: 600px;overflow: hidden;}
+        .imgList{position:relative;width:960;height:600px;z-index: 10;overflow: hidden;}
+        .imgList li{float:left;display: inline;}
+        #prev,
+        #next{position: absolute;top:80px;z-index: 20;cursor: pointer;opacity: 0.2;filter:alpha(opacity=20);}
+        #prev{left: 10px;}
+        #next{right: 10px;}
+        #prev:hover,
+        #next:hover{opacity: 0.5;filter:alpha(opacity=50);}
+        .bg{position: absolute;bottom: 0;width: 400px;height: 40px;z-index:20;opacity: 0.4;filter:alpha(opacity=40);background: black;}
+        .infoList{position: absolute;left: 10px;bottom: 10px;z-index: 30;}
+        .infoList li{display: none;}
+        .infoList .infoOn{display: inline;color: white;}
+        .indexList{position: absolute;right: 10px;bottom: 5px;z-index: 30;}
+        .indexList li{float: left;margin-right: 5px;padding: 2px 4px;border: 2px solid black;background: grey;cursor: pointer;}
+        .indexList .indexOn{background: red;font-weight: bold;color: white;}
+ </style>
+
 <script type="text/javascript" src="http://staticfile.tujia.com/Portalsite2/Scripts/Base/owl.carousel.js"></script>
 <script type="text/javascript" src="http://staticfile.tujia.com/portalsite2/scripts/js_detail_head_v2?v=6b40c9a"></script>
 <script type="text/javascript">

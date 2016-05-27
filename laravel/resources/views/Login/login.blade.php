@@ -1,4 +1,4 @@
-f<!DOCTYPE HTML>
+<!DOCTYPE HTML>
 <html>
 <head>
     <meta http-equiv="Cache-Control" content="no-transform" />

@@ -27,16 +27,16 @@ Route::any('sreach','MainController@index');
 Route::any('love','ThemeController@love');
 
 /*主题->北京美景*/
-Route::any('meijing','ThemeController@meijing');
+Route::any('scenery','ThemeController@scenery');
 
 /*主题->北京欢乐谷*/
-Route::any('hlg','ThemeController@hlg');
+Route::any('kursaal','ThemeController@kursaal');
 
 /*主题->北京房车*/
 Route::any('carhome','ThemeController@carhome');
 
 /*主题->北京精品*/
-Route::any('jing','ThemeController@jing');
+Route::any('Boutique','ThemeController@Boutique');
 
 
 Route::any('demo','RegisterController@demo');

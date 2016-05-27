@@ -195,7 +195,7 @@
         <span class="controls-span">入住</span>
         <div class="controls">
             <label for="startDate">
-                <input class="ipt-text startDate" id="startDate" name="startDate" type="text" value="2016-05-16" />
+                <input class="ipt-text startDate" id="startDate" name="startDate" type="text" value="<?php echo $startDate?>" />
                 <i class="icon-calendar"></i>
             </label>
         </div>
@@ -205,7 +205,7 @@
         <span class="controls-span">退房</span>
         <div class="controls">
             <label for="endDate">
-                <input class="ipt-text endDate" id="endDate" name="endDate" type="text" value="2016-05-17" />
+                <input class="ipt-text endDate" id="endDate" name="endDate" type="text" value="<?php echo $endDate?>" />
                 <i class="icon-calendar"></i>
             </label>
         </div>
@@ -215,7 +215,7 @@
             <div class="controls">
                 <label for="adress">
                     <input type="text" id="adress" class="ipt-text" onfocus="_gaq.push(['_trackEvent', 'pcList', '关键词输入框']);" />
-                    <span class="address-mark" style="">位置/公寓名/房型等</span>
+                    <span class="address-mark" style=""><?php echo $adress?></span>
                     <i class="icon-key"></i>
                 </label>
             </div>
@@ -4194,7 +4194,9 @@
         </div>
     </div>
 @endforeach
+<center>
 {!! $room->render() !!}
+</center>
     <div id="PrepaidCardTooltip" class="m-tips-wrap" style="display: none">
         <div class="tips-content" style="width:220px">
             <div class="tips-info">所有产品均可直接全额预付房费，支持使用“途游卡、礼品卡、惠住卡、积分和账户余额”</div>

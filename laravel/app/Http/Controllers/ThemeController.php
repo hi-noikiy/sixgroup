@@ -8,6 +8,12 @@ use DB;
 use App\Http\Controllers\ThemeController;
 use Request;
 
+/**
+ *	@Modular 	主题选择
+ *	@Class 		Theme
+ *	@Author 	薛佳琪
+ *	@Time 		2016/05/25
+**/
 class ThemeController extends Controller
 {  
 	//展示首页（情侣主题）
@@ -20,7 +26,7 @@ class ThemeController extends Controller
 	}
 	
 	//展示首页（美景主题）
-	public function meijing()
+	public function scenery()
 	{
 		 $meijing= DB::select('select * from room where t_id=2');
 		 $area= DB::select('select * from area limit 7');
@@ -29,7 +35,7 @@ class ThemeController extends Controller
 	}
 
 	//展示首页（欢乐谷主题）
-	public function hlg()
+	public function kursaal()
 	{
 		 $hlg= DB::select('select * from room where t_id=4');
 		 $area= DB::select('select * from area limit 7');
@@ -46,7 +52,7 @@ class ThemeController extends Controller
 	}
    
    //展示首页（精品主题）
-	public function jing()
+	public function Boutique()
 	{
 		 $jing= DB::select('select * from room where t_id=3');
 		 $area= DB::select('select * from area limit 7');
