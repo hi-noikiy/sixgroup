@@ -30,7 +30,7 @@ class CenterController extends Controller
             ->join('user', 'orde.u_id', '=', 'user.u_id')
             ->join('room', 'orde.r_id', '=', 'room.r_id')
             ->select('user.u_id', 'room.r_id','room.r_img','room.r_title','orde.o_id','orde.o_start_time','orde.o_price','orde.o_end_time','orde.o_state')
-            ->where('user.u_id', '=',$u_id)->get();
+            ->where('user.u_id', '=',$u_id)->paginate(3);
         return view('Center/center',['data'=>$data]);
     }
     /*
@@ -115,7 +115,7 @@ class CenterController extends Controller
             ->join('user', 'orde.u_id', '=', 'user.u_id')
             ->join('room', 'orde.r_id', '=', 'room.r_id')
             ->select('user.u_id', 'room.r_id','room.r_img','room.r_title','orde.o_id','orde.o_start_time','orde.o_price','orde.o_end_time','orde.o_state')
-            ->where('user.u_id', '=',$u_id)->get();
+            ->where('user.u_id', '=',$u_id)->paginate(3);
         return view('Center/order',['data'=>$data]);
     }
     /*
