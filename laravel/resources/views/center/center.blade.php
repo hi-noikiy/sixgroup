@@ -153,9 +153,6 @@
                 </table>
             </div>
             @endforeach
-            <center>
-                {!!$data->render()!!}
-            </center>
         </div>
 
     </div>
