@@ -4033,7 +4033,7 @@
     <?php $img=explode('|',$v->r_img) ?>
         <div class="house-img">
             <a href="../public/images/{{$img[0]}}" target="_blank" rel="nofollow" class="link-btn-pic" onclick="_gaq.push(['_trackEvent', 'pcList', '房屋点击']);">
-                <img src="images/{{$img[0]}}" alt="北京 北京光耀公寓豪华行政二居室" />
+                <img src="uploads/{{$img[0]}}" alt="北京 北京光耀公寓豪华行政二居室" />
             </a>
             <div class="functions-menu">
                 <a href="javascript:;" class="view-pic">更多图片</a>

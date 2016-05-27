@@ -305,7 +305,7 @@ $(function() {
 		</div>
 	</div>
 </div>
-
+<br><br><br><br><br><br><br><br>
 <div class="surveYY_pic"></div>
 <div class="pic_big">
 	<div class="big_img" style="display:none"><img src=""/></div>

@@ -1,4 +1,4 @@
-f<!DOCTYPE HTML>
+<!DOCTYPE HTML>
 <html>
 <head>
     <meta http-equiv="Cache-Control" content="no-transform" />
@@ -89,7 +89,7 @@ f<!DOCTYPE HTML>
 </div>
     <div class="wrap-large">
         <div class="banner-box">
-             <a href="http://go.tujia.com/3270/?code=2016dsndly" target="_blank" rel="nofollow"><img src="https://staticfiles.tujia.com/upload/config/day_160503/20160503175358635.jpg" alt="" width="880" height="450" /></a>
+             <a href="http://go.tujia.com/3270/?code=2016dsndly" target="_blank" rel="nofollow"><img src="./uploads/1089891.jpg" alt="" width="880" height="450" /></a>
         </div>
         <div class="sidebar-box">
             <div class="login-hd">

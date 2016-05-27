@@ -436,20 +436,12 @@ $(function() {
 				<dt><span class="fr">房屋类型：</span><em class="notNull"></em></dt>
 				<dd>
 					<select class="largeSelect" name="type" >
-                        		<option value="1" >民居</option>
-                        		<option value="2" >公寓</option>
-                        		<option value="3" >独栋别墅</option>
-                        		<option value="5" >客栈</option>
-                        		<option value="6" >阁楼</option>
-                        		<option value="7" >四合院</option>
-                        		<option value="8" >海边小屋</option>
-                        		<option value="10" >林间小屋</option>
-                        		<option value="11" >豪宅</option>
-                        		<option value="12" >城堡</option>
-                        		<option value="13" >树屋</option>
-                        		<option value="14" >船舱</option>
-                        		<option value="15" >房车</option>
-                        		<option value="16" >冰屋</option>
+                        		<option value="民居" >民居</option>
+                        		<option value="公寓" >公寓</option>
+                        		<option value="独栋别墅" >独栋别墅</option>
+                        		<option value="阁楼" >阁楼</option>
+                        		<option value="四合院" >四合院</option>
+                        		<option value="房车" >房车</option>
 					</select>
 				</dd>
 			</dl>

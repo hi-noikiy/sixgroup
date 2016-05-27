@@ -102,6 +102,10 @@ Route::any('login/del','LoginController@del');
 Route::any('room','RoomController@index');
 //房源信息接收表单
 Route::post('room/message','RoomController@room_message');
+//房源详情页面
+Route::any('room/particulars','RoomController@room_particulars');
+//房源详情接收
+Route::any('room/particularse','RoomController@room_particularse');
 //房源照片
 Route::any('room/photo','RoomController@room_photo');
 //房源照片接收

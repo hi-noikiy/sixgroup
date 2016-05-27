@@ -218,6 +218,13 @@
             <span style="margin-left:50px;padding:1px 10px;left:351px;">此为用作接单的手机号码</span>
         </dd>
     </dl>
+	 <!--QQ号-->
+    <dl class='clearfloat bas_content'>
+        <dt class='fl'><span class="fr">QQ号：</span><em class="notNull"></em></dt>
+        <dd class='fl'>
+            <input class="tel_phone" type="text" name="qq" id="qq" value=""  />
+        </dd>
+    </dl>
     <!--身份证号码-->
     <dl class='clearfloat bas_content'>
         <dt class='fl'><span class="fr">身份证号码：</span></dt>
