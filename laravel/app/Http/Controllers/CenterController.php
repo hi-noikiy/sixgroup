@@ -26,8 +26,11 @@ class CenterController extends Controller
         //存储session
         $u_name=Session::get('u_name');
         $u_id=Session::get('u_id');
-        $sql = "select * from orde inner join user on orde.u_id=user.u_id inner join room on orde.r_id=room.r_id where user.u_id='$u_id'";
-        $data = DB::select($sql);
+        $data=DB::table('orde')
+            ->join('user', 'orde.u_id', '=', 'user.u_id')
+            ->join('room', 'orde.r_id', '=', 'room.r_id')
+            ->select('user.u_id', 'room.r_id','room.r_img','room.r_title','orde.o_id','orde.o_start_time','orde.o_price','orde.o_end_time','orde.o_state')
+            ->where('user.u_id', '=',$u_id)->paginate(3);
         return view('Center/center',['data'=>$data]);
     }
     /*
@@ -108,8 +111,11 @@ class CenterController extends Controller
         Session::get('u_name');
         $u_id=Session::get('u_id');
         //用户表、房间表、订单表联查
-        $sql = "select * from orde inner join user on orde.u_id=user.u_id inner join room on orde.r_id=room.r_id where user.u_id='$u_id'";
-        $data = DB::select($sql);
+        $data=DB::table('orde')
+            ->join('user', 'orde.u_id', '=', 'user.u_id')
+            ->join('room', 'orde.r_id', '=', 'room.r_id')
+            ->select('user.u_id', 'room.r_id','room.r_img','room.r_title','orde.o_id','orde.o_start_time','orde.o_price','orde.o_end_time','orde.o_state')
+            ->where('user.u_id', '=',$u_id)->paginate(3);
         return view('Center/order',['data'=>$data]);
     }
     /*
