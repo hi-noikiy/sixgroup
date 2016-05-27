@@ -55,7 +55,7 @@
             <?php echo Session::get('u_name')?>
         </span>
                 <br />
-
+                <br/>
             </p>
         </div>
 
@@ -72,6 +72,7 @@
             <ul>
                 <li><a id="myUserInfoInfo" href="person" onclick="_gaq.push(['_trackEvent', 'pcUserInfo', '个人资料']);">个人资料</a></li>
                 <li><a id="mypassword" href="updpwd" onclick="_gaq.push(['_trackEvent', 'pcUserInfo', '修改密码']);">修改密码</a></li>
+                <li><a id="myUserInfoInfo" href="headp" onclick="_gaq.push(['_trackEvent', 'pcUserInfo', '头像上传']);">头像上传</a></li>
             </ul>
         </div>
 

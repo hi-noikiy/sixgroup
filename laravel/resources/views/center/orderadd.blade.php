@@ -68,18 +68,6 @@
             <img style="margin-top: 10px;margin-left: 17px" height="40px" width="100px" src="images/logo.jpg" alt="蜗牛logo"></a>
             <span class="logo-text">旅途中的家,全球公寓民宿预订平台</span>
         </div>
-        <div class="step-cont">
-            <div class="m-step-no1">
-                <div class="m-step">
-                    <ul class="cols3">
-
-                        <li class="step1"><span class="s-num">1</span><span class="s-text">提交订单</span></li>
-                        <li class="step3"><span class="s-num">2</span><span class="s-text">支付订金</span></li>
-                        <li class="step4"><span class="s-num">3</span><span class="s-text">预订成功</span></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
     </div>
 </div>
 

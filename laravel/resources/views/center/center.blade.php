@@ -83,6 +83,7 @@
             <ul>
                 <li><a id="myUserInfoInfo" href="person" onclick="_gaq.push(['_trackEvent', 'pcUserInfo', '个人资料']);">个人资料</a></li>
                 <li><a id="mypassword" href="updpwd" onclick="_gaq.push(['_trackEvent', 'pcUserInfo', '修改密码']);">修改密码</a></li>
+                <li><a id="myUserInfoInfo" href="headp" onclick="_gaq.push(['_trackEvent', 'pcUserInfo', '头像上传']);">头像上传</a></li>
             </ul>
         </div>
     </div>
@@ -148,26 +149,15 @@
                                 <a href="javascript:void(0)" onclick="orderdelete({{$v->o_id}})">删除订单</a></span>
                             </td>
                         <tr></tr>
-                    @endforeach
                     </tbody>
                 </table>
             </div>
-
-            <div class="m-tips-wrap" id="freepickupreturntastevoucher-tip-1543590" style="display: none">
-                <div class="tips-content text-description">
-                    <h2>送体验劵</h2>
-                    <div class="tips-info">
-                        送体验券<span id="divReturnTasteVoucherTitle">288</span>元，成功入住并发布点评（100字符以上，并上传至少3张相关图片），在七个工作日内审核通过，系统将自动将体验券充值到您途家账户，有效期120天。您可登录途家网体验房频道，1:1抵房费预订体验房！
-                    </div>
-                </div>
-            </div>
-
+            @endforeach
+            <center>
+                {!!$data->render()!!}
+            </center>
         </div>
-        <div class="dn" id="maskWrap" style="width: 486px;"></div>
-        <div class="dn" id="orderDayRateDiv" style="width: 484px;"></div>
-        <div id="SurroundingIntroductionHelperContent" style="width: 200px" class="toTips dn">
-            距离确认订单的最后时间还有
-        </div>
+
     </div>
 </div>
 

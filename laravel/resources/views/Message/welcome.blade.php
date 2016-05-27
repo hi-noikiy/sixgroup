@@ -198,21 +198,12 @@
 <form id="mainSearchForm" action="{{URL('sreach')}}" class="mainSearchForm mainSearchForm_homeindex" method="post">
 <input type="hidden" name="_token" value="{{csrf_token()}}"/>
 
-    <div class="control-group  city-group">
-        <span class="controls-span">目的地</span>
-        <div class="controls">
-            <label for="destInput">
-                <input type="text" id="destInput" class="ipt-text" data-destid="23" data-destpinyin="beijing" value="北京" />
-                <i class="icon-city"></i>
-            </label>
-
-        </div>
-    </div>
+    
     <div class="control-group date-group">
         <span class="controls-span">入住</span>
         <div class="controls">
             <label for="startDate">
-                <input class="ipt-text startDate" id="startDate" name="startDate" type="text" value="2016-05-16" />
+                <input class="ipt-text startDate" id="startDate" name="startDate" type="text" />
                 <i class="icon-calendar"></i>
             </label>
         </div>
@@ -222,7 +213,7 @@
         <span class="controls-span">退房</span>
         <div class="controls">
             <label for="endDate">
-                <input class="ipt-text endDate" id="endDate" name="endDate" type="text" value="2016-05-17" />
+                <input class="ipt-text endDate" id="endDate" name="endDate" type="text" />
                 <i class="icon-calendar"></i>
             </label>
         </div>
@@ -231,7 +222,7 @@
             <span class="controls-span">关键词</span>
             <div class="controls">
                 <label for="adress">
-                    <input type="text" id="adress" class="ipt-text" onfocus="_gaq.push(['_trackEvent', 'pcList', '关键词输入框']);" />
+                    <input type="text" id="adress" name="adress" class="ipt-text" onfocus="_gaq.push(['_trackEvent', 'pcList', '关键词输入框']);" />
                     <span class="address-mark" style="">位置/公寓名/房型等</span>
                     <i class="icon-key"></i>
                 </label>
@@ -242,64 +233,6 @@
     </div>
 </form>
 
-
-
-
-
-
-
-
-
-                </div>
-
-                <div class="tab-content" style="display: none">
-                    <form action="http://international.tujia.com" method="GET" id="internationalSearchForm">
-                        <div class="control-group city-group">
-                            <span class="controls-span">目的地</span>
-                            <div class="controls">
-                                <label for="internationalCriteriaSelect">
-                                    <input type="text" id="internationalCriteriaSelect" class="ipt-text" data-destid="28" data-destpinyin="pujidao" value="普吉岛" />
-                                    <i class="jQuery"></i>
-                                </label>
-                            </div>
-                        </div>
-
-                        <div class="control-group date-group">
-                            <span class="controls-span">入住</span>
-                            <div class="controls">
-                                <label for="internationalStartDate">
-                                    <input class="ipt-text date" id="internationalStartDate" name="startDate" type="text" value="" />
-                                    <i class="icon-calendar"></i>
-                                    <span class="datewatermark f-dn">YYYY-MM-DD</span>
-                                </label>
-                            </div>
-                        </div>
-
-                        <div class="control-group date-group">
-                            <span class="controls-span">退房</span>
-                            <div class="controls">
-                                <label for="internationalEndDate">
-                                    <input class="ipt-text date" id="internationalEndDate" name="endDate" type="text" value="" />
-                                    <i class="icon-calendar icon-calendar-t"></i>
-                                    <span class="datewatermark f-dn">YYYY-MM-DD</span>
-                                </label>
-                            </div>
-                        </div>
-                        <div class="control-group key-group">
-                            <span class="controls-span">关键词</span>
-                            <div class="controls">
-                                <label for="worldKwdInput">
-                                    <input type="text" id="worldKwdInput" class="ipt-text" value="" autocomplete="off" />
-                                    <span class="address-mark" style="">想住【普吉岛】哪里？</span>
-                                    <i class="icon-key"></i>
-                                </label>
-                            </div>
-                        </div>
-
-                        <div class="control-group search-btn-group" id="submitBox">
-                            <input type="button" value="搜索" class="search-btn" id="internationalSearchButton">
-                        </div>
-                    </form>
                 </div>
             </div>
         </div>
@@ -358,7 +291,7 @@
                                     <a href="{{URL('goods')}}" target="_blank" rel="nofollow" class="pic-box" onclick="_gaq.push(['_trackEvent', 'PC-首页推荐','三亚市内','家庭出游']);" id="<?php echo $key->r_id?>"><img data-original="http://pic.tujia.com/upload/landlordunit/day_160505/thumb/201605051733501789_370_232.jpg" alt="" class="house-pic" width="370" height="232"></a>
                                     <div class="house-info">
                                         <h2>
-                                            <a href="/sanya_gongyu/se0/sanyawan_90492.htm" class="house-tit" target="_blank" title="<?php echo $key->r_title?>" onclick="_gaq.push(['_trackEvent', 'PC-首页推荐','三亚市内','家庭出游']);" id="<?php echo $key->r_id?>"><?php echo $key->r_title?></a>
+                                            <a href="{{URL('good?r_id')}}={{$key->r_id}}" class="house-tit" target="_blank" title="<?php echo $key->r_title?>" onclick="_gaq.push(['_trackEvent', 'PC-首页推荐','三亚市内','家庭出游']);" id="<?php echo $key->r_id?>"><?php echo $key->r_title?></a>
                                                 <i class="icon-quality-hotel" rel="PreferredUnitTips"></i>
                                         </h2>
                                         <div class="house-datelist">
@@ -386,12 +319,12 @@
                 <div class="theme-list">
                     <ul class="clearfix">
                             <li>
-                                <a href="{{URL('meijing')}}" target="_blank">
+                                <a href="{{URL('scenery')}}" target="_blank">
                                     <img data-original="images/theme/meijing.jpg" alt="北京美景" width="580" height="364" />
                                 </a>
                             </li>
                             <li>
-                                <a href="{{URL('hlg')}}" target="_blank">
+                                <a href="{{URL('kursaal')}}" target="_blank">
                                     <img data-original="images/theme/hlg.jpg" alt="北京欢乐谷" width="580" height="364" />
                                 </a>
                             </li>
@@ -411,7 +344,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="{{URL('jing')}}" target="_blank">
+                                <a href="{{URL('Boutique')}}" target="_blank">
                                     <img data-original="images/theme/jing.jpg" alt="精品订购" width="370" height="232" />
                                 </a>
                             </li>
