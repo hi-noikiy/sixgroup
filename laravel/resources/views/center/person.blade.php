@@ -90,10 +90,10 @@
                                 <div class="ud-con">
                                     <div class="clearfix">
                                         <div class="data-result m-fl">
-                                            <a href="headp" class="usp-bg">
+                                            <div  class="usp-bg">
                                                 {{--<img src="http://staticfile.tujia.com/bookingsite/images/user-default.png" alt="">--}}
                                                 <span class="change-photo"></span>
-                                            </a>
+                                            </div>
                                             @foreach($data as $v)
                                             <div class="usp-info">
                                                 <div class="group-cont">
