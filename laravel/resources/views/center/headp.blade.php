@@ -97,7 +97,7 @@
             </div>
             <!--没加载方法前-->
             <div id="SelectBox">
-                <form    name="FORM" enctype="multipart/form-data" method="post"  target="POSTiframe">
+                <form  name="FORM" enctype="multipart/form-data" method="post"  target="POSTiframe">
                     <input name="shearphoto" type="hidden" value="我要在这里传参数"> <!--示例传参数到服务端，后端文件用UPLOAD.php用$_POST['shearphoto']接收-->
                     <a href="javascript:;" id="selectImage"><input type="file"  name="UpFile" /></a>
                 </form>
