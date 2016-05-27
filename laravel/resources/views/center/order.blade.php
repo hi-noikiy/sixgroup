@@ -151,9 +151,9 @@
                 </table>
             </div>
             @endforeach
-                <center>
-                    {!!$data->render()!!}
-                </center>
+            <center>
+                {!!$data->render()!!}
+            </center>
         </div>
         <div class="m-tips-wrap" id="freepickupreturntastevoucher-tip" style="display: none;">
             <div class="tips-content text-description">

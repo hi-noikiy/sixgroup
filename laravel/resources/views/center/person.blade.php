@@ -90,7 +90,7 @@
                                 <div class="ud-con">
                                     <div class="clearfix">
                                         <div class="data-result m-fl">
-                                            <a href="headp" class="usp-bg">
+                                            <a href="" class="usp-bg">
                                                 {{--<img src="http://staticfile.tujia.com/bookingsite/images/user-default.png" alt="">--}}
                                                 <span class="change-photo"></span>
                                             </a>

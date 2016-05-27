@@ -158,10 +158,6 @@
             </center>
         </div>
 
-
-        <div id="SurroundingIntroductionHelperContent" style="width: 200px" class="toTips dn">
-            距离确认订单的最后时间还有
-        </div>
     </div>
 </div>
 
