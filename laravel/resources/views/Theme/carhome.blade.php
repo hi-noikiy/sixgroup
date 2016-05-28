@@ -118,21 +118,7 @@
             </div>
         </div>
 <div class="content">
-    <!-- 精品房源 -->
-    <!-- 城市导航条 4个及4个以上城市显示城市导航条 
-    <div id="navBox" class="nav-box">
-        <div class="nav-city" id="nav-city">
-            <table class="theme_city">
-                <tr>
-                        <td class="current"><a href="#subject0">厦门地区房车</a></td>
-                        <td class=""><a href="#subject1">北京地区房车</a></td>
-                        <td class=""><a href="#subject2">华东地区房车</a></td>
-                        <td class=""><a href="#subject3">华北地区房车</a></td>
-                        <td class=""><a href="#subject4">华西地区房车</a></td>
-                    </tr>
-            </table>
-        </div>
-    </div>-->
+    
 <div id="unitContainer" class="container">
     <!-- 城市房源 -->
         <div class="mod" id="subject2">
@@ -147,286 +133,61 @@
 <div class="mod-city">
     <div class="city-house">
         <ul class="house-list clearfix">
-
+               @foreach($carhome as $v)
                     <li class="item-unit ">
                         <div class="pic">
-                                <a href="http://www.tujia.com/hangzhou_gongyu/xihuqu_55417.htm" target="_blank">
-                                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" class="lazy" alt="杭州西溪湿地蜗牛房车五号营车" data-original="http://pic.tujia.com/upload/landlordunit/day_150831/thumb/20150831042243551_370_232.jpg">
+                                <a href="{{URL('good?r_id')}}={{$v->r_id}}" target="_blank">
+                                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" class="lazy" alt="{{$v->r_title}}" data-original="http://pic.tujia.com/upload/landlordunit/day_150831/thumb/20150831042243551_370_232.jpg">
                                 </a>
                         </div>
                         <div class="text">
                             <h4>
-                              <a href="http://www.tujia.com/hangzhou_gongyu/xihuqu_55417.htm" target="_blank">杭州西溪湿地蜗牛房车五号营车</a>
+                              <a href="{{URL('good?r_id')}}={{$v->r_id}}" target="_blank">{{$v->r_title}}</a>
                             </h4>
                                 <div class="house-datelist">
                                     <p class="house-htladdress">
                                         
-                                        西湖区
+                                        北京
                                         <a href="javascript:void(0)" ref="http://api.map.baidu.com/staticimage?zoom=15&amp;markers=120.053447,30.254361&amp;width=400&amp;height=400&amp;markerStyles=m, ,&amp;pic=mappic.png" onclick="window.open('http://www.tujia.com/hangzhou_gongyu/xihuqu_55417.htm?tabto=map')" class="map-btn">地图</a>
                                     </p>
                                     <p>
 
-                                        <span title="三钻房车营地">三钻房车营地</span> |
-                                        <span title="1室1厅1卫">一居</span> |
+                                        <span title="{{$v->r_type}}">{{$v->r_type}}</span> |
+                                        <span title="{{$v->r_pattem}}">{{$v->r_pattem}}</span> |
 
-                                        <span title="推荐入住2人">宜住2人</span>
+                                        <span title="推荐入住{{$v->r_people}}人">宜住{{$v->r_people}}人</span>
                                     </p>
                                 </div>
                         </div>
                             <div class="btn-order">
                                 <div class="price">
-                                    <span><em><sup>￥</sup>1185</em></span>
+                                    <span><em><sup>￥</sup>{{$v->r_price}}</em></span>
                                 </div>
                                 <a href="http://www.tujia.com/hangzhou_gongyu/xihuqu_55417.htm" class="buy-btn" target="_blank">立即预订</a>
                             </div>
                     </li>
-                    <li class="item-unit ">
-                        <div class="pic">
-                                <a href="http://www.tujia.com/yangzhou_gongyu/hanjiangqu_60646.htm" target="_blank">
-                                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" class="lazy" alt="扬州润扬森林公园露营地六米房车" data-original="http://pic.tujia.com/upload/landlordunit/day_150921/thumb/201509210159095352_370_232.jpg">
-                                </a>
-                        </div>
-                        <div class="text">
-                            <h4>
-                              <a href="http://www.tujia.com/yangzhou_gongyu/hanjiangqu_60646.htm" target="_blank">扬州润扬森林公园露营地六米房车</a>
-                            </h4>
-                                <div class="house-datelist">
-                                    <p class="house-htladdress">
-                                        
-                                        邗江区
-                                        <a href="javascript:void(0)" ref="http://api.map.baidu.com/staticimage?zoom=15&amp;markers=119.387666,32.24019&amp;width=400&amp;height=400&amp;markerStyles=m, ,&amp;pic=mappic.png" onclick="window.open('http://www.tujia.com/yangzhou_gongyu/hanjiangqu_60646.htm?tabto=map')" class="map-btn">地图</a>
-                                    </p>
-                                    <p>
-
-                                        <span title="四钻房车营地">四钻房车营地</span> |
-                                        <span title="1室1卫1厨房">一居</span> |
-
-                                        <span title="推荐入住2人">宜住2人</span>
-                                    </p>
-                                </div>
-                        </div>
-                            <div class="btn-order">
-                                <div class="price">
-                                    <span><em><sup>￥</sup>430</em></span>
-                                </div>
-                                <a href="http://www.tujia.com/yangzhou_gongyu/hanjiangqu_60646.htm" class="buy-btn" target="_blank">立即预订</a>
-                            </div>
-                    </li>
-                    <li class="item-unit ">
-                        <div class="pic">
-                                <a href="http://www.tujia.com/hangzhou_gongyu/xihuqu_53113.htm" target="_blank">
-                                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" class="lazy" alt="杭州西溪湿地蜗牛房车一号营车" data-original="http://pic.tujia.com/upload/landlordunit/day_150831/thumb/201508310419302453_370_232.jpg">
-                                </a>
-                        </div>
-                        <div class="text">
-                            <h4>
-                              <a href="http://www.tujia.com/hangzhou_gongyu/xihuqu_53113.htm" target="_blank">杭州西溪湿地蜗牛房车一号营车</a>
-                            </h4>
-                                <div class="house-datelist">
-                                    <p class="house-htladdress">
-                                        
-                                        西湖区
-                                        <a href="javascript:void(0)" ref="http://api.map.baidu.com/staticimage?zoom=15&amp;markers=120.053434,30.254365&amp;width=400&amp;height=400&amp;markerStyles=m, ,&amp;pic=mappic.png" onclick="window.open('http://www.tujia.com/hangzhou_gongyu/xihuqu_53113.htm?tabto=map')" class="map-btn">地图</a>
-                                    </p>
-                                    <p>
-
-                                        <span title="房车营地">房车营地</span> |
-                                        <span title="1室1卫">一居</span> |
-
-                                        <span title="推荐入住2人">宜住2人</span>
-                                    </p>
-                                </div>
-                        </div>
-                            <div class="btn-order">
-                                <div class="price">
-                                    <span><em><sup>￥</sup>810</em></span>
-                                </div>
-                                <a href="http://www.tujia.com/hangzhou_gongyu/xihuqu_53113.htm" class="buy-btn" target="_blank">立即预订</a>
-                            </div>
-                    </li>
-                    <li class="item-unit ">
-                        <div class="pic">
-                                <a href="http://www.tujia.com/hangzhou_gongyu/xihuqu_55415.htm" target="_blank">
-                                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" class="lazy" alt="杭州西溪湿地蜗牛房车二号营车" data-original="http://pic.tujia.com/upload/landlordunit/day_150831/thumb/201508310412532495_370_232.jpg">
-                                </a>
-                        </div>
-                        <div class="text">
-                            <h4>
-                              <a href="http://www.tujia.com/hangzhou_gongyu/xihuqu_55415.htm" target="_blank">杭州西溪湿地蜗牛房车二号营车</a>
-                            </h4>
-                                <div class="house-datelist">
-                                    <p class="house-htladdress">
-                                        
-                                        西湖区
-                                        <a href="javascript:void(0)" ref="http://api.map.baidu.com/staticimage?zoom=15&amp;markers=120.053443,30.254368&amp;width=400&amp;height=400&amp;markerStyles=m, ,&amp;pic=mappic.png" onclick="window.open('http://www.tujia.com/hangzhou_gongyu/xihuqu_55415.htm?tabto=map')" class="map-btn">地图</a>
-                                    </p>
-                                    <p>
-
-                                        <span title="三钻房车营地">三钻房车营地</span> |
-                                        <span title="1室1厅1卫">一居</span> |
-
-                                        <span title="推荐入住2人">宜住2人</span>
-                                    </p>
-                                </div>
-                        </div>
-                            <div class="btn-order">
-                                <div class="price">
-                                    <span><em><sup>￥</sup>810</em></span>
-                                </div>
-                                <a href="http://www.tujia.com/hangzhou_gongyu/xihuqu_55415.htm" class="buy-btn" target="_blank">立即预订</a>
-                            </div>
-                    </li>
-                    <li class="item-unit ">
-                        <div class="pic">
-                                <a href="http://www.tujia.com/ningbo_gongyu/fenghuashi_55052.htm" target="_blank">
-                                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" class="lazy" alt="奉化云之道房车露营武岭豪华大床房" data-original="http://pic.tujia.com/upload/landlordunit/day_150827/thumb/201508271016052503_370_232.jpg">
-                                </a>
-                        </div>
-                        <div class="text">
-                            <h4>
-                              <a href="http://www.tujia.com/ningbo_gongyu/fenghuashi_55052.htm" target="_blank">奉化云之道房车露营武岭豪华大床房</a>
-                            </h4>
-                                <div class="house-datelist">
-                                    <p class="house-htladdress">
-                                        
-                                        奉化市
-                                        <a href="javascript:void(0)" ref="http://api.map.baidu.com/staticimage?zoom=15&amp;markers=121.183927,29.710843&amp;width=400&amp;height=400&amp;markerStyles=m, ,&amp;pic=mappic.png" onclick="window.open('http://www.tujia.com/ningbo_gongyu/fenghuashi_55052.htm?tabto=map')" class="map-btn">地图</a>
-                                    </p>
-                                    <p>
-
-                                        <span title="四钻房车营地">四钻房车营地</span> |
-                                        <span title="1室1卫1厨房">一居</span> |
-
-                                        <span title="推荐入住2人">宜住2人</span>
-                                    </p>
-                                </div>
-                        </div>
-                            <div class="btn-order">
-                                <div class="price">
-                                    <span><em><sup>￥</sup>888</em></span>
-                                </div>
-                                <a href="http://www.tujia.com/ningbo_gongyu/fenghuashi_55052.htm" class="buy-btn" target="_blank">立即预订</a>
-                            </div>
-                    </li>
-                    <li class="item-unit ">
-                        <div class="pic">
-                                <a href="http://www.tujia.com/ningbo_gongyu/fenghuashi_55048.htm" target="_blank">
-                                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" class="lazy" alt="奉化云之道房车露营武岭精致大床房" data-original="http://pic.tujia.com/upload/landlordunit/day_150827/thumb/201508271010092653_370_232.png">
-                                </a>
-                        </div>
-                        <div class="text">
-                            <h4>
-                              <a href="http://www.tujia.com/ningbo_gongyu/fenghuashi_55048.htm" target="_blank">奉化云之道房车露营武岭精致大床房</a>
-                            </h4>
-                                <div class="house-datelist">
-                                    <p class="house-htladdress">
-                                        
-                                        奉化市
-                                        <a href="javascript:void(0)" ref="http://api.map.baidu.com/staticimage?zoom=15&amp;markers=121.291889,29.688225&amp;width=400&amp;height=400&amp;markerStyles=m, ,&amp;pic=mappic.png" onclick="window.open('http://www.tujia.com/ningbo_gongyu/fenghuashi_55048.htm?tabto=map')" class="map-btn">地图</a>
-                                    </p>
-                                    <p>
-
-                                        <span title="三钻房车营地">三钻房车营地</span> |
-                                        <span title="1室1卫1厨房">一居</span> |
-
-                                        <span title="推荐入住2人">宜住2人</span>
-                                    </p>
-                                </div>
-                        </div>
-                            <div class="btn-order">
-                                <div class="price">
-                                    <span><em><sup>￥</sup>688</em></span>
-                                </div>
-                                <a href="http://www.tujia.com/ningbo_gongyu/fenghuashi_55048.htm" class="buy-btn" target="_blank">立即预订</a>
-                            </div>
-                    </li>
-                    <li class="item-unit hide">
-                        <div class="pic">
-                                <a href="http://www.tujia.com/hangzhou_gongyu/xiachengqu_59103.htm" target="_blank">
-                                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" class="lazy" alt="北京蜗牛房车营地龙之游高级房车" data-original="http://pic.tujia.com/upload/unit/day_150916/thumb/201509161026414438_370_232.jpg">
-                                </a>
-                        </div>
-                        <div class="text">
-                            <h4>
-                              <a href="http://www.tujia.com/hangzhou_gongyu/xiachengqu_59103.htm" target="_blank">北京蜗牛房车营地龙之游高级房车</a>
-                            </h4>
-                                <div class="house-datelist">
-                                    <p class="house-htladdress">
-                                        
-                                        下城区
-                                        <a href="javascript:void(0)" ref="http://api.map.baidu.com/staticimage?zoom=15&amp;markers=120.18582,30.291028&amp;width=400&amp;height=400&amp;markerStyles=m, ,&amp;pic=mappic.png" onclick="window.open('http://www.tujia.com/hangzhou_gongyu/xiachengqu_59103.htm?tabto=map')" class="map-btn">地图</a>
-                                    </p>
-                                    <p>
-
-                                        <span title="四钻房车营地">四钻房车营地</span> |
-                                            <span title="海景房">海景房</span> |
-                                        <span title="1室1厅1卫1厨">一居</span> |
-
-                                        <span title="推荐入住3人">宜住3人</span>
-                                    </p>
-                                </div>
-                        </div>
-                            <div class="btn-order">
-                                <div class="price">
-                                    <span><em><sup>￥</sup>1500</em></span>
-                                        <del class="m-producthighestprice-money" data-defaultprice="1800">
-                                            <b class="number-box">1800</b>
-                                        </del>
-                                </div>
-                                <a href="http://www.tujia.com/hangzhou_gongyu/xiachengqu_59103.htm" class="buy-btn" target="_blank">立即预订</a>
-                            </div>
-                    </li>
-                    <li class="item-unit hide">
-                        <div class="pic">
-                                <a href="http://www.tujia.com/yangzhou_gongyu/hanjiangqu_60649.htm" target="_blank">
-                                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" class="lazy" alt="北京润扬森林公园露营地九米房车" data-original="http://pic.tujia.com/upload/landlordunit/day_150921/thumb/201509210221083383_370_232.jpg">
-                                </a>
-                        </div>
-                        <div class="text">
-                            <h4>
-                              <a href="http://www.tujia.com/yangzhou_gongyu/hanjiangqu_60649.htm" target="_blank">北京润扬森林公园露营地九米房车</a>
-                            </h4>
-                                <div class="house-datelist">
-                                    <p class="house-htladdress">
-                                        
-                                        邗江区
-                                        <a href="javascript:void(0)" ref="http://api.map.baidu.com/staticimage?zoom=15&amp;markers=119.387666,32.24019&amp;width=400&amp;height=400&amp;markerStyles=m, ,&amp;pic=mappic.png" onclick="window.open('http://www.tujia.com/yangzhou_gongyu/hanjiangqu_60649.htm?tabto=map')" class="map-btn">地图</a>
-                                    </p>
-                                    <p>
-
-                                        <span title="四钻房车营地">四钻房车营地</span> |
-                                        <span title="1室1卫1厨房">一居</span> |
-
-                                        <span title="推荐入住2人">宜住2人</span>
-                                    </p>
-                                </div>
-                        </div>
-                            <div class="btn-order">
-                                <div class="price">
-                                    <span><em><sup>￥</sup>480</em></span>
-                                </div>
-                                <a href="http://www.tujia.com/yangzhou_gongyu/hanjiangqu_60649.htm" class="buy-btn" target="_blank">立即预订</a>
-                            </div>
-                    </li>
-        </ul>
+					@endforeach
+              </ul>
     </div>
 
     <div class="city-intro">
         
-        <div class="city-box">
+       <div class="city-box">
             <ul>
                     <li>
                         <div class="pic"><a href="http://www.tujia.com/beijing_gongyu/" target="_blank"><img src="http://staticfile.tujia.com/upload/CMSActivity/day_160513/201605131500504479.jpg" alt=""></a></div>
                         <p>.</p>
-                        <a class="more" href="http://www.tujia.com/hangzhou_gongyu/" target="_blank">查看更多该城市的公寓</a>
+                        <a class="more" href="http://www.tujia.com/xitang_gongyu/" target="_blank">查看更多该城市的公寓</a>
                     </li>
             </ul>
         </div>
+		
     </div>
 
 
-    <!-- 查看更多 -->
-            <a href="javascript:void(0)" class="list-more" moreprduct="0">查看更多房屋<i class="icon icon-more"></i></a>
+
+    <!-- 查看更多
+            <a href="javascript:void(0)" class="list-more" moreprduct="0">查看更多房屋<i class="icon icon-more"></i></a> -->
 </div>
         </div>
       

@@ -70,6 +70,7 @@
             <ul>
                 <li><a id="myUserInfoInfo" href="person" onclick="_gaq.push(['_trackEvent', 'pcUserInfo', '个人资料']);">个人资料</a></li>
                 <li><a id="mypassword" href="updpwd" onclick="_gaq.push(['_trackEvent', 'pcUserInfo', '修改密码']);">修改密码</a></li>
+                <li><a id="myUserInfoInfo" href="headp" onclick="_gaq.push(['_trackEvent', 'pcUserInfo', '头像上传']);">头像上传</a></li>
             </ul>
         </div>
     </div>
@@ -89,10 +90,9 @@
                                 <div class="ud-con">
                                     <div class="clearfix">
                                         <div class="data-result m-fl">
-                                            <a href="headp" class="usp-bg">
-                                                <img src="http://staticfile.tujia.com/bookingsite/images/user-default.png" alt="">
+                                            <div href="" class="usp-bg">
                                                 <span class="change-photo"></span>
-                                            </a>
+                                            </div>
                                             @foreach($data as $v)
                                             <div class="usp-info">
                                                 <div class="group-cont">
@@ -104,9 +104,6 @@
                                                 </div>
                                                 <div class="group-cont">
                                                     <label class="lb-txt">绑定手机：</label><strong class="lb-info">{{$v->u_phone}}</strong>
-                                                </div>
-                                                <div>
-                                                    <label class="lb-txt">注册时间：</label><strong class="lb-info">{{$v->u_time}}</strong>
                                                 </div>
                                             </div>
                                             @endforeach

@@ -25,6 +25,7 @@ class MainController extends Controller{
 		 //echo $startDate;die;
 	     $endDate=Input::get('endDate');
 		 $adress=Input::get('adress');
+<<<<<<< HEAD
 		 //判断搜索
 		 //  if(!empty($startDate) & $adress=="" & !empty($endDate)){
 			// 	  $data = DB::table('room')
@@ -33,11 +34,25 @@ class MainController extends Controller{
 			// 	->paginate(3);
 		 // }
 		 //if(!empty($adress) & $startDate=="" & $endDate==""){
+=======
+		 $data = DB::table('room')
+				->where('r_type',$adress)
+				->paginate(3);
+		 /*判断搜索
+		  if(!empty($startDate) & $adress=="" & !empty($endDate)){
+				  $data = DB::table('room')
+				->where('r_starttime',$startDate)
+				->where('r_endtime',$endDate)
+				->paginate(3);
+		 }
+		 if(!empty($adress) & $startDate=="" & $endDate==""){
+>>>>>>> d3923c8b0c077bb119c8081c36086dc27209a54f
 				 $data = DB::table('room')
 				//->where('ty_name',$adress)
 				->paginate(3);
 				//dd($data);
 			 
+<<<<<<< HEAD
 		// }
 		 // if(!empty($startDate) & !empty($adress) & !empty($endDate)){
 			// 	$data = DB::table('room')
@@ -47,6 +62,17 @@ class MainController extends Controller{
 			// 	->where('ty_name',$adress)
 			// 	->paginate(3);
 		 // }
+=======
+		 }
+		 if(!empty($startDate) & !empty($adress) & !empty($endDate)){
+				$data = DB::table('room')
+				->join('type', 'room.r_type', '=', 'type.ty_id')
+				->where('r_starttime',$startDate)
+				->where('r_endtime',$endDate)
+				->where('ty_name',$adress)
+				->paginate(3);
+		 }*/
+>>>>>>> d3923c8b0c077bb119c8081c36086dc27209a54f
 		return view('Main/main',['room' => $data,'startDate'=>$startDate,'endDate'=>$endDate,'adress'=>$adress]);
 	}
 

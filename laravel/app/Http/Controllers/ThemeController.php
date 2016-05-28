@@ -19,45 +19,38 @@ class ThemeController extends Controller
 	//展示首页（情侣主题）
 	public function love()
 	{
-		 $love= DB::select('select * from room where t_id=5');
-		 $area= DB::select('select * from area limit 7');
-		 //print_r($love);die;
-		 return view('Theme/love',['love'=>$love,'area'=>$area]);
+		 $love= DB::select("select * from  room  where r_theme='情侣套餐'");
+		 return view('Theme/love',['love'=>$love]);
 	}
 	
 	//展示首页（美景主题）
 	public function scenery()
 	{
-		 $meijing= DB::select('select * from room where t_id=2');
-		 $area= DB::select('select * from area limit 7');
-		 //print_r($love);die;
-		 return view('Theme/meijing',['lmeijing'=>$meijing,'area'=>$area]);
+		 $meijing= DB::select("select * from  room where r_theme='北京美景'");
+		 //print_r($meijing);die;
+		 return view('Theme/meijing',['meijing'=>$meijing]);
 	}
 
 	//展示首页（欢乐谷主题）
 	public function kursaal()
 	{
-		 $hlg= DB::select('select * from room where t_id=4');
-		 $area= DB::select('select * from area limit 7');
-		 //print_r($love);die;
-		 return view('Theme/hlg',['hlg'=>$hlg,'area'=>$area]);
+		 $hlg= DB::select("select * from  room where r_theme='欢乐谷'");
+		 return view('Theme/hlg',['hlg'=>$hlg]);
 	}
 	//展示首页（房车主题）
 	public function carhome()
 	{
-		 $carhome= DB::select('select * from room where t_id=1');
-		 $area= DB::select('select * from area limit 7');
-		 //print_r($love);die;
-		 return view('Theme/carhome',['carhome'=>$carhome,'area'=>$area]);
+		 $carhome= DB::select("select * from  room where r_theme='家庭出游房车'");
+		 
+		 return view('Theme/carhome',['carhome'=>$carhome]);
 	}
    
    //展示首页（精品主题）
-	public function Boutique()
+	public function boutique()
 	{
-		 $jing= DB::select('select * from room where t_id=3');
-		 $area= DB::select('select * from area limit 7');
-		 //print_r($love);die;
-		 return view('Theme/jing',['jing'=>$jing,'area'=>$area]);
+		 $jin= DB::select("select * from  room where r_theme='精品订购'");
+		// print_r($jin);die;
+		 return view('Theme/jing',['jin'=>$jin]);
 	}
    
 

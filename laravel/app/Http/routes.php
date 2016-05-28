@@ -24,19 +24,19 @@ Route::any('index','MessageController@index');
 Route::any('sreach','MainController@index');
 
 /*主题->情侣*/
-Route::any('love','ThemeController@love');
+Route::any('index/love','ThemeController@love');
 
 /*主题->北京美景*/
-Route::any('scenery','ThemeController@scenery');
+Route::any('index/scenery','ThemeController@scenery');
 
 /*主题->北京欢乐谷*/
-Route::any('kursaal','ThemeController@kursaal');
+Route::any('index/kursaal','ThemeController@kursaal');
 
 /*主题->北京房车*/
-Route::any('carhome','ThemeController@carhome');
+Route::any('index/carhome','ThemeController@carhome');
 
 /*主题->北京精品*/
-Route::any('Boutique','ThemeController@Boutique');
+Route::any('index/boutique','ThemeController@Boutique');
 
 
 Route::any('demo','RegisterController@demo');
@@ -109,6 +109,10 @@ Route::any('login/del','LoginController@del');
 Route::any('room','RoomController@index');
 //房源信息接收表单
 Route::post('room/message','RoomController@room_message');
+//房源详情页面
+Route::any('room/particulars','RoomController@room_particulars');
+//房源详情接收
+Route::any('room/particularse','RoomController@room_particularse');
 //房源照片
 Route::any('room/photo','RoomController@room_photo');
 //房源照片接收
@@ -179,3 +183,14 @@ Route::any('headp','CenterController@headp');
 //上传头像成功
 Route::any('headsuccess','CenterController@headsuccess');
 
+
+/*关于网站底部的处理*/
+
+//关于我们
+Route::any('bottom/about','MessageController@about');
+//我是房客
+Route::any('bottom/customer','MessageController@customer');
+//加入蜗牛
+Route::any('bottom/join','MessageController@joins');
+//城市地图
+Route::any('bottom/map','MessageController@map');

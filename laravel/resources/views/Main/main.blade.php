@@ -653,7 +653,11 @@
     <?php $img=explode('|',$v->r_img) ?>
         <div class="house-img">
             <a href="../public/images/{{$img[0]}}" target="_blank" rel="nofollow" class="link-btn-pic" onclick="_gaq.push(['_trackEvent', 'pcList', '房屋点击']);">
+<<<<<<< HEAD
                 <img src="images/{{$img[0]}}" alt="{{$v->r_title}}" />
+=======
+                <img src="uploads/{{$img[0]}}" alt="北京 北京光耀公寓豪华行政二居室" />
+>>>>>>> d3923c8b0c077bb119c8081c36086dc27209a54f
             </a>
             <div class="functions-menu">
                 <a href="javascript:;" class="view-pic">更多图片</a>
@@ -936,11 +940,9 @@
          
    
     <div class="m-footer-link-list">
-        <a href="http://content.tujia.com/tujiajianjie.htm" target="_blank" class="forst" rel="nofollow">关于我们</a>|
-        <a href="http://content.tujia.com/youkebangzhu.htm" target="_blank" rel="nofollow">我是房客</a>|
-        <a href="http://content.tujia.com/qiyewenhua.htm" target="_blank" rel="nofollow">加入途家</a>|
-        <a href="/SiteMap/UnitDestination/" target="_blank">网站地图</a>|
-        <a href="/sitemap.htm" target="_blank">城市地图</a>
+        <a href="{{URL('bottom/about')}}" target="_blank" class="forst" rel="nofollow">关于我们</a>|
+        <a href="{{URL('bottom/customer')}}" target="_blank" rel="nofollow">联系我们</a>|
+        <a href="{{URL('bottom/map')}}" target="_blank">城市地图</a>
         
         
         
