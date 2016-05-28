@@ -11,7 +11,7 @@
 
 
     <link rel="canonical" href="http://www.tujia.com/beijing_gongyu/chaoyangqu_3581.htm"/>
-    <title>【图】北京蜗牛长安驿精品大床房_朝阳区短租公寓_蜗牛短租</title>
+    <title>【图】{{$room->r_title}}_蜗牛短租</title>
     <meta name="description" content="" />
     <meta name="keywords" content="" />
     <meta property="qc:admins" content="27330065376452116375" />
@@ -39,10 +39,6 @@
         window["WEB_XHR_POLLING"] = true;
         var MESSAGE_RADIO="http://staticfile.tujia.com/PortalSite2/radio/message.wav", ORDERNOTICE_RADIO = "http://staticfile.tujia.com/PortalSite2/radio/ordernotice.wav";
     </script>
-
-    
-
-
 <script src="http://www.tujia.com/Common/CityInfo"></script>
 
 <script type="text/javascript">
@@ -193,8 +189,14 @@
     var imUrl = "http://im.tujia.com";
     var customerUrl =  "http://vip.tujia.com";
 
-</script> 
-
+</script>
+ <!--  百度地图-->
+<style type="text/css">
+        body, html {width: 100%;height: 100%;margin:0;font-family:"微软雅黑";}
+        #allmap{width:100%;height:500px;}
+        p{margin-left:5px; font-size:14px;}
+    </style>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=KDVmREdMbYe73tGfkqKEmbUGBT0UbFvF"></script>
 </head>
 <body id=&#39;tujia&#39;>
     <!--[if lt IE 8]>
@@ -261,20 +263,7 @@
 
 
 
-<div class="m-cont row-cont">
-    
-
-<div id="dir" class="dir-cont">
-        <a href="http://www.tujia.com/se0/" title="蜗牛短租">蜗牛短租</a>
-    
-            <em>&gt;</em><a href="/beijing_gongyu/se0/" title="北京住宿">北京住宿</a>
-        <em>&gt;</em><a href="/beijing_gongyu/chaoyangqu_se0s182/" title="朝阳区住宿">朝阳区住宿</a><em>&gt;</em>
-
-北京蜗牛长安驿精品大床房
-
-</div>
-
-    
+<div class="m-cont row-cont">    
 <div class="share-cont">
     <a class="a-btn" target="_blank" href="http://www.tujia.com/Account/BeginShare?state=SinaWeiBo&amp;unitID=3581"><i class="icon-sian"></i>分享到微博</a>
     <a class="a-btn" href="javascript:void(0);" id="shareWeixin"><i class="icon-wixin"></i>分享到微信</a>
@@ -345,210 +334,20 @@
     <div class="thumb-cont">
         <div class="shadow-box"></div>
         <div class="owl-carousel" style="width: 9999px">
+                @foreach($img as $v)
                     <div class="item">
-                     <div id="wrapper"><!-- 最外层部分 -->
-    <div id="banner"><!-- 轮播部分 -->
-        <ul class="imgList"><!-- 图片部分 -->
-            @foreach($img as $v)
-            <li><a href="#"><img src="uploads/{{$v}}" width="100%" height="600px" alt="puss in boots1"></a></li>
-            @endforeach
-        </ul>
-        <img src="./img/prev.png" width="20px" height="40px" id="prev">
-        <img src="./img/next.png" width="20px" height="40px" id="next">
-        <div class="bg"></div> <!-- 图片底部背景层部分-->
-        <ul class="infoList"><!-- 图片左下角文字信息部分 -->
-            <li class="infoOn">puss in boots1</li>
-            <li>puss in boots2</li>
-            <li>puss in boots3</li>
-            <li>puss in boots4</li>
-            <li>puss in boots5</li>
-        </ul>
-        <ul class="indexList"><!-- 图片右下角序号部分 -->
-            <li class="indexOn">1</li>
-            <li>2</li>
-            <li>3</li>
-            <li>4</li>
-            <li>5</li>
-        </ul>
-    </div>
-</div>
+                        <img onload="javascript:imgLoadSuccess();" onerror="javascript:imgLoadFail(this);" src="images/{{$v}}" />
                     </div>
+                @endforeach
+
         </div>
         <div id="imgControl" class="thumb-btn" style="display:none">
             <a href="javascript:;" class="btn-prev" id="hd-prev">上一张</a>
             <a href="javascript:;" class="btn-next" id="hd-next">下一张</a>
         </div>
     </div>
-    
-
-    
-    <div class="house-hint-info">
-        <div class="house-tag-box">
-
-                <span class="label-text">优势地段</span>
-                                <span class="label-text">休闲度假</span>
-                    <span class="label-text">商务差旅</span>
-                    <span class="label-text">近菜市场</span>
-
-        </div>
-        <span>此房型有20套，实际入住与此可能略有不同</span>
-    </div>
 </div>
-<script type="text/javascript">
-    var curIndex = 0, //当前index
-        imgArr = getElementsByClassName("imgList")[0].getElementsByTagName("li"), //获取图片组
-        imgLen = imgArr.length,
-        infoArr = getElementsByClassName("infoList")[0].getElementsByTagName("li"), //获取图片info组
-        indexArr = getElementsByClassName("indexList")[0].getElementsByTagName("li"); //获取控制index组
-    // 定时器自动变换2.5秒每次
-    var autoChange = setInterval(function(){
-        if(curIndex < imgLen -1){
-            curIndex ++;
-        }else{
-            curIndex = 0;
-        }
-        //调用变换处理函数
-        changeTo(curIndex);
-    },2500);
 
-    //清除定时器时候的重置定时器--封装
-    function autoChangeAgain(){
-        autoChange = setInterval(function(){
-            if(curIndex < imgLen -1){
-                curIndex ++;
-            }else{
-                curIndex = 0;
-            }
-            //调用变换处理函数
-            changeTo(curIndex);
-        },2500);
-    }
-
-    //调用添加事件处理
-    addEvent();
-
-    //给左右箭头和右下角的图片index添加事件处理
-    function addEvent(){
-        for(var i=0;i<imgLen;i++){
-            //闭包防止作用域内活动对象item的影响
-            (function(_i){
-                //鼠标滑过则清除定时器，并作变换处理
-                indexArr[_i].onmouseover = function(){
-                    clearTimeout(autoChange);
-                    changeTo(_i);
-                    curIndex = _i;
-                };
-                //鼠标滑出则重置定时器处理
-                indexArr[_i].onmouseout = function(){
-                    autoChangeAgain();
-                };
-            })(i);
-        }
-
-        //给左箭头prev添加上一个事件
-        var prev = document.getElementById("prev");
-        prev.onmouseover = function(){
-            //滑入清除定时器
-            clearInterval(autoChange);
-        };
-        prev.onclick = function(){
-            //根据curIndex进行上一个图片处理
-            curIndex = (curIndex > 0) ? (--curIndex) : (imgLen - 1);
-            changeTo(curIndex);
-        };
-        prev.onmouseout = function(){
-            //滑出则重置定时器
-            autoChangeAgain();
-        };
-
-        //给右箭头next添加下一个事件
-        var next = document.getElementById("next");
-        next.onmouseover = function(){
-            clearInterval(autoChange);
-        };
-        next.onclick = function(){
-            curIndex = (curIndex < imgLen - 1) ? (++curIndex) : 0;
-            changeTo(curIndex);
-        };
-        next.onmouseout = function(){
-            autoChangeAgain();
-        };
-    }
-
-    //左右切换处理函数
-    function changeTo(num){
-        //设置image
-        var imgList = getElementsByClassName("imgList")[0];
-        goLeft(imgList,num*400); //左移一定距离
-        //设置image 的 info
-        var curInfo = getElementsByClassName("infoOn")[0];
-        removeClass(curInfo,"infoOn");
-        addClass(infoArr[num],"infoOn");
-        //设置image的控制下标 index
-        var _curIndex = getElementsByClassName("indexOn")[0];
-        removeClass(_curIndex,"indexOn");
-        addClass(indexArr[num],"indexOn");
-    }
-
-
-    //图片组相对原始左移dist px距离
-    function goLeft(elem,dist){
-        if(dist == 400){ //第一次时设置left为0px 或者直接使用内嵌法 style="left:0;"
-            elem.style.left = "0px";
-        }
-        var toLeft; //判断图片移动方向是否为左
-        dist = dist + parseInt(elem.style.left); //图片组相对当前移动距离
-        if(dist<0){
-            toLeft = false;
-            dist = Math.abs(dist);
-        }else{
-            toLeft = true;
-        }
-        for(var i=0;i<= dist/20;i++){ //这里设定缓慢移动，10阶每阶40px
-            (function(_i){
-                var pos = parseInt(elem.style.left); //获取当前left
-                setTimeout(function(){
-                    pos += (toLeft)? -(_i * 20) : (_i * 20); //根据toLeft值指定图片组位置改变
-                    //console.log(pos);
-                    elem.style.left = pos + "px";
-                },_i * 25); //每阶间隔50毫秒
-            })(i);
-        }
-    }
-
-    //通过class获取节点
-    function getElementsByClassName(className){
-        var classArr = [];
-        var tags = document.getElementsByTagName('*');
-        for(var item in tags){
-            if(tags[item].nodeType == 1){
-                if(tags[item].getAttribute('class') == className){
-                    classArr.push(tags[item]);
-                }
-            }
-        }
-        return classArr; //返回
-    }
-
-    // 判断obj是否有此class
-    function hasClass(obj,cls){  //class位于单词边界
-        return obj.className.match(new RegExp('(\\s|^)' + cls + '(\\s|$)'));
-    }
-    //给 obj添加class
-    function addClass(obj,cls){
-        if(!this.hasClass(obj,cls)){
-            obj.className += cls;
-        }
-    }
-    //移除obj对应的class
-    function removeClass(obj,cls){
-        if(hasClass(obj,cls)){
-            var reg = new RegExp('(\\s|^)' + cls + '(\\s|$)');
-            obj.className = obj.className.replace(reg,'');
-        }
-    }
-
-</script>
 
 <div class="m-share-pop" style="display: none;" id="divWeixin">
     <div class="hd-box">
@@ -610,26 +409,26 @@
                 <div class="district-info">
                     <i class="icon-area"></i>
 
-                            <span class="lab-text">朝阳区</span>
-                            <span class=" business-name">CBD</span>
-                            <span class="lab-text">长安驿酒店式公寓</span>
-
-                        [
+                            <span class="lab-text">{{$room->r_district}}</span>
+                            <span class=" business-name">{{$room->r_alias}}</span>
+                            <!-- <span class="lab-text">长安驿酒店式公寓</span>
+                            
+                                                    [
                             近永安里地铁站
-                        
-                            ]
+                                                    
+                            ] -->
                         
                     <a href="#unitmap" class="link-btn">查看地图</a>
                 </div>
                 <div class="hotel-advan-tag">
                     <ul>
-                        <li class="icon-type" title="酒店式公寓">酒店式公寓</li>
-                        <li class="icon-square" title="建筑面积45平米">{{$room->r_pattem}}</li>
-                            <li class="icon-cooking" title="可做饭">可做饭</li>
-                        <li class="icon-bed" title="1张床"><span class="lab-text"><u rel="bedCountDetail">1张床</u></span></li>
-                        <li class="icon-guests" title="推荐入住2人">宜住2人</li>
+                        <li class="icon-type" title="酒店式公寓">{{$room->r_type}}</li>
+                        <li class="icon-square" title="建筑面积{{$room->r_pattem}}平米">{{$room->r_pattem}}</li>
+                            <!-- <li class="icon-cooking" title="可做饭">可做饭</li>
+                                                    <li class="icon-bed" title="1张床"><span class="lab-text"><u rel="bedCountDetail">1张床</u></span></li> -->
+                        <li class="icon-guests" title="推荐入住{{$room->r_people}}人">宜住{{$room->r_people}}人</li>
 
-                                <li class="icon-wiff" title="无线网络">无线网络</li>
+                                <!-- <li class="icon-wiff" title="无线网络">无线网络</li> -->
                     </ul>
 
                         <span id="bedCountDetail" class="m-tips-wrap" style="display:none;padding:5px;">2×1.5米 大床×1</span>
@@ -706,11 +505,11 @@
                         </div>
 
                     </div>
-                    <div class="room-select-box" id="productcontent">
+                    <!-- <div class="room-select-box" id="productcontent">
                         <div class="loading-wrap">
                             <i class="icon-loading"></i>
                         </div>
-                    </div>
+                    </div> -->
             </div>
             <!-- Tabs  -->
             
@@ -778,10 +577,7 @@
         </div>
         <div class="content-box">
             <div class="highlight-info">
-                                    <p><i>▪</i>位于朝阳区CBD，临近使馆区，更适合商务出差人士入住；</p>
-                                    <p><i>▪</i>紧邻长安街，地铁10分钟达天安门、北京站，公交直达热门景点；</p>
-                                    <p><i>▪</i>楼下有24小时便利店，庆丰包子等，餐饮方便；</p>
-                                    <p><i>▪</i>房屋装修简约大方，开间宽敞舒适，设备齐全。</p>
+                <p>{{$room->r_lightspot}}</p>
             </div>
         </div>
     </div>
@@ -791,23 +587,13 @@
 
     <div class="column-info">
         <div class="side-box">
-            <i class="icon-facility"></i>
-            <h2>设施服务</h2>
+            <h2>优惠活动</h2>
         </div>
         <div class="content-box">
             <div id="facilitycontainer" class="m-key-list">
-                    <h4>设施</h4>
-                    <ul style="max-height:79px;">
-                            <li class="icon-airconditioner">空调</li>
-                            <li class="icon-elevator">电梯</li>
-                    </ul>
-
-                    <h4>服务</h4>
-                    <ul style="max-height:35px;">
-                            <li class="dis-text">免费停车</li>
-                            <li class="dis-text"></li>
-                            <li class="">行李寄存</li>
-                            <li class="">接机</li>
+                    <ul style="max-height:35px; margin-top:20px">
+                            <li class="">一、满<span style="color:red">7</span>天，打<span style="color:red">{{$room->r_checkin}}</span>折</li>&nbsp;&nbsp;
+                            <li class="">二、满<span style="color:red">30</span>天，打<span style="color:red">{{$room->r_checkout}}</span>折</li>
                     </ul>
             </div>
 
@@ -838,13 +624,10 @@
             <h2>房屋描述</h2>
         </div>
         <div id="unitintrocontentcontainer" class="content-box">
-            <div class="desc-info " style="">
-                {{$room->r_introduce}}
-            </div>
-
-
-    
+            <!-- <div class="desc-info " style="">
                 
+            </div> -->
+            {{$room->r_introduce}}
         </div>
     </div>
     <script type="text/javascript">
@@ -874,52 +657,14 @@
         <div class="column-info">
             <div class="side-box">
                 <i class="icon-community"></i>
-                <h2>小区概况</h2>
+                <h2>交通概况</h2>
             </div>
             <div class="content-box">
                 <div id="residentialquartercontainer" class="community-cont">
-
-                    
-                        <div class="community-info  " style="">北京地杰长安驿酒店式公寓位于朝阳区建国门外，占据赛特优势地段，紧靠长安街，距赛特购物中心直线距离不到100米。周边有北京友谊商店、国际俱乐部、建国饭店、凯莱大酒店、北广传媒大厦等多个购物中心。五星级酒店、国际级俱乐部和高档的写字楼，商业、商务、生活配套极度成熟，紧靠第一使馆区，建有各类使馆41座，有非常浓厚的涉外氛围。<p><br/></p>公寓主力户型为45-109平米，高标准国际品质全精装。社区内20000平米独立商业，6000平米配套商业，多车位规划，是您旅游、办公、出差的理想选择。</div>
-                                            <div class="community-info j-autohide" style="display:none">
-                            <div class="label-group">
-                                <span class="label-text">年份-2012</span>
-                                <span class="label-text">绿化率-0</span>
-                                <span class="label-text" style="width:auto">停车费-5元/小时</span>
-                            </div>
-
-                        </div>
-                                            <div class="community-info j-autohide" style="display:none">
-                                <div class="label-group">
-                                                                            <span class="label-text">便利店</span>
-                                                                            <span class="label-text">停车位</span>
-                                                                                                                                            </div>
-
-                                <div class="text-box">
-                                    地下停车超过半个小时以上，5元/小时，不分白天晚上。<br />
-                                </div>
-                        </div>
-                                            <div class="community-tag j-autohide" style="display:none">优势地段&nbsp;&nbsp;配套成熟&nbsp;&nbsp;涉外氛围&nbsp;&nbsp;出行方便</div>
-
-                        <div class="community-info  j-autohide" style="display:none">
-                            <div class="text-box">24小时保安&nbsp;&nbsp;摄像监控</div>
-                        </div>
-                                                <div class="community-info  j-autohide" style="display:none"><img src="http://pic.tujia.com/upload/residentialquarter/day_121217/201212171202528624.jpg" style="height:390px;width:632px"></div>
-
-                        <div class="community-pic j-autohide" style="display:none">
-                            <ul>
-                                    <li><a class="group1" data-img="http://pic.tujia.com/upload/residentialquarter/day_160125/thumb/201601251759086963_630_390.jpg"><img src="http://pic.tujia.com/upload/residentialquarter/day_160125/thumb/201601251759086963_70_43.jpg" alt="" width="70" height="43"></a></li>
-                                    <li><a class="group1" data-img="http://pic.tujia.com/upload/residentialquarter/day_160125/thumb/201601251758549504_630_390.jpg"><img src="http://pic.tujia.com/upload/residentialquarter/day_160125/thumb/201601251758549504_70_43.jpg" alt="" width="70" height="43"></a></li>
-                                    <li><a class="group1" data-img="http://pic.tujia.com/upload/residentialquarter/day_160125/thumb/201601251758299995_630_390.jpg"><img src="http://pic.tujia.com/upload/residentialquarter/day_160125/thumb/201601251758299995_70_43.jpg" alt="" width="70" height="43"></a></li>
-                                    <li><a class="group1" data-img="http://pic.tujia.com/upload/residentialquarter/day_160125/thumb/201601251758187520_630_390.jpg"><img src="http://pic.tujia.com/upload/residentialquarter/day_160125/thumb/201601251758187520_70_43.jpg" alt="" width="70" height="43"></a></li>
-                                    <li><a class="group1" data-img="http://pic.tujia.com/upload/residentialquarter/day_160125/thumb/201601251758004630_630_390.jpg"><img src="http://pic.tujia.com/upload/residentialquarter/day_160125/thumb/201601251758004630_70_43.jpg" alt="" width="70" height="43"></a></li>
-                                    <li><a class="group1" data-img="http://pic.tujia.com/upload/residentialquarter/day_160125/thumb/201601251758425011_630_390.jpg"><img src="http://pic.tujia.com/upload/residentialquarter/day_160125/thumb/201601251758425011_70_43.jpg" alt="" width="70" height="43"></a></li>
-                            </ul>
-                        </div>
-
+                <div class="community-info  " style="">
+                    <li>{{$room->r_traffic}}</li>
                 </div>
-                    <div id="residentialquartermore" class="toggle-btn"><a href="javascript:;" class="">查看更多<i class="i-acor"></i></a></div>
-                    <div id="residentialquarterless" class="toggle-btn" style="display:none"><a href="javascript:;" class="active">收起<i class="i-acor"></i></a></div>
+                </div>  
             </div>
         </div>
         <script type="text/javascript">
@@ -953,60 +698,14 @@
         </div>
         <div class="content-box">
             <div class="m-key-list t-key-list">
-                    <ul>
-                            <li class="">提供发票</li>
-                            <li class="dis-text">银联标识信用卡</li>
-                            <li class="dis-text">外卡信用卡</li>
-                            <li class="">15:00之后入住</li>
-                            <li class="">12:00之前退房<i title='以上均为当地时间' class='icon-desc-text'></i></li>
-                            <li class="">接待外宾</li>
-                            <li class="">允许吸烟</li>
-                            <li class="">允许带宠物</li>
+                    <ul style="margin-top:20px">
+                        <li class="">{{$room->r_seven}}&nbsp;&nbsp;之后入住</li>
+                        <li class="">{{$room->r_days}}&nbsp;&nbsp;之前退房<i title='以上均为当地时间' class='icon-desc-text'></i></li>
                     </ul>
 
             </div>
         </div>
 </div>                <!-- 入住提示  -->
-
-
-    <div class="column-info ">
-        <div class="side-box">
-            <i class="icon-service"></i>
-            <h2>服务费用</h2>
-        </div>
-        <div class="content-box">
-            <div class="m-hint-info">
-                    <ul class="desc-cont">
-                            <li class="dis-text">
-                                <h5>允许加人</h5>
-                            </li>
-                            <li class="">
-                                <h5>允许聚会</h5>
-                            </li>
-                            <li class="">
-                                <h5>允许做饭</h5>
-                            </li>
-                            <li class="">
-                                <h5>可加床</h5>
-                                        <div class="text-box">（最多可加床1张）</div>
-                            </li>
-                    </ul>
-
-                    <ul class="expense-cont">
-                            <li>
-                                <h5>其他入住须知</h5>
-                                <div class="text-box">
-北京蜗牛斯维登服务公寓（地杰长安驿）精选中高端度假公寓、特色房屋，房间格局丰富，配套设施高档齐全，同时提供接机等一站式服务，为您带来温馨的居家体验和深度旅游的需要。
-1、房间一客一打扫，赠送饮料2瓶。
-2、所有房型中，部分房间电视为液晶，部分为台式。
-1、公寓可接纳港澳台同胞及外宾；
-2、公寓支持刷卡消费；
-3、公寓可提供发票。</div>
-                            </li>
-                    </ul>
-            </div>
-        </div>
-    </div>
 
             </div>
 
@@ -1017,32 +716,9 @@
     <h2>位置地图</h2>
 </div>
 <div class="map-cont">
-        <div class="map-main">
-            <div id="mapPanel" class="map-panel"></div>
-            <div class="map-legend" id="mapIconInfo">
-                <div class="mapitem" lng="116.450654" lat="39.912128" address="朝阳区建华南路地杰长安驿">
-                    <div class="icon" id="icon1"></div>
-                    <div class="text">房屋位置</div>
-                </div>
-            </div>
-
-        </div>
-        <div class="map-sidebar">
-            <div class="peripheral-info">
-                <h3>周边信息</h3>
-                <ul class="tab-menu" id="map-tab-menus">
-                    <li class="current" q="餐饮"><a href="javascript:void(0)" onclick="_gaq.push(['_trackEvent', 'pcDetail', '地图','餐饮美食']);">餐饮美食</a></li>
-                    <li q="景区"><a href="javascript:void(0)" onclick="_gaq.push(['_trackEvent', 'pcDetail', '地图','景区景点']);">景区景点</a></li>
-                    <li q="娱乐" class="last"><a href="javascript:void(0)" onclick="_gaq.push(['_trackEvent', 'pcDetail', '地图','娱乐场所']);">娱乐场所</a></li>
-                </ul>
-                <div class="tab-info-item" id="map-tab-items">
-                </div>
-            </div>
-        </div>
-
-        <div class="hint-text">周边五百米服务：超市</div>
+        <div id="allmap"></div>
 </div>
-            </div>
+</div>
             <!-- 房屋评论  -->
             
 
@@ -1068,7 +744,14 @@
         <img style="display: none" height="400px" width="400px" src="uploads/2.jpg" >
         <ul>
         @foreach($com as $v)
-            <li><em>{{$v->c_content}}</em><em>{{$v->c_time}}</em><br><img onmouseover="out({{$v->c_id}})"  height="45px" width="130px" src="images/logo1.png" alt="蜗牛logo"></li>
+		<li>{{$v->u_name}}&nbsp;&nbsp;&nbsp;&nbsp;<em>{{$v->c_time}}</em>&nbsp;&nbsp;入住 </li>
+            <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<em>{{$v->c_content}}</em><br>
+
+			@foreach($img as $val)
+            <!-- <a class="preview" href="../public/uploads/{{$val}}" title=""> -->
+            <img height="45px" width="130px" src="../public/uploads/{{$val}}" alt=""></a></li>
+            @endforeach
+            <!-- <li><em>{{$v->c_content}}</em><em>{{$v->c_time}}</em><br><img onmouseover="out({{$v->c_id}})"  height="45px" width="130px" src="images/logo1.png" alt="蜗牛logo"></li> -->
         @endforeach
         </ul>
 
@@ -2208,11 +1891,14 @@ a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
             }, 1);
         }());
     </script>
-    
-
-
-
-
-
 </body>
 </html>
+<script type="text/javascript">
+    // 百度地图API功能
+    var map = new BMap.Map("allmap");          
+    map.centerAndZoom(new BMap.Point(116.404, 39.915), 11);
+    var local = new BMap.LocalSearch(map, {
+        renderOptions:{map: map}
+    });
+    local.search("{{$room->r_coordinate}}");
+</script>
