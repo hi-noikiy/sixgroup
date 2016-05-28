@@ -34,7 +34,6 @@ class Room extends Model
     	}elseif($layout=='no' && $layout==''){
     		unset($where2['r_pattem']);
     	}
-    		//$where2=array('r_district'=>$site,'r_type'=>$rom,'r_pattem'=>$layout);
     	if ($r_price & empty($site) || empty($rom) || empty($layout)) {	//价格存在
     		$price=explode('-',$r_price);
     		$price1=$price[0];

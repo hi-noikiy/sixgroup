@@ -653,11 +653,11 @@
     <?php $img=explode('|',$v->r_img) ?>
         <div class="house-img">
             <a href="../public/images/{{$img[0]}}" target="_blank" rel="nofollow" class="link-btn-pic" onclick="_gaq.push(['_trackEvent', 'pcList', '房屋点击']);">
-<<<<<<< HEAD
+
                 <img src="images/{{$img[0]}}" alt="{{$v->r_title}}" />
-=======
+
                 <img src="uploads/{{$img[0]}}" alt="北京 北京光耀公寓豪华行政二居室" />
->>>>>>> d3923c8b0c077bb119c8081c36086dc27209a54f
+
             </a>
             <div class="functions-menu">
                 <a href="javascript:;" class="view-pic">更多图片</a>
