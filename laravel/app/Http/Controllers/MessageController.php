@@ -29,4 +29,23 @@ class MessageController extends Controller
          $room= DB::select('select * from room');
 		 return view('Message/goods',['room' => $room]);
    }
+   //底部处理
+   public function about(){
+	   //关于我们
+	      return view('Message/about');
+         
+   }
+   public function customer(){
+	   //我是房客
+	      return view('Message/customer');
+	     
+         
+   }
+   public function joins(){
+	   //加入我们
+	      return view('Message/join');
+	     
+         
+   }
+
 }

@@ -118,44 +118,7 @@
             </div>
         </div>
 <div class="content">
-    <!-- 精品房源 -->
-     
-    <!-- 城市导航条 4个及4个以上城市显示城市导航条 
-
-    <div id="navBox" class="nav-box">
-        <div class="nav-city" id="nav-city">
-            <table class="theme_city">
-                <tr>
-                        <td  class="current "><a href="javascript:scrollTo(0,0);">华北区域</a></td>
-                        <td  class=" "><a href="javascript:scrollTo(0,0);">华南区域</a></td>
-                        <td  class=" "><a href="javascript:scrollTo(0,0);">华东区域</a></td>
-                        <td  class=" "><a href="javascript:scrollTo(0,0);">东北区域</a></td>
-            </table>
-            <table class="citys" id="citys">
-                    <tr id="subjectItem0" class="subjectItemNav"style=>
-                        <td class="current_city"><a href="#subject0">北京</a></td>
-                        <td class=""><a href="#subject1">北京</a></td>
-                        <td class=""><a href="#subject2">西安</a></td>
-                    </tr>
-                    <tr id="subjectItem1" class="subjectItemNav"style=display:none>
-                        <td class="current_city"><a href="#subject3">广州</a></td>
-                        <td class=""><a href="#subject4">成都</a></td>
-                        <td class=""><a href="#subject5">深圳</a></td>
-                    </tr>
-                    <tr id="subjectItem2" class="subjectItemNav"style=display:none>
-                        <td class="current_city"><a href="#subject6">上海</a></td>
-                        <td class=""><a href="#subject7">杭州</a></td>
-                        <td class=""><a href="#subject8">苏州</a></td>
-                        <td class=""><a href="#subject9">武汉</a></td>
-                    </tr>
-                    <tr id="subjectItem3" class="subjectItemNav"style=display:none>
-                        <td class="current_city"><a href="#subject10">沈阳</a></td>
-                        <td class=""><a href="#subject11">大连</a></td>
-                    </tr>
-                
-        </table>
-        </div>
-    </div>-->
+    
 <div id="unitContainer" class="container">
     <!-- 城市房源 -->
             
@@ -171,35 +134,35 @@
 <div class="mod-city">
     <div class="city-house">
         <ul class="house-list clearfix">
-
+                @foreach($jin as $v)
                     <li class="item-unit ">
                         <div class="pic">
-                                <a href="http://www.tujia.com/tianjin_gongyu/hexiqu_78310.htm" target="_blank">
-                                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" class="lazy" alt="北京盛捷友谊服务公寓单房式公寓" data-original="http://pic.tujia.com/upload/landlordunit/day_151210/thumb/201512101750197960_370_232.jpg">
+                                <a href="{{URL('good?r_id')}}={{$v->r_id}}" target="_blank">
+                                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" class="lazy" alt="{{$v->r_title}}" data-original="http://pic.tujia.com/upload/landlordunit/day_151210/thumb/201512101750197960_370_232.jpg">
                                 </a>
                         </div>
                         <div class="text">
                             <h4>
-                              <a href="http://www.tujia.com/tianjin_gongyu/hexiqu_78310.htm" target="_blank">北京盛捷友谊服务公寓单房式公寓</a>
+                              <a href="{{URL('good?r_id')}}={{$v->r_id}}" target="_blank">{{$v->r_title}}</a>
                             </h4>
                                 <div class="house-datelist">
                                     <p class="house-htladdress">
                                         
-                                        河西区
+                                        北京
                                         <a href="javascript:void(0)" ref="http://api.map.baidu.com/staticimage?zoom=15&amp;markers=117.216827,39.089358&amp;width=400&amp;height=400&amp;markerStyles=m, ,&amp;pic=mappic.png" onclick="window.open('http://www.tujia.com/tianjin_gongyu/hexiqu_78310.htm?tabto=map')" class="map-btn">地图</a>
                                     </p>
                                     <p>
 
-                                        <span title="四钻标准酒店">四钻标准酒店</span> |
-                                        <span title="1室1卫">一居</span> |
+                                        <span title="{{$v->r_type}}">{{$v->r_type}}</span> |
+                                        <span title="{{$v->r_pattem}}">{{$v->r_pattem}}</span> |
 
-                                        <span title="推荐入住2人">宜住2人</span>
+                                        <span title="推荐入住{{$v->r_people}}人">宜住{{$v->r_people}}人</span>
                                     </p>
                                 </div>
                         </div>
                             <div class="btn-order">
                                 <div class="price">
-                                    <span><em><sup>￥</sup>466</em></span>
+                                    <span><em><sup>￥</sup>{{$v->r_price}}</em></span>
                                         <del class="m-producthighestprice-money" data-defaultprice="583">
                                             <b class="number-box">583</b>
                                         </del>
@@ -207,300 +170,7 @@
                                 <a href="http://www.tujia.com/tianjin_gongyu/hexiqu_78310.htm" class="buy-btn" target="_blank">立即预订</a>
                             </div>
                     </li>
-                    <li class="item-unit ">
-                        <div class="pic">
-                                <a href="http://www.tujia.com/tianjin_gongyu/hepingqu_73004.htm" target="_blank">
-                                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" class="lazy" alt="北京盛捷奥林匹克公寓行政一室套房" data-original="http://pic.tujia.com/upload/landlordunit/day_151124/thumb/20151124150015726_370_232.jpg">
-                                </a>
-                        </div>
-                        <div class="text">
-                            <h4>
-                              <a href="http://www.tujia.com/tianjin_gongyu/hepingqu_73004.htm" target="_blank">北京盛捷奥林匹克公寓行政一室套房</a>
-                            </h4>
-                                <div class="house-datelist">
-                                    <p class="house-htladdress">
-                                        
-                                        和平区
-                                        <a href="javascript:void(0)" ref="http://api.map.baidu.com/staticimage?zoom=15&amp;markers=117.200181,39.112759&amp;width=400&amp;height=400&amp;markerStyles=m, ,&amp;pic=mappic.png" onclick="window.open('http://www.tujia.com/tianjin_gongyu/hepingqu_73004.htm?tabto=map')" class="map-btn">地图</a>
-                                    </p>
-                                    <p>
-
-                                        <span title="四钻酒店式公寓">四钻酒店式公寓</span> |
-                                        <span title="1室1厅1卫1厨房1阳台">一居</span> |
-
-                                        <span title="推荐入住2人">宜住2人</span>
-                                    </p>
-                                </div>
-                        </div>
-                            <div class="btn-order">
-                                <div class="price">
-                                    <span><em><sup>￥</sup>742</em></span>
-                                </div>
-                                <a href="http://www.tujia.com/tianjin_gongyu/hepingqu_73004.htm" class="buy-btn" target="_blank">立即预订</a>
-                            </div>
-                    </li>
-                    <li class="item-unit ">
-                        <div class="pic">
-                                <a href="http://www.tujia.com/tianjin_gongyu/hexiqu_52843.htm" target="_blank">
-                                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" class="lazy" alt="北京盛捷友谊服务公寓豪华一室套房" data-original="http://pic.tujia.com/upload/landlordunit/day_150813/thumb/201508130559427810_370_232.jpg">
-                                </a>
-                        </div>
-                        <div class="text">
-                            <h4>
-                              <a href="http://www.tujia.com/tianjin_gongyu/hexiqu_52843.htm" target="_blank">北京盛捷友谊服务公寓豪华一室套房</a>
-                            </h4>
-                                <div class="house-datelist">
-                                    <p class="house-htladdress">
-                                        
-                                        河西区
-                                        <a href="javascript:void(0)" ref="http://api.map.baidu.com/staticimage?zoom=15&amp;markers=117.216827,39.089358&amp;width=400&amp;height=400&amp;markerStyles=m, ,&amp;pic=mappic.png" onclick="window.open('http://www.tujia.com/tianjin_gongyu/hexiqu_52843.htm?tabto=map')" class="map-btn">地图</a>
-                                    </p>
-                                    <p>
-
-                                        <span title="四钻酒店式公寓">四钻酒店式公寓</span> |
-                                        <span title="1室1厅1卫1厨房">一居</span> |
-
-                                        <span title="推荐入住2人">宜住2人</span>
-                                    </p>
-                                </div>
-                        </div>
-                            <div class="btn-order">
-                                <div class="price">
-                                    <span><em><sup>￥</sup>636</em></span>
-                                </div>
-                                <a href="http://www.tujia.com/tianjin_gongyu/hexiqu_52843.htm" class="buy-btn" target="_blank">立即预订</a>
-                            </div>
-                    </li>
-                    <li class="item-unit ">
-                        <div class="pic">
-                                <a href="http://www.tujia.com/tianjin_gongyu/hepingqu_52706.htm" target="_blank">
-                                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" class="lazy" alt="北京盛捷奥林匹克公寓豪华一室套房" data-original="http://pic.tujia.com/upload/landlordunit/day_151124/thumb/2015112414424170_370_232.jpg">
-                                </a>
-                        </div>
-                        <div class="text">
-                            <h4>
-                              <a href="http://www.tujia.com/tianjin_gongyu/hepingqu_52706.htm" target="_blank">北京盛捷奥林匹克公寓豪华一室套房</a>
-                            </h4>
-                                <div class="house-datelist">
-                                    <p class="house-htladdress">
-                                        
-                                        和平区
-                                            <span class="business-area-name">滨江道</span>
-                                        <a href="javascript:void(0)" ref="http://api.map.baidu.com/staticimage?zoom=15&amp;markers=117.200181,39.112759&amp;width=400&amp;height=400&amp;markerStyles=m, ,&amp;pic=mappic.png" onclick="window.open('http://www.tujia.com/tianjin_gongyu/hepingqu_52706.htm?tabto=map')" class="map-btn">地图</a>
-                                    </p>
-                                    <p>
-
-                                        <span title="四钻酒店式公寓">四钻酒店式公寓</span> |
-                                        <span title="1室1厅1卫1厨房1阳台">一居</span> |
-
-                                        <span title="推荐入住2人">宜住2人</span>
-                                    </p>
-                                </div>
-                        </div>
-                            <div class="btn-order">
-                                <div class="price">
-                                    <span><em><sup>￥</sup>636</em></span>
-                                </div>
-                                <a href="http://www.tujia.com/tianjin_gongyu/hepingqu_52706.htm" class="buy-btn" target="_blank">立即预订</a>
-                            </div>
-                    </li>
-                    <li class="item-unit ">
-                        <div class="pic">
-                                <a href="http://www.tujia.com/tianjin_gongyu/hepingqu_72967.htm" target="_blank">
-                                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" class="lazy" alt="北京盛捷国际大厦公寓豪华一室" data-original="http://pic.tujia.com/upload/landlordunit/day_151124/thumb/201511241406531664_370_232.jpg">
-                                </a>
-                        </div>
-                        <div class="text">
-                            <h4>
-                              <a href="http://www.tujia.com/tianjin_gongyu/hepingqu_72967.htm" target="_blank">北京盛捷国际大厦公寓豪华一室</a>
-                            </h4>
-                                <div class="house-datelist">
-                                    <p class="house-htladdress">
-                                        
-                                        和平区
-                                            <span class="business-area-name">小白楼街</span>
-                                        <a href="javascript:void(0)" ref="http://api.map.baidu.com/staticimage?zoom=15&amp;markers=117.215889,39.122315&amp;width=400&amp;height=400&amp;markerStyles=m, ,&amp;pic=mappic.png" onclick="window.open('http://www.tujia.com/tianjin_gongyu/hepingqu_72967.htm?tabto=map')" class="map-btn">地图</a>
-                                    </p>
-                                    <p>
-
-                                        <span title="四钻酒店式公寓">四钻酒店式公寓</span> |
-                                        <span title="1室1厅1卫1厨房">一居</span> |
-
-                                        <span title="推荐入住2人">宜住2人</span>
-                                    </p>
-                                </div>
-                        </div>
-                            <div class="btn-order">
-                                <div class="price">
-                                    <span><em><sup>￥</sup>793</em></span>
-                                </div>
-                                <a href="http://www.tujia.com/tianjin_gongyu/hepingqu_72967.htm" class="buy-btn" target="_blank">立即预订</a>
-                            </div>
-                    </li>
-                    <li class="item-unit ">
-                        <div class="pic">
-                                <a href="http://www.tujia.com/tianjin_gongyu/hepingqu_52785.htm" target="_blank">
-                                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" class="lazy" alt="北京盛捷国际大厦公寓行政一室套房" data-original="http://pic.tujia.com/upload/landlordunit/day_150813/thumb/201508130455112761_370_232.jpg">
-                                </a>
-                        </div>
-                        <div class="text">
-                            <h4>
-                              <a href="http://www.tujia.com/tianjin_gongyu/hepingqu_52785.htm" target="_blank">北京盛捷国际大厦公寓行政一室套房</a>
-                            </h4>
-                                <div class="house-datelist">
-                                    <p class="house-htladdress">
-                                        
-                                        和平区
-                                            <span class="business-area-name">小白楼街</span>
-                                        <a href="javascript:void(0)" ref="http://api.map.baidu.com/staticimage?zoom=15&amp;markers=117.215889,39.122315&amp;width=400&amp;height=400&amp;markerStyles=m, ,&amp;pic=mappic.png" onclick="window.open('http://www.tujia.com/tianjin_gongyu/hepingqu_52785.htm?tabto=map')" class="map-btn">地图</a>
-                                    </p>
-                                    <p>
-
-                                        <span title="五钻酒店式公寓">五钻酒店式公寓</span> |
-                                        <span title="1室1厅1卫1厨房">一居</span> |
-
-                                        <span title="推荐入住2人">宜住2人</span>
-                                    </p>
-                                </div>
-                        </div>
-                            <div class="btn-order">
-                                <div class="price">
-                                    <span><em><sup>￥</sup>878</em></span>
-                                </div>
-                                <a href="http://www.tujia.com/tianjin_gongyu/hepingqu_52785.htm" class="buy-btn" target="_blank">立即预订</a>
-                            </div>
-                    </li>
-                    <li class="item-unit hide">
-                        <div class="pic">
-                                <a href="http://www.tujia.com/tianjin_gongyu/hexiqu_52849.htm" target="_blank">
-                                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" class="lazy" alt="北京盛捷友谊服务公寓行政两室套房" data-original="http://pic.tujia.com/upload/landlordunit/day_150813/thumb/201508130644406349_370_232.jpg">
-                                </a>
-                        </div>
-                        <div class="text">
-                            <h4>
-                              <a href="http://www.tujia.com/tianjin_gongyu/hexiqu_52849.htm" target="_blank">北京盛捷友谊服务公寓行政两室套房</a>
-                            </h4>
-                                <div class="house-datelist">
-                                    <p class="house-htladdress">
-                                        
-                                        河西区
-                                        <a href="javascript:void(0)" ref="http://api.map.baidu.com/staticimage?zoom=15&amp;markers=117.216827,39.089358&amp;width=400&amp;height=400&amp;markerStyles=m, ,&amp;pic=mappic.png" onclick="window.open('http://www.tujia.com/tianjin_gongyu/hexiqu_52849.htm?tabto=map')" class="map-btn">地图</a>
-                                    </p>
-                                    <p>
-
-                                        <span title="四钻酒店式公寓">四钻酒店式公寓</span> |
-                                        <span title="2室1厅2卫1厨房">二居</span> |
-
-                                        <span title="推荐入住4人">宜住4人</span>
-                                    </p>
-                                </div>
-                        </div>
-                            <div class="btn-order">
-                                <div class="price">
-                                    <span><em><sup>￥</sup>1050</em></span>
-                                </div>
-                                <a href="http://www.tujia.com/tianjin_gongyu/hexiqu_52849.htm" class="buy-btn" target="_blank">立即预订</a>
-                            </div>
-                    </li>
-                    <li class="item-unit hide">
-                        <div class="pic">
-                                <a href="http://www.tujia.com/tianjin_gongyu/hepingqu_72993.htm" target="_blank">
-                                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" class="lazy" alt="北京盛捷奥林匹克公寓豪华两室套房" data-original="http://pic.tujia.com/upload/landlordunit/day_151124/thumb/201511241440081930_370_232.jpg">
-                                </a>
-                        </div>
-                        <div class="text">
-                            <h4>
-                              <a href="http://www.tujia.com/tianjin_gongyu/hepingqu_72993.htm" target="_blank">北京盛捷奥林匹克公寓豪华两室套房</a>
-                            </h4>
-                                <div class="house-datelist">
-                                    <p class="house-htladdress">
-                                        
-                                        和平区
-                                            <span class="business-area-name">滨江道</span>
-                                        <a href="javascript:void(0)" ref="http://api.map.baidu.com/staticimage?zoom=15&amp;markers=117.200149,39.112753&amp;width=400&amp;height=400&amp;markerStyles=m, ,&amp;pic=mappic.png" onclick="window.open('http://www.tujia.com/tianjin_gongyu/hepingqu_72993.htm?tabto=map')" class="map-btn">地图</a>
-                                    </p>
-                                    <p>
-
-                                        <span title="四钻酒店式公寓">四钻酒店式公寓</span> |
-                                        <span title="2室1厅1卫1厨房1阳台">二居</span> |
-
-                                        <span title="推荐入住3人">宜住3人</span>
-                                    </p>
-                                </div>
-                        </div>
-                            <div class="btn-order">
-                                <div class="price">
-                                    <span><em><sup>￥</sup>901</em></span>
-                                </div>
-                                <a href="http://www.tujia.com/tianjin_gongyu/hepingqu_72993.htm" class="buy-btn" target="_blank">立即预订</a>
-                            </div>
-                    </li>
-                    <li class="item-unit hide">
-                        <div class="pic">
-                                <a href="http://www.tujia.com/tianjin_gongyu/hepingqu_52722.htm" target="_blank">
-                                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" class="lazy" alt="北京盛捷奥林匹克公寓行政两室套房" data-original="http://pic.tujia.com/upload/landlordunit/day_151124/thumb/201511241446523184_370_232.jpg">
-                                </a>
-                        </div>
-                        <div class="text">
-                            <h4>
-                              <a href="http://www.tujia.com/tianjin_gongyu/hepingqu_52722.htm" target="_blank">北京盛捷奥林匹克公寓行政两室套房</a>
-                            </h4>
-                                <div class="house-datelist">
-                                    <p class="house-htladdress">
-                                        
-                                        和平区
-                                            <span class="business-area-name">滨江道</span>
-                                        <a href="javascript:void(0)" ref="http://api.map.baidu.com/staticimage?zoom=15&amp;markers=117.200149,39.112753&amp;width=400&amp;height=400&amp;markerStyles=m, ,&amp;pic=mappic.png" onclick="window.open('http://www.tujia.com/tianjin_gongyu/hepingqu_52722.htm?tabto=map')" class="map-btn">地图</a>
-                                    </p>
-                                    <p>
-
-                                        <span title="四钻酒店式公寓">四钻酒店式公寓</span> |
-                                        <span title="2室1厅1卫1厨房1阳台">二居</span> |
-
-                                        <span title="推荐入住3人">宜住3人</span>
-                                    </p>
-                                </div>
-                        </div>
-                            <div class="btn-order">
-                                <div class="price">
-                                    <span><em><sup>￥</sup>954</em></span>
-                                </div>
-                                <a href="http://www.tujia.com/tianjin_gongyu/hepingqu_52722.htm" class="buy-btn" target="_blank">立即预订</a>
-                            </div>
-                    </li>
-                    <li class="item-unit hide">
-                        <div class="pic">
-                                <a href="http://www.tujia.com/tianjin_gongyu/hepingqu_72976.htm" target="_blank">
-                                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" class="lazy" alt="北京盛捷国际大厦公寓豪华行政两室" data-original="http://pic.tujia.com/upload/landlordunit/day_151124/thumb/20151124141636618_370_232.jpg">
-                                </a>
-                        </div>
-                        <div class="text">
-                            <h4>
-                              <a href="http://www.tujia.com/tianjin_gongyu/hepingqu_72976.htm" target="_blank">北京盛捷国际大厦公寓豪华行政两室</a>
-                            </h4>
-                                <div class="house-datelist">
-                                    <p class="house-htladdress">
-                                        
-                                        和平区
-                                            <span class="business-area-name">小白楼街</span>
-                                        <a href="javascript:void(0)" ref="http://api.map.baidu.com/staticimage?zoom=15&amp;markers=117.215889,39.122315&amp;width=400&amp;height=400&amp;markerStyles=m, ,&amp;pic=mappic.png" onclick="window.open('http://www.tujia.com/tianjin_gongyu/hepingqu_72976.htm?tabto=map')" class="map-btn">地图</a>
-                                    </p>
-                                    <p>
-
-                                        <span title="四钻酒店式公寓">四钻酒店式公寓</span> |
-                                        <span title="2室1厅2卫1厨房1书房">二居</span> |
-
-                                        <span title="推荐入住2人">宜住2人</span>
-                                    </p>
-                                </div>
-                        </div>
-                            <div class="btn-order">
-                                <div class="price">
-                                    <span><em><sup>￥</sup>1007</em></span>
-                                </div>
-                                <a href="http://www.tujia.com/tianjin_gongyu/hepingqu_72976.htm" class="buy-btn" target="_blank">立即预订</a>
-                            </div>
-                    </li>
+					@endforeach
         </ul>
     </div>
 
@@ -518,8 +188,8 @@
     </div>
 
 
-    <!-- 查看更多 -->
-            <a href="javascript:void(0)" class="list-more" moreprduct="0">查看更多房屋<i class="icon icon-more"></i></a>
+    <!-- 查看更多 
+            <a href="javascript:void(0)" class="list-more" moreprduct="0">查看更多房屋<i class="icon icon-more"></i></a>-->
 </div>                    </div>
                     
             </div>

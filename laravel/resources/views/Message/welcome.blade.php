@@ -58,8 +58,7 @@
         </div>
         <div class="nav-list">
             <ul>
-                <li class="first"><a href="http://www.tujia.com/se0/" class="home-link " target="_blank">首页</a></li>
-               <!-- <li><a href="http://international.tujia.com/"  target="_blank">海外·港台</a></li>-->
+                <li class="first"><a href="{{URL('index')}}" class="home-link " target="_blank">首页</a></li>
                 <li><a href="http://www.tujia.com/changzu/se0/"  target="_blank">周租月租</a></li>
                 <li><a href="http://www.tujia.com/Experience/"  target="_blank">体验房</a></li>
                 <li><a href="http://www.tujia.com/photowall/" target="_blank" >特色房</a></li>
@@ -239,30 +238,6 @@
     </div>
 </div>
 
-<div class="m-why-wrap">
-    <div class="why-cont">
-        <ul>
-            <li class="why-item-1">
-                <i class="icon-box"></i>
-                <p><span><a href="http://www.tujia.com/Promotion/ConsumerTrainning.htm" target="_blank" class="link-btn">多人多天便捷</a></span>能做饭能洗衣，能带宠物能聚会</p>
-            </li>
-            <li class="why-item-2">
-                <i class="icon-box"></i>
-                <p><span><a href="http://www.tujia.com/Promotion/ConsumerTrainning.htm" target="_blank" class="link-btn">更具家庭氛围</a></span>住在途家，享受家的温馨和舒适</p>
-            </li>
-            <li class="why-item-3">
-                <i class="icon-box"></i>
-                <p><span><a href="http://www.tujia.com/Promotion/ConsumerTrainning.htm" target="_blank" class="link-btn">比酒店更实惠</a></span>比等价酒店空间大，设施更齐全</p>
-            </li>
-            <li class="why-item-4">
-                <i class="icon-box"></i>
-                <p><span><a href="http://www.tujia.com/Promotion/ConsumerTrainning.htm" target="_blank" class="link-btn">新奇当地体验</a></span>风格迥异，体验新奇，融入当地</p>
-            </li>
-        </ul>
-    </div>
-</div>
-
-
 
     <div class="hot-destn-fluid">
         <div class="wrap-large">
@@ -288,7 +263,7 @@
                     <div class="destn-house-list j-specialunit-container" data-leveloneid="1" data-leveltwoid="<?php echo $key->ty_id?>" style="">
                         <ul>
                                 <li>
-                                    <a href="{{URL('goods')}}" target="_blank" rel="nofollow" class="pic-box" onclick="_gaq.push(['_trackEvent', 'PC-首页推荐','三亚市内','家庭出游']);" id="<?php echo $key->r_id?>"><img data-original="http://pic.tujia.com/upload/landlordunit/day_160505/thumb/201605051733501789_370_232.jpg" alt="" class="house-pic" width="370" height="232"></a>
+                                    <a href="{{URL('good?r_id')}}={{$key->r_id}}" target="_blank" rel="nofollow" class="pic-box" onclick="_gaq.push(['_trackEvent', 'PC-首页推荐','三亚市内','家庭出游']);" id="<?php echo $key->r_id?>"><img data-original="http://pic.tujia.com/upload/landlordunit/day_160505/thumb/201605051733501789_370_232.jpg" alt="" class="house-pic" width="370" height="232"></a>
                                     <div class="house-info">
                                         <h2>
                                             <a href="{{URL('good?r_id')}}={{$key->r_id}}" class="house-tit" target="_blank" title="<?php echo $key->r_title?>" onclick="_gaq.push(['_trackEvent', 'PC-首页推荐','三亚市内','家庭出游']);" id="<?php echo $key->r_id?>"><?php echo $key->r_title?></a>
@@ -297,7 +272,7 @@
                                         <div class="house-datelist">
                                             <span title="<?php echo $key->ty_name?>" class="label-text"><?php echo $key->ty_name?></span>|
                                             <span title="<?php echo $key->r_pattem?>" class="label-text"><?php echo $key->r_pattem?></span>|
-                                            <span title="<?php echo $key->r_people?>" class="label-text"><?php echo $key->r_people?></span>
+                                            <span title="宜住<?php echo $key->r_people?>人" class="label-text">宜住<?php echo $key->r_people?>人</span>
                                         </div>
                                         <span class="price-box"><dfn>¥</dfn><b><?php echo $key->r_price?></b>/晚</span>
                                     </div>
@@ -319,12 +294,12 @@
                 <div class="theme-list">
                     <ul class="clearfix">
                             <li>
-                                <a href="{{URL('scenery')}}" target="_blank">
+                                <a href="{{URL('index/scenery')}}" target="_blank">
                                     <img data-original="images/theme/meijing.jpg" alt="北京美景" width="580" height="364" />
                                 </a>
                             </li>
                             <li>
-                                <a href="{{URL('kursaal')}}" target="_blank">
+                                <a href="{{URL('index/kursaal')}}" target="_blank">
                                     <img data-original="images/theme/hlg.jpg" alt="北京欢乐谷" width="580" height="364" />
                                 </a>
                             </li>
@@ -333,59 +308,24 @@
                 <div class="theme-list t-theme-list" id="themeTemplateFirst">
                     <ul class="clearfix">
                             <li>
-                                <a href="{{URL('love')}}" target="_blank">
+                                <a href="{{URL('index/love')}}" target="_blank">
                                     <img data-original="http://pic.tujia.com/upload/config/day_160513/201605131647555135.jpg" alt="520情侣房" width="370" height="232" />
                                 </a>
                             </li>
                             <li>
-                                <a href="{{URL('carhome')}}" 
+                                <a href="{{URL('index/carhome')}}" 
 								target="_blank">
                                     <img data-original="http://pic.tujia.com/upload/config/day_160316/201603161723503184.jpg" alt="旅游房车提供" width="370" height="232" />
                                 </a>
                             </li>
                             <li>
-                                <a href="{{URL('Boutique')}}" target="_blank">
+                                <a href="{{URL('index/boutique')}}" target="_blank">
                                     <img data-original="images/theme/jing.jpg" alt="精品订购" width="370" height="232" />
                                 </a>
                             </li>
                     </ul>
+					
                 </div>
-                    <div class="theme-list" style="display: none" id="themeTemplate">
-                        <ul class="clearfix">
-                                <li>
-                                    <a href="http://go.tujia.com/3262/?code=2016cjgjhp1" target="_blank">
-                                        <img data-original="http://pic.tujia.com/upload/config/day_160329/201603291626095227.jpg" alt="2016春季广交会" width="580" height="364" />
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="http://go.tujia.com/3248/?code=shjp1" target="_blank">
-                                        <img data-original="http://pic.tujia.com/upload/config/day_160311/201603111807433558.jpg" alt="全国赏花季" width="580" height="364" />
-                                    </a>
-                                </li>
-                        </ul>
-                    </div>
-                        <div class="theme-list t-theme-list" style="display: none" id="themeTemplate2">
-                            <ul class="clearfix">
-                                    <li>
-                                        <a href="http://go.tujia.com/3250/?code=rbyhp1" target="_blank">
-                                            <img data-original="http://pic.tujia.com/upload/config/day_160311/201603111808485510.jpg" alt="日本樱花季" width="370" height="232" />
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="http://go.tujia.com/3259/?code=qgzhp1" target="_blank">
-                                            <img data-original="http://pic.tujia.com/upload/config/day_160406/201604061717292494.jpg" alt="2016春季全国展会" width="370" height="232" />
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="http://go.tujia.com/3176/?code=fcztp1" target="_blank">
-                                            <img data-original="http://pic.tujia.com/upload/config/day_160316/201603161723503184.jpg" alt="2015秋季房车专题" width="370" height="232" />
-                                        </a>
-                                    </li>
-                            </ul>
-                        </div>
-                                    <div class="m-link-box"><a href="javascript:void(0);" class="more-btn" id="theme-more-btn">查看更多<i class="i-acor"></i></a></div>
-
-
             </div>
         </div>
     </div>
@@ -405,14 +345,11 @@
          
    
     <div class="m-footer-link-list">
-        <a href="http://content.tujia.com/tujiajianjie.htm" target="_blank" class="forst" rel="nofollow">关于我们</a>|
-        <a href="http://content.tujia.com/youkebangzhu.htm" target="_blank" rel="nofollow">我是房客</a>|
+        <a href="{{URL('bottom/about')}}" target="_blank" class="forst" rel="nofollow">关于我们</a>|
+        <a href="{{URL('bottom/customer')}}" target="_blank" rel="nofollow">我是房客</a>|
         <a href="http://content.tujia.com/qiyewenhua.htm" target="_blank" rel="nofollow">加入蜗牛</a>|
         <a href="/SiteMap/UnitDestination/" target="_blank">网站地图</a>|
         <a href="/sitemap.htm" target="_blank">城市地图</a>
-        
-        
-        
         
     </div>
     

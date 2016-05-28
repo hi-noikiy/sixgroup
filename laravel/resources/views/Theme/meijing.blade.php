@@ -80,8 +80,6 @@
 <div class="header-nav clearfix">
     <div class="w1190">
         
-            <a href="http://www.tujia.com/" target="_blank" title="蜗牛网首页" class="tujia-logo">蜗牛网</a>
-        
         <ul class="nav-list">
             <li><a href="http://www.tujia.com/" class="home-link " target="_blank">首页</a></li>
             <li><a href="http://www.tujia.com/changzu/"  target="_blank">周租月租</a></li>
@@ -106,34 +104,13 @@
 
 
 
-
-
         <div class="banner" style="background-image:url(images/theme/fj1.jpg)">
             <div class="content pr w1190">
-                <img src="images/theme/fj1.jpg" alt="美屋美景，不可辜负">
+                <img src="laravel/public/images/theme/fj1.jpg" alt="美屋美景，不可辜负">
             </div>
         </div>
 <div class="content">
-    <!-- 精品房源 -->
-    <!-- 城市导航条 4个及4个以上城市显示城市导航条 
-    <div id="navBox" class="nav-box">
-        <div class="nav-city" id="nav-city">
-            <table class="theme_city">
-                <tr>
-                        <td class="current"><a href="#subject0">杭州</a></td>
-                        <td class=""><a href="#subject1">北京</a></td>
-                        <td class=""><a href="#subject2">乌镇</a></td>
-                        <td class=""><a href="#subject3">苏州</a></td>
-                        <td class=""><a href="#subject4">无锡</a></td>
-                        <td class=""><a href="#subject5">南京</a></td>
-                        <td class=""><a href="#subject6">常州</a></td>
-                        <td class=""><a href="#subject7">上海</a></td>
-                        <td class=""><a href="#subject8">宁波</a></td>
-                        <td class=""><a href="#subject9">更多美城</a></td>
-                    </tr>
-            </table>
-        </div>
-    </div>-->
+  
 <div id="unitContainer" class="container">
     <!-- 城市房源 -->
         <div class="mod" id="subject1">
@@ -148,16 +125,16 @@
 <div class="mod-city">
     <div class="city-house">
         <ul class="house-list clearfix">
-
+            @foreach($meijing as $v)
                     <li class="item-unit ">
                         <div class="pic">
-                                <a href="http://www.tujia.com/xitang_gongyu/xitang_66971.htm" target="_blank">
-                                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" class="lazy" alt="北京邀月阁客栈圆床房" data-original="http://pic.tujia.com/upload/landlordunit/day_151102/thumb/201511021131256066_370_232.png">
+                                <a href="{{URL('good?r_id')}}={{$v->r_id}}" target="_blank">
+                                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" class="lazy" alt="{{$v->r_title}}" data-original="http://pic.tujia.com/upload/landlordunit/day_151102/thumb/201511021131256066_370_232.png">
                                 </a>
                         </div>
                         <div class="text">
                             <h4>
-                              <a href="http://www.tujia.com/xitang_gongyu/xitang_66971.htm" target="_blank">北京邀月阁客栈圆床房</a>
+                              <a href="{{URL('good?r_id')}}={{$v->r_id}}" target="_blank">{{$v->r_title}}</a>
                             </h4>
                                 <div class="house-datelist">
                                     <p class="house-htladdress">
@@ -167,351 +144,28 @@
                                     </p>
                                     <p>
 
-                                        <span title="四钻标准酒店">四钻标准酒店</span> |
-                                        <span title="1室1卫">一居</span> |
+                                        <span title="{{$v->r_type}}">{{$v->r_type}}</span> |
+                                        <span title="{{$v->r_pattem}}">{{$v->r_pattem}}</span> |
 
-                                        <span title="推荐入住2人">宜住2人</span>
+                                        <span title="推荐入住{{$v->r_people}}人">宜住{{$v->r_people}}人</span>
                                     </p>
                                 </div>
                         </div>
                             <div class="btn-order">
                                 <div class="price">
-                                    <span><em><sup>￥</sup>158</em></span>
+                                    <span><em><sup>￥</sup>{{$v->r_price}}</em></span>
                                 </div>
                                 <a href="http://www.tujia.com/xitang_gongyu/xitang_66971.htm" class="buy-btn" target="_blank">立即预订</a>
                             </div>
                     </li>
-                    <li class="item-unit ">
-                        <div class="pic">
-                                <a href="http://www.tujia.com/xitang_gongyu/xitang_69972.htm" target="_blank">
-                                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" class="lazy" alt="北京临河客栈木雕大床房" data-original="http://pic.tujia.com/upload/landlordunit/day_151112/thumb/201511121741493317_370_232.jpg">
-                                </a>
-                        </div>
-                        <div class="text">
-                            <h4>
-                              <a href="http://www.tujia.com/xitang_gongyu/xitang_69972.htm" target="_blank">北京临河客栈木雕大床房</a>
-                            </h4>
-                                <div class="house-datelist">
-                                    <p class="house-htladdress">
-                                        
-                                        北京
-                                        <a href="javascript:void(0)" ref="http://api.map.baidu.com/staticimage?zoom=15&amp;markers=120.902665,30.950743&amp;width=400&amp;height=400&amp;markerStyles=m, ,&amp;pic=mappic.png" onclick="window.open('http://www.tujia.com/xitang_gongyu/xitang_69972.htm?tabto=map')" class="map-btn">地图</a>
-                                    </p>
-                                    <p>
-
-                                        <span title="客栈">客栈</span> |
-                                        <span title="1室1卫">一居</span> |
-
-                                        <span title="推荐入住2人">宜住2人</span>
-                                    </p>
-                                </div>
-                        </div>
-                            <div class="btn-order">
-                                <div class="price">
-                                    <span><em><sup>￥</sup>188</em></span>
-                                </div>
-                                <a href="http://www.tujia.com/xitang_gongyu/xitang_69972.htm" class="buy-btn" target="_blank">立即预订</a>
-                            </div>
-                    </li>
-                    <li class="item-unit ">
-                        <div class="pic">
-                                <a href="http://www.tujia.com/xitang_gongyu/xitang_37039.htm" target="_blank">
-                                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" class="lazy" alt="北京听雨临河欧式大床房" data-original="http://pic.tujia.com/upload/landlordunit/day_150606/thumb/201506061121051042_370_232.jpg">
-                                </a>
-                        </div>
-                        <div class="text">
-                            <h4>
-                              <a href="http://www.tujia.com/xitang_gongyu/xitang_37039.htm" target="_blank">北京听雨临河欧式大床房</a>
-                            </h4>
-                                <div class="house-datelist">
-                                    <p class="house-htladdress">
-                                        
-                                        北京
-                                        <a href="javascript:void(0)" ref="http://api.map.baidu.com/staticimage?zoom=15&amp;markers=120.900141,30.95087&amp;width=400&amp;height=400&amp;markerStyles=m, ,&amp;pic=mappic.png" onclick="window.open('http://www.tujia.com/xitang_gongyu/xitang_37039.htm?tabto=map')" class="map-btn">地图</a>
-                                    </p>
-                                    <p>
-
-                                        <span title="三钻客栈">三钻客栈</span> |
-                                            <span title="江景房">江景房</span> |
-                                        <span title="1室1卫">一居</span> |
-
-                                        <span title="推荐入住2人">宜住2人</span>
-                                    </p>
-                                </div>
-                        </div>
-                            <div class="btn-order">
-                                <div class="price">
-                                    <span><em><sup>￥</sup>680</em></span>
-                                </div>
-                                <a href="http://www.tujia.com/xitang_gongyu/xitang_37039.htm" class="buy-btn" target="_blank">立即预订</a>
-                            </div>
-                    </li>
-                    <li class="item-unit ">
-                        <div class="pic">
-                                <a href="http://www.tujia.com/xitang_gongyu/xitang_69452.htm" target="_blank">
-                                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" class="lazy" alt="北京水乡别苑客栈临河全景大床房" data-original="http://pic.tujia.com/upload/landlordunit/day_151111/thumb/201511111341166399_370_232.jpg">
-                                </a>
-                        </div>
-                        <div class="text">
-                            <h4>
-                              <a href="http://www.tujia.com/xitang_gongyu/xitang_69452.htm" target="_blank">北京水乡别苑客栈临河全景大床房</a>
-                            </h4>
-                                <div class="house-datelist">
-                                    <p class="house-htladdress">
-                                        
-                                        北京
-                                        <a href="javascript:void(0)" ref="http://api.map.baidu.com/staticimage?zoom=15&amp;markers=120.904866,30.950476&amp;width=400&amp;height=400&amp;markerStyles=m, ,&amp;pic=mappic.png" onclick="window.open('http://www.tujia.com/xitang_gongyu/xitang_69452.htm?tabto=map')" class="map-btn">地图</a>
-                                    </p>
-                                    <p>
-
-                                        <span title="三钻客栈">三钻客栈</span> |
-                                        <span title="1室1卫">一居</span> |
-
-                                        <span title="推荐入住2人">宜住2人</span>
-                                    </p>
-                                </div>
-                        </div>
-                            <div class="btn-order">
-                                <div class="price">
-                                    <span><em><sup>￥</sup>358</em></span>
-                                </div>
-                                <a href="http://www.tujia.com/xitang_gongyu/xitang_69452.htm" class="buy-btn" target="_blank">立即预订</a>
-                            </div>
-                    </li>
-                    <li class="item-unit ">
-                        <div class="pic">
-                                <a href="http://www.tujia.com/xitang_gongyu/xitang_10133.htm" target="_blank">
-                                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" class="lazy" alt="北京风之情复式房" data-original="http://pic.tujia.com/upload/landlordunit/day_131204/thumb/201312040223251598_370_232.jpg">
-                                </a>
-                        </div>
-                        <div class="text">
-                            <h4>
-                              <a href="http://www.tujia.com/xitang_gongyu/xitang_10133.htm" target="_blank">北京风之情复式房</a>
-                            </h4>
-                                <div class="house-datelist">
-                                    <p class="house-htladdress">
-                                        
-                                        北京
-                                        <a href="javascript:void(0)" ref="http://api.map.baidu.com/staticimage?zoom=15&amp;markers=120.902766,30.952991&amp;width=400&amp;height=400&amp;markerStyles=m, ,&amp;pic=mappic.png" onclick="window.open('http://www.tujia.com/xitang_gongyu/xitang_10133.htm?tabto=map')" class="map-btn">地图</a>
-                                    </p>
-                                    <p>
-
-                                        <span title="客栈">客栈</span> |
-                                        <span title="1室1厅1卫">一居</span> |
-
-                                        <span title="推荐入住2人">宜住2人</span>
-                                    </p>
-                                </div>
-                        </div>
-                            <div class="btn-order">
-                                <div class="price">
-                                    <span><em><sup>￥</sup>158</em></span>
-                                </div>
-                                <a href="http://www.tujia.com/xitang_gongyu/xitang_10133.htm" class="buy-btn" target="_blank">立即预订</a>
-                            </div>
-                    </li>
-                    <li class="item-unit ">
-                        <div class="pic">
-                                <a href="http://www.tujia.com/xitang_gongyu/xitang_91335.htm" target="_blank">
-                                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" class="lazy" alt="北京乐艺坊三店竹楼情歌" data-original="http://pic.tujia.com/upload/landlordunit/day_160304/thumb/201603041141025485_370_232.jpg">
-                                </a>
-                        </div>
-                        <div class="text">
-                            <h4>
-                              <a href="http://www.tujia.com/xitang_gongyu/xitang_91335.htm" target="_blank">北京乐艺坊三店竹楼情歌</a>
-                            </h4>
-                                <div class="house-datelist">
-                                    <p class="house-htladdress">
-                                        
-                                        北京
-                                        <a href="javascript:void(0)" ref="http://api.map.baidu.com/staticimage?zoom=15&amp;markers=120.904081,30.950519&amp;width=400&amp;height=400&amp;markerStyles=m, ,&amp;pic=mappic.png" onclick="window.open('http://www.tujia.com/xitang_gongyu/xitang_91335.htm?tabto=map')" class="map-btn">地图</a>
-                                    </p>
-                                    <p>
-
-                                        <span title="客栈">客栈</span> |
-                                        <span title="1室1厅1卫">一居</span> |
-
-                                        <span title="推荐入住2人">宜住2人</span>
-                                    </p>
-                                </div>
-                        </div>
-                            <div class="btn-order">
-                                <div class="price">
-                                    <span><em><sup>￥</sup>216</em></span>
-                                </div>
-                                <a href="http://www.tujia.com/xitang_gongyu/xitang_91335.htm" class="buy-btn" target="_blank">立即预订</a>
-                            </div>
-                    </li>
-                    <li class="item-unit hide">
-                        <div class="pic">
-                                <a href="http://www.tujia.com/xitang_gongyu/xitang_65446.htm" target="_blank">
-                                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" class="lazy" alt="北京左岸客栈豪华双床房" data-original="http://pic.tujia.com/upload/landlordunit/day_151027/thumb/201510270250482678_370_232.jpg">
-                                </a>
-                        </div>
-                        <div class="text">
-                            <h4>
-                              <a href="http://www.tujia.com/xitang_gongyu/xitang_65446.htm" target="_blank">北京左岸客栈豪华双床房</a>
-                            </h4>
-                                <div class="house-datelist">
-                                    <p class="house-htladdress">
-                                        
-                                        北京
-                                        <a href="javascript:void(0)" ref="http://api.map.baidu.com/staticimage?zoom=15&amp;markers=120.907395,30.9494&amp;width=400&amp;height=400&amp;markerStyles=m, ,&amp;pic=mappic.png" onclick="window.open('http://www.tujia.com/xitang_gongyu/xitang_65446.htm?tabto=map')" class="map-btn">地图</a>
-                                    </p>
-                                    <p>
-
-                                        <span title="三钻客栈">三钻客栈</span> |
-                                        <span title="1室1卫">一居</span> |
-
-                                        <span title="推荐入住4人">宜住4人</span>
-                                    </p>
-                                </div>
-                        </div>
-                            <div class="btn-order">
-                                <div class="price">
-                                    <span><em><sup>￥</sup>148</em></span>
-                                </div>
-                                <a href="http://www.tujia.com/xitang_gongyu/xitang_65446.htm" class="buy-btn" target="_blank">立即预订</a>
-                            </div>
-                    </li>
-                    <li class="item-unit hide">
-                        <div class="pic">
-                                <a href="http://www.tujia.com/xitang_gongyu/xitang_95135.htm" target="_blank">
-                                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" class="lazy" alt="北京满塘虹客栈甜蜜蜜圆床房" data-original="http://pic.tujia.com/upload/landlordunit/day_160327/thumb/201603271431378483_370_232.jpg">
-                                </a>
-                        </div>
-                        <div class="text">
-                            <h4>
-                              <a href="http://www.tujia.com/xitang_gongyu/xitang_95135.htm" target="_blank">北京满塘虹客栈甜蜜蜜圆床房</a>
-                            </h4>
-                                <div class="house-datelist">
-                                    <p class="house-htladdress">
-                                        
-                                        北京
-                                        <a href="javascript:void(0)" ref="http://api.map.baidu.com/staticimage?zoom=15&amp;markers=120.902607,30.951064&amp;width=400&amp;height=400&amp;markerStyles=m, ,&amp;pic=mappic.png" onclick="window.open('http://www.tujia.com/xitang_gongyu/xitang_95135.htm?tabto=map')" class="map-btn">地图</a>
-                                    </p>
-                                    <p>
-
-                                        <span title="三钻客栈">三钻客栈</span> |
-                                        <span title="1室1卫">一居</span> |
-
-                                        <span title="推荐入住2人">宜住2人</span>
-                                    </p>
-                                </div>
-                        </div>
-                            <div class="btn-order">
-                                <div class="price">
-                                    <span><em><sup>￥</sup>148</em></span>
-                                </div>
-                                <a href="http://www.tujia.com/xitang_gongyu/xitang_95135.htm" class="buy-btn" target="_blank">立即预订</a>
-                            </div>
-                    </li>
-                    <li class="item-unit hide">
-                        <div class="pic">
-                                <a href="http://www.tujia.com/xitang_gongyu/xitang_27692.htm" target="_blank">
-                                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" class="lazy" alt="避风港水柳岸临河景观（4人）房" data-original="http://pic.tujia.com/upload/landlordunit/day_150420/thumb/201504200410205094_370_232.jpg">
-                                </a>
-                        </div>
-                        <div class="text">
-                            <h4>
-                              <a href="http://www.tujia.com/xitang_gongyu/xitang_27692.htm" target="_blank">避风港水柳岸临河景观（4人）房</a>
-                            </h4>
-                                <div class="house-datelist">
-                                    <p class="house-htladdress">
-                                        
-                                        北京
-                                        <a href="javascript:void(0)" ref="http://api.map.baidu.com/staticimage?zoom=15&amp;markers=120.90414,30.950364&amp;width=400&amp;height=400&amp;markerStyles=m, ,&amp;pic=mappic.png" onclick="window.open('http://www.tujia.com/xitang_gongyu/xitang_27692.htm?tabto=map')" class="map-btn">地图</a>
-                                    </p>
-                                    <p>
-
-                                        <span title="三钻客栈">三钻客栈</span> |
-                                            <span title="江景房">江景房</span> |
-                                        <span title="2室1卫">二居</span> |
-
-                                        <span title="推荐入住4人">宜住4人</span>
-                                    </p>
-                                </div>
-                        </div>
-                            <div class="btn-order">
-                                <div class="price">
-                                    <span><em><sup>￥</sup>890</em></span>
-                                </div>
-                                <a href="http://www.tujia.com/xitang_gongyu/xitang_27692.htm" class="buy-btn" target="_blank">立即预订</a>
-                            </div>
-                    </li>
-                    <li class="item-unit hide">
-                        <div class="pic">
-                                <a href="http://www.tujia.com/xitang_gongyu/xitang_94422.htm" target="_blank">
-                                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" class="lazy" alt="北京景区内特色船床大床房" data-original="http://pic.tujia.com/upload/landlordunit/day_160505/thumb/201605051548554375_370_232.jpg">
-                                </a>
-                        </div>
-                        <div class="text">
-                            <h4>
-                              <a href="http://www.tujia.com/xitang_gongyu/xitang_94422.htm" target="_blank">北京景区内特色船床大床房</a>
-                            </h4>
-                                <div class="house-datelist">
-                                    <p class="house-htladdress">
-                                        
-                                        北京
-                                        <a href="javascript:void(0)" ref="http://api.map.baidu.com/staticimage?zoom=15&amp;markers=120.903118,30.954016&amp;width=400&amp;height=400&amp;markerStyles=m, ,&amp;pic=mappic.png" onclick="window.open('http://www.tujia.com/xitang_gongyu/xitang_94422.htm?tabto=map')" class="map-btn">地图</a>
-                                    </p>
-                                    <p>
-
-                                        <span title="三钻客栈">三钻客栈</span> |
-                                        <span title="1室1卫">一居</span> |
-
-                                        <span title="推荐入住2人">宜住2人</span>
-                                    </p>
-                                </div>
-                        </div>
-                            <div class="btn-order">
-                                <div class="price">
-                                    <span><em><sup>￥</sup>168</em></span>
-                                </div>
-                                <a href="http://www.tujia.com/xitang_gongyu/xitang_94422.htm" class="buy-btn" target="_blank">立即预订</a>
-                            </div>
-                    </li>
-                    <li class="item-unit hide">
-                        <div class="pic">
-                                <a href="http://www.tujia.com/xitang_gongyu/xitang_19543.htm" target="_blank">
-                                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" class="lazy" alt="北京蜗牛恒隆广场豪华双床房" data-original="http://pic.tujia.com/upload/unit/day_150730/thumb/201507300420004754_370_232.jpg">
-                                </a>
-                        </div>
-                        <div class="text">
-                            <h4>
-                              <a href="http://www.tujia.com/xitang_gongyu/xitang_19543.htm" target="_blank">北京蜗牛恒隆广场豪华双床房</a>
-                            </h4>
-                                <div class="house-datelist">
-                                    <p class="house-htladdress">
-                                        
-                                        北京
-                                        <a href="javascript:void(0)" ref="http://api.map.baidu.com/staticimage?zoom=15&amp;markers=120.908846,30.946049&amp;width=400&amp;height=400&amp;markerStyles=m, ,&amp;pic=mappic.png" onclick="window.open('http://www.tujia.com/xitang_gongyu/xitang_19543.htm?tabto=map')" class="map-btn">地图</a>
-                                    </p>
-                                    <p>
-
-                                        <span title="四钻酒店式公寓">四钻酒店式公寓</span> |
-                                        <span title="1室1卫1厨">一居</span> |
-
-                                        <span title="推荐入住2人">宜住2人</span>
-                                    </p>
-                                </div>
-                        </div>
-                            <div class="btn-order">
-                                <div class="price">
-                                    <span><em><sup>￥</sup>120</em></span>
-                                        <del class="m-producthighestprice-money" data-defaultprice="699">
-                                            <b class="number-box">699</b>
-                                        </del>
-                                </div>
-                                <a href="http://www.tujia.com/xitang_gongyu/xitang_19543.htm" class="buy-btn" target="_blank">立即预订</a>
-                            </div>
-                    </li>
+@endforeach
+                    
         </ul>
     </div>
 
     <div class="city-intro">
         
-        <div class="city-box">
+       <div class="city-box">
             <ul>
                     <li>
                         <div class="pic"><a href="http://www.tujia.com/beijing_gongyu/" target="_blank"><img src="http://staticfile.tujia.com/upload/CMSActivity/day_160513/201605131500504479.jpg" alt=""></a></div>
@@ -520,11 +174,12 @@
                     </li>
             </ul>
         </div>
+		
     </div>
 
 
-    <!-- 查看更多 -->
-            <a href="javascript:void(0)" class="list-more" moreprduct="0">查看更多房屋<i class="icon icon-more"></i></a>
+    <!-- 查看更多 
+            <a href="javascript:void(0)" class="list-more" moreprduct="0">查看更多房屋<i class="icon icon-more"></i></a>-->
 </div>
         </div>
 
