@@ -154,14 +154,16 @@
 </style>
 <input  type="hidden" name="ctx" id="ctx" value="" />
 <div class='header relave'>
-    <a href="/"><div class='asote head_left'></div></a>
+    <a href="/"><div class='asote head_left'><img src="../images/logo1.png" width="125px"  height="50px"/></div></a>
     <div class='head_cnt relave'>
         <span class='search'></span>
         <ul class="nav_R asote nav_right">
             <li>
                 <div class="showinfo">
                     <a href="javascript:menufrozen(851671587,'/tenant/851671587/orders','user')" target="_self"><img src="http://i1.mayi.com/gjfs15/M05/C7/30/CgEHP1cxdOXUq,Q-AABd0owykF8682.jpg_35x35c.jpg" id="aaa" class="user_img">
-                        <span class="name" id="head_nickname"></span></a>
+                        <span class="name" id="head_nickname"><?php  $value = session('u_name');
+						echo $value;
+						?></span></a>
                     <div class="head_pop">
                         <div class="pop_column">
                             <p><a href="javascript:menufrozen(851671587,'/tenant/851671587/orders','user')" target="_self" id="myorder" rel="nofollow">我的订单</a></p>
@@ -179,7 +181,7 @@
                     <div class="head_pop">
                         <div class="pop_column plr10">
                             <p><a href="javascript:menufrozen(851671587,'/landlord/851671587/orders','landlord')">订单管理</a></p>
-                            <p><a href="javascript:menufrozen(851671587,'/user/landlord/roommanager','landlord')">房源管理</a></p>
+                            <p><a href="{{URL('center')}}">房源管理</a></p>
                             <p><a href="javascript:menufrozen(851671587,'/landlord/851671587/settlements','landlord')">结算管理</a></p>
                             <p><a href="javascript:menufrozen(851671587,'/user/landlord/msgmanager','landlord')">消息通知</a></p>
                             <p><a href="javascript:menufrozen(851671587,'/user/landlord/accountmanager','landlord')">账户管理</a></p>
@@ -332,15 +334,17 @@
     <div class='one_workflow yes_person'>
         <div class='workflow relave'>
             <div class='progress progress_6'></div>
-            <b class='workflow1'>房源信息</b>
+             <b class='workflow1'>房源信息</b>
             <b class='workflow2'>房源描述</b>
             <b class='workflow3'>房源图片</b>
             <b class='workflow4'>价格要求</b>
+			<b class='workflow5'>价格要求</b>
             <b class='workflow6'>发布成功</b>
             <span class='workflow1_1'><a href="javascript:;" class='a_after'>1</a></span>
             <span class='workflow1_2'><a href="javascript:;" class='a_after'>2</a></span>
             <span class='workflow1_3'><a href="javascript:;" class='a_after'>3</a></span>
             <span class='workflow1_4'><a href="javascript:;" class='a_after'>4</a></span>
+			<span class='workflow1_5'><a href="javascript:;" class='a_after'>5</a></span>
             <span class='workflow1_6'><a href="javascript:;" class='duigo a_after'></a></span>
         </div>
     </div>
@@ -355,7 +359,7 @@
                     <p class="font12">系统将会把审核结果以短信和邮件的方式第一时间通知您！<a target="_blank" href="http://www.mayi.com/landlordrule/" style="text-decoration:underline;color:#e56f35;">房东必读</a></p>
                     <div class="submit-wrap textleft">
                         <a class="publistNew" href="{{URL('room')}}">发布新房间</a>
-                        <a class="contactLandord" href="">房间管理</a>
+                        <a class="contactLandord" href="{{URL('center')}}">房间管理</a>
                     </div>
                 </dd>
             </dl>

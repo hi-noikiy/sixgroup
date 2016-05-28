@@ -23,6 +23,17 @@
     <link rel="stylesheet" type="text/css" href="http://staticfile.tujia.com/portalsite2/styles/menu.css?v=5e55fe5" />
     <script type="text/javascript" src="http://staticfile.tujia.com/portalsite2/scripts/base/jquery.js?v=5e55fe5"></script>
     <link rel="stylesheet" type="text/css" href="http://staticfile.tujia.com/portalsite2/styles/colorbox.css?v=5e55fe5" />
+
+
+    <link href="../public/css/ShearPhoto.css" rel="stylesheet" type="text/css" media="all">
+    <script  type="text/javascript" src="../public/js/ShearPhoto.js" ></script>
+    <script  type="text/javascript"  src="../public/js/move.js" ></script>
+    <script  type="text/javascript"  src="../public/js/processdata.js" ></script>
+    <script  type="text/javascript"  src="../public/js/UpImg.js" ></script>
+    <script  type="text/javascript"  src="../public/js/webcam_ShearPhoto.js" ></script>
+    <script  type="text/javascript"  src="../public/js/handle.js" ></script>
+
+
     <script type="text/javascript" src="http://staticfile.tujia.com/portalsite2/scripts/base/colorbox.js?v=5e55fe5"></script>
 
     <script type="text/javascript" src="http://staticfile.tujia.com/portalsite2/scripts/js_user_head?v=5e55fe5"></script>
@@ -30,8 +41,6 @@
     <script src="http://staticfile.tujia.com/Common/Scripts/jquery.unobtrusive-ajax.js" type="text/javascript"></script>
     <script src="http://staticfile.tujia.com/Common/Scripts/swfobject.js" type="text/javascript"></script>
     <script type="text/javascript" src="http://staticfile.tujia.com/Common/Scripts/fullAvatarEditor.js"></script>
-    <script type="text/javascript" src="http://localhost/sixgroup/laravel/public/scripts/fullAvatarEditor.js"></script>
-    <script type="text/javascript" src="http://localhost/sixgroup/laravel/public/scripts/swfobject.js"></script>
     <script type="text/javascript">
         //window["WEB_XHR_POLLING"] = true;
         var MESSAGE_RADIO = "http://staticfile.tujia.com/PortalSite2/radio/message.wav", ORDERNOTICE_RADIO = "http://staticfile.tujia.com/PortalSite2/radio/ordernotice.wav";
@@ -55,7 +64,7 @@
             <?php echo Session::get('u_name')?>
         </span>
                 <br />
-
+                <br/>
             </p>
         </div>
 
@@ -72,6 +81,7 @@
             <ul>
                 <li><a id="myUserInfoInfo" href="person" onclick="_gaq.push(['_trackEvent', 'pcUserInfo', '个人资料']);">个人资料</a></li>
                 <li><a id="mypassword" href="updpwd" onclick="_gaq.push(['_trackEvent', 'pcUserInfo', '修改密码']);">修改密码</a></li>
+                <li><a id="myUserInfoInfo" href="headp" onclick="_gaq.push(['_trackEvent', 'pcUserInfo', '头像上传']);">头像上传</a></li>
             </ul>
         </div>
 
@@ -80,64 +90,108 @@
         <div>
             <p id="swfContainer"></p>
         </div>
-        <script type="text/javascript">
-            swfobject.addDomLoadEvent(function () {
-                var swf = new fullAvatarEditor("../public/scripts/fullAvatarEditor.swf", "../public/scripts/expressInstall.swf", "swfContainer", {
-                            id : 'swf',
-                            upload_url : '{{URL('headsuccess')}}?u_id=<?php echo Session::get('u_id')?>',	//上传接口
-                            method : 'post',	//传递到上传接口中的查询参数的提交方式。更改该值时，请注意更改上传接口中的查询参数的接收方式
-                            src_upload : 0,		//是否上传原图片的选项，有以下值：0-不上传；1-上传；2-显示复选框由用户选择
-                            avatar_box_border_width : 0,
-                            avatar_sizes : '150*150|100*100|50*50',
-                            avatar_sizes_desc : '150*150像素|100*100像素|50*50像素'
-                        }, function (msg) {
-                            switch(msg.code)
-                            {
-                                case 1 : alert("页面成功加载了组件！");break;
-                                case 2 :
-                                    alert("已成功加载图片到编辑面板。");
-                                    document.getElementById("upload").style.display = "inline";
-                                    break;
-                                case 3 :
-                                    if(msg.type == 0)
-                                    {
-                                        alert("摄像头已准备就绪且用户已允许使用。");
-                                    }
-                                    else if(msg.type == 1)
-                                    {
-                                        alert("摄像头已准备就绪但用户未允许使用！");
-                                    }
-                                    else
-                                    {
-                                        alert("摄像头被占用！");
-                                    }
-                                    break;
-                                case 5 :
-                                    if(msg.type == 0)
-                                    {
-                                        if(msg.content.sourceUrl)
-                                        {
-                                            alert("原图已成功保存至服务器，url为：\n" +　msg.content.sourceUrl+"\n\n" + "头像已成功保存至服务器，url为：\n" + msg.content.avatarUrls.join("\n\n")+"\n\n传递的u_id="+msg.content.<?php echo Session::get('u_id')?>);
-                                        }
-                                        else
-                                        {
-                                            alert("头像已成功保存至服务器，url为：\n" + msg.content.avatarUrls.join("\n\n")+"\n\n传递的u_id="+msg.content.<?php echo Session::get('u_id')?>);
-                                        }
-                                    }
-                                    break;
-                            }
-                        }
-                );
-                document.getElementById("upload").onclick=function(){
-                    swf.call("upload");
-                };
-            });
-
-        </script>
 
 
+        <div id="main">
+            <div class="point">
+            </div>
+            <!--没加载方法前-->
+            <div id="SelectBox">
+                <form  name="FORM" enctype="multipart/form-data" method="post"  target="POSTiframe">
+                    <input name="shearphoto" type="hidden" value="我要在这里传参数"> <!--示例传参数到服务端，后端文件用UPLOAD.php用$_POST['shearphoto']接收-->
+                    <a href="javascript:;" id="selectImage"><input type="file"  name="UpFile" /></a>
+                </form>
+                <a href="javascript:;" id="PhotoLoading"></a>
+                <a href="javascript:;" id="camerasImage"></a>
+            </div>
+            <!--没加载方法前结束-->
+            <div id="relat">
+                <div id="black">
+                </div>
+                <div id="movebox">
+                    <div id="smallbox">
+                        <img src="../public/images/default.png" class="MoveImg" />
+                    </div>
+                    <i id="BottomRight">
+                    </i>
+                    <i id="TopRight">
+                    </i>
+                    <i id="Bottomleft">
+                    </i>
+                    <i id="Topleft">
+                    </i>
+                    <i id="Topmiddle">
+                    </i>
+                    <i id="leftmiddle">
+                    </i>
+                    <i id="Rightmiddle">
+                    </i>
+                    <i id="Bottommiddle">
+                    </i>
+                </div>
+                <img src="../public/images/default.png" class="BigImg" />
+            </div>
+        </div>
+        <div id="Shearbar">
+            <a id="LeftRotate" href="javascript:;">
+                <em>
+                </em>
+                向左旋转
+            </a>
+            <em class="hint L">
+            </em>
+            <div class="ZoomDist" id="ZoomDist">
+                <div id="ZoomBar">
+                </div>
+                        <span class="progress">
+                        </span>
+            </div>
+            <em class="hint R">
+            </em>
+            <a id="RightRotate" href="javascript:;">
+                向右旋转
+                <em>
+                </em>
+            </a>
+            <p class="Psava">
+                <a id="againIMG"  href="javascript:;">重新选择</a>
+                <a id="saveShear" href="javascript:;">保存截图</a>
+            </p>
+        </div>
+        <!--主功能部份-->
+        <!--相册-->
+        <div id="photoalbum">
+            <h1>假如：这是一个相册--------试试点击图片</h1>
+            <i id="close"></i>
+            <ul>
+                <li><img src="../public/file/photo/1.jpg" serveUrl="../public/file/photo/1.jpg" /></li>
+                <li><img src="../public/file/photo/2.jpg" serveUrl="../public/file/photo/2.jpg" /></li>
+                <li><img src="../public/file/photo/3.jpg" serveUrl="../public/file/photo/3.jpg" /></li>
+                <li><img src="../public/file/photo/4.jpg" serveUrl="../public/file/photo/4.jpg" /></li>
+                <li><img src="../public/file/photo/5.jpg" serveUrl="../public/file/photo/5.jpg" /></li>
+                <li><img src="../public/file/photo/6.jpg" serveUrl="../public/file/photo/6.jpg" /></li>
+                <li><img src="../public/file/photo/7.jpg"  serveUrl="../public/file/photo/7.jpg"/></li>
+                <li><img src="../public/file/photo/8.jpg" serveUrl="../public/file/photo/8.jpg" /></li>
+            </ul>
+        </div>
+        <!--相册-->
+        <!--拍照-->
+        <div id="CamBox">
+            <p class="lens"></p>
+            <div id="CamFlash"></div>
+            <p class="cambar">
+                <a href="javascript:;" id="CamOk"  >拍照</a>
+                <a href="javascript:;" id="setCam">设置</a>
+                <a href="javascript:;" id="camClose">关闭</a>
+            <div style="clear:both;"></div>
+            </p>
+            <div id="timing">3</div>
+        </div>
+        <!--拍照-->
 
-    <div class="m-tips-wrap group-cont" id="mobile-tip" style="display: none">
+
+
+        <div class="m-tips-wrap group-cont" id="mobile-tip" style="display: none">
         <span>手机号尚未验证</span>
     </div>
     <div id="maskWrap" class="mask dn"></div>

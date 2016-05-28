@@ -57,10 +57,10 @@ class RoomController extends Controller
          //房源地址
 		$r_coordinate=Input::get('stock');
 		$se=DB::table('room')->insert(
-                ['u_id' => $u_id, 'r_alias' => $r_alias,'r_type' => $r_type, 'r_pattem' => $r_pattem,'r_coordinate' => $r_coordinate, 'r_people' => $r_people, 'r_area' => $r_area,'a_id' => $a_id]);
+                ['u_id' => $u_id, 'r_title' => $r_alias,'r_type' => $r_type, 'r_pattem' => $r_pattem,'r_coordinate' => $r_coordinate, 'r_people' => $r_people, 'r_area' => $r_area,'a_id' => $a_id]);
 		if($se){
 			//跳到路由
-			return redirect("room/photo");
+			return redirect("room/particulars");
 		}else{
 			echo "失败";
 		}
@@ -182,6 +182,7 @@ class RoomController extends Controller
 			//接收表单值		
 		   $r_uickname=Input::get('nickname');
 		   $u_introduce=Input::get('introduce');
+		   $qq=Input::get('qq');
 		   $u_phone=Input::get('mobile');
            //身份证
 		   $u_card=Input::get('paperno');
@@ -189,7 +190,7 @@ class RoomController extends Controller
         $se=DB::insert($sql);
         if($se){
             //user表入库
-            $sql="update user set u_card='$u_card',u_evaluate='$u_introduce',u_phone='$u_phone' where u_id='$u_id'";
+            $sql="update user set u_card='$u_card',u_evaluate='$u_introduce',qq='$qq',u_phone='$u_phone' where u_id='$u_id'";
             $re=DB::insert($sql);
             if($re){
                 //跳到路由
@@ -215,6 +216,40 @@ class RoomController extends Controller
             return redirect("login");
         }
     }
+	//房源详情页面
+	public function room_particulars(){
+             //判断用户是否登录
+		if (session()->has('u_name')) {
+			//展示价格页面
+		 return view('Room/basicinfo_2');
+     
+        }else{
+			 //展示登陆页面
+			return redirect("login");
+		}
+	}
+	//房源详情页面入库
+	public function room_particularse(){
+		
+		 //得到上条添加的id
+		    $re=DB::select("select * from room  order by r_id desc");
+		    $r_id=$re[0]->r_id;
+			//接收表单值		
+		   $r_district=Input::get('r_district');
+		   $r_theme=Input::get('r_theme');
+		   $r_lightspot=Input::get('intro');
+		   $r_traffic=Input::get('traffic');
+		   $r_facility=Input::get('surroundings');
+		    $sql="update room set r_district='$r_district',r_theme='$r_theme',r_lightspot='$r_lightspot',r_traffic='$r_traffic',r_facility='$r_facility' where r_id='$r_id'";
+		   $se=DB::insert($sql);
+		   if($se){
+              //跳到路由
+					return redirect("room/photo");
+		   }else{
+			   echo "错误";
+		   }
+		  
+	}
 
 	
     
