@@ -28,10 +28,10 @@ class MainController extends Controller{
 		 if ($adress) {
 		 	 $data = DB::table('room')
 				->where('r_type',$adress)
-				->paginate(3);	
+				->paginate($perPage = 3, $columns = ['*'], $pageName = 'page', $page = null);
 		 }else{
 		 	 $data = DB::table('room')
-				->paginate(3);
+				->paginate($perPage = 3, $columns = ['*'], $pageName = 'page', $page = null);
 		 }	
 		
 

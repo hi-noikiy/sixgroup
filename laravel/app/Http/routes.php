@@ -59,6 +59,7 @@ Route::any('demo1','RegisterController@demo1');
 /*列表*/
 Route::get('main','MainController@index');
 
+
 //搜索
 Route::any('main/search','MainController@search');
 

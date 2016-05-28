@@ -36,8 +36,8 @@ class Room extends Model
     	}
     	if ($r_price & empty($site) || empty($rom) || empty($layout)) {	//价格存在
     		$price=explode('-',$r_price);
-    		$price1=$price[0];
-    		$price2=$price[1];
+    		@$price1=$price[0];
+    		@$price2=$price[1];
     		$row=DB::table('room')
 				->whereBetween('r_price', [$price1,$price2])
 				->paginate(3);

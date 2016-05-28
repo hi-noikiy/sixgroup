@@ -751,6 +751,7 @@
 @endforeach
 <center>
 {!! $room->render() !!}
+
 </center>
     <div id="PrepaidCardTooltip" class="m-tips-wrap" style="display: none">
         <div class="tips-content" style="width:220px">
