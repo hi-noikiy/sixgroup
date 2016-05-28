@@ -22,12 +22,12 @@ class GoodController extends Controller
 	public function index(){
 		$r_id=Request::get('r_id');
 		$room=DB::table('room')	//房源信息
-            ->where('room.r_id', '=',$r_id)
+            //->where('room.r_id', '=',$r_id)
             ->get();
-        $com=DB::table('comment')	//评论信息
-        	->join('room', 'room.r_id', '=', 'comment.r_id')
-        	->where('room.r_id', '=',$r_id)
+        $com=DB::table('comment')->join('room', 'room.r_id', '=', 'comment.r_id')->join('user','user.u_id','=','comment.u_id')
+        	->where('room.r_id', '=',1)
         	->get();
+        	//print_r($com);die;
         $sum=count($com);	//评论条数
         $img=$room[0]->r_img;	//获取图片字符串
         $imgs=explode('|',$img);	//转换数组
