@@ -20,22 +20,6 @@
     
 </head>
 <body>
-    <!--[if lt IE 8]>
-        <div class="ie-tips">
-    <span> 您使用的IE浏览器版本较低！</span>本站已不再支持较低版本的IE浏览器，已为您启用了精简版。为了更好的体验本站内容，建议您升级<a target="_blank" href="http://www.microsoft.com/zh-cn/download/ie.aspx?q=internet+explorer">Internet Explorer浏览器</a>或安装非IE内核浏览器。请下载 <a href="http://down.360safe.com/se/360se7.1.1.556.exe" class="link-btn" target="_blank">360浏览器</a>或<a href="http://dldir1.qq.com/invc/tt/QQBrowser_Setup_Wireless.exe" class="link-btn" target="_blank">QQ浏览器</a>。
-        </div>
-        <![endif]-->
-    <!--M-81-141-->
-
-    
-
-    
-
-
-
-
-
-
 
     <!-- head  start-->
 
@@ -346,10 +330,8 @@
    
     <div class="m-footer-link-list">
         <a href="{{URL('bottom/about')}}" target="_blank" class="forst" rel="nofollow">关于我们</a>|
-        <a href="{{URL('bottom/customer')}}" target="_blank" rel="nofollow">我是房客</a>|
-        <a href="http://content.tujia.com/qiyewenhua.htm" target="_blank" rel="nofollow">加入蜗牛</a>|
-        <a href="/SiteMap/UnitDestination/" target="_blank">网站地图</a>|
-        <a href="/sitemap.htm" target="_blank">城市地图</a>
+        <a href="{{URL('bottom/customer')}}" target="_blank" rel="nofollow">联系我们</a>|
+        <a href="{{URL('bottom/map')}}" target="_blank">城市地图</a>
         
     </div>
     

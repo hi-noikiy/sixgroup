@@ -25,7 +25,10 @@ class MainController extends Controller{
 		 //echo $startDate;die;
 	     $endDate=Input::get('endDate');
 		 $adress=Input::get('adress');
-		 //判断搜索
+		 $data = DB::table('room')
+				->where('r_type',$adress)
+				->paginate(3);
+		 /*判断搜索
 		  if(!empty($startDate) & $adress=="" & !empty($endDate)){
 				  $data = DB::table('room')
 				->where('r_starttime',$startDate)
@@ -46,7 +49,7 @@ class MainController extends Controller{
 				->where('r_endtime',$endDate)
 				->where('ty_name',$adress)
 				->paginate(3);
-		 }
+		 }*/
 		return view('Main/main',['room' => $data,'startDate'=>$startDate,'endDate'=>$endDate,'adress'=>$adress]);
 	}
 

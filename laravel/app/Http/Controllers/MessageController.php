@@ -47,5 +47,11 @@ class MessageController extends Controller
 	     
          
    }
+    public function map(){
+	   //城市地图
+	      return view('Message/map');
+	     
+         
+   }
 
 }

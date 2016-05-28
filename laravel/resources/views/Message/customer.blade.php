@@ -1,287 +1,208 @@
-<!DOCTYPE HTML>
-<html lang="en-US">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="蜗牛，蜗牛短租，短租，短租房，居住自由主义，住宿"/>
+<meta name="description" content="国内最大社交住宿平台,超过200个城市的三万多家庭将闲置的别墅,公寓,卧室或沙发分享给旅行中的人们,为您提供独一无二的短租体验,用实际行动促进人与人间的信任。" />
+<title>联系我们-蜗牛</title>
+<link rel="stylesheet" type="text/css" href="http://jci.xiaozhustatic1.com/e160527/xzcss?css=global,about" />
+</head>
+
+<body class="body_bg">
+<!--[if lte IE 7]>
+<div style="background:#f16b80;  width:100%; height:50px; line-height:50px; text-align:center; font-size:14px; color:#fff; font-family:"微软雅黑";>
+    温馨提示：您目前的浏览器版本过低，网站部分功能无法正常使用，建议尽快升级：
+        <a href="http://www.microsoft.com/china/windows/IE/upgrade/index.aspx" name="升级ie浏览器" id="upgrade_ie" target="_blank" style=" display:inline-block;width:154px; height:40px;  vertical-align:middle;  margin:0 18px 0 12px;_margin-top:4px;"><img src="/images/ie.jpg" width="154" height="40"/></a>
+             或安装
+        <a href="http://www.firefox.com.cn" target="_blank" name="升级火狐浏览器" id="upgrade_firefox" style="display:inline-block;width:154px; height:40px;  vertical-align:middle;  margin:0 18px 0 12px;_margin-top:4px;"><img src="/images/firefox.jpg" width="154" height="40"/></a>
+</div>
+<![endif]-->
+
+<div class="header height56">
+    <div class="top"></div>
+    <div class="top_wraper">
+        <div class="top_con">
+  
+<!DOCTYPE html>
+<html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>帮助QA_我是房客-途家网</title>
-    <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico" />
-    <link rel="stylesheet" type="text/css" href="/style/Base.css" media="all" />
-    <link rel="stylesheet" type="text/css" href="/style/Common.css" media="all" />
-    <script src="/js/jquery-1.4.2.min.js" type="text/javascript" charset="utf-8"></script>
+    <title>蜗牛短租</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    
+    <link rel="shortcut icon" href="http://staticfile.tujia.com/PortalSite/Images/favicon.ico" type="image/x-icon" />
+    <link rel="bookmark" href="http://staticfile.tujia.com/PortalSite/Images/favicon.ico" type="image/x-icon" />
+    
+    <meta name="mobile-agent" content="format=html5;url=http://m.tujia.com">
+    <link rel="stylesheet" type="text/css" href="http://staticfile.tujia.com/portalsite2/styles/css_home?v=6b40c9a" />
 
     
-    <link rel="stylesheet" type="text/css" href="/style/Help.css" media="all" />
-
+    <link rel="stylesheet" type="text/css" href="http://staticfile.tujia.com/portalsite2/styles/im.css?v=6b40c9a" />
+    <script type="text/javascript" src="http://staticfile.tujia.com/portalsite2/scripts/base/jquery.js?v=6b40c9a"></script>
+    <script type="text/javascript" src="http://staticfile.tujia.com/portalsite2/scripts/js_common_head?v=6b40c9a"></script>
     
-
-
-
-
-
-
 </head>
-<body id="Help">
-    <div class="container_24">
-            <div class="grid_24" id="mininav">
-                <a href="https://passport.tujia.com/PortalSite/LoginPage/" target="_blank">登录</a> - <a href="https://passport.tujia.com/PortalSite/Register/" target="_blank">注册</a> 丨 <a href="http://www.tujia.com" target="_blank">途家网首页</a>
-            </div>
-    </div>
-    <div id="navWrap">
-        <div class="container_24">
-            <div class="grid_7">
-                <div class="siteLogo"><a href="http://www.tujia.com" target="_blank"></a></div>
-            </div>
-            <div class="grid_17">
-                <div class="nvaBox">
-                    <ul>                        
-                        <li><a href="http://content.tujia.com/youkebangzhu.htm"  class=current>我是房客 </a></li>
-                        <li><a href="http://content.tujia.com/youshi.htm" >许可经营 </a></li>
+<body>
 
-                        
+    <!-- head  start-->
 
-                        
-                       
-                        <li><a href="http://content.tujia.com/tujiajianjie.htm" >关于途家</a></li>
-
-                        <li><a href="http://content.tujia.com/qiyewenhua.htm" >加入途家</a></li>
-
-                        <li><a href="http://content.tujia.com/yezhujiaohuan.htm" >合作伙伴</a></li>
-
-                        
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
+<style>
+    .site-logo-cont img{
+        display: block;
+        margin-top: 8px;
+        text-indent: -999px;  
+    }
+</style>
+   
     
 
 
-<div class="container_24">
-    <div class="grid_24" id="dir">
-        <a href="http://content.tujia.com" >首页</a><em>&gt;</em><a href="/Help/Index.htm">我是房客</a><em>&gt;</em><span>帮助QA</span>
-    </div>
-</div>
-<div class="container_24">
-    <div id="pageBody">
-        <div class="grid_4  omega" id="sidebarBox">
-            
-<div class="sidebarNav">
-    <ul>
-        <li><a href="http://content.tujia.com/youkebangzhu.htm" class="current">帮助QA</a></li>
-
-        <li><a href="http://content.tujia.com/huiyuanclub.htm" class="">会员QA</a></li>
-
-        
-
-        <li><a href="http://content.tujia.com/tuyouka.htm" class="">途游卡</a> </li>
-
-        <li><a href="http://p.tujia.com/2015/invitefriends/" target="_blank">邀请好友返利</a></li>
-
-        <li><a href="http://content.tujia.com/fangkelianxi.htm" class="">联系我们</a></li>
-
-        <li><a href="http://content.tujia.com/weiguixize.htm" class="">违规处理细则</a></li>
-
-        
-    </ul>
-</div>
-
-
+<div class="hd-wrap-fluid ">
+    <div class="m-hd">
+        <div class="site-logo-cont">
+             <img  height="45px" width="130px" src="images/logo1.png" alt="蜗牛logo">
+             <!--<span class="logo-text"></span>-->
         </div>
-        <div class="grid_20 alpha " id="mainContent">
-            <div class="pageBanner"><img src="/Images/banner_qa.jpg" alt=""></div>
-
-            <div class="help-wrap">
-                <dl class="fqas">
-                    <dt>Q: 如何预订途家网房屋？</dt>
-                    <dd>
-                        A:首先在途家网找到你喜欢的房屋，然后在该房屋详情页点击“立即预订”按钮，进行在线预订。同时您还可以致电途家网客服中心 (400-188-1234) 进行电话预订。
-                    </dd>
-                </dl>
-                <dl class="fqas">
-                    <dt>Q: 在途家网预订度假房屋，如何支付？ </dt>
-                    <dd>
-                        A:可通过网络在线支付（如：网上银行、微信、支付宝、银联卡等)完成付款。
-                    </dd>
-                </dl>
-                <dl class="fqas">
-                    <dt>Q: 提交订单后订单状态显示等待房东确认无法进行支付？</dt>
-                    <dd>
-                        A:途家网的部分房屋由途家网合作的独立管理公司管理，您的订单需要等待管理公司确认后才可以进行支付。
-                    </dd>
-                </dl>
-                <dl class="fqas">
-                    <dt>Q: 在途家网预订房屋，需要付订金吗？</dt>
-                    <dd>
-                        A: 这与入住时间和所订的房屋有关。在旺季，将按房屋或管理公司的押金规则收取部分或全部房费作为订金。
-                    </dd>
-                </dl>
-                <dl class="fqas">
-                    <dt>Q: 途家网需要注册吗?</dt>
-                    <dd>
-                        A: 目前用户不需要注册，即可在途家网预订房屋。途家网会使用您预订时填写的手机号码帮您自动完成注册并将登录密码发送至该手机中，同时在您忘记密码时也可以通过该手机号码找回密码。当然您仍然可以选择注册后再预订房间，系统会使用您注册时填写的资料帮您填写相关订单信息．
-                    </dd>
-                </dl>
-                <dl class="fqas">
-                    <dt>Q: 提交订单后如何确认、查询订单？</dt>
-                    <dd>
-                        A：登录后在途家网首页“我的途家-我的订单”中即可查询订单信息。
-                    </dd>
-                </dl>
-                <dl class="fqas">
-                    <dt>Q: 预订后，若要更改入住时间或人数，怎么办？ </dt>
-                    <dd>A: 您需要尽快联系途家客服中心(400-188-1234)客服人员，如果产生额外费用，需另行支付。</dd>
-                </dl>
-                <dl class="fqas">
-                    <dt>Q: 如何取消预订 </dt>
-                    <dd>A: 登录后在途家网首页“我的途家-我的订单”中进行取消。</dd>
-                </dl>
-                <dl class="fqas">
-                    <dt>
-                        Q：如果取消预订，在途家网预付的订金可退吗？
-                    </dt>
-                    <dd>A：房屋确认后如需取消或变更，订金的退还将按预订时所订房间相关规定执行。</dd>
-                </dl>
-                <dl class="fqas">
-                    <dt>Q: 预订房屋是否可以提供接送机？ </dt>
-                    <dd>A: 部分房屋是可以提供接机服务的。如果您预订的房间有＂免费接机＂的赠礼，即可享受免费的接机服务。如果收费接机，收费标准可参考房间详情页或订单页的可选服务。当您需要接送机服务时，请在预订时输入具体的航班日期和航班号，并留下姓名和联系方式。</dd>
-                </dl>
-                <dl class="fqas">
-                    <dt>Q: 房屋可以加床吗？加床收费吗？</dt>
-                    <dd>
-                        A: 部分房屋是可以提供加床的。收费标准参考房间详情页。
-                    </dd>
-                </dl>
-                <dl class="fqas">
-                    <dt>
-                        Q: 如何办理入住、退房手续？
-                    </dt>
-                    <dd>
-                        A: 请于入住当日在所预订房屋的对应接待处办理，地址及联系方式将在预订成功后显示并随确认短信发送至联系人手机。
-                    </dd>
-                </dl>
-                <dl class="fqas">
-                    <dt>
-                        Q: 入住返现何时能到账?
-                    </dt>
-                    <dd>
-                        A:入住完成并经过途家的确认后，返还的现金将在2-7个工作日内充值到您的途家账户中，您可以提现，也可以下次预订时直接抵扣订金。
-                    </dd>
-                </dl>
-                <dl class="fqas">
-                    <dt>
-                        Q: 可以通过途家网，直接与房主联系吗？
-
-                    </dt>
-                    <dd>
-                        A: 可以。您可以在房屋页面通过“在线聊天“或“给房东留言”进行联系，同时您还可以致电页面中的400热线电话直接咨询。
-
-                    </dd>
-                </dl>
+        <div class="nav-list">
+            <ul>
+                <li class="first"><a href="{{URL('index')}}" class="home-link " target="_blank">首页</a></li>
+                <li><a href="http://www.tujia.com/changzu/se0/"  target="_blank">周租月租</a></li>
+                <li><a href="http://www.tujia.com/Experience/"  target="_blank">体验房</a></li>
+                <li><a href="http://www.tujia.com/photowall/" target="_blank" >特色房</a></li>
                 
-                <a id="tv" href="#tv" name="tv"></a>
-                <dl class="fqas">
-                    <dt>Q: 什么是体验券？</dt>
-                    <dd>1、	体验券是途家网回馈用户，预订公寓后，经过点评和审核后发放给用户的抵用券。</dd>
-                    <dd>2、	体验券在有效期内可用于途家网体验房频道（http://www.tujia.com/Experience/）的体验房预订，并1：1抵用房费。</dd>
-                    <dd>3、 体验券不予兑换货币使用，不退换、不找零及不可用于其他用途。</dd>
-                </dl>
-
-                <dl class="fqas">
-                    <dt>Q: 什么是“体验房“频道？</dt>
-                    <dd>
-                        1、	“体验房”频道是途家网回馈用户，提供用户使用途家网体验券预订优质公寓的专属频道。
-                    </dd>
-                    <dd>2、	用户在途家网获得的体验券，只可用于“体验房”频道的预订使用，其他频道不可使用，频道开通城市及可预订房源以途家网体验房频道显示为准。</dd>
-                    <dd>3、	法定节假日及其调休日、周末以及当地旅游旺季为预订高峰，体验房供不应求，先订先得。</dd>
-                </dl>
-
-                <dl class="fqas">
-                    <dt>Q: 如何获得体验券？</dt>
-                    <dd>1、	通过途家网或途家手机客户端预订非体验房的公寓，成功入住并发布点评（100字符以上，并上传至少3张相关图片），在七个工作日内审核通过，便可获得途家赠送的体验券。</dd>
-                    <dd>2、	金额在800元以下（含800元）的订单按金额1：1的比例赠送体验券，800元以上的订单一律赠送800元体验券。您的点评通过后，系统将自动将体验券充值到您的途家账户，您可在登陆后，于“我的途家-体验券”中查看体验券金额。</dd>
-                    <dd>3、	途家网-体验券到账后次日生效，有效期为120天。</dd>
-                    <dd>4、	您也可以参与途家体验券抽奖等促销优惠活动获得体验券。更多优惠请关注途家官方微博和微信。</dd>
-                </dl>
-                <dl class="fqas">
-                    <dt>Q: 如何预订体验房？</dt>
-                    <dd>1、	在获得体验券后，有效期内可在途家网体验房频道（http://www.tujia.com/Experience/）进行体验房预订，并1：1抵用房费，只需额外缴纳固定的服务费。</dd>
-                </dl>
-
-                <dl class="fqas">
-                    <dt>Q: 体验券使用规则？</dt>
-                    <dd>1、 途家网-体验券到账后次日生效，体验券有效期为120天。</dd>
-                    <dd>2、 预订时，“预订日期、入住日期和退房日期”都需要在体验券的有效期内。系统自动使用最先到期的体验券。</dd>
-                    <dd>3、 如果您账户中有体验券，则在预订体验房时自动使用，使用规则按剩余有效期从短至长排列。</dd>
-                    <dd>4、 预订时，如果体验券金额不足以抵扣全部房费，需您在线上使用现金支付订单差价。体验房订单不支持积分、礼品卡支付，也不参与任何形式的立减、返现，不赠送体验券及积分。</dd>
-                    <dd>5、同一用户在同一家门店，180天（自然日）内最多可入住2间夜体验房，业主会员除外。</dd>
-                    <dd>6、业主会员预订体验房时，需录入入住人的真实身份信息。如果超出10个受益人范畴则不允许预订。</dd>
-                </dl>
-
-                <dl class="fqas">
-                    <dt>Q: 如何绑定纸质体验券？</dt>
-                    <dd>
-                        您在网站预订房间获得的体验券，将会自动绑定到您的途家账户中，如果您持有纸质体验券，您可以有2种方式可绑定到您的账户，请按照如下流程。<br />
-                        方法1：<br />
-                        1、登录后进入“我的途家”。<br />
-                        2、点击“我的体验券”，在右侧菜单页面中，点击“绑定体验券”按钮。<br />
-                        3、输入您的体验券号码和密码，既可绑定成功。<br />
-                        方法2：<br />
-                        1、 进入“体验房”频道，选择您预订的公寓，点击预订。<br />
-                        2、 在订单页面，“优惠信息”中 点击绑定到帐户。<br />
-                        3、 输入您的体验券号码和密码，既可绑定成功。<br />
-                    </dd>
-                </dl>
-                <div style="margin-top: 10px; padding: 0 50px; color:#f60">注：关于体验券及体验房的规则、及本规则内未尽事宜的最终解释权归途家所有，规则如有调整将更新在此页面，恕不另行通知。</div>
-            </div>
-
+                <li><a href="http://travel.tujia.com" target="_blank">社区</a></li>
+                <li><a href="http://www.tujia.com/EntrustTreasure/"  target="_blank">买楼收租</a></li>
+                <li><a href="http://www.tujia.com/TuYuan/"  target="_blank">途远度假</a></li>
+            </ul>
         </div>
+
+        <div class="sub-link" >
+    @if($name=Session::get('u_name'))
+    <a href="{{URL('center')}}">欢迎<font style="color: red">{{$name}}</font>来到蜗牛家!</a>
+    <a href="{{URL('login/del')}}" rel="nofollow">退出</a>
+    @else
+    <a href="{{URL('register')}}" rel="nofollow" class="link-btn">注册</a>
+    <a href="{{URL('login')}}" rel="nofollow">登录</a>
+    @endif
+    <a href="{{URL('room')}}" target="_blank" rel="nofollow" class="t-link-btn">免费发布房屋</a>
+        </div>
+    </div>
+</div>           
+ <div class="overF_hidden"><img class="banner_01 marginT1" src="http://jci.xiaozhustatic2.com/e160527/images/about/about_banner_01.jpg" width="1440" height="245" /></div>
+<div class="about_main">
+    <div class="bor_top"></div>
+    <div class="about_L">
+        <h1>联系我们</h1>        
+        <p class="about_p">欢迎来到蜗牛，我们将对您的需求和问题提供满意的服务与帮助！<br /><br /></p>
+        <p class="about_p"><strong class="orange_1">客户服务：</strong></p>
+        <p class="about_p1">如果您在使用蜗牛平台时，出现任何问题、或者您要给我们提出任何意见和建议，请联系：<br />
+            E-mail：service@snail.com<br /><br /></p>
+        <p class="about_p"><strong class="orange_1">合作联系：</strong></p>
+        <p class="about_p">如果您想与蜗牛洽谈商务合作、市场合作及媒体合作等，请联系：<br />
+        　 　BD商务：bd@snail.com<br />
+        　 　PR：pr@snail.com<br />
+        　 　招聘：hr@snail.com<br /><br /></p>
+        <p class="about_p"><strong class="orange_1">免费客服热线：</strong></p>
+        <p class="about_p">
+            宁先生：13051151895<br />
+        　　为了给您提供更好的服务及方便沟通，请您在发信给我们的时候，留下您的联系方式。<br />
+        　　对您的来信与来电，我们会非常重视，并及时给您反馈！<br /><br /></p>
+    </div>
+    <div class="about_R">
+    <dl class="about_sider">
+        <dt>网站介绍</dt>
+        <dd ><a href="http://www.xiaozhu.com/aboutus">&middot; &nbsp;关于我们</a></dd>
+        <dd class="current_about"><a href="http://www.xiaozhu.com/contactus">&middot; &nbsp;联系我们</a></dd>
+        <dd ><a href="http://www.xiaozhu.com/sitemap.html">&middot; &nbsp;网站地图</a></dd>
+        <dd ><a href="http://www.xiaozhu.com/friendlink">&middot; &nbsp;友情链接</a></dd>
+    </dl>
+    <dl class="about_sider">
+        <dt>法律协议</dt>
+        <dd ><a href="http://www.xiaozhu.com/help/privacy">&middot; &nbsp;隐私保护声明</a></dd>
+        <dd ><a href="http://www.xiaozhu.com/help/copyright">&middot; &nbsp;版权声明</a></dd>
+        <dd ><a href="http://www.xiaozhu.com/help/service">&middot; &nbsp;服务协议</a></dd>
+        <dd ><a href="http://www.xiaozhu.com/help/disclaimer">&middot; &nbsp;免责声明</a></dd>
+        <dd ><a href="http://www.xiaozhu.com/help/intellectualProperty">&middot; &nbsp;知识产权声明</a></dd>
+        <dd ><a href="http://www.xiaozhu.com/help/contractServicesAgreement">&middot; &nbsp;委托服务协议</a></dd>
+    </dl>
+    <dl class="about_sider">
+        <dt>服务规则</dt>
+        <dd ><a href="http://www.xiaozhu.com/help/landlordRule">&middot; &nbsp;房东规则</a></dd>
+        <dd ><a href="http://www.xiaozhu.com/help/tenantRule">&middot; &nbsp;房客规则</a></dd>
+        <dd ><a href="http://www.xiaozhu.com/help/auditRule">&middot; &nbsp;房源上线标准</a></dd>
+        <dd ><a href="http://www.xiaozhu.com/help/commentRule">&middot; &nbsp;点评发布规则</a></dd>
+                <dd ><a href="http://www.xiaozhu.com/help/personLandlordAuthenticationRule">&middot; &nbsp;个人房东认证规则</a></dd>
+        <dd ><a href="http://www.xiaozhu.com/help/landlordOperatingRule">&middot; &nbsp;房东经营行为管理规范</a></dd>
+        <dd ><a href="http://www.xiaozhu.com/help/minorCheckInRule">&middot; &nbsp;未成年人入住规则</a></dd>
+    </dl>
+</div></div>
+ 
+<div class="foot_v2">
+        <ul class="foot_ul">
+        <li><a class="guide" href="http://www.xiaozhu.com/xzweb.php?op=Help_UserGuide&type=tenant" target="_blank">房客指南</a></li>
+        <li><a class="guide icon_fk" href="http://www.xiaozhu.com/xzweb.php?op=Help_UserGuide&type=landlord" target="_blank">房东指南</a></li>
+        <li>
+            <span class="guide_T">关于我们</span>
+            <a href="http://www.xiaozhu.com/aboutus" target="_blank">关于蜗牛</a>
+            <a href="http://www.xiaozhu.com/contactus" target="_blank">联系我们</a>
+        </li>
+        <li>
+            <span class="guide_T">网站帮助</span>
+            <a href="http://www.xiaozhu.com/help/index" target="_blank" >帮助中心</a>
+            <a href="http://www.xiaozhu.com/sitemap.html" target="_blank">网站地图</a> 
+        </li>
+        <li class="width_280">
+            <span class="guide_T">网站协议</span><br/>
+            <a href="http://www.xiaozhu.com/help/service" target="_blank">服务协议</a> 
+            <a href="http://www.xiaozhu.com/help/landlordRule" target="_blank">房东规则</a>
+            <a href="http://www.xiaozhu.com/help/tenantRule" target="_blank">房客规则</a>
+            <a href="http://www.xiaozhu.com/help/auditRule" target="_blank">房源上线标准</a>
+            <a href="http://www.xiaozhu.com/help/privacy" target="_blank">隐私保护</a>
+            <a href="http://www.xiaozhu.com/help/copyright" target="_blank">版权声明</a>
+            <a href="http://www.xiaozhu.com/help/disclaimer" target="_blank">免责声明</a>
+            <a href="http://www.xiaozhu.com/help/intellectualProperty" target="_blank">知识产权声明</a>
+            <a href="http://www.xiaozhu.com/help/commentRule" target="_blank">点评发布规则</a>
+        </li>
+        <li class="width_100 bigFont">
+            <span class="guide_T">客服电话</span><br/>
+            400  018  3100
+        </li>
+        <li class="width_100 bigFont">
+            <span class="guide_T">客服邮箱</span><br/>
+            service@xiaozhu.com
+        </li>
+    </ul>
+            <div class="foot_btm">许可证号：<a target="_blank" href="http://www.miibeian.gov.cn" rel="nofollow">京ICP证140510号</a> &nbsp;&nbsp; <a href="http://www.anquan.org/s/www.xiaozhu.com" |="" name="mt8SMvYyRDI92b06nuDs8dPFapllCJYidqhM1WlOoGRZ9DWpbo" rel="nofollow" target="_blank">安全联盟</a> &nbsp;&nbsp; 北京快跑信息科技有限公司
+    </div>
+    <div style="width:300px;margin:0 auto;">
+        <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010802020380" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"><img src="/images/record_icon.png" style="float:left;"/><p style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#bdc3c7;">京公网安备 11010802020380号</p></a>
     </div>
 </div>
 
+<input type="hidden" name="actionName" id="actionName" value="Help_ContactUs"/>
+<!-- Piwik --> 
+<noscript><p><img src="http://piwik.xiaozhu.com/piwik.php?idsite=1" style="border:0" alt="" /></p></noscript>
+<!-- End Piwik Tracking Code -->
+<input type="hidden" id="piwik_trigger" value="1">
 
-    <div id="footerWrap">
-        <div class="container_24">
-            <div class="grid_24 footer">
-                <a href="http://content.tujia.com">关于途家网</a> |  <a href="http://weibo.com/bjtujia" target="_blank">官方微博</a> | <a href="http://content.tujia.com/qiyewenhua.htm">诚征英才</a> | <a href="http://content.tujia.com/tujiajianjie.htm">联系我们</a> | <a href="/Clause/Disclaimers.htm">服务条款</a> | <a href="/Clause/Index.htm">隐私权条款</a>
-                <p>© Copyright 2016  tujia.com 途家&nbsp;&nbsp;&nbsp;&nbsp;版权所有&nbsp;&nbsp;&nbsp;&nbsp;不得转载</p>
-                <p>京公网安备11010502027120&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.miitbeian.gov.cn/" target="_blank">京ICP证120277号</a></p>
-            </div>
-        </div>
-    </div>
-    
-    <!--底部 Google analytics访问分析代码/ 百度统计 -->
-    <script type="text/javascript">
-        var _gaq = _gaq || [];
-        _gaq.push(['_setAccount', 'UA-30952525-1']);
-        _gaq.push(['_setDomainName', '.tujia.com']);
-        //_gaq.push(['_setAllowHash', false]);
-        _gaq.push(['_addIgnoredRef', 'tujia.com']);
-        _gaq.push(['_addOrganic', 'soso', 'w']);
-        _gaq.push(['_addOrganic', 'youdao', 'q']);
-        _gaq.push(['_addOrganic', 'sogou', 'query']);
-        _gaq.push(['_addOrganic', 'baidu', 'wd']);
-        _gaq.push(['_addOrganic', 'baidu', 'word']);
-        _gaq.push(['_addOrganic', 'bing', 'q']);
-        _gaq.push(['_addOrganic', '360', 'q']);
-        _gaq.push(['_addOrganic', '360', 'wd']);
-        _gaq.push(['_addOrganic', 'so.com', 'q']);
-        _gaq.push(['_addOrganic', 'so.com', 'wd']);
-        _gaq.push(['_trackPageview']);
-        _gaq.push(['_trackPageLoadTime']);
-        if (typeof (trackTrans) != "undefined") { trackTrans(); }
-        setTimeout(function () {
-            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-            //ga.src = ('https:' == document.location.protocol ? ' https://ssl' : ' http://www') + '.google-analytics.com/ga.js';
-            ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
-            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-        }, 1500);
-        var _hmt = _hmt || [];
-        (function () {
-            var hm = document.createElement("script");
-            hm.src = "//hm.baidu.com/hm.js?405c96e7f6bed44fb846abfe1f65c6f5";
-            var s = document.getElementsByTagName("script")[0];
-            s.parentNode.insertBefore(hm, s);
-        })();
-    </script>
+<input type="hidden" id="pagetype" value="help">
 
+<script type="text/javascript" src="http://jci.xiaozhustatic3.com/e160527/js/jquery/jquery.js"></script>
+<script type="text/javascript" src="http://jci.xiaozhustatic1.com/e160527/xzjs?k=Footer&httphost=www.xiaozhu.com"></script>
+<link rel="stylesheet" type="text/css" href="http://jci.xiaozhustatic1.com/e160527/xzcss?css=jquery.mCustomScrollbar,nyroModal,uploadify" />
+<script type="text/javascript" src="http://jci.xiaozhustatic1.com/e160527/js/jquery/lazyload.js"></script>
+<script type="text/javascript" src="http://www.xiaozhu.com/e160527/js/webimv4/application/xzim4.js?source=xiaozhu&dm=xiaozhu.com" id="webimSource"></script>
+
+<script type="text/javascript" src="http://jci.xiaozhustatic1.com/e160527/xzjs?k=FangDong_Header&httphost=www.xiaozhu.com"></script>
+<script type="text/javascript" src="http://jci.xiaozhustatic1.com/e160527/xzjs?k=Help_ContactUs&httphost=www.xiaozhu.com"></script>
 </body>
-</html>
+<!-- Google Tag Manager -->
+
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-W85X4L" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-W85X4L');
+</script>
+
+<!-- End Google Tag Manager --></html>

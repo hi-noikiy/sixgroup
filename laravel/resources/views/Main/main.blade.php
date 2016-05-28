@@ -4063,7 +4063,7 @@
 
                     <div class="house-datelist">
 
-                        <span title="酒店式公寓">{{$v->ty_name}}</span>|
+                        <span title="酒店式公寓">{{$v->r_type}}</span>|
 
                             <span title="2室1厅2卫1厨房">{{$v->r_pattem}}</span>|
 
@@ -4385,11 +4385,9 @@
          
    
     <div class="m-footer-link-list">
-        <a href="http://content.tujia.com/tujiajianjie.htm" target="_blank" class="forst" rel="nofollow">关于我们</a>|
-        <a href="http://content.tujia.com/youkebangzhu.htm" target="_blank" rel="nofollow">我是房客</a>|
-        <a href="http://content.tujia.com/qiyewenhua.htm" target="_blank" rel="nofollow">加入途家</a>|
-        <a href="/SiteMap/UnitDestination/" target="_blank">网站地图</a>|
-        <a href="/sitemap.htm" target="_blank">城市地图</a>
+        <a href="{{URL('bottom/about')}}" target="_blank" class="forst" rel="nofollow">关于我们</a>|
+        <a href="{{URL('bottom/customer')}}" target="_blank" rel="nofollow">联系我们</a>|
+        <a href="{{URL('bottom/map')}}" target="_blank">城市地图</a>
         
         
         

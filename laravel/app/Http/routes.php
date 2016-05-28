@@ -185,3 +185,5 @@ Route::any('bottom/about','MessageController@about');
 Route::any('bottom/customer','MessageController@customer');
 //加入蜗牛
 Route::any('bottom/join','MessageController@joins');
+//城市地图
+Route::any('bottom/map','MessageController@map');
