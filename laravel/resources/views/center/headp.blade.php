@@ -58,13 +58,23 @@
                 <br/>
             </p>
         </div>
-
-        <div class="navWrapper">
-            <h5>我的订单</h5>
-            <ul>
-                <li><a id="myorders" href="order" class="current" onclick="_gaq.push(['_trackEvent', 'pcUserInfo', '订单管理']);">订单管理<span></span></a></li>
-            </ul>
-        </div>
+        @foreach($data as $v)
+            @if($v->status==1)
+                <div class="navWrapper">
+                    <h5>我的订单</h5>
+                    <ul>
+                        <li><a id="myorders" href="order" class="current" onclick="_gaq.push(['_trackEvent', 'pcUserInfo', '订单管理']);">订单管理<span></span></a></li>
+                    </ul>
+                </div>
+            @else
+                <div class="navWrapper">
+                    <h5>发布房源</h5>
+                    <ul>
+                        <li><a id="myorders" href="order" class="current" onclick="_gaq.push(['_trackEvent', 'pcUserInfo', '房源管理管理']);">房源信息<span></span></a></li>
+                    </ul>
+                </div>
+            @endif
+        @endforeach
         <div class="navWrapper">
             <h5>
                 个人中心

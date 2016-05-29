@@ -73,7 +73,7 @@
         <div class="navWrapper">
             <h5>发布房源</h5>
             <ul>
-                <li><a id="myorders" href="order" class="current" onclick="_gaq.push(['_trackEvent', 'pcUserInfo', '订单管理']);">房源信息<span></span></a></li>
+                <li><a id="myorders" href="order" class="current" onclick="_gaq.push(['_trackEvent', 'pcUserInfo', '房源管理']);">房源信息<span></span></a></li>
             </ul>
         </div>
         <div class="navWrapper">
