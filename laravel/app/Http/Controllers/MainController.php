@@ -25,16 +25,17 @@ class MainController extends Controller{
 		 //echo $startDate;die;
 	     $endDate=Input::get('endDate');
 		 $adress=Input::get('adress');
-		 if ($adress) {
+		 if($adress) {
 		 	 $data = DB::table('room')
 				->where('r_type',$adress)
-				->paginate($perPage = 3, $columns = ['*'], $pageName = 'page', $page = null);
+				->paginate($perPage = 5, $columns = ['*'], $pageName = 'page', $page = null);
+			$com=DB::table('comment')
+				->get();
 		 }else{
-		 	 $data = DB::table('room')
-				->paginate($perPage = 3, $columns = ['*'], $pageName = 'page', $page = null);
+		 	 $data=DB::table('room')
+				->paginate($perPage = 5, $columns = ['*'], $pageName = 'page', $page = null);
 		 }	
-		
-
+		//dd($data);
 		return view('Main/main',['room' => $data]);
 	}
 

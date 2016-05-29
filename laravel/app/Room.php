@@ -40,14 +40,14 @@ class Room extends Model
     		@$price2=$price[1];
     		$row=DB::table('room')
 				->whereBetween('r_price', [$price1,$price2])
-				->paginate(3);
+				->paginate(5);
     	}elseif(empty($r_price)	& !empty($site) || !empty($rom) || !empty($layout)){	//价格空在其他值存在
     		$row=DB::table('room')
 				->where($where2)
-				->paginate(3);
+				->paginate(5);
     	}elseif(empty($r_price) & empty($site) & empty($rom) & empty($layout)){	//所有条件为空
     		$row=DB::table('room')
-				->paginate(3);
+				->paginate(5);
     	}else{
     		$price=explode('-',$r_price);
     		$price1=$price[0];
@@ -55,7 +55,7 @@ class Room extends Model
     		$row=DB::table('room')
 				->where($where2)
 				->whereBetween('r_price', [$price1,$price2])
-				->paginate();
+				->paginate(5);
     	}
     	
 
