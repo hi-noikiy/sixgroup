@@ -34,6 +34,7 @@ class LoginController extends Controller
 				//得到用户上次登陆的时间戳
 				$time=$user->u_time;
                 $u_id=$user->u_id;
+                $status=$user->status;
 				//转换成时间戳
 				$s_time=strtotime($time);
 				//当前时间
@@ -49,9 +50,9 @@ class LoginController extends Controller
 						  if($pwd){
                              echo "<script>alert('登陆成功');</script>";
 							   // 存储数据到session...
-                              session(['u_name' => $u_name]);
-                              session(['u_id' => $u_id]);
+                              session(['u_name' => $u_name,'u_id' => $u_id,'status'=>$status]);
                               $u_id=Session::get('u_id');
+                              $status=Session::get('status');
                               $up=DB::table('user')->where('u_name', $u_name)->update(['u_aut' =>0]);
 							 return redirect("index");                                                                      
 						  }
