@@ -90,9 +90,11 @@
                                 <div class="ud-con">
                                     <div class="clearfix">
                                         <div class="data-result m-fl">
-                                            <div href="" class="usp-bg">
-                                                <span class="change-photo"></span>
-                                            </div>
+                                            @foreach($data as $v)
+                                                <a href="{{URL('headp')}}"><div href="" class="usp-bg">
+                                                <span><img src="http://localhost/sixgroup/laravel/public/uploads/{{$v->u_img}}" alt=""/></span>
+                                            </div></a>
+                                            @endforeach
                                             @foreach($data as $v)
                                             <div class="usp-info">
                                                 <div class="group-cont">
