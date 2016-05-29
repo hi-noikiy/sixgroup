@@ -142,7 +142,7 @@ class CenterController extends Controller
                 ->join('room', 'user.u_id', '=', 'room.u_id')
                 ->select('user.u_id', 'room.r_id','room.r_img','room.r_title','room.r_checkin','room.r_checkout','room.r_price','room.state','room.r_pattem','room.r_people','room.r_coordinate')
                 ->where('user.u_id', '=',$u_id)->paginate(3);
-            return view('Center/release',['data'=>$data]);
+            return view('Center/housing',['data'=>$data]);
         }
     }
     /*
@@ -171,8 +171,9 @@ class CenterController extends Controller
     {
         //获取session
         Session::get('u_name');
-        Session::get('u_id');
-        return view('Center/updpwd');
+        $u_id=Session::get('u_id');
+        $data = DB::table('user')->where('u_id', '=', [$u_id])->get();
+        return view('Center/updpwd',['data'=>$data]);
     }
     /*
      * @updatepwd  修改密码成功
@@ -308,7 +309,8 @@ class CenterController extends Controller
     {
         $u_id=Session::get('u_id');
         $u_name=Session::get('u_name');
-        return view('Center/headp');
+        $data = DB::table('user')->where('u_id', '=', [$u_id])->get();
+        return view('Center/headp',['data'=>$data]);
     }
     /*
      * @headsuccess   上传头像成功
