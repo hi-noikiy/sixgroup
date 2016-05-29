@@ -254,15 +254,6 @@
     </div>
 </div>
 
-
-    
-
-
-
-
-
-
-
 <div class="m-cont row-cont">    
 <div class="share-cont">
     <a class="a-btn" target="_blank" href="http://www.tujia.com/Account/BeginShare?state=SinaWeiBo&amp;unitID=3581"><i class="icon-sian"></i>分享到微博</a>
@@ -336,7 +327,7 @@
         <div class="owl-carousel" style="width: 9999px">
                 @foreach($img as $v)
                     <div class="item">
-                        <img onload="javascript:imgLoadSuccess();" onerror="javascript:imgLoadFail(this);" src="images/{{$v}}" />
+                        <img onload="javascript:imgLoadSuccess();" onerror="javascript:imgLoadFail(this);" src="uploads/{{$v}}" />
                     </div>
                 @endforeach
 
@@ -422,7 +413,7 @@
                 </div>
                 <div class="hotel-advan-tag">
                     <ul>
-                        <li class="icon-type" title="酒店式公寓">{{$room->r_type}}</li>
+                        <li class="icon-type" title="{{$room->r_type}}">{{$room->r_type}}</li>
                         <li class="icon-square" title="建筑面积{{$room->r_pattem}}平米">{{$room->r_pattem}}</li>
                             <!-- <li class="icon-cooking" title="可做饭">可做饭</li>
                                                     <li class="icon-bed" title="1张床"><span class="lab-text"><u rel="bedCountDetail">1张床</u></span></li> -->
@@ -495,15 +486,18 @@
                                     </label>
                                 </div>
                             </div>
-                            <div>
-                                <span class="staring-price">¥{{$room->r_price}}</span>
-                            </div>
                             <div class="change-control-group btn-group">
                                 <div class="controls"><a href="javascript:void(0);" id="changeBtn" class="change-btn" onclick="lick()">确定</a></div>
                             </div>
                                 
                         </div>
-
+                            <!-- 一晚价钱 -->
+                            <div class="change-control-group" style="margin-top:15px">
+                                <span class="controls-span">价钱</span>
+                                <div class="controls">
+                                    <span class="staring-price">¥{{$room->r_price}}</span>
+                                </div>
+                            </div>
                     </div>
                     <!-- <div class="room-select-box" id="productcontent">
                         <div class="loading-wrap">
@@ -799,28 +793,30 @@
 
 <div class="sidebar-hd sidebar-hd-new"><h2>房东信息</h2></div>
 <div class="m-listing-cont">
+
     <div class="hotel-info" id="hotelmanagementcompanycontent">
         <div class="photo-cont">
             <a href="/Hotel/Index/821/" target="_blank" onclick="_gaq.push(['_trackEvent', 'pcDetail', '管理公司']);"><img src="http://pic.tujia.com/upload/hotelmanagementcompanylogo/day_130502/201305021101557868.jpg" alt="" width="100" height="100" class="photo-img"></a>
         </div>
             <h2 class="name-box">
-                <a href="/Hotel/Index/821/" target="_blank" class="listing-name" onclick="_gaq.push(['_trackEvent', 'pcDetail', '管理公司']);">北京蜗牛斯维登服务公寓（地杰长安驿） </a><span class="personal-tag sweetome-tag" title="蜗牛自营门店，高品质的体验">蜗牛自营</span>
+                <a href="/Hotel/Index/821/" target="_blank" class="listing-name" onclick="_gaq.push(['_trackEvent', 'pcDetail', '管理公司']);">北京蜗牛{{$u_name}}服务公寓</a><span class="personal-tag sweetome-tag" title="蜗牛自营门店，高品质的体验">蜗牛自营</span>
             </h2>
         <div class="shop-tag">
         </div>
 
         <div class="shop-rate">
             
-                <p class="link-btn-cont"><a href="javascript:;"  class="chat-btn  custom-service">在线客服</a></p>
-                            <p class="contact-info">蜗牛客服：<span class="tel-box">400-188-1234</span><span class="gray-text">(7x24小时)</span> </p>
+                <p class="link-btn-cont"><a href="http://wpa.qq.com/msgrd?v=3&uin=1592502410&Site=10086zs&Menu=yes"  class="chat-btn  custom-service">在线客服</a></p>
+                            <p class="contact-info">蜗牛客服：<span class="tel-box">{{$u_phone}}</span><span class="gray-text">(7x24小时)</span> </p>
         </div>
         
     </div>
 
-
-        <div class="sidebar-hd"><h2>房东的其它房屋<span class="gray-text">（5）</span></h2></div>
+        <div class="sidebar-hd"><h2>房东的其它房屋(<span class="gray-text" style="color:red">{{$num}}</span>)</h2></div>
+        
         <div class="m-house-cont">
             <div class="houses-list">
+            @foreach($rooms as $val)
                 <ul>
                         <li>
                             <a href="/beijing_gongyu/se0/chaoyangqu_5030.htm" target="_blank" class="pic-cont" onclick="_gaq.push(['_trackEvent', 'pcDetail', '房东其他房屋']);"><img src="http://pic.tujia.com/upload/unit/day_160125/thumb/201601251739263948_300_200.jpg" alt="" width="278" height="165"></a>
@@ -828,102 +824,24 @@
                                 <a href="/beijing_gongyu/se0/chaoyangqu_5030.htm" target="_blank" class="tit" onclick="_gaq.push(['_trackEvent', 'pcDetail', '房东其他房屋']);">北京蜗牛长安驿精品双床房</a>
 
                                 <div class="house-info">
-                                    <span class="lab-text" title="酒店式公寓">酒店式公寓</span>|
-                                    <span class="lab-text" title="1室1卫">1室1卫</span>|
-                                    <span class="lab-text" title="2张床">2张床</span>|
-                                    <span class="lab-text" title="宜住2人">宜住2人</span>
+                                    <span class="lab-text" title="酒店式公寓">{{$val->r_type}}</span>|
+                                    <span class="lab-text" title="1室1卫">{{$val->r_pattem}}</span>|
+                                    <!-- <span class="lab-text" title="2张床">2张床</span>| -->
+                                    <span class="lab-text" title="宜住2人">宜住{{$val->r_people}}人</span>
                                 </div>
-                                <div class="picer-box"><dfn>¥</dfn><span class="value-box">439</span>/晚</div>
+                                <div class="picer-box"><dfn>¥</dfn><span class="value-box">{{$val->r_price}}</span>/晚</div>
                             </div>
                         </li>
-                        <li>
-                            <a href="/beijing_gongyu/se0/chaoyangqu_13739.htm" target="_blank" class="pic-cont" onclick="_gaq.push(['_trackEvent', 'pcDetail', '房东其他房屋']);"><img src="http://pic.tujia.com/upload/unit/day_160127/thumb/201601272159013849_300_200.jpg" alt="" width="278" height="165"></a>
-                            <div class="house-cont">
-                                <a href="/beijing_gongyu/se0/chaoyangqu_13739.htm" target="_blank" class="tit" onclick="_gaq.push(['_trackEvent', 'pcDetail', '房东其他房屋']);">北京蜗牛长安驿豪华套房</a>
-
-                                <div class="house-info">
-                                    <span class="lab-text" title="酒店式公寓">酒店式公寓</span>|
-                                    <span class="lab-text" title="1室1厅1卫">1室1厅1卫</span>|
-                                    <span class="lab-text" title="2张床">2张床</span>|
-                                    <span class="lab-text" title="宜住3人">宜住3人</span>
-                                </div>
-                                <div class="picer-box"><dfn>¥</dfn><span class="value-box">489</span>/晚</div>
-                            </div>
-                        </li>
-                        <li>
-                            <a href="/beijing_gongyu/se0/chaoyangqu_3583.htm" target="_blank" class="pic-cont" onclick="_gaq.push(['_trackEvent', 'pcDetail', '房东其他房屋']);"><img src="http://pic.tujia.com/upload/unit/day_160125/thumb/201601251724099372_300_200.jpg" alt="" width="278" height="165"></a>
-                            <div class="house-cont">
-                                <a href="/beijing_gongyu/se0/chaoyangqu_3583.htm" target="_blank" class="tit" onclick="_gaq.push(['_trackEvent', 'pcDetail', '房东其他房屋']);">北京蜗牛长安驿精品双床套房</a>
-
-                                <div class="house-info">
-                                    <span class="lab-text" title="酒店式公寓">酒店式公寓</span>|
-                                    <span class="lab-text" title="2室1卫">2室1卫</span>|
-                                    <span class="lab-text" title="2张床">2张床</span>|
-                                    <span class="lab-text" title="宜住4人">宜住4人</span>
-                                </div>
-                                <div class="picer-box"><dfn>¥</dfn><span class="value-box">699</span>/晚</div>
-                            </div>
-                        </li>
-                </ul>
-                    <div class="link-btn-cont"><a href="/Hotel/Index/821/" target="_blank" onclick="_gaq.push(['_trackEvent', 'pcDetail', '查看更多']);">查看更多&gt;&gt;</a></div>
+                     </ul>
+                     @endforeach
+                    <!-- <div class="link-btn-cont"><a href="/Hotel/Index/821/" target="_blank" onclick="_gaq.push(['_trackEvent', 'pcDetail', '查看更多']);">查看更多&gt;&gt;</a></div> -->
             </div>
         </div>
+        
 </div>
 
             </div>
             <!--管理公司其它房屋-->
-                <div class="m-column-box t-column-box">
-                        <div class="sidebar-hd"><h2>周边推荐房屋</h2></div>
-    <div class="m-house-cont">
-        <div class="houses-list">
-            <ul>
-                    <li>
-                        <a href="/beijing_gongyu/se0/chaoyangqu_10774.htm" target="_blank" class="pic-cont" onclick="_gaq.push(['_trackEvent', 'pcDetail', '房东其他房屋']);"><img src="http://pic.tujia.com/upload/landlordunit/day_140120/thumb/201401200746159306_300_200.jpg" alt="" width="278" height="165"></a>
-                        <div class="house-cont">
-                            <a href="/beijing_gongyu/se0/chaoyangqu_10774.htm" target="_blank" class="tit" onclick="_gaq.push(['_trackEvent', 'pcDetail', '房东其他房屋']);">中景亿佳公寓舒适大床房</a>
-
-                            <div class="house-info">
-                                <span class="lab-text" title="酒店式公寓">酒店式公寓</span>|
-                                <span class="lab-text" title="1室1卫">1室1卫</span>|
-                                <span class="lab-text" title="1张床">1张床</span>|
-                                <span class="lab-text" title="宜住2人">宜住2人</span>
-                            </div>
-                            <div class="picer-box"><dfn>¥</dfn><span class="value-box">425</span>/晚</div>
-                        </div>
-                    </li>
-                    <li>
-                        <a href="/beijing_gongyu/se0/chaoyangqu_10952.htm" target="_blank" class="pic-cont" onclick="_gaq.push(['_trackEvent', 'pcDetail', '房东其他房屋']);"><img src="http://pic.tujia.com/upload/landlordunit/day_160205/thumb/201602051800362736_300_200.jpg" alt="" width="278" height="165"></a>
-                        <div class="house-cont">
-                            <a href="/beijing_gongyu/se0/chaoyangqu_10952.htm" target="_blank" class="tit" onclick="_gaq.push(['_trackEvent', 'pcDetail', '房东其他房屋']);">中景亿佳公寓舒适家庭房</a>
-
-                            <div class="house-info">
-                                <span class="lab-text" title="酒店式公寓">酒店式公寓</span>|
-                                <span class="lab-text" title="1室1卫">1室1卫</span>|
-                                <span class="lab-text" title="2张床">2张床</span>|
-                                <span class="lab-text" title="宜住4人">宜住4人</span>
-                            </div>
-                            <div class="picer-box"><dfn>¥</dfn><span class="value-box">445</span>/晚</div>
-                        </div>
-                    </li>
-                    <li>
-                        <a href="/beijing_gongyu/se0/chaoyangqu_87706.htm" target="_blank" class="pic-cont" onclick="_gaq.push(['_trackEvent', 'pcDetail', '房东其他房屋']);"><img src="http://pic.tujia.com/upload/landlordunit/day_160127/thumb/20160127113611261_300_200.jpg" alt="" width="278" height="165"></a>
-                        <div class="house-cont">
-                            <a href="/beijing_gongyu/se0/chaoyangqu_87706.htm" target="_blank" class="tit" onclick="_gaq.push(['_trackEvent', 'pcDetail', '房东其他房屋']);">北京长安驿短租公寓温馨小套</a>
-
-                            <div class="house-info">
-                                <span class="lab-text" title="酒店式公寓">酒店式公寓</span>|
-                                <span class="lab-text" title="1室1厅1卫">1室1厅1卫</span>|
-                                <span class="lab-text" title="2张床">2张床</span>|
-                                <span class="lab-text" title="宜住4人">宜住4人</span>
-                            </div>
-                            <div class="picer-box"><dfn>¥</dfn><span class="value-box">488</span>/晚</div>
-                        </div>
-                    </li>
-            </ul>
-        </div>
-    </div>
-
-                </div>
 
             <div class="m-column-box ">
                 <div class="m-ensure">
@@ -981,9 +899,9 @@
 </div>
 <!--跳转弹层－结束-->
 <!--在线客服&& 和房东聊天－开始-->
-<div class="J-service-btn" id="J-service-btn">
+<!-- <div class="J-service-btn" id="J-service-btn">
     <a href="javascript:;" rel="nofollow" onclick="qimoChatClick(); return false;" class="service-chat-btn"><i class="icon-service"></i><span class="label-text">客服</span></a>
-</div>
+</div> -->
 <!--在线客服&& 和房东聊天-结束-->
 <!--登录框－开始-->
 <div style="height: 1px;" id="loginBtn"></div>
