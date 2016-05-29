@@ -60,7 +60,7 @@
     var traceData = window.traceData || {};
     traceData.logService = 'http://api.tujia.com';
     traceData.prevId = '';
-    traceData.pageId = 'd388fcd1-9175-49e9-a78d-2a027f89ae19';
+    traceData.pageId = 'd388fcd1-9175-49e9-a78d-2a027f89ae19';      
     traceData.url = '/beijing_gongyu/chaoyangqu_3581.htm';
     traceData.params = '';
 </script>
