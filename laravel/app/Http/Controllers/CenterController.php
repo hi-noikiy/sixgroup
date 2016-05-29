@@ -24,12 +24,14 @@ class CenterController extends Controller
      */
     public function index()
     {
-        //存储session
+        //获取session
         $u_name=Session::get('u_name');
         $u_id=Session::get('u_id');
         $status=Session::get('status');
+        //判断房客、房源
         if($status==1)
         {
+            //执行sql语句
             $data=DB::table('orde')
                 ->join('user', 'orde.u_id', '=', 'user.u_id')
                 ->join('room', 'orde.r_id', '=', 'room.r_id')
@@ -40,6 +42,7 @@ class CenterController extends Controller
         else if($status==0)
         {
             $u_id=Session::get('u_id');
+            //执行sql语句
             $data=DB::table('user')
                 ->join('room', 'user.u_id', '=', 'room.u_id')
                 ->select('user.u_id', 'room.r_id','room.r_img','room.r_title','room.r_checkin','room.r_checkout','room.r_price','room.state','room.r_pattem','room.r_people','room.r_coordinate')
@@ -52,9 +55,9 @@ class CenterController extends Controller
      */
     public function delorder()
     {
-        //接收id
+        //接收表单提交的数据
         $o_id=Input::get('o_id');
-        //删除sql语句
+        //执行sql语句
         $sql=DB::table('orde')->where('o_id', '=', [$o_id])->delete();
         //判断删除是否成功
         if($sql)
@@ -99,7 +102,7 @@ class CenterController extends Controller
         $u_city=Input::get('u_city');
         $u_study=Input::get('u_study');
         $u_hang=Input::get('u_hang');
-        //添加sql语句
+        //执行sql语句
         $sql=DB::update('update user set u_real_name="'.$u_real_name.'",u_sex="'.$u_sex.'",u_city="'.$u_city.'",u_birthdy="'.$u_birthdy.'",u_study="'.$u_study.'",u_hang="'.$u_hang.'" where u_id = ?', [$u_id]);
         //判断添加成功
         if($sql)
@@ -112,6 +115,7 @@ class CenterController extends Controller
      */
     public function personal()
     {
+        //获取session
         Session::get('u_name');
         Session::get('u_id');
         return view('Center/personal');
@@ -125,9 +129,10 @@ class CenterController extends Controller
         Session::get('u_name');
         $u_id=Session::get('u_id');
         $status=Session::get('status');
-        //用户表、房间表、订单表联查
+        //用户表、房间表、订单表联查，判断房客，房源
         if($status==1)
         {
+            //执行sql语句
             $data=DB::table('orde')
                 ->join('user', 'orde.u_id', '=', 'user.u_id')
                 ->join('room', 'orde.r_id', '=', 'room.r_id')
@@ -138,6 +143,7 @@ class CenterController extends Controller
         else if($status==0)
         {
             $u_id=Session::get('u_id');
+            //执行sql语句
             $data=DB::table('user')
                 ->join('room', 'user.u_id', '=', 'room.u_id')
                 ->select('user.u_id', 'room.r_id','room.r_img','room.r_title','room.r_checkin','room.r_checkout','room.r_price','room.state','room.r_pattem','room.r_people','room.r_coordinate')
@@ -150,9 +156,9 @@ class CenterController extends Controller
      */
     public function orderdel()
     {
-        //接收id
+        //接收表单提交的数据
         $o_id=Input::get('o_id');
-        //删除sql语句
+        //执行sql语句
         $sql=DB::table('orde')->where('o_id', '=', [$o_id])->delete();
         //判断删除是否成功
         if($sql)
@@ -172,6 +178,7 @@ class CenterController extends Controller
         //获取session
         Session::get('u_name');
         $u_id=Session::get('u_id');
+        //查询用户信息
         $data = DB::table('user')->where('u_id', '=', [$u_id])->get();
         return view('Center/updpwd',['data'=>$data]);
     }
@@ -180,9 +187,13 @@ class CenterController extends Controller
      */
     public function updatepwd()
     {
+        //获取session
         $u_id=Session::get('u_id');
+        //接收表单提交的数据
         $npwd=Input::get('npwd');
+        //修改密码
         $sql=DB::update('update user set u_pwd="'.$npwd.'" where u_id = ?', [$u_id]);
+        //判断修改是否成功
         if($sql)
         {
             return Redirect::action('CenterController@pwdupdate');
@@ -193,6 +204,7 @@ class CenterController extends Controller
      */
     public function pwdupdate()
     {
+        //获取session
         Session::get('u_name');
         Session::get('u_id');
         return view('Center/pwdupdate');
@@ -202,7 +214,9 @@ class CenterController extends Controller
      */
     public function orderadd()
     {
+        //接收表单提交的数据
         $r_id=Input::get('r_id');
+        //查询房源表信息
         $data = DB::table('room')->where('r_id', '=', [$r_id])->get();
         return view('Center/orderadd',['data'=>$data]);
     }
@@ -211,17 +225,18 @@ class CenterController extends Controller
      */
     public function orderad()
     {
+        //获取session
         $u_id=Session::get('u_id');
+        //接收表单提交的数据
         $r_id=Input::get('r_id');
-        //接收数据
         $r_price=Input::get('r_price');
         $o_people=Input::get('o_people');
         $u_name=Input::get('u_name');
         $u_phone=Input::get('u_phone');
         $u_email=Input::get('u_email');
         //执行sql语句
-        DB::update('update user set u_name="'.$u_name.'",u_phone="'.$u_phone.'",u_email="'.$u_email.'" where u_id = ?', [$u_id]);
-        DB::table('orde')->insert(['u_id'=>$u_id,'r_id'=>$r_id,'o_price' =>$r_price, 'o_people' =>$o_people]);
+        $sql=DB::update('update user set u_name="'.$u_name.'",u_phone="'.$u_phone.'",u_email="'.$u_email.'" where u_id = ?', [$u_id]);
+        $sql=DB::table('orde')->insert(['u_id'=>$u_id,'r_id'=>$r_id,'o_price' =>$r_price, 'o_people' =>$o_people]);
         return Redirect::action('CenterController@order');
     }
     /*
@@ -307,8 +322,10 @@ class CenterController extends Controller
      */
     public function headp()
     {
+        //获取session
         $u_id=Session::get('u_id');
         $u_name=Session::get('u_name');
+        //查询用户信息
         $data = DB::table('user')->where('u_id', '=', [$u_id])->get();
         return view('Center/headp',['data'=>$data]);
     }
@@ -317,10 +334,15 @@ class CenterController extends Controller
      */
     public function headsuccess()
     {
+        //获取session
         $u_id=Session::get('u_id');
+        //接收表单提交的数据
         $data =Request::all();
+        //图片名字
         $clientName = $data['u_img'] ->  getClientOriginalName();
+        //存储路径
         $path = $data['u_img'] -> move('uploads/',$clientName);
+        //执行sql语句
         $sql= DB::update('update user set u_img="'.$clientName.'" where u_id = ?', [$u_id]);
         return Redirect::action('CenterController@headlist');
     }
@@ -329,7 +351,9 @@ class CenterController extends Controller
      */
     public function headlist()
     {
+        //获取session
         $u_id=Session::get('u_id');
+        //查询用户信息
         $data = DB::table('user')->where('u_id', '=', [$u_id])->get();
         return view('Center/person',['data'=>$data]);
     }
