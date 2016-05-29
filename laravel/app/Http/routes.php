@@ -185,6 +185,9 @@ Route::any('headp','CenterController@headp');
 Route::any('headsuccess','CenterController@headsuccess');
 
 
+//显示头像
+Route::any('headlist','CenterController@headlist');
+
 /*关于网站底部的处理*/
 
 //关于我们
