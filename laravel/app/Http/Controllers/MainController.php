@@ -47,7 +47,7 @@ class MainController extends Controller{
 		$r_price=Request::get('price');	//价格
 		$rom=Request::get('room');	//房型
 		$layout=Request::get('layout');	//房型
-		//dd($price);
+		//dd($layout);
 		$room=new \App\Room;	//实例化Model层
 		$row=$room->search($site,$r_price,$rom,$layout);
 		//dd($row);

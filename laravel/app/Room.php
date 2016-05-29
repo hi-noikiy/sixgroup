@@ -21,17 +21,17 @@ class Room extends Model
     {
     	if ($site) {	//区域
     		$where2['r_district']=$site;
-    	}elseif($site=='no' && $site==''){
+    	}elseif($site=='no'){
     		unset($where2['r_district']);
     	}
     	if ($rom) {		//房型
     		$where2['r_type']=$rom;
-    	}elseif($rom=='no' && $rom==''){
+    	}elseif($rom=='no'){
     		unset($where2['r_type']);
     	}
     	if ($layout) {	//格局
     		$where2['r_pattem']=$layout;
-    	}elseif($layout=='no' && $layout==''){
+    	}elseif($layout=='no'){
     		unset($where2['r_pattem']);
     	}
     	if ($r_price & empty($site) || empty($rom) || empty($layout)) {	//价格存在

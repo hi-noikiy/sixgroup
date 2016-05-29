@@ -519,11 +519,11 @@
     <div class="searchresult-list t-searchresult-list  clearfix" data-unitid="13460">
     <?php $img=explode('|',$v->r_img) ?>
         <div class="house-img">
-            <a href="uploads/{{$img[0]}}" target="_blank" rel="nofollow" class="link-btn-pic" onclick="_gaq.push(['_trackEvent', 'pcList', '房屋点击']);">
+            <a href="{{URL('good?r_id')}}={{$v->r_id}}" target="_blank" rel="nofollow" class="link-btn-pic" onclick="_gaq.push(['_trackEvent', 'pcList', '房屋点击']);">
 
                 <img src="uploads/{{$img[0]}}" alt="{{$v->r_title}}" />
 
-                <img src="uploads/{{$img[0]}}" alt="北京 北京光耀公寓豪华行政二居室" />
+                <img src="uploads/{{$img[0]}}" alt="" />
 
             </a>
             <div class="functions-menu">
@@ -595,7 +595,7 @@
                                     </td>
 
                                     <td class="item-last">
-                                            <a class="btn-buy" href="javascript:void(0);" rel="nofollow" onclick="_gaq.push(['_trackEvent', 'pcList', '房价查看']);">查看</a>
+                                            <a class="btn-buy" href="{{URL('good?r_id')}}={{$v->r_id}}" rel="nofollow" >查看</a>
                                     </td>
 
                                 </tr>

@@ -223,50 +223,7 @@
 </div>
 
 
-    <div class="hot-destn-fluid">
-        <div class="wrap-large">
-            <div class="destn-hd">
-                    为您推荐大家当前最爱去的地方
-            </div>
-        </div>
-        <div class="wrap-large">
-            <div class="m-tabs-link" id="SpecialLevelOneCategoryContainer">
-            <?php foreach($re as $val=>$key){?>
-                    <a class="first current" data-leveloneid="<?php echo $key->a_id?>" href="javascript:;"><?php echo $key->a_name?></a>
-					<?php }?>
-            </div>
-
-           <!--房屋类型-->
-            <div class="destn-menu" id="SpecialLevelTwoCategoryContainer">
-                    <?php foreach($room as $val=>$key){?>
-                        <a href="javascript:;" data-moreurl="/sanya_gongyu/se0t339/" data-leveloneid="<?php echo $key->a_id?>" data-leveltwoid="<?php echo $key->ty_id?>" style="" class="current"><?php echo $key->ty_name?></a>
-					<?php }?>
-            </div>
-           <!--END-->
-                 <?php foreach($room as $val=>$key){?>
-                    <div class="destn-house-list j-specialunit-container" data-leveloneid="1" data-leveltwoid="<?php echo $key->ty_id?>" style="">
-                        <ul>
-                                <li>
-                                    <a href="{{URL('good?r_id')}}={{$key->r_id}}" target="_blank" rel="nofollow" class="pic-box" onclick="_gaq.push(['_trackEvent', 'PC-首页推荐','三亚市内','家庭出游']);" id="<?php echo $key->r_id?>"><img data-original="http://pic.tujia.com/upload/landlordunit/day_160505/thumb/201605051733501789_370_232.jpg" alt="" class="house-pic" width="370" height="232"></a>
-                                    <div class="house-info">
-                                        <h2>
-                                            <a href="{{URL('good?r_id')}}={{$key->r_id}}" class="house-tit" target="_blank" title="<?php echo $key->r_title?>" onclick="_gaq.push(['_trackEvent', 'PC-首页推荐','三亚市内','家庭出游']);" id="<?php echo $key->r_id?>"><?php echo $key->r_title?></a>
-                                                <i class="icon-quality-hotel" rel="PreferredUnitTips"></i>
-                                        </h2>
-                                        <div class="house-datelist">
-                                            <span title="<?php echo $key->ty_name?>" class="label-text"><?php echo $key->ty_name?></span>|
-                                            <span title="<?php echo $key->r_pattem?>" class="label-text"><?php echo $key->r_pattem?></span>|
-                                            <span title="宜住<?php echo $key->r_people?>人" class="label-text">宜住<?php echo $key->r_people?>人</span>
-                                        </div>
-                                        <span class="price-box"><dfn>¥</dfn><b><?php echo $key->r_price?></b>/晚</span>
-                                    </div>
-                                </li>
-                        </ul>
-					<?php }?>
-                    </div>
-            <div class="m-link-box t-link-box" style="margin-top:0"><a href="/sanya_gongyu/se0t339/" target="_blank" id="moreSpecialCityUnit" class="more-btn">查看更多<i class="i-acor"></i></a></div>
-        </div>
-    </div>
+   
 
     <div class="theme-fluid">
         <div class="wrap-large" data-count="21">

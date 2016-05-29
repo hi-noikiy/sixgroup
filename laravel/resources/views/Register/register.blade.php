@@ -119,7 +119,7 @@
                     <div class="control-group">
                         <label class="controls-label"><b>*</b>手机验证码：</label>
                         <div class="controls">
-                            <input class="ipt-text-verify verification"  onblur="key()" data-message="请输入验证码" data-val="true" data-val-required="验证码不能为空" id="verifycode" maxlength="4" name="verifycode" type="text"  />
+                            <input class="ipt-text-verify verification" value=""  onblur="key()" data-message="请输入验证码" data-val="true" data-val-required="验证码不能为空" id="verifycode" maxlength="4" name="verifycode" type="text"  />
                             <span id="errorMsgCode">
                                 
                             </span>
@@ -135,7 +135,7 @@
                     <div class="control-group">
                         <label class="controls-label" for="Password"><b>*</b>登录密码：</label>
                         <div class="controls">
-                            <input class="ipt-text" data-val="true" data-val-length="请输入长度为6到16的密码" data-val-length-max="16" data-val-length-min="6" data-val-required="请输入密码" id="Password" name="Password" type="password" />
+                            <input class="ipt-text" data-val="true" data-val-length="请输入长度为6到16的密码" data-val-length-max="16" data-val-length-min="6" data-val-required="请输入密码" id="Password" name="Password" type="password" value="" />
                         </div>
                     </div>
 
@@ -145,14 +145,7 @@
                             <input class="ipt-text" data-val="true" data-val-equalto="两次输入的密码必须一致" data-val-equalto-other="*.Password" data-val-length="请输入长度为6到16的密码" data-val-length-max="16" data-val-length-min="6" id="Repwd" name="Repwd" type="password" />
                         </div>
                     </div>
-                    <div class="control-group">
-                        <label class="controls-label">邀请码：</label>
-                        <div class="controls">
-                            <input class="ipt-text-verify" data-val="true" data-val-number="字段 FromId 必须是一个数字。" id="FromId" name="FromId" type="text" value="" />
-                            <span>使用好友给您的邀请码注册（选填）</span>
-                            
-                        </div>
-                    </div>
+
                     
                     <div class="control-group">
                         <label class="controls-label">常用邮箱：</label>
