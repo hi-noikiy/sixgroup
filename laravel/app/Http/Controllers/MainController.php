@@ -25,16 +25,17 @@ class MainController extends Controller{
 		 //echo $startDate;die;
 	     $endDate=Input::get('endDate');
 		 $adress=Input::get('adress');
-		 if ($adress) {
+		 if($adress) {
 		 	 $data = DB::table('room')
 				->where('r_type',$adress)
-				->paginate(3);	
+				->paginate($perPage = 5, $columns = ['*'], $pageName = 'page', $page = null);
+			$com=DB::table('comment')
+				->get();
 		 }else{
-		 	 $data = DB::table('room')
-				->paginate(3);
+		 	 $data=DB::table('room')
+				->paginate($perPage = 5, $columns = ['*'], $pageName = 'page', $page = null);
 		 }	
-		
-
+		//dd($data);
 		return view('Main/main',['room' => $data]);
 	}
 
@@ -46,7 +47,7 @@ class MainController extends Controller{
 		$r_price=Request::get('price');	//价格
 		$rom=Request::get('room');	//房型
 		$layout=Request::get('layout');	//房型
-		//dd($price);
+		//dd($layout);
 		$room=new \App\Room;	//实例化Model层
 		$row=$room->search($site,$r_price,$rom,$layout);
 		//dd($row);

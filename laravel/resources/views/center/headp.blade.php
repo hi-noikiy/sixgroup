@@ -10,7 +10,7 @@
     <link rel="shortcut icon" href="http://staticfile.tujia.com/PortalSite/Images/favicon.ico" type="image/x-icon" />
     <link rel="bookmark" href="http://staticfile.tujia.com/PortalSite/Images/favicon.ico" type="image/x-icon" />
     <title>
-        个人资料- 蜗牛短租
+        头像上传- 蜗牛短租
     </title>
 
     <link rel="stylesheet" type="text/css" href="http://staticfile.tujia.com/portalsite2/styles/css_user?v=5e55fe5" />
@@ -23,15 +23,6 @@
     <link rel="stylesheet" type="text/css" href="http://staticfile.tujia.com/portalsite2/styles/menu.css?v=5e55fe5" />
     <script type="text/javascript" src="http://staticfile.tujia.com/portalsite2/scripts/base/jquery.js?v=5e55fe5"></script>
     <link rel="stylesheet" type="text/css" href="http://staticfile.tujia.com/portalsite2/styles/colorbox.css?v=5e55fe5" />
-
-
-    <link href="../public/css/ShearPhoto.css" rel="stylesheet" type="text/css" media="all">
-    <script  type="text/javascript" src="../public/js/ShearPhoto.js" ></script>
-    <script  type="text/javascript"  src="../public/js/move.js" ></script>
-    <script  type="text/javascript"  src="../public/js/processdata.js" ></script>
-    <script  type="text/javascript"  src="../public/js/UpImg.js" ></script>
-    <script  type="text/javascript"  src="../public/js/webcam_ShearPhoto.js" ></script>
-    <script  type="text/javascript"  src="../public/js/handle.js" ></script>
 
 
     <script type="text/javascript" src="http://staticfile.tujia.com/portalsite2/scripts/base/colorbox.js?v=5e55fe5"></script>
@@ -67,13 +58,23 @@
                 <br/>
             </p>
         </div>
-
-        <div class="navWrapper">
-            <h5>我的订单</h5>
-            <ul>
-                <li><a id="myorders" href="order" class="current" onclick="_gaq.push(['_trackEvent', 'pcUserInfo', '订单管理']);">订单管理<span></span></a></li>
-            </ul>
-        </div>
+        @foreach($data as $v)
+            @if($v->status==1)
+                <div class="navWrapper">
+                    <h5>我的订单</h5>
+                    <ul>
+                        <li><a id="myorders" href="order" class="current" onclick="_gaq.push(['_trackEvent', 'pcUserInfo', '订单管理']);">订单管理<span></span></a></li>
+                    </ul>
+                </div>
+            @else
+                <div class="navWrapper">
+                    <h5>发布房源</h5>
+                    <ul>
+                        <li><a id="myorders" href="order" class="current" onclick="_gaq.push(['_trackEvent', 'pcUserInfo', '房源管理管理']);">房源信息<span></span></a></li>
+                    </ul>
+                </div>
+            @endif
+        @endforeach
         <div class="navWrapper">
             <h5>
                 个人中心
@@ -90,104 +91,49 @@
         <div>
             <p id="swfContainer"></p>
         </div>
+        <div style="margin-top: 100px;margin-left: 170px">
+            <form action="{{URL('headsuccess')}}" method="post" enctype='multipart/form-data'>
+                <style>
+                    .div1{
+                        float: left;
+                        height: 41px;
+                        background: #D15FEE;
+                        width: 144px;
+                        position:relative;
+                    }
+                    .div2{
+                        text-align:center;
+                        padding-top:12px;
+                        font-size:15px;
+                        font-weight:800
+                    }
+                    .inputstyle{
+                        width: 144px;
+                        height: 41px;
+                        cursor: pointer;
+                        font-size: 30px;
+                        outline: medium none;
+                        position: absolute;
+                        filter:alpha(opacity=0);
+                        -moz-opacity:0;
+                        opacity:0;
+                        left:0px;
+                        top: 0px;
+                    }
+                </style>
+                <div class="div1">
+                    <div class="div2">上传头像</div>
+                    <input type="file" class="inputstyle" name="u_img">
+                </div>
+                <div class="control-group submit-group">
+                    <div class="controls">
+                        <input name="_token" value="{{csrf_token()}}" type="hidden"/>
+                        <input type="submit" value="保存"  /></div>
 
+                </div>
+            </form>
+        </div>
 
-        <div id="main">
-            <div class="point">
-            </div>
-            <!--没加载方法前-->
-            <div id="SelectBox">
-                <form  name="FORM" enctype="multipart/form-data" method="post"  target="POSTiframe">
-                    <input name="shearphoto" type="hidden" value="我要在这里传参数"> <!--示例传参数到服务端，后端文件用UPLOAD.php用$_POST['shearphoto']接收-->
-                    <a href="javascript:;" id="selectImage"><input type="file"  name="UpFile" /></a>
-                </form>
-                <a href="javascript:;" id="PhotoLoading"></a>
-                <a href="javascript:;" id="camerasImage"></a>
-            </div>
-            <!--没加载方法前结束-->
-            <div id="relat">
-                <div id="black">
-                </div>
-                <div id="movebox">
-                    <div id="smallbox">
-                        <img src="../public/images/default.png" class="MoveImg" />
-                    </div>
-                    <i id="BottomRight">
-                    </i>
-                    <i id="TopRight">
-                    </i>
-                    <i id="Bottomleft">
-                    </i>
-                    <i id="Topleft">
-                    </i>
-                    <i id="Topmiddle">
-                    </i>
-                    <i id="leftmiddle">
-                    </i>
-                    <i id="Rightmiddle">
-                    </i>
-                    <i id="Bottommiddle">
-                    </i>
-                </div>
-                <img src="../public/images/default.png" class="BigImg" />
-            </div>
-        </div>
-        <div id="Shearbar">
-            <a id="LeftRotate" href="javascript:;">
-                <em>
-                </em>
-                向左旋转
-            </a>
-            <em class="hint L">
-            </em>
-            <div class="ZoomDist" id="ZoomDist">
-                <div id="ZoomBar">
-                </div>
-                        <span class="progress">
-                        </span>
-            </div>
-            <em class="hint R">
-            </em>
-            <a id="RightRotate" href="javascript:;">
-                向右旋转
-                <em>
-                </em>
-            </a>
-            <p class="Psava">
-                <a id="againIMG"  href="javascript:;">重新选择</a>
-                <a id="saveShear" href="javascript:;">保存截图</a>
-            </p>
-        </div>
-        <!--主功能部份-->
-        <!--相册-->
-        <div id="photoalbum">
-            <h1>假如：这是一个相册--------试试点击图片</h1>
-            <i id="close"></i>
-            <ul>
-                <li><img src="../public/file/photo/1.jpg" serveUrl="../public/file/photo/1.jpg" /></li>
-                <li><img src="../public/file/photo/2.jpg" serveUrl="../public/file/photo/2.jpg" /></li>
-                <li><img src="../public/file/photo/3.jpg" serveUrl="../public/file/photo/3.jpg" /></li>
-                <li><img src="../public/file/photo/4.jpg" serveUrl="../public/file/photo/4.jpg" /></li>
-                <li><img src="../public/file/photo/5.jpg" serveUrl="../public/file/photo/5.jpg" /></li>
-                <li><img src="../public/file/photo/6.jpg" serveUrl="../public/file/photo/6.jpg" /></li>
-                <li><img src="../public/file/photo/7.jpg"  serveUrl="../public/file/photo/7.jpg"/></li>
-                <li><img src="../public/file/photo/8.jpg" serveUrl="../public/file/photo/8.jpg" /></li>
-            </ul>
-        </div>
-        <!--相册-->
-        <!--拍照-->
-        <div id="CamBox">
-            <p class="lens"></p>
-            <div id="CamFlash"></div>
-            <p class="cambar">
-                <a href="javascript:;" id="CamOk"  >拍照</a>
-                <a href="javascript:;" id="setCam">设置</a>
-                <a href="javascript:;" id="camClose">关闭</a>
-            <div style="clear:both;"></div>
-            </p>
-            <div id="timing">3</div>
-        </div>
-        <!--拍照-->
 
 
 
@@ -200,23 +146,7 @@
 </div>
 
 <!-- footer Start -->
-
-<div class="m-seo-list">
-
-</div>
-
-<div style="display: none">getFriendLinkRuleTime执行时间: 0.0403</div>
-<div style="display: none">getSeoFooterRulrTime执行时间: 0.0186</div>
-<div style="display: none">SeoFooter执行时间: 0.0038</div>
-
-<div class="m-footer-link-list">
-    <a href="http://content.tujia.com/tujiajianjie.htm" target="_blank" class="forst" rel="nofollow">关于我们</a>|
-    <a href="http://content.tujia.com/youkebangzhu.htm" target="_blank" rel="nofollow">我是房客</a>|
-    <a href="http://content.tujia.com/qiyewenhua.htm" target="_blank" rel="nofollow">加入途家</a>|
-    <a href="http://www.tujia.com/UnitDestination/SiteMap/" target="_blank">网站地图</a>|
-    <a href="/SiteMap/Default/" target="_blank">城市地图</a>
-
-</div>
+@include('components.foot');
 <!-- footer  End -->
 <div class="edm-pop " id="dialog" style="display: none">
     <div class="edm-hd"><h2>订阅邮件</h2><a class="close-btn" title="关闭"></a></div>

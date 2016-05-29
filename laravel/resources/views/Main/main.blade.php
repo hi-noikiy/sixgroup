@@ -118,14 +118,14 @@
         <div class="nav-list">
             <ul>
                 <li class="first"><a href="{{URL('index')}}" class="home-link ">首页</a></li>
-                <li><a href="http://international.tujia.com/"  target="_blank">海外·港台</a></li>
-                <li><a href="http://www.tujia.com/changzu/se0/"  target="_blank">周租月租</a></li>
-                <li><a href="http://www.tujia.com/Experience/"  target="_blank">体验房</a></li>
-                <li><a href="http://www.tujia.com/photowall/" target="_blank" >特色房</a></li>
+
+                <li><a href=""  target="_blank">周租月租</a></li>
+                <li><a href=""  target="_blank">体验房</a></li>
+                <li><a href="" target="_blank" >特色房</a></li>
                 
-                <li><a href="http://travel.tujia.com" target="_blank">社区</a></li>
-                <li><a href="http://www.tujia.com/EntrustTreasure/"  target="_blank">买楼收租</a></li>
-                <li><a href="http://www.tujia.com/TuYuan/"  target="_blank">途远度假</a></li>
+                <li><a href="" target="_blank">社区</a></li>
+                <li><a href=""  target="_blank">买楼收租</a></li>
+                <li><a href=""  target="_blank">蜗牛家族</a></li>
             </ul>
         </div>
 
@@ -152,14 +152,8 @@
     <div class="wrap-large">
         <div id="dir">
             
-            <a href="http://www.tujia.com/se0/" title="途家网">途家网</a>
+            <a href="" title="途家网">蜗牛家我的家</a>
             
-
-
-<em>&gt;</em>
-    <h1>北京公寓住宿</h1>
-
-
         </div>
     </div>
     
@@ -170,70 +164,9 @@
     </div>
     
 
-
     <!--- 面包屑  结束  -->
 
-    <div class="wrap-large">
-        <div class="unit-list-search " id="search">
-            <div class="m-search-box form-horizontal">
-                <div class="tab-content">
 
-<form id="mainSearchForm" action="search" class="mainSearchForm mainSearchForm_unitlist" method="post">
-    <div class="control-group  city-group">
-        <span class="controls-span">目的地</span>
-        <div class="controls">
-            <label for="">
-                <input type="text" id="destInput" class="ipt-text" data-destid="48" data-destpinyin="beijing" value="北京" />
-                <i class="icon-city"></i>
-            </label>
-        </div>
-    </div>
-    <div class="control-group date-group">
-        <span class="controls-span">入住</span>
-        <div class="controls">
-            <label for="startDate">
-                <input class="ipt-text startDate" id="startDate" name="startDate" type="text" value="" />
-                <i class="icon-calendar"></i>
-            </label>
-        </div>
-    </div>
-
-    <div class="control-group date-group">
-        <span class="controls-span">退房</span>
-        <div class="controls">
-            <label for="endDate">
-                <input class="ipt-text endDate" id="endDate" name="endDate" type="text" value="" />
-                <i class="icon-calendar"></i>
-            </label>
-        </div>
-    </div>
-        <div class="control-group key-group">
-            <span class="controls-span">关键词</span>
-            <div class="controls">
-                <label for="adress">
-                    <input type="text" id="adress" class="ipt-text" onfocus="_gaq.push(['_trackEvent', 'pcList', '关键词输入框']);" />
-                    <span class="address-mark" style=""></span>
-                    <i class="icon-key"></i>
-                </label>
-            </div>
-        </div>
-    <div class="control-group search-btn-group" id="submitBox">
-        <input type="button" value="搜索" class="search-btn" id="searchHouse" onclick="_gaq.push(['_trackEvent', 'pcList', '列表搜索按钮']);">
-    </div>
-
-</form>
-
-
-
-
-
-
-
-
-</div>
-            </div>
-
-        </div>
     </div>
 
     <!---  页面内容 开始 -->
@@ -530,21 +463,6 @@
                     <a href="javascript:void(0)" data-cat="2" onclick="_gaq.push(['_trackEvent', 'pcList', '房价排序']);" data-type="o" data-val="4"
                        class="link-btn " style="display:none;" name="PriceSort" title="点击按价格从高到低排序"><i class="icon-up"></i>房价</a>
 
-                    <a href="javascript:void(0)" data-cat="3" onclick="_gaq.push(['_trackEvent', 'pcList', '点评分排序']);" data-type="o" data-val="18"
-                       name="commentscoresort" class="" title="点击按点评分从高到低排序">点评分</a>
-
-                    
-
-                    <a href="javascript:void(0)" data-cat="5" onclick="_gaq.push(['_trackEvent', 'pcList', '销量排序']);" data-type="o" data-val="21"
-                       name="CommentCountSort" class="" title="点击按销量从多到少排序">销量</a>
-
-                    
-
-                    <a href="javascript:void(0)" data-cat="6" onclick="_gaq.push(['_trackEvent', 'pcList', '面积排序']);" data-type="o" data-val="7"
-                       class="link-btn   " style="display:none;" name="GrossAreaSort" title="点击按面积从大到小排序"><i class="icon-up"></i>面积</a>
-
-                    <a href="javascript:void(0)" data-type="o" style="display:none;" data-val="15"
-                       name="distancesort" title="按距离从近到远排序" class="">距离</a>
                 </div>
             </div>
             <div class="total-house-amount">套房屋符合条件</div>
@@ -558,7 +476,7 @@
 
 
 <div class="m-hot-room" style="display:none;" id="recom-list">
-    <h2>城市热门推荐</h2>
+    <h2>热门房屋推荐</h2>
     <div class="room-list">
         <a href="javascript:;" class="prev-btn" id="recom_carousel_prev"></a>
         <a href="javascript:;" class="next-btn" id="recom_carousel_next"></a>
@@ -576,61 +494,10 @@
                             </div>
                         </div>
                     </div>
-                    <div class="carousel_box house-group">
-                        <div class="room-cont">
-                            <a href="http://go.tujia.com/1007/?code=CZLB-ZSK-bj&amp;id=62790" target="_blank" title="北京麒麟外交公寓豪华两居" class="pic-box" rel="nofollow">
-                                <img src="http://pic.tujia.com/upload/landlordunit/day_160411/thumb/201604111405017984_120_90.jpg" alt="北京麒麟外交公寓豪华两居" />
-                            </a>
-                            <div class="info-box">
-                                <a href="http://go.tujia.com/1007/?code=CZLB-ZSK-bj&amp;id=62790" target="_blank" class="room-tit" title="北京麒麟外交公寓豪华两居">北京麒麟外交公寓豪华两居</a>
-                                <p class="picer-info"><span class="price-box"><dfn>¥</dfn><b class="number-box">1288</b></span>/晚起 </p><p class="hint-text"></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel_box house-group">
-                        <div class="room-cont">
-                            <a href="http://go.tujia.com/1007/?code=CZLB-ZSK-bj&amp;id=29022" target="_blank" title="地铁直达鸟巢水立方一室一厅套间" class="pic-box" rel="nofollow">
-                                <img src="http://pic.tujia.com/upload/landlordunit/day_160429/thumb/201604291001176856_120_90.jpg" alt="地铁直达鸟巢水立方一室一厅套间" />
-                            </a>
-                            <div class="info-box">
-                                <a href="http://go.tujia.com/1007/?code=CZLB-ZSK-bj&amp;id=29022" target="_blank" class="room-tit" title="地铁直达鸟巢水立方一室一厅套间">地铁直达鸟巢水立方一室一厅套间</a>
-                                <p class="picer-info"><span class="price-box"><dfn>¥</dfn><b class="number-box">308</b></span>/晚起 </p><p class="hint-text"></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel_box house-group">
-                        <div class="room-cont">
-                            <a href="http://go.tujia.com/1007/?code=CZLB-ZSK-bj&amp;id=49976" target="_blank" title="北京百住公寓蓝堡国际店两室套房" class="pic-box" rel="nofollow">
-                                <img src="http://pic.tujia.com/upload/landlordunit/day_160127/thumb/201601271100229854_120_90.jpg" alt="北京百住公寓蓝堡国际店两室套房" />
-                            </a>
-                            <div class="info-box">
-                                <a href="http://go.tujia.com/1007/?code=CZLB-ZSK-bj&amp;id=49976" target="_blank" class="room-tit" title="北京百住公寓蓝堡国际店两室套房">北京百住公寓蓝堡国际店两室套房</a>
-                                <p class="picer-info"><span class="price-box"><dfn>¥</dfn><b class="number-box">989</b></span>/晚起 </p><p class="hint-text"></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel_box house-group">
-                        <div class="room-cont">
-                            <a href="http://go.tujia.com/1007/?code=CZLB-ZSK-bj&amp;id=78183" target="_blank" title="朝阳区6号线草房地铁附近温馨公寓" class="pic-box" rel="nofollow">
-                                <img src="http://pic.tujia.com/upload/landlordunit/day_151210/thumb/20151210145331343_120_90.jpg" alt="朝阳区6号线草房地铁附近温馨公寓" />
-                            </a>
-                            <div class="info-box">
-                                <a href="http://go.tujia.com/1007/?code=CZLB-ZSK-bj&amp;id=78183" target="_blank" class="room-tit" title="朝阳区6号线草房地铁附近温馨公寓">朝阳区6号线草房地铁附近温馨公寓</a>
-                                <p class="picer-info"><span class="price-box"><dfn>¥</dfn><b class="number-box">98</b></span>/晚起 </p><p class="hint-text"></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel_box house-group">
-                        <div class="room-cont">
-                            <a href="http://go.tujia.com/1007/?code=CZLB-ZSK-bj&amp;id=7155" target="_blank" title="北京广渠门家庭公寓大床房" class="pic-box" rel="nofollow">
-                                <img src="http://pic.tujia.com/upload/landlordunit/day_141119/thumb/201411190840106963_120_90.jpg" alt="北京广渠门家庭公寓大床房" />
-                            </a>
-                            <div class="info-box">
-                                <a href="http://go.tujia.com/1007/?code=CZLB-ZSK-bj&amp;id=7155" target="_blank" class="room-tit" title="北京广渠门家庭公寓大床房">北京广渠门家庭公寓大床房</a>
-                                <p class="picer-info"><span class="price-box"><dfn>¥</dfn><b class="number-box">288</b></span>/晚起 </p><p class="hint-text"></p>
-                            </div>
-                        </div>
-                    </div>
+
+
+
+
             </div>
         </div>
     </div>
@@ -652,11 +519,11 @@
     <div class="searchresult-list t-searchresult-list  clearfix" data-unitid="13460">
     <?php $img=explode('|',$v->r_img) ?>
         <div class="house-img">
-            <a href="../public/images/{{$img[0]}}" target="_blank" rel="nofollow" class="link-btn-pic" onclick="_gaq.push(['_trackEvent', 'pcList', '房屋点击']);">
+            <a href="{{URL('good?r_id')}}={{$v->r_id}}" target="_blank" rel="nofollow" class="link-btn-pic" onclick="_gaq.push(['_trackEvent', 'pcList', '房屋点击']);">
 
-                <img src="images/{{$img[0]}}" alt="{{$v->r_title}}" />
+                <img src="uploads/{{$img[0]}}" alt="{{$v->r_title}}" />
 
-                <img src="uploads/{{$img[0]}}" alt="北京 北京光耀公寓豪华行政二居室" />
+                <img src="uploads/{{$img[0]}}" alt="" />
 
             </a>
             <div class="functions-menu">
@@ -687,12 +554,7 @@
                     </div>
                 </div>
 
-                <div class="house-highlight">
-                            <div class="house-judgement"><a href="/beijing_gongyu/chaoyangqu_13460.htm#tabto=usercomments&amp;index=30" target="_blank" rel="nofollow" onclick="_gaq.push(['_trackEvent', 'pcList', '房屋点评']);"><span class="hotel-value">{{$v->r_collect}}</span>/<span class="number-box">5</span>分<span class="comments-count">118</span>条点评</a></div>
 
-
-
-                </div>
 
                 <div class="house-sid">
                     <div class="price-cont">
@@ -721,8 +583,7 @@
                     <tbody data-scenicspot="chaoyangqu" data-destinationpinyin="beijing">
 <tr data-link="/beijing_gongyu/chaoyangqu_13460.htm#pid=15903&amp;tabto=productfilter&amp;index=30" class=" ">
                                     <td class="item-first">
-                                            <a class="link-tit" href="javascript:void(0);" rel="nofollow" title="前台现付价">前台现付价</a>
-
+                                            
                                     </td>
 
                                     <td title="需支付担保金（首晚房费）用于担保订单，正常入住后，担保金原路退还。房费到店支付" class="item-03">
@@ -734,7 +595,7 @@
                                     </td>
 
                                     <td class="item-last">
-                                            <a class="btn-buy" href="javascript:void(0);" rel="nofollow" onclick="_gaq.push(['_trackEvent', 'pcList', '房价查看']);">查看</a>
+                                            <a class="btn-buy" href="{{URL('good?r_id')}}={{$v->r_id}}" rel="nofollow" >查看</a>
                                     </td>
 
                                 </tr>
@@ -751,16 +612,17 @@
 @endforeach
 <center>
 {!! $room->render() !!}
+
 </center>
     <div id="PrepaidCardTooltip" class="m-tips-wrap" style="display: none">
         <div class="tips-content" style="width:220px">
-            <div class="tips-info">所有产品均可直接全额预付房费，支持使用“途游卡、礼品卡、惠住卡、积分和账户余额”</div>
+            <div class="tips-info">支持支付宝交易</div>
         </div>
     </div>
 
 <div id="FaceToFacePaytip" class="m-tips-wrap" style="display: none">
     <div class="tips-content" style="width:220px">
-        <div class="tips-info">到店当面付：到达门店入住时，使用途家手机APP或手机H5网站，找到需到店支付的订单进行当面支付操作，可使用途游卡、积分、余额支付，更方便、更省钱！</div>
+        <div class="tips-info">实名认证</div>
     </div>
 </div>
 
@@ -898,32 +760,6 @@
 
 
 
-<div class="m-dld-wrap">
-    <div class="dld-bd">
-            <div class="game-info" style="width: 480px;">
-                <span style="display: block; width: 452px;height: 172px;margin: -22px 0 0 0;background: url(http://staticfile.tujia.com/PortalSite2/Images/girl.png) no-repeat top;"></span>
-            </div>
-
-        <div class="dld-ct">
-            <div class="dld-ct-item">
-                <h2>扫描二维码下载</h2>
-                <i class="i-code-app"></i>
-            </div>
-            <div class="dld-ct-item">
-                <h2>直接下载</h2>
-                <a onclick="window.open('http://m.tujia.com/click?id=1184');return false;" href="javascript:void(0);" class="link-btn" target="_blank">iPhone</a>
-                <a onclick="window.open('http://download.tujia.com/android/tujia4541-tujiaportal.apk'); return false;" href="javascript:void(0);" class="link-btn" target="_blank">Android</a>
-            </div>
-        </div>
-
-        <div class="weixin-ct">
-            <h2> 实时热门推荐，请关注途家微信</h2>
-            <i class="i-code-weixin"></i>
-        </div>
-
-        <a href="javascript:void(0)" class="close-btn" title="关闭">关闭</a>
-    </div>
-</div>
 
     
 <div class="m-seo-list">

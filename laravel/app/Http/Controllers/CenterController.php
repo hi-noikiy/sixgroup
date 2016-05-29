@@ -13,6 +13,7 @@ use Session;
 use Cookie;
 use DB;
 use Input;
+use Request;
 /*
  * @Center   个人用户中心
  */
@@ -26,12 +27,25 @@ class CenterController extends Controller
         //存储session
         $u_name=Session::get('u_name');
         $u_id=Session::get('u_id');
-        $data=DB::table('orde')
-            ->join('user', 'orde.u_id', '=', 'user.u_id')
-            ->join('room', 'orde.r_id', '=', 'room.r_id')
-            ->select('user.u_id', 'room.r_id','room.r_img','room.r_title','orde.o_id','orde.o_start_time','orde.o_price','orde.o_end_time','orde.o_state')
-            ->where('user.u_id', '=',$u_id)->paginate(3);
-        return view('Center/center',['data'=>$data]);
+        $status=Session::get('status');
+        if($status==1)
+        {
+            $data=DB::table('orde')
+                ->join('user', 'orde.u_id', '=', 'user.u_id')
+                ->join('room', 'orde.r_id', '=', 'room.r_id')
+                ->select('user.u_id', 'room.r_id','room.r_img','room.r_title','orde.o_id','orde.o_start_time','orde.o_price','orde.o_end_time','orde.o_state')
+                ->where('user.u_id', '=',$u_id)->paginate(3);
+            return view('Center/center',['data'=>$data]);
+        }
+        else if($status==0)
+        {
+            $u_id=Session::get('u_id');
+            $data=DB::table('user')
+                ->join('room', 'user.u_id', '=', 'room.u_id')
+                ->select('user.u_id', 'room.r_id','room.r_img','room.r_title','room.r_checkin','room.r_checkout','room.r_price','room.state','room.r_pattem','room.r_people','room.r_coordinate')
+                ->where('user.u_id', '=',$u_id)->paginate(3);
+            return view('Center/release',['data'=>$data]);
+        }
     }
     /*
      * @delorder   订单删除
@@ -110,13 +124,26 @@ class CenterController extends Controller
         //获取session
         Session::get('u_name');
         $u_id=Session::get('u_id');
+        $status=Session::get('status');
         //用户表、房间表、订单表联查
-        $data=DB::table('orde')
-            ->join('user', 'orde.u_id', '=', 'user.u_id')
-            ->join('room', 'orde.r_id', '=', 'room.r_id')
-            ->select('user.u_id', 'room.r_id','room.r_img','room.r_title','orde.o_id','orde.o_start_time','orde.o_price','orde.o_end_time','orde.o_state')
-            ->where('user.u_id', '=',$u_id)->paginate(3);
-        return view('Center/order',['data'=>$data]);
+        if($status==1)
+        {
+            $data=DB::table('orde')
+                ->join('user', 'orde.u_id', '=', 'user.u_id')
+                ->join('room', 'orde.r_id', '=', 'room.r_id')
+                ->select('user.u_id', 'room.r_id','room.r_img','room.r_title','orde.o_id','orde.o_start_time','orde.o_price','orde.o_end_time','orde.o_state')
+                ->where('user.u_id', '=',$u_id)->paginate(3);
+            return view('Center/order',['data'=>$data]);
+        }
+        else if($status==0)
+        {
+            $u_id=Session::get('u_id');
+            $data=DB::table('user')
+                ->join('room', 'user.u_id', '=', 'room.u_id')
+                ->select('user.u_id', 'room.r_id','room.r_img','room.r_title','room.r_checkin','room.r_checkout','room.r_price','room.state','room.r_pattem','room.r_people','room.r_coordinate')
+                ->where('user.u_id', '=',$u_id)->paginate(3);
+            return view('Center/housing',['data'=>$data]);
+        }
     }
     /*
      * @orderdel    删除订单
@@ -144,8 +171,9 @@ class CenterController extends Controller
     {
         //获取session
         Session::get('u_name');
-        Session::get('u_id');
-        return view('Center/updpwd');
+        $u_id=Session::get('u_id');
+        $data = DB::table('user')->where('u_id', '=', [$u_id])->get();
+        return view('Center/updpwd',['data'=>$data]);
     }
     /*
      * @updatepwd  修改密码成功
@@ -280,13 +308,29 @@ class CenterController extends Controller
     public function headp()
     {
         $u_id=Session::get('u_id');
-        return view('Center/headp');
+        $u_name=Session::get('u_name');
+        $data = DB::table('user')->where('u_id', '=', [$u_id])->get();
+        return view('Center/headp',['data'=>$data]);
     }
     /*
      * @headsuccess   上传头像成功
      */
     public function headsuccess()
     {
-
+        $u_id=Session::get('u_id');
+        $data =Request::all();
+        $clientName = $data['u_img'] ->  getClientOriginalName();
+        $path = $data['u_img'] -> move('uploads/',$clientName);
+        $sql= DB::update('update user set u_img="'.$clientName.'" where u_id = ?', [$u_id]);
+        return Redirect::action('CenterController@headlist');
+    }
+    /*
+     * @headlist  显示头像
+     */
+    public function headlist()
+    {
+        $u_id=Session::get('u_id');
+        $data = DB::table('user')->where('u_id', '=', [$u_id])->get();
+        return view('Center/person',['data'=>$data]);
     }
 }

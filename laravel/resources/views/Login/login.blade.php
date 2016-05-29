@@ -129,14 +129,7 @@
                              
                         </div>
                     </div>
-                    
-                    <div class="control-group verifycode-group">
-                        <div class="controls">
-                            <input class="ipt-text verify-text" data-message="请输入验证码" id="verifycode" name="verifycode" type="text" value="" />
-                            <img id="verifyImage" src="images/code.gif" alt="看不清楚，换一张" class="verify-image">
-                            <a id="verifyImageLink" href="javascript:void(0)" class="change-rand">看不清，换一张</a>
-                        </div>
-                    </div>
+
                     
                     <div class="control-group t-control-group">
                         <label for="saveUserLongTime">
