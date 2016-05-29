@@ -91,7 +91,7 @@
                                     <div class="clearfix">
                                         <div class="data-result m-fl">
                                             @foreach($data as $v)
-                                                <a href="{{URL('')}}"><div href="" class="usp-bg">
+                                                <a href="{{URL('headp')}}"><div href="" class="usp-bg">
                                                 <span><img src="http://localhost/sixgroup/laravel/public/uploads/{{$v->u_img}}" alt=""/></span>
                                             </div></a>
                                             @endforeach
