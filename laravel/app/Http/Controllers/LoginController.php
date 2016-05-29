@@ -52,7 +52,7 @@ class LoginController extends Controller
 							   // 存储数据到session...
                               session(['u_name' => $u_name,'u_id' => $u_id,'status'=>$status]);
                               $u_id=Session::get('u_id');
-                              
+                              $status=Session::get('status');
                               $up=DB::table('user')->where('u_name', $u_name)->update(['u_aut' =>0]);
 							 return redirect("index");                                                                      
 						  }
