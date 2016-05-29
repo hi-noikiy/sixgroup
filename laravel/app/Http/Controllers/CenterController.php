@@ -334,3 +334,4 @@ class CenterController extends Controller
         return view('Center/person',['data'=>$data]);
     }
 }
+?>
