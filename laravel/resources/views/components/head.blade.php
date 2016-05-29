@@ -2,7 +2,7 @@
     <div class="m-hd">
         <div class="site-logo-cont">
             <img src="images/logo1.png" width="150px" height="50px"/>
-            <span class="logo-text">旅途中的家</span>
+            {{--<span class="logo-text">旅途中的家</span>--}}
         </div>
         <div class="nav-list">
             <ul>
