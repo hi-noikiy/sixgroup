@@ -90,7 +90,7 @@ class MainController extends \yii\web\Controller{
         $r_id=$request->get('r_id');
         //echo $r_id;die;
         $connection = \Yii::$app->db;
-        $command = $connection->createCommand("SELECT * FROM room join type on room.r_type=type.ty_id where r_id='$r_id'");
+        $command = $connection->createCommand("SELECT * FROM room where r_id='$r_id'"); //查询对应的房源信息
         $post = $command->queryOne();
         $img = explode('|',$post['r_img']);
         foreach($img as $key => $val){
