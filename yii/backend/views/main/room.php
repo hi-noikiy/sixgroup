@@ -729,8 +729,8 @@ $session->open();
 															</label>
 														</th>
 														<th>房源标题</th>
-<!--														<th>用户头像</th>-->
-														<th class="hidden-480">评论</th>
+<!--														<th>用户头像</th>--><!-- 
+														<th class="hidden-480">评论</th> -->
 
 														<th>
 															房源基本信息
@@ -751,7 +751,7 @@ $session->open();
 														</td>
 														<!-- <td><?php echo $v['u_id']?></td> -->
 														<td><?php echo $v['r_title']?></td>
-                                                        <td class="hidden-480"><?php echo str_replace(substr($v['r_comment'],21),'...',$v['r_comment'])?></td>
+                                                        <!-- <td class="hidden-480"><?php echo str_replace(substr($v['r_comment'],21),'...',$v['r_comment'])?></td> -->
 														<td><?php echo $v['r_info']?></td>
 
 <!--														<td class="hidden-480">-->

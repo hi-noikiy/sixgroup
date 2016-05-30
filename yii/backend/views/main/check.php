@@ -348,7 +348,7 @@ $session->open();
 														<!-- <td><?php echo $room['u_id']?></td> -->
 														<td><?php echo $room['r_title']?></td>
 														<td><img src="./uploads/<?php echo $image?>" width='150px' height='120px' alt=""></td>
-														<td><?php echo $room['ty_name']?></td>
+														<td><?php echo $room['r_type']?></td>
 
 <!--														<td class="hidden-480">-->
 <!--															<span class="label label-sm label-warning">Expiring</span>-->
@@ -2370,66 +2370,3 @@ $session->open();
 </div>
 </body>
 </html>
-<script>
-	function audite(r_id){
-		state=document.getElementById(r_id).value;
-		if(state==1){
-			state=0
-		}else{
-			state=1
-		}
-		if(confirm('你确定要通过审核吗？')==true){
-			//alert(state);
-			//document.getElementById('tr_'+r_id).innerHTML='已审核';
-			//创建ajax对象
-			var ajax=new XMLHttpRequest();
-            //ajax事件
-            ajax.onreadystatechange=function(){
-                if(ajax.readyState==4){
-                    document.getElementById('count').innerHTML=ajax.responseText;
-                }
-            }
-            ajax.open('get','index.php?r=main/update&state='+state+'&&r_id='+r_id);
-            ajax.send(null);
-		}
-	}
-
-	/**
-	 * 批量删除
-	 */
-	function batch() {
-        if(window.confirm('你确定要删除吗？')){
-            var ids=document.getElementsByName('ids');
-            var str='';
-            for(var i=0;i<ids.length;i++){
-			if(ids[i].checked==true){
-				str+=','+ids[i].value;
-				}
-            }
-        
-        ids=str.substr(1);
-        //alert(ids);
-        var ajax=new XMLHttpRequest();
-        ajax.onreadystatechange=function(){
-            if(ajax.readyState==4&&ajax.status==200){
-				if(ajax.responseText==-1){
-					alert('删除失败');
-				}else{
-					document.getElementById('count').innerHTML=ajax.responseText;
-				}
-            }
-        }
-        ajax.open('get','index.php?r=main/batch&r_id='+ids);
-        ajax.send(null);     
-        } 
-    }
-
-    	var qx=document.getElementById('checkall');
-    	qx.onclick=function(){
-        var qx=document.getElementById('checkall');
-        var obj=document.getElementsByName('ids');
-        for(i in obj){
-            obj[i].checked=true;
-        }
-    }
-</script>
