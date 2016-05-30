@@ -666,3 +666,22 @@ a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
     </script>
 </body>
 </html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>jquery带二维码返回顶部代码_777模板www.777moban.com</title>
+<link href="css/zzsc.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="js/zzsc.js"></script>
+<script>
+
+</script>
+</head>
+<body>
+<div id="top"></div>
+<div style="text-align:center;margin:50px 0; font:normal 14px/24px 'MicroSoft YaHei';">
+</div>
+</body>
+</html>
+
