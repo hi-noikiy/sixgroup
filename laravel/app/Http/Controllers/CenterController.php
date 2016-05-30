@@ -227,6 +227,7 @@ class CenterController extends Controller
     {
         //获取session
         $u_id=Session::get('u_id');
+        $status=Session::get('status');
         //接收表单提交的数据
         $r_id=Input::get('r_id');
         $r_price=Input::get('r_price');
@@ -237,7 +238,20 @@ class CenterController extends Controller
         //执行sql语句
         $sql=DB::update('update user set u_name="'.$u_name.'",u_phone="'.$u_phone.'",u_email="'.$u_email.'" where u_id = ?', [$u_id]);
         $sql=DB::table('orde')->insert(['u_id'=>$u_id,'r_id'=>$r_id,'o_price' =>$r_price, 'o_people' =>$o_people]);
-        return Redirect::action('CenterController@order');
+        if($status==1)
+        {
+            return Redirect::action('CenterController@order');
+        }
+        else if($status==0)
+        {
+            $u_id=Session::get('u_id');
+            //执行sql语句
+            $data=DB::table('user')
+                ->join('room', 'user.u_id', '=', 'room.u_id')
+                ->select('user.u_id', 'room.r_id','room.r_img','room.r_title','room.r_checkin','room.r_checkout','room.r_price','room.state','room.r_pattem','room.r_people','room.r_coordinate')
+                ->where('user.u_id', '=',$u_id)->paginate(3);
+            return view('Center/housing',['data'=>$data]);
+        }
     }
     /*
      * @payorder    支付
