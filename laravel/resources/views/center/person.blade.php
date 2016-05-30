@@ -81,7 +81,7 @@
                 <li><a id="myUserInfoInfo" href="person" onclick="_gaq.push(['_trackEvent', 'pcUserInfo', '个人资料']);">个人资料</a></li>
                 <li><a id="mypassword" href="updpwd" onclick="_gaq.push(['_trackEvent', 'pcUserInfo', '修改密码']);">修改密码</a></li>
                 <li><a id="myUserInfoInfo" href="headp" onclick="_gaq.push(['_trackEvent', 'pcUserInfo', '头像上传']);">头像上传</a></li>
-            </ul>
+                 </ul>
         </div>
     </div>
     
@@ -781,7 +781,7 @@
                                                     <em>&nbsp;&nbsp;日</em>
                                             <span id="strong_Birthday" name='strong_Birthday' class="stell-txt">
                                                 魔羯座
-                                                
+
                                             </span>
                                                 </div>
                                             </div>
