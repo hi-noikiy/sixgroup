@@ -115,6 +115,7 @@
                     <tr>
                         <td>
                         <?php $img=explode('|',$v1->r_img) ?>
+                        
                             <img src="../uploads/{{$img[0]}}" alt="蜗牛短租" width="60" height="100" />
                             <p class="p-item">价格：<span class="price-box"><dfn class="">¥</dfn>{{$v1->r_price}}</span></p>
                         </td>
