@@ -68,7 +68,7 @@ class MainController extends \yii\web\Controller{
         $r_id=$request->get('r_id');
         $state=$request->get('state');
 		$connection = \Yii::$app->db;
-        $connection->createCommand()->update('room', ['state' => $state], 'u_id='.$u_id)->execute();
+        $connection->createCommand()->update('room', ['state' => $state], 'r_id='.$r_id)->execute();
         return $this->redirect(array('main/tables'));
         //echo "<script>alert('已审核');location.href='index.php?r=main/tables'</script>";
     }

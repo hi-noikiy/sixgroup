@@ -68,7 +68,7 @@ class MainController extends \yii\web\Controller{
         $r_id=$request->get('r_id');
         $state=$request->get('state');
 		$connection = \Yii::$app->db;
-        $connection->createCommand()->update('room', ['state' => $state], 'u_id='.$u_id)->execute();
+        $connection->createCommand()->update('room', ['state' => $state], 'r_id='.$r_id)->execute();
         return $this->redirect(array('main/tables'));
         //echo "<script>alert('已审核');location.href='index.php?r=main/tables'</script>";
     }
@@ -90,10 +90,8 @@ class MainController extends \yii\web\Controller{
         $r_id=$request->get('r_id');
         //echo $r_id;die;
         $connection = \Yii::$app->db;
-        $command = $connection->createCommand("SELECT * FROM room where r_id='$r_id'");
+        $command = $connection->createCommand("SELECT * FROM room where r_id='$r_id'"); //查询对应的房源信息
         $post = $command->queryOne();
-        print_r($post);die;
-		print_r($post);die;
         $img = explode('|',$post['r_img']);
         foreach($img as $key => $val){
             if($key==0){
