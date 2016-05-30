@@ -238,13 +238,30 @@
                 <li><a href="http://travel.tujia.com" target="_blank">社区</a></li>
                 <li><a href="http://www.tujia.com/EntrustTreasure/"  target="_blank">买楼收租</a></li>
                 <li><a href="http://www.tujia.com/TuYuan/"  target="_blank">途远度假</a></li>
-                <li><a href="{{URL()}}"  target="_blank">我的收藏</a></li>
+                <li><a href="javascript:void(0)" onclick="sc()">我的收藏</a></li>
                 <li><a href="javascript:void(0)" onclick="wn()">我的蜗牛</a></li>
             </ul>
         </div>
 
 <script>
     function wn()
+    {
+        $.ajax({
+            type:'get',
+            url:"{{URL('good/wn')}}",
+            success:function(msg){
+                if (msg==0) {
+                    alert('请先登录');
+                     location.href="{{URL('login')}}";
+                }else{
+                   location.href="{{URL('order')}}";
+                }
+               
+            }
+        })
+    }
+
+    function sc()
     {
         $.ajax({
             type:'get',

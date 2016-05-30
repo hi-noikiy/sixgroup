@@ -57,6 +57,9 @@ class Room extends Model
 				->whereBetween('r_price', [$price1,$price2])
 				->paginate(5);
     	}
+        $row=DB::table('room')
+                ->where($where2)
+                ->paginate(5);
     	
 
 		return $row;
