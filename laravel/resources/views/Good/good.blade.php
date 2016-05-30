@@ -970,7 +970,7 @@
 
 			@foreach($img as $val)
             <!-- <a class="preview" href="../public/uploads/{{$val}}" title=""> -->
-            <img height="45px" width="130px" src="../public/uploads/{{$val}}" alt=""></a></li>
+            <img height="45px" width="130px" src="../public/uploads/{{$val}}" alt=""></li>
             @endforeach
             <!-- <li><em>{{$v->c_content}}</em><em>{{$v->c_time}}</em><br><img onmouseover="out({{$v->c_id}})"  height="45px" width="130px" src="images/logo1.png" alt="蜗牛logo"></li> -->
         @endforeach
@@ -1048,7 +1048,7 @@
                         <li>
                             <a href="/beijing_gongyu/se0/chaoyangqu_5030.htm" target="_blank" class="pic-cont" onclick="_gaq.push(['_trackEvent', 'pcDetail', '房东其他房屋']);"><img src="http://pic.tujia.com/upload/unit/day_160125/thumb/201601251739263948_300_200.jpg" alt="" width="278" height="165"></a>
                             <div class="house-cont">
-                                <a href="/beijing_gongyu/se0/chaoyangqu_5030.htm" target="_blank" class="tit" onclick="_gaq.push(['_trackEvent', 'pcDetail', '房东其他房屋']);">北京蜗牛长安驿精品双床房</a>
+                                <a href="/beijing_gongyu/se0/chaoyangqu_5030.htm" target="_blank" class="tit" onclick="_gaq.push(['_trackEvent', 'pcDetail', '房东其他房屋']);">{{$val->r_title}}</a>
 
                                 <div class="house-info">
                                     <span class="lab-text" title="酒店式公寓">{{$val->r_type}}</span>|
