@@ -752,7 +752,9 @@ $session->open();
 														<!-- <td><?php echo $v['u_id']?></td> -->
 														<td><?php echo $v['r_title']?></td>
                                                         <!-- <td class="hidden-480"><?php echo str_replace(substr($v['r_comment'],21),'...',$v['r_comment'])?></td> -->
-														<td><?php echo $v['r_info']?></td>
+														<td>类型：<?php echo $v['r_type']?><p>格局：<?php echo $v['r_pattem']?></p>
+														
+														</td>
 
 <!--														<td class="hidden-480">-->
 <!--															<span class="label label-sm label-warning">Expiring</span>-->
