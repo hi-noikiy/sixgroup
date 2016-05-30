@@ -27,13 +27,12 @@ class GoodController extends Controller{
         //查询房主其他房源
         $rooms=DB::table('room')->join('user','user.u_id','=','room.u_id')
         ->where('room.u_id', '=',1)->get();
-        //dd($rooms);
         $num=count($rooms); //获取房源数量
         //dd($num);
         $com=DB::table('comment')->join('room', 'room.r_id', '=', 'comment.r_id')->join('user','user.u_id','=','comment.u_id')
         	->where('room.r_id', '=',1)
         	->get();
-        	//dd($com['0']->u_name);
+        	//dd($com);
        	$u_name=$com['0']->u_name;
        	$u_phone=$com['0']->u_phone;
         $sum=count($com);	//评论条数
