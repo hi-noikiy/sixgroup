@@ -93,39 +93,41 @@
         </div>
         <div style="margin-top: 100px;margin-left: 170px">
             <form action="{{URL('headsuccess')}}" method="post" enctype='multipart/form-data'>
-                <style>
-                    .div1{
-                        float: left;
-                        height: 41px;
-                        background: #D15FEE;
-                        width: 144px;
-                        position:relative;
-                    }
-                    .div2{
-                        text-align:center;
-                        padding-top:12px;
-                        font-size:15px;
-                        font-weight:800
-                    }
-                    .inputstyle{
-                        width: 144px;
-                        height: 41px;
-                        cursor: pointer;
-                        font-size: 30px;
-                        outline: medium none;
-                        position: absolute;
-                        filter:alpha(opacity=0);
-                        -moz-opacity:0;
-                        opacity:0;
-                        left:0px;
-                        top: 0px;
-                    }
-                </style>
-                <div class="div1">
-                    <div class="div2">上传头像</div>
-                    <input type="file" class="inputstyle" name="u_img">
+                <div style="margin-bottom: 10px">
+                    <style>
+                        .div1{
+                            float: left;
+                            height: 41px;
+                            background: #D15FEE;
+                            width: 110px;
+                            position:relative;
+                        }
+                        .div2{
+                            text-align:center;
+                            padding-top:12px;
+                            font-size:15px;
+                            font-weight:800
+                        }
+                        .inputstyle{
+                            width: 144px;
+                            height: 41px;
+                            cursor: pointer;
+                            font-size: 30px;
+                            outline: medium none;
+                            position: absolute;
+                            filter:alpha(opacity=0);
+                            -moz-opacity:0;
+                            opacity:0;
+                            left:0px;
+                            top: 0px;
+                        }
+                    </style>
+                    <div class="div1">
+                        <div class="div2">上传头像</div>
+                        <input type="file" class="inputstyle" name="u_img">
+                    </div>
                 </div>
-                <div class="control-group submit-group">
+                <div class="control-group submit-group" style="margin-top: 20px;">
                     <div class="controls">
                         <input name="_token" value="{{csrf_token()}}" type="hidden"/>
                         <input type="submit" value="保存"  /></div>
