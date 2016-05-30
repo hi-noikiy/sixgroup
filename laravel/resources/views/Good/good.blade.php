@@ -375,7 +375,7 @@
             <br />
             将心动的房屋分享给自己的好友和朋友圈吧！
         </h2>
-        <p class="code-box" id="wechatImg"></p>
+        <p class="code-box" ><img src="uploads/kz03.jpg" alt="微信扫一扫"></p>
         <p class="text-info">
             打开微信，点击底部的“发现”，使用 “扫一扫” 即可将网页分享<br />
             给我的好友和朋友圈。
@@ -695,8 +695,13 @@
             url:'{{URL("good/add")}}',
             data:'r_id='+r_id+'&startDate='+startDate+'&endDate='+endDate,
             success:function(msg){
-                //alert(msg);
-                location.href="{{URL('orderadd?r_id')}}="+r_id;
+                if (msg==1) {
+                    alert('请先登录');
+                     location.href="{{URL('login')}}";
+                }else{
+                    location.href="{{URL('orderadd?r_id')}}="+r_id; 
+                }
+               
             }
         })
         //alert(r_id);

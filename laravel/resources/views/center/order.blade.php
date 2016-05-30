@@ -136,7 +136,7 @@
                         <td>
                             <p class="p-item">房费：<span class="price-box"><dfn class="">¥</dfn>{{$v->o_price}}</span><span class="divItem">
                                     @if($v->o_state==0)
-                                        <a href="payment">付款</a>
+                                        <a href="{{URL('payment')}}">付款</a>
                                     @else
                                         付款成功
                                     @endif

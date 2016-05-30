@@ -129,7 +129,7 @@ Route::any('room/personages','RoomController@room_personages');
 //房源发布成功页面
 Route::any('room/success','RoomController@room_success');
 //支付页面
-Route::any('payment','PaymentController@index');
+//Route::any('payment','PaymentController@index');
 
 
 //用户个人中心

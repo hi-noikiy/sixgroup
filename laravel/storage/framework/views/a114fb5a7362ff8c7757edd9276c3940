@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta http-equiv="Cache-Control" content="no-transform" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>
     用户登录- 蜗牛短租网
@@ -75,7 +75,7 @@
         </div>
         <div class="nav-list">
             <ul>
-                <li class="first"><a href="http://www.tujia.com/se0/" class="home-link " target="_blank">首页</a></li>
+                <li class="first"><a href="<?php echo e(URL('index')); ?>" class="home-link " >首页</a></li>
                 <li><a href="http://www.tujia.com/changzu/se0/"  target="_blank">周租月租</a></li>
                 <li><a href="http://www.tujia.com/Experience/"  target="_blank">体验房</a></li>
                 <li><a href="http://www.tujia.com/photowall/" target="_blank" >特色房</a></li>
@@ -89,7 +89,7 @@
 </div>
     <div class="wrap-large">
         <div class="banner-box">
-             <a href="http://go.tujia.com/3270/?code=2016dsndly" target="_blank" rel="nofollow"><img src="https://staticfiles.tujia.com/upload/config/day_160503/20160503175358635.jpg" alt="" width="880" height="450" /></a>
+             <a href="http://go.tujia.com/3270/?code=2016dsndly" target="_blank" rel="nofollow"><img src="./uploads/1089891.jpg" alt="" width="880" height="450" /></a>
         </div>
         <div class="sidebar-box">
             <div class="login-hd">
@@ -129,14 +129,7 @@
                              
                         </div>
                     </div>
-                    
-                    <div class="control-group verifycode-group">
-                        <div class="controls">
-                            <input class="ipt-text verify-text" data-message="请输入验证码" id="verifycode" name="verifycode" type="text" value="" />
-                            <img id="verifyImage" src="images/code.gif" alt="看不清楚，换一张" class="verify-image">
-                            <a id="verifyImageLink" href="javascript:void(0)" class="change-rand">看不清，换一张</a>
-                        </div>
-                    </div>
+
                     
                     <div class="control-group t-control-group">
                         <label for="saveUserLongTime">
@@ -179,8 +172,8 @@
                     <span class="text-watermark" style="width:125px">动态密码</span>
                 </label>
                 <input type="button" id="btnGetVerifyCode" value="获取动态密码" class="verify-btn" onclick="pwd()" />
-                <input type="button" id="huoqu" style="display:none" value="发送成功" class="verify-btn"  />
-                
+				<input type="button" id="huoqu" style="display:none" value="发送成功" class="verify-btn"  />
+				
 
             </div>
         </div>
@@ -203,7 +196,8 @@
             <div class="coagent-cont">
                 <div class="coagent-tit"><span>合作网站账号登录</span></div>
                 <div class="link-btn-cont">
-                     <a href="javascript:;" id="qqLogin" title="QQ账户登录" onclick="qqLogin();return false;"  class="qq-login-btn">QQ</a>
+				<a href="<?php echo e(URL('login/thirdparty')); ?>"  title="QQ账户登录"   class="qq-login-btn">QQ</a>
+                    <!-- <a href="javascript:;" id="qqLogin" title="QQ账户登录" onclick="qqLogin();return false;"  class="qq-login-btn">QQ</a>-->
                      <a href="javascript:;" id="sinaLogin" title="新浪微博账户登录" onclick="sinaLogin();return false;" class="sian-login-btn">新浪微博</a>
                      <a href="javascript:;" id="" title="微信账户登录" onclick="wechatLogin();return false;" class="weixin-login-btn">微信</a>
                 </div>
@@ -225,27 +219,27 @@
 <script type="text/javascript">
 function  pwd(){
       var phone=document.getElementById('Mobile').value;
-     
-          $.ajax({
+	 
+		  $.ajax({
             type:'get',
             url:"<?php echo e(URL('login/phone')); ?>",
            data:'phone='+phone,
            success:function(msg){
                 if(msg==1){
-                    $("#btnGetVerifyCode").val("动态密码已发送");
-                    //$("#btnGetVerifyCode").hide();
-                    //$("#btnGetVerifyCode").css('display','none'); 
-                    // $('#huoqu').css("display","block");
+					$("#btnGetVerifyCode").val("动态密码已发送");
+					//$("#btnGetVerifyCode").hide();
+					//$("#btnGetVerifyCode").css('display','none'); 
+					// $('#huoqu').css("display","block");
 
-                }else{
-                    $('#btnGetVerifyCode').val("动态密码失败");
-                }
+				}else{
+					$('#btnGetVerifyCode').val("动态密码失败");
+				}
             }
         })  
-      // var date={'phone':phone}
-       //   $.get("<?php echo e(URL('login/phone')); ?>",date,function(msg){
-       //     alert(msg);
-       //  });
+	  // var date={'phone':phone}
+	   //   $.get("<?php echo e(URL('login/phone')); ?>",date,function(msg){
+	   //     alert(msg);
+	   //  });
 
              
 }

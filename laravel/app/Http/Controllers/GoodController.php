@@ -46,17 +46,21 @@ class GoodController extends Controller{
 
 	/*商品添加*/
 	public function add(){
-		$r_id=Request::get('r_id');
-		$startDate=Request::get('startDate');
-		$endDate=Request::get('endDate');
-		$re=DB::table('orde')->insert(
-                ['u_id' => 1, 'r_id' => $r_id,'o_start_time' => $startDate, 'o_end_time' => $endDate,]);
-		if($re){
-        
-			echo 1;
-		}
+        $sess=Session::get('u_name');
+		if($sess){
+			$r_id=Request::get('r_id');
+            $startDate=Request::get('startDate');
+            $endDate=Request::get('endDate');
+            $re=DB::table('orde')->insert(
+                    ['u_id' => 1, 'r_id' => $r_id,'o_start_time' => $startDate, 'o_end_time' => $endDate,]);
+		}else{
+           
+            echo 1; 
+        }
 
 	}
+
+    /*房源信息*/
 	public function users(){
 		$rooms=DB::table('room')->join('user','user.u_id','=','room.u_id')->select('u_name')	//房源信息
             ->where('room.u_id', '=',1)
