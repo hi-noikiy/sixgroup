@@ -119,7 +119,8 @@
                     <tbody>
                     <tr class="first">
                         <td rowspan="2" class="pic-box">
-                            <a href="room" target="_blank"><img src="http://localhost/sixgroup/laravel/public/images/{{$v->r_img}}" alt="" width="70" height="43" /></a>
+                        <?php $img=explode('|',$v->r_img ) ?>
+                            <a href="room" target="_blank"><img src="../uploads/{{$img[0]}}" alt="11" width="70" height="43" /></a>
                         </td>
                         <td colspan="4">
                             <a href="room" target="_blank">{{$v->r_title}}</a>
