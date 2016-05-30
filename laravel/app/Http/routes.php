@@ -67,10 +67,15 @@ Route::any('main/search','MainController@search');
 
 
 /*跳转至商品详情页*/
-//Route::any('index','GoodController@index');
+//oute::any('index','GoodController@index');
 /*商品详情页*/
 Route::any('good','GoodController@index');
 Route::any('good/add','GoodController@add');
+Route::any('good/wn','GoodController@wn');
+// //收藏
+Route::any('good/coll','GoodController@coll');
+Route::any('good/cll','GoodController@cll');
+Route::any('good/cl','GoodController@cl');
 
 
 /*注册*/
@@ -129,7 +134,7 @@ Route::any('room/personages','RoomController@room_personages');
 //房源发布成功页面
 Route::any('room/success','RoomController@room_success');
 //支付页面
-//Route::any('payment','PaymentController@index');
+Route::any('payment','PaymentController@index');
 
 
 //用户个人中心
@@ -168,7 +173,7 @@ Route::any('orderdelete','CenterController@orderdelete');
 Route::any('orderdel','CenterController@orderdel');
 
 //支付
-Route::any('payment','CenterController@payment');
+//Route::any('payment','CenterController@payment');
 
 //修改密码页面
 Route::any('updpwd','CenterController@updpwd');

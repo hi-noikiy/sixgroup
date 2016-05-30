@@ -9,7 +9,7 @@ use App\Room;
 /**
  *	@Modular 	列表页面
  *	@Class 		Main
- *	@Author 	薛佳琪
+ *	@Author 	宁铭杰
  *	@Time 		2016/05/25
 **/
 

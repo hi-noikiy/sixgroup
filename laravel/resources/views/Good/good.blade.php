@@ -238,8 +238,29 @@
                 <li><a href="http://travel.tujia.com" target="_blank">社区</a></li>
                 <li><a href="http://www.tujia.com/EntrustTreasure/"  target="_blank">买楼收租</a></li>
                 <li><a href="http://www.tujia.com/TuYuan/"  target="_blank">途远度假</a></li>
+                <li><a href="{{URL()}}"  target="_blank">我的收藏</a></li>
+                <li><a href="javascript:void(0)" onclick="wn()">我的蜗牛</a></li>
             </ul>
         </div>
+
+<script>
+    function wn()
+    {
+        $.ajax({
+            type:'get',
+            url:"{{URL('good/wn')}}",
+            success:function(msg){
+                if (msg==0) {
+                    alert('请先登录');
+                     location.href="{{URL('login')}}";
+                }else{
+                   location.href="{{URL('good/cl')}}";
+                }
+               
+            }
+        })
+    }
+</script>
 
          <div class="sub-link" >
     @if($name=Session::get('u_name'))
@@ -258,7 +279,7 @@
 <div class="share-cont">
     <a class="a-btn" target="_blank" href="http://www.tujia.com/Account/BeginShare?state=SinaWeiBo&amp;unitID=3581"><i class="icon-sian"></i>分享到微博</a>
     <a class="a-btn" href="javascript:void(0);" id="shareWeixin"><i class="icon-wixin"></i>分享到微信</a>
-    <a class="addFavorite a-btn last-btn " id="favorite" data-page="unitdetail" onclick="_gaq.push(['_trackEvent', 'pcDetail', '点赞']);" unitid="3581" href="javascript:void(0);">
+    <a class="addFavorite a-btn last-btn " id="favorite" data-page="unitdetail" onclick="coll()" unitid="3581" href="javascript:void(0);">
         <i class="icon-chevron"></i>
         <span id="txtdianzan">我想住</span>
     </a>
@@ -572,6 +593,7 @@
             <div class="room-info">
                     <h1>
                         {{$room->r_title}}<span class="personal-tag sweetome-tag" title="蜗牛自营门店，高品质的体验">蜗牛自营</span>
+                        <input type="hidden" id="coll" value="{{$room->r_id}}">
                         
 
                     </h1>
@@ -596,7 +618,6 @@
                             <!-- <li class="icon-cooking" title="可做饭">可做饭</li>
                                                     <li class="icon-bed" title="1张床"><span class="lab-text"><u rel="bedCountDetail">1张床</u></span></li> -->
                         <li class="icon-guests" title="推荐入住{{$room->r_people}}人">宜住{{$room->r_people}}人</li>
-
                                 <!-- <li class="icon-wiff" title="无线网络">无线网络</li> -->
                     </ul>
 
@@ -635,6 +656,29 @@
         </div>
     </div>
 </div>
+
+<script>
+    function coll()
+    {
+        var coll=$('#coll').val();
+       
+        $.ajax({
+            type:'get',
+            url:"{{URL('good/coll')}}",
+            data:'coll='+coll,
+            success:function(msg){
+                if (msg==1) {
+                    alert('请先登录');
+                     location.href="{{URL('login')}}";
+                }else{
+                    alert('收藏成功');
+                }
+               
+            }
+        })
+    }
+</script>
+
 
     <!-- 开始    2015-10-19  -->
     <div class="m-cont t-cont clearfix">

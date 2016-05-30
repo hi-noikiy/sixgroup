@@ -5,16 +5,17 @@ use Session;
 use Cookie;
 use DB,Input,Redirect,url,Validator,Request;
 
+
 /**
- * 登录功能
- * ============================================================================
- * *http://localhost/snail/laravel/public/login
- * ----------------------------------------------------------------------------
- * @controller     LoginController
- * ============================================================================
- * $Author: 耿文龙
- * 2016/5/17   2016/5/18 
-*/
+ *	@Modular 	登录功能
+ *	@Class 		Login
+ *	@Author 	耿文龙
+ *	@Time 		2016/5/18 
+**/
+
+
+
+
 class LoginController extends Controller
 {
     //展示登陆页面
