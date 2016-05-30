@@ -921,7 +921,7 @@
 
 			@foreach($img as $val)
             <!-- <a class="preview" href="../public/uploads/{{$val}}" title=""> -->
-            <img height="45px" width="130px" src="../public/uploads/{{$val}}" alt=""></a></li>
+            <img height="45px" width="130px" src="../public/uploads/{{$val}}" alt=""></li>
             @endforeach
             <!-- <li><em>{{$v->c_content}}</em><em>{{$v->c_time}}</em><br><img onmouseover="out({{$v->c_id}})"  height="45px" width="130px" src="images/logo1.png" alt="蜗牛logo"></li> -->
         @endforeach
