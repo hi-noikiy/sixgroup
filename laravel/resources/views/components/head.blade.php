@@ -1,7 +1,7 @@
 <div class="hd-wrap-fluid ">
     <div class="m-hd">
-        <div class="site-logo-cont">
-            <img src="images/logo1.png" width="150px" height="50px"/>
+        <div class="site-logo-cont" style="margin-top: 4px">
+            <img src="../public/images/logo1.png" width="150px" height="50px"/>
         </div>
         <div class="nav-list">
             <ul>
