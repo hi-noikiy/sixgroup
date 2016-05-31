@@ -64,8 +64,8 @@
 
 <div class="m-fluid-cont t-fluid-cont">
     <div class="m-hd-cont">
-        <div class="logo-cont">
-            <img style="margin-top: 10px;margin-left: 17px" height="40px" width="100px" src="images/logo.jpg" alt="蜗牛logo"></a>
+        <div class="logo-cont" style="margin-top:10px">
+            <img src="../public/images/logo1.png" width="150px" height="50px"/></a>
             <span class="logo-text">旅途中的家,全球公寓民宿预订平台</span>
         </div>
     </div>
@@ -896,7 +896,7 @@
                 <div class="order-cont">
                     <div class="picture-box">
                         <a href="room" target="_blank" rel="nofollow">
-                            <img src="http://localhost/web/snail/laravel/public/images/{{$v->r_img}}" width="300" height="200" title="三亚瑞家公寓揽海精品两房一厅" alt="三亚瑞家公寓揽海精品两房一厅" /></a>
+                            <img src="../public/images/{{$v->r_img}}" width="300" height="200" title="三亚瑞家公寓揽海精品两房一厅" alt="三亚瑞家公寓揽海精品两房一厅" /></a>
                         <span class="personal-tag landlord-tag">房东经营</span>
 
                     </div>

@@ -53,7 +53,7 @@
 @include('components.head');
 <!-- head  end -->
 <div  class="container_24">
-    <div class="grid_24" id="dir"><a href="http://localhost/web/snail/laravel/public/">蜗牛短租</a><em>&gt;</em>发布房源</div>
+    <div class="grid_24" id="dir"><a href="">蜗牛短租</a><em>&gt;</em>发布房源</div>
 </div>
 <div class="container_24 clearfix" id="orderWrapper">
     <div class="grid_5">
@@ -111,10 +111,10 @@
                         <tbody>
                         <tr class="first">
                             <td rowspan="2" class="pic-box">
-                                <a href="room" target="_blank"><img src="http://localhost/web/snail/laravel/public/images/{{$v->r_img}}" alt="" width="70" height="55" /></a>
+                                <a href="{{URL('good')}}" target="_blank"><img src="../public/images/{{$v->r_img}}" alt="" width="70" height="55" /></a>
                             </td>
                             <td colspan="4">
-                                <a href="room" target="_blank">{{$v->r_title}}</a>
+                                <a href="{{URL('good')}}" target="_blank">{{$v->r_title}}</a>
                             </td>
                         </tr>
                         <tr>

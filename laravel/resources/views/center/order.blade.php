@@ -111,7 +111,9 @@
                             </span>
                                 </p>
                                 <a href="payorder" target="_blank" class="link-btn"><strong></strong></a>
-                                <a href="javascript:void(0)" onclick="deleteOrder(1543590)" class="link-btn"></a>
+                                <span>
+                                <input name="_token" value="{{csrf_token()}}" type="hidden"/>
+                                <a href="javascript:void(0)" onclick="orderdelete({{$v->o_id}})">删除订单</a></span>
                             </div>
                         </th>
                     </tr>
@@ -119,11 +121,10 @@
                     <tbody>
                     <tr class="first">
                         <td rowspan="2" class="pic-box">
-                        <?php $img=explode('|',$v->r_img ) ?>
-                            <a href="room" target="_blank"><img src="../uploads/{{$img[0]}}" alt="11" width="70" height="43" /></a>
+                            <a href="{{URL('good')}}" target="_blank"><img src="../public/images/{{$v->r_img}}" alt="" width="70" height="43" /></a>
                         </td>
                         <td colspan="4">
-                            <a href="room" target="_blank">{{$v->r_title}}</a>
+                            <a href="{{URL('good')}}" target="_blank">{{$v->r_title}}</a>
                         </td>
                     </tr>
                     <tr>
@@ -137,15 +138,14 @@
                         <td>
                             <p class="p-item">房费：<span class="price-box"><dfn class="">¥</dfn>{{$v->o_price}}</span><span class="divItem">
                                     @if($v->o_state==0)
-                                        <a href="{{URL('payment')}}">付款</a>
+                                        <a href="payment">付款</a>
                                     @else
-                                        付款成功
+                                        付款成功<br/>
+                                        <a href="comment?r_id={{$v->r_id}}">我要评论</a>
                                     @endif
                                 </span>
                             </p>
-                            <span>
-                                <input name="_token" value="{{csrf_token()}}" type="hidden"/>
-                                <a href="javascript:void(0)" onclick="orderdelete({{$v->o_id}})">删除订单</a></span>
+
                         </td>
                     <tr></tr>
                     </tbody>

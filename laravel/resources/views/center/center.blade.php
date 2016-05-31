@@ -113,7 +113,9 @@
                             </span>
                                 </p>
                                 <a href="payorder" target="_blank" class="link-btn"><strong></strong></a>
-                                <a href="javascript:void(0)" onclick="deleteOrder(1543590)" class="link-btn"></a>
+                                <span>
+                                <input name="_token" value="{{csrf_token()}}" type="hidden"/>
+                                <a href="javascript:void(0)" onclick="deleteorder({{$v->o_id}})">删除订单</a></span>
                             </div>
                         </th>
                     </tr>
@@ -121,10 +123,10 @@
                     <tbody>
                         <tr class="first">
                             <td rowspan="2" class="pic-box">
-                                <a href="room" target="_blank"><img src="http://localhost/web/snail/laravel/public/images/{{$v->r_img}}" alt="" width="70" height="43" /></a>
+                                <a href="{{URL('good')}}" target="_blank"><img src="../public/images/{{$v->r_img}}" alt="" width="70" height="43" /></a>
                             </td>
                             <td colspan="4">
-                                <a href="room" target="_blank">{{$v->r_title}}</a>
+                                <a href="{{URL('good')}}" target="_blank">{{$v->r_title}}</a>
                             </td>
                         </tr>
                         <tr>
@@ -140,13 +142,12 @@
                                         @if($v->o_state==0)
                                             <a href="payment">未付款</a>
                                         @else
-                                            付款成功
+                                            付款成功<br/>
+                                            <a href="comment?r_id={{$v->r_id}}">我要评论</a>
                                         @endif
                                     </span>
                                 </p>
-                            <span>
-                                <input name="_token" value="{{csrf_token()}}" type="hidden"/>
-                                <a href="javascript:void(0)" onclick="orderdelete({{$v->o_id}})">删除订单</a></span>
+
                             </td>
                         <tr></tr>
                     </tbody>
@@ -355,33 +356,7 @@
             //alert(data.Message);
         }
     }
-    function deleteOrder(id) {
-        if (!confirm('删除后将无法恢复，确认删除？')) return false;
-        //alert(id);
-        $.ajax({
-            url: '/UserInfo/DeleteOrder',
-            data: {
-                orderID: id
-            },
-            type: "POST",
-            //beforeSend: function () { $("#productcontent").html('<div class="loading-wrap"><i class="icon-loading"></i></div>'); $("#bestProduct").html('<div class="loading-wrap"></div>'); },
-            cache: false,
-            dataType: "html",
-            success: function (retData) {
-                //alert(retData);
-                if (retData == "true") {
-                    alert("删除成功");
-                    window.location.reload();
-                }
-                else {
-                    alert("删除失败");
-                }
-            },
-            error: function () {
-                alert("error");
-            }
-        });
-    }
+
     function closeLayer() {
         if (CurrentOverLay) {
             CurrentOverLay.find(".closeBtn").click();
@@ -473,12 +448,12 @@
     }, 800);
 
     var _hmt = _hmt || [];
-    (function () {
-        var hm = document.createElement("script");
-        hm.src = "//hm.baidu.com/hm.js?405c96e7f6bed44fb846abfe1f65c6f5";
-        var s = document.getElementsByTagName("script")[0];
-        s.parentNode.insertBefore(hm, s);
-    })();
+//    (function () {
+//        var hm = document.createElement("script");
+//        hm.src = "//hm.baidu.com/hm.js?405c96e7f6bed44fb846abfe1f65c6f5";
+//        var s = document.getElementsByTagName("script")[0];
+//        s.parentNode.insertBefore(hm, s);
+//    })();
 </script>
 
 
@@ -497,14 +472,14 @@
     /* ]]> */
 </script>
 <script type="text/javascript">
-    function asyncLoadScript(url, delayTime) {
-        setTimeout(function () {
-            var bd = document.createElement('script'); bd.type = 'text/javascript'; bd.async = true;
-            bd.src = unescape(_bdhmProtocol + url);
-            var b = document.getElementsByTagName('script')[0]; b.parentNode.insertBefore(bd, b);
-        }, delayTime);
-    }
-    asyncLoadScript("www.googleadservices.com/pagead/conversion.js", 200);
+//    function asyncLoadScript(url, delayTime) {
+//        setTimeout(function () {
+//            var bd = document.createElement('script'); bd.type = 'text/javascript'; bd.async = true;
+//            bd.src = unescape(_bdhmProtocol + url);
+//            var b = document.getElementsByTagName('script')[0]; b.parentNode.insertBefore(bd, b);
+//        }, delayTime);
+//    }
+//    asyncLoadScript("www.googleadservices.com/pagead/conversion.js", 200);
 </script>
 <noscript>
     <div style="display:inline;">

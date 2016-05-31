@@ -38,7 +38,7 @@
 @include('components.head');
 <!-- head  end -->
 <div  class="container_24">
-    <div class="grid_24" id="dir"><a href="http://www.tujia.com">途家网</a><em>&gt;</em>个人资料</div>
+    <div class="grid_24" id="dir"><a href="http://www.tujia.com">蜗牛</a><em>&gt;</em>个人资料</div>
 </div>
 <div class="container_24 clearfix" id="orderWrapper">
     <div class="grid_5">
@@ -77,7 +77,7 @@
         <div class="orderHead"><h4>个人资料</h4></div>
         <div class="clearfix">
             <div class="infoWrapper">
-                <p class="text"><span>修改成功!</span><br />尊敬的用户 ，恭喜您个人资料修改成功 。</p>
+                <p class="text"><span>添加成功!</span><br />尊敬的用户 ，恭喜您个人资料修改成功 。</p>
             </div>
         </div>
     </div>

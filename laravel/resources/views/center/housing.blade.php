@@ -111,10 +111,10 @@
                         <tbody>
                         <tr class="first">
                             <td rowspan="2" class="pic-box">
-                                <a href="room" target="_blank"><img src="http://localhost/web/snail/laravel/public/images/{{$v->r_img}}" alt="" width="70" height="55" /></a>
+                                <a href="{{URL('good')}}" target="_blank"><img src="../public/images/{{$v->r_img}}" alt="" width="70" height="55" /></a>
                             </td>
                             <td colspan="4">
-                                <a href="room" target="_blank">{{$v->r_title}}</a>
+                                <a href="{{URL('good')}}" target="_blank">{{$v->r_title}}</a>
                             </td>
                         </tr>
                         <tr>

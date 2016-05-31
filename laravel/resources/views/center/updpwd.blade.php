@@ -36,7 +36,7 @@
 @include('components.head');
 <!-- head  end -->
 <div  class="container_24">
-    <div class="grid_24" id="dir"><a href="http://localhost/web/snail/laravel/public/">蜗牛短租</a><em>&gt;</em>修改密码</div>
+    <div class="grid_24" id="dir"><a href="">蜗牛短租</a><em>&gt;</em>修改密码</div>
 </div>
 <div class="container_24 clearfix" id="orderWrapper">
     <div class="grid_5">

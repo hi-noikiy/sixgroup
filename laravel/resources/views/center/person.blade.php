@@ -41,7 +41,7 @@
 @include('components.head');
 <!-- head  end -->
 <div  class="container_24">
-    <div class="grid_24" id="dir"><a href="http://localhost/web/snail/laravel/public/">蜗牛短租</a><em>&gt;</em>个人资料</div>
+    <div class="grid_24" id="dir"><a href="">蜗牛短租</a><em>&gt;</em>个人资料</div>
 </div>
 <div class="container_24 clearfix" id="orderWrapper">
     <div class="grid_5">
@@ -102,7 +102,7 @@
                                         <div class="data-result m-fl">
                                             @foreach($data as $v)
                                                 <a href="{{URL('headp')}}"><div href="" class="usp-bg">
-                                                <span><img src="http://localhost/sixgroup/laravel/public/uploads/{{$v->u_img}}" alt=""/></span>
+                                                <span><img src="../public/uploads/{{$v->u_img}}" alt=""/></span>
                                             </div></a>
                                             @endforeach
                                             @foreach($data as $v)
