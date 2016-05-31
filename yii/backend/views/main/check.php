@@ -431,15 +431,16 @@ $session->open();
 														</td>
 													</tr>
 													<table id="sample-table-1" class="table table-striped table-bordered table-hover">
-												<thead>
-													<tr>
-														<th>房源基本信息</th>
-													</tr>
-													
-												</thead>
-												<tbody>
-													<tr>
-														<td><h4><?php echo $room['r_introduce']?></h4></td>
+												<h3 align="center">房源基本信息</h3>
+													<tbody>
+													<tr height='80px'>
+														<td align="center" style='margin-top:100px'>
+														    <h4><span style="color:blue">类型：</span><?php echo $room['r_type']?>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+															<span style="color:blue">格局：</span><?php echo $room['r_pattem']?>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+															<span style="color:blue">人数：</span>宜住<?php echo $room['r_people']?>人&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+															<span style="color:blue">价钱：</span>￥<?php echo $room['r_price']?>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+															<span style="color:blue">面积：</span><?php echo $room['r_area']?>&nbsp;&nbsp;平</h4>
+														</td>
 													</tr>
 												</tbody>
 											</table>
