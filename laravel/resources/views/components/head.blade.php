@@ -17,6 +17,11 @@
             </ul>
         </div>
 
-        <div class="sub-link"><a  href="{{URL('center')}}">我的蜗牛</a></div>
+        <div class="sub-link">
+            @if($name=Session::get('u_name'))
+                <a href="{{URL('center')}}">欢迎<font style="color: red">{{$name}}</font>来到蜗牛家!</a>
+                <a href="{{URL('login/del')}}" rel="nofollow">退出</a>
+            @endif
+        </div>
     </div>
 </div>
