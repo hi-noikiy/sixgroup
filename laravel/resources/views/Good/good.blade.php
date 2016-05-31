@@ -29,11 +29,8 @@
      
 
 
-	<link rel="stylesheet" type="text/css" href="http://staticfile.tujia.com/portalsite2/styles/css_detail?v=6b40c9a" />
-	<!--评论图片放大效果-->
-	<!--start-->
-	<link rel="stylesheet" type="text/css" href="./css/tu.css">
-	<!--end-->
+<link rel="stylesheet" type="text/css" href="http://staticfile.tujia.com/portalsite2/styles/css_detail?v=6b40c9a" />
+ 
 
     <script type="text/javascript" src="http://staticfile.tujia.com/portalsite2/scripts/base/jquery.js?v=6b40c9a"></script>
     <script type="text/javascript" src="http://staticfile.tujia.com/portalsite2/scripts/js_common_head?v=6b40c9a"></script>
@@ -284,7 +281,7 @@
 
          <div class="sub-link" >
     @if($name=Session::get('u_name'))
-    欢迎<font style="color: red">{{$name}}</font>来到蜗牛家!
+    <a href="{{URL('center')}}">欢迎<font style="color: red">{{$name}}</font>来到蜗牛家!</a>
     <a href="{{URL('login/del')}}" rel="nofollow">退出</a>
     @else
     <a href="{{URL('register')}}" rel="nofollow" class="link-btn">注册</a>
@@ -989,22 +986,22 @@
             <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<em>{{$v->c_content}}</em><br>
 
 			@foreach($img as $val)
-            
-            <a href="../public/uploads/{{$val}}" class="avatar" target="_blank">
-                <img height="60px" width="140px" src="../public/uploads/{{$val}}" alt="">
-                </a>
-				</li>
+            <!-- <a class="preview" href="../public/uploads/{{$val}}" title=""> -->
+            <img height="45px" width="130px" src="../public/uploads/{{$val}}" alt=""></li>
             @endforeach
+            <!-- <li><em>{{$v->c_content}}</em><em>{{$v->c_time}}</em><br><img onmouseover="out({{$v->c_id}})"  height="45px" width="130px" src="images/logo1.png" alt="蜗牛logo"></li> -->
         @endforeach
         </ul>
 
         </div>
     </div>
 
-<style>
-body{text-align:left;}
-.tv_hot{margin-left:auto;margin-right:auto;}
-</style>
+<script>
+    function out(id){
+        alert(id);
+
+    }
+</script>
 
 
 <div class="m-tips-wrap" id="j-experience-info" style="display: none;">
