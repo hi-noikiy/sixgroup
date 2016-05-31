@@ -371,5 +371,35 @@ class CenterController extends Controller
         $data = DB::table('user')->where('u_id', '=', [$u_id])->get();
         return view('Center/person',['data'=>$data]);
     }
+    /*
+     * @comment   评论
+     */
+    public function comment()
+    {
+        //获取session
+        Session::get('u_name');
+        $u_id=Session::get('u_id');
+        //接收表单提交的数据
+        $r_id=Input::get('r_id');
+        $data = DB::table('room')->where('r_id', '=', [$r_id])->get();
+        return view('Center/comment',['data'=>$data]);
+    }
+    /*
+     * @commentsuc  评论成功
+     */
+    public function commentsuc()
+    {
+        //获取session
+        $u_id=Session::get('u_id');
+        $r_id=Input::get('r_id');
+        $c_content=Input::get('c_content');
+        $c_time=date('Y-m-d H:i:s',time());
+        $sql=DB::table('comment')->insert(
+            ['r_id' => $r_id, 'u_id' => $u_id,'c_content'=>$c_content,'c_time'=>$c_time]);
+        if($sql)
+        {
+            return view('Center/personals');
+        }
+    }
 }
 ?>
