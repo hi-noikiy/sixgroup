@@ -93,7 +93,7 @@
         </div>
         <div class="order-list">
             <form action="{{URL('commentsuc')}}" method="post">
-                <div class="collection-cont" id="favoriteList">
+                <div class="collection-cont" id="favoriteList" style="float:right">
                     @foreach($data as $v)
                         <input type="hidden" name="r_id" value="{{$v->r_id}}"/>
                     <div class="collection-list">
@@ -118,23 +118,25 @@
                     </div>
                     @endforeach
         </div>
-                <div style="float:left;margin-right: 10px">
-                    <table>
-                        <tr>
-                            <td>
-                                <textarea name="c_content" id="" cols="43" rows="10"></textarea>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
+        <div style="padding-top: 20px">
+            <table>
+                <tr>
+                    <td>
+                        <textarea name="c_content" id="" cols="43" rows="10"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="control-group submit-group">
+                            <div class="controls" style="margin-top: 23px;margin-left: 150px">
                                 <input name="_token" value="{{csrf_token()}}" type="hidden"/>
-                                <input type="submit" id='sub' value="修改并提交"  />
-                            </td>
-                        </tr>
-                    </table>
-                    </div>
-
-
+                                <input type="submit" id='sub' value="提交"  />
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+            </div>
         </form>
         <div class="m-tips-wrap" id="freepickupreturntastevoucher-tip" style="display: none;">
             <div class="tips-content text-description">
