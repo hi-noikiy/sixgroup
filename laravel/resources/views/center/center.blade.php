@@ -123,7 +123,8 @@
                     <tbody>
                         <tr class="first">
                             <td rowspan="2" class="pic-box">
-                                <a href="{{URL('good')}}" target="_blank"><img src="../public/images/{{$v->r_img}}" alt="" width="70" height="43" /></a>
+                                <?php $img=explode('|',$v->r_img) ?>
+                                <a href="{{URL('good')}}" target="_blank"><img src="../public/uploads/{{$img[0]}}" alt="" width="70" height="43" /></a>
                             </td>
                             <td colspan="4">
                                 <a href="{{URL('good')}}" target="_blank">{{$v->r_title}}</a>

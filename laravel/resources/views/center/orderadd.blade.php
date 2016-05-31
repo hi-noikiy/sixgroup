@@ -49,7 +49,12 @@
 
 <div class="m-fluid-cont">
     <div class="hd-link">
-        <div class="sub-link"><a  href="{{URL('center')}}">我的蜗牛</a></div>
+        <div class="sub-link">
+            @if($name=Session::get('u_name'))
+                <a href="{{URL('center')}}">欢迎<font style="color: red">{{$name}}</font>来到蜗牛家!</a>
+                <a href="{{URL('login/del')}}" rel="nofollow">退出</a>
+            @endif
+        </div>
     </div>
 </div>
 
@@ -895,8 +900,9 @@
 
                 <div class="order-cont">
                     <div class="picture-box">
+                        <?php $img=explode('|',$v->r_img) ?>
                         <a href="room" target="_blank" rel="nofollow">
-                            <img src="../public/images/{{$v->r_img}}" width="300" height="200" title="三亚瑞家公寓揽海精品两房一厅" alt="三亚瑞家公寓揽海精品两房一厅" /></a>
+                            <img src="../public/uploads/{{$img[0]}}" width="300" height="200" title="三亚瑞家公寓揽海精品两房一厅" alt="三亚瑞家公寓揽海精品两房一厅" /></a>
                         <span class="personal-tag landlord-tag">房东经营</span>
 
                     </div>

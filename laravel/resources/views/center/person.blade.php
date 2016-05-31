@@ -102,11 +102,8 @@
                                         <div class="data-result m-fl">
                                             @foreach($data as $v)
                                                 <a href="{{URL('headp')}}"><div href="" class="usp-bg">
-<<<<<<< HEAD
                                                 <span><img src="../uploads/{{$v->u_img}}" alt=""/></span>
-=======
                                                 <span><img src="../public/uploads/{{$v->u_img}}" alt=""/></span>
->>>>>>> 60eaad62dbab0db5a7264eda16af08d4db71a286
                                             </div></a>
                                             @endforeach
                                             @foreach($data as $v)

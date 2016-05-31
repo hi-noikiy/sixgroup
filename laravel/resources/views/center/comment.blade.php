@@ -99,8 +99,9 @@
                     <div class="collection-list">
                         <ul>
                             <li class="myfavorite" unitid="17082" unittype="0">
+                                <?php $img=explode('|',$v->r_img) ?>
                                 <a href="{{URL('good')}}"  target="_blank"   class="pic-box">
-                                    <img  src="../public/images/{{$v->r_img}}" width="368" height="232" />
+                                    <img  src="../public/uploads/{{$img[0]}}" width="368" height="232" />
                                 </a>
                                 <div class="house-hd">
                                     <h2><a href="{{URL('good')}}"   target="_blank"   title="白洋淀途家美芦庄园精致双卧园景温泉别墅" >{{$v->r_title}}</a></h2>
