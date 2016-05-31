@@ -38,7 +38,7 @@
 @include('components.head');
 <!-- head  end -->
 <div  class="container_24">
-    <div class="grid_24" id="dir"><a href="http://www.tujia.com">途家网</a><em>&gt;</em>个人资料</div>
+    <div class="grid_24" id="dir"><a href="">蜗牛短租</a><em>&gt;</em>个人资料</div>
 </div>
 <div class="container_24 clearfix" id="orderWrapper">
     <div class="grid_5">

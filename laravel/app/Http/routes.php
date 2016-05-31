@@ -192,6 +192,12 @@ Route::any('headsuccess','CenterController@headsuccess');
 //显示头像
 Route::any('headlist','CenterController@headlist');
 
+//评论
+Route::any('comment','CenterController@comment');
+
+//评论成功
+Route::any('commentsuc','CenterController@commentsuc');
+
 /*关于网站底部的处理*/
 
 //关于我们
