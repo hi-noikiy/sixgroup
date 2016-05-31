@@ -104,7 +104,7 @@
                                     <img  src="../public/uploads/{{$img[0]}}" width="368" height="232" />
                                 </a>
                                 <div class="house-hd">
-                                    <h2><a href="{{URL('good')}}"   target="_blank"   title="白洋淀途家美芦庄园精致双卧园景温泉别墅" >{{$v->r_title}}</a></h2>
+                                    <h2><a href="good"   target="_blank"   title="白洋淀途家美芦庄园精致双卧园景温泉别墅" >{{$v->r_title}}</a></h2>
                                     <span class="price-box"><dfn>¥</dfn>{{$v->r_price}}</span>起
                                 </div>
                                 <div class="house-info">
@@ -118,9 +118,22 @@
                     </div>
                     @endforeach
         </div>
-                <div style=""><textarea name="c_content" id="" cols="43" rows="10"></textarea></div>
-                <input name="_token" value="{{csrf_token()}}" type="hidden"/>
-                <input type="submit" id='sub' value="修改并提交"  />
+                <div style="float:left;margin-right: 10px">
+                    <table>
+                        <tr>
+                            <td>
+                                <textarea name="c_content" id="" cols="43" rows="10"></textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input name="_token" value="{{csrf_token()}}" type="hidden"/>
+                                <input type="submit" id='sub' value="修改并提交"  />
+                            </td>
+                        </tr>
+                    </table>
+                    </div>
+
 
         </form>
         <div class="m-tips-wrap" id="freepickupreturntastevoucher-tip" style="display: none;">

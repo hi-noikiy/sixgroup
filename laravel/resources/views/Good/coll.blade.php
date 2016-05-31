@@ -10,7 +10,7 @@
     <link rel="shortcut icon" href="http://staticfile.tujia.com/PortalSite/Images/favicon.ico" type="image/x-icon" />
     <link rel="bookmark" href="http://staticfile.tujia.com/PortalSite/Images/favicon.ico" type="image/x-icon" />
     <title>
-        我的订单- 蜗牛短租
+        我的收藏- 蜗牛短租
     </title>
 
     <link rel="stylesheet" type="text/css" href="http://staticfile.tujia.com/portalsite2/styles/css_user?v=5e55fe5" />
@@ -71,7 +71,7 @@
         <div class="navWrapper">
             <h5>我的订单</h5>
             <ul>
-                <li><a id="myorders" href="order" class="current" onclick="_gaq.push(['_trackEvent', 'pcUserInfo', '订单管理']);">订单管理<span></span></a></li>
+                <li><a id="myorders" href="{{URL('order')}}" class="current" onclick="_gaq.push(['_trackEvent', 'pcUserInfo', '订单管理']);">订单管理<span></span></a></li>
             </ul>
         </div>
         <div class="navWrapper">
@@ -79,9 +79,9 @@
                 个人中心
             </h5>
             <ul>
-                <li><a id="myUserInfoInfo" href="person" onclick="_gaq.push(['_trackEvent', 'pcUserInfo', '个人资料']);">个人资料</a></li>
-                <li><a id="mypassword" href="updpwd" onclick="_gaq.push(['_trackEvent', 'pcUserInfo', '修改密码']);">修改密码</a></li>
-                <li><a id="myUserInfoInfo" href="headp" onclick="_gaq.push(['_trackEvent', 'pcUserInfo', '头像上传']);">头像上传</a></li>
+                <li><a id="myUserInfoInfo" href="{{URL('person')}}" onclick="_gaq.push(['_trackEvent', 'pcUserInfo', '个人资料']);">个人资料</a></li>
+                <li><a id="mypassword" href="{{url('updpwd')}}" onclick="_gaq.push(['_trackEvent', 'pcUserInfo', '修改密码']);">修改密码</a></li>
+                <li><a id="myUserInfoInfo" href="{{URL('headp')}}" onclick="_gaq.push(['_trackEvent', 'pcUserInfo', '头像上传']);">头像上传</a></li>
             </ul>
         </div>
 
