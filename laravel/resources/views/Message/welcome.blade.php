@@ -99,7 +99,7 @@
         <div id="slide" class="m-focus-wrap">
             <div id="panel" class="focus-box">
                 <ul>
-				http://pic.tujia.com/upload/config/home/day_160511/201605111734512067.jpg
+				
 
                         <li style=list-item>
 

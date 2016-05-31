@@ -50,6 +50,8 @@
                 <li><a href="http://travel.tujia.com" target="_blank">社区</a></li>
                 <li><a href="http://www.tujia.com/EntrustTreasure/"  target="_blank">买楼收租</a></li>
                 <li><a href="http://www.tujia.com/TuYuan/"  target="_blank">途远度假</a></li>
+				<div class="bdsharebuttonbox"><a href="#" class="bds_more" data-cmd="more"></a><a title="分享到QQ空间" href="#" class="bds_qzone" data-cmd="qzone"></a><a title="分享到新浪微博" href="#" class="bds_tsina" data-cmd="tsina"></a><a title="分享到腾讯微博" href="#" class="bds_tqq" data-cmd="tqq"></a><a title="分享到人人网" href="#" class="bds_renren" data-cmd="renren"></a><a title="分享到微信" href="#" class="bds_weixin" data-cmd="weixin"></a></div>
+    <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"16"},"share":{},"image":{"viewList":["qzone","tsina","tqq","renren","weixin"],"viewText":"分享到：","viewSize":"16"},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["qzone","tsina","tqq","renren","weixin"]}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
             </ul>
         </div>
 
@@ -97,7 +99,7 @@
         <div id="slide" class="m-focus-wrap">
             <div id="panel" class="focus-box">
                 <ul>
-				http://pic.tujia.com/upload/config/home/day_160511/201605111734512067.jpg
+				
 
                         <li style=list-item>
 
@@ -666,3 +668,22 @@ a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
     </script>
 </body>
 </html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>jquery带二维码返回顶部代码_777模板www.777moban.com</title>
+<link href="css/zzsc.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="js/zzsc.js"></script>
+<script>
+
+</script>
+</head>
+<body>
+<div id="top"></div>
+<div style="text-align:center;margin:50px 0; font:normal 14px/24px 'MicroSoft YaHei';">
+</div>
+</body>
+</html>
+

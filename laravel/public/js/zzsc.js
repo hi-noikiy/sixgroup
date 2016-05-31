@@ -1,6 +1,6 @@
 $(function(){
 
-	var tophtml="<div id=\"izl_rmenu\" class=\"izl-rmenu\"><a href=\"tencent://Message/?Uin=826237199&websiteName=www.777moban.com=&Menu=yes\" class=\"btn btn-qq\"></a><div class=\"btn btn-wx\"><img class=\"pic\" src=\"images/weixin.png\" onclick=\"window.location.href=\'http://%77%77%77%2e%73%75%63%61%69%6a%69%61%79%75%61%6e%2e%63%6f%6d\'\"/></div><div class=\"btn btn-phone\"><div class=\"phone\">13051151895</div></div><div class=\"btn btn-top\"></div></div>";
+	var tophtml="<div id=\"izl_rmenu\" class=\"izl-rmenu\"><a href=\"tencent://Message/?Uin=2532646653&websiteName=www.777moban.com=&Menu=yes\" class=\"btn btn-qq\"></a><div class=\"btn btn-wx\"><img class=\"pic\" src=\"images/weixin.png\" onclick=\"window.location.href=\'http://%77%77%77%2e%73%75%63%61%69%6a%69%61%79%75%61%6e%2e%63%6f%6d\'\"/></div><div class=\"btn btn-phone\"><div class=\"phone\">13051151895</div></div><div class=\"btn btn-top\"></div></div>";
 	$("#top").html(tophtml);
 	$("#izl_rmenu").each(function(){
 		$(this).find(".btn-wx").mouseenter(function(){

@@ -550,7 +550,8 @@
 
                             <span title="建筑面积128平米">{{$v->r_area}}平米</span>|
 
-                            <span title="推荐入住4人">宜住{{$v->r_people}}人</span>
+                            <span title="推荐入住4人">宜住{{$v->r_people}}人</span>|
+                            <span title="推荐入住4人">{{$v->r_district}}</span>
                     </div>
                 </div>
 
