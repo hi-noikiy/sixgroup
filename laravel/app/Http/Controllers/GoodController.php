@@ -22,7 +22,7 @@ class GoodController extends Controller{
 		$r_id=Input::get('r_id');
 		
 		$room=DB::table('room')	//房源信息
-           // ->where('room.r_id', '=',$r_id)
+           ->where('room.r_id', '=',$r_id)
             ->get();
         //查询房主其他房源
         $rooms=DB::table('room')->join('user','user.u_id','=','room.u_id')
