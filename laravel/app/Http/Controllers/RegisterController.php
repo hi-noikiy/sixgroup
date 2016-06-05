@@ -65,7 +65,7 @@ class RegisterController extends Controller
 	{
 		$phone= Request::get('phone');	//获取手机号
 		$yz= Request::get('yz');	//获取验证码
-		$url="http://api.k780.com:88/?app=sms.send&tempid=50508&param=code%3d{$yz}&phone={$phone}&appkey=18342&sign=54dde18295f570014b9f0486d16f1c2b&format=json";
+		$url="http://api.k780.com:88/?app=sms.send&tempid=50508&param=code%3d{$yz}&phone={$phone}&appkey=&sign=&format=json";
 		$re=file_get_contents($url);
 		$ar=json_decode($re,true);	//对接口返回数据进行数组转换
 		if ($ar['success']==1) {	//判断状态是否成功
